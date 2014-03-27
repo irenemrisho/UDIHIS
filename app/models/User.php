@@ -21,7 +21,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $hidden = array('password');
     public static $rules = array('username' => 'required|min:5', 'password' => 'required|min:4');
+    protected $table = 'Users';
+    protected $fillable = array('first_name','middle_name','designation','address','email','contact');
 
+    
     /**
      * Get the unique identifier for the user.
      *
@@ -50,6 +53,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     }
 
     public static function level($lv) {
+
+    }
+
+    public function appointment(){
+        return $this->hasMany('Appointment','user_id','id');
 
     }
 
