@@ -15,11 +15,15 @@
 
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
-Route::get('pharmacy', 'PharmacyController@getIndex');
-Route::get('admin','AdminController@getIndex');
-Route::get('/users/add','UserController@addUser');
+Route::get('pharmacy', 'Pharmacy@getIndex');
+Route::get('admin','Admin@getIndex');
+Route::get('/addUser','UserController@addUser');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/login', 'UserController@login');
+Route::get('/manage_user','Admin@manage_user');
+Route::post('/manage_user','Admin@addUser');
+Route::get('/logout','UserController@logout');
+
 
 //Route::get('/login', function() {
 //    return Redirect::to('/');

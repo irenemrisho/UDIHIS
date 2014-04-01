@@ -29,25 +29,54 @@ class UserController extends BaseController {
 
     public function login() {
 
-        $username = Input::get('username');
-        $password = Input::get('password');
-        $validator = Validator::make(Input::all(), User::$rules);
-        if ($validator->fails()) {
-            $errors = $validator->messages();
-            $this->layout->content = View::make('login.login_page', compact('errors'));
-        } else {
-            if (Auth::attempt(array('username' => $username, 'password' => $password))) {
-                $level = Auth::user()->level;
-                $l = trim($level);
-                if ($l == "adm") {
-                    $this->layout->content = View::make('admin.admini_page');
-                } else {
-                    
-                }
-            } else {
-                $this->layout->content = View::make('login.login_page')->withErrors($validator);
-            }
-        }
-    }
+        $userdata = array(
+            'email' => Input::get('email'),
+            'password' => Input::get('password')
+            );
 
+   if (Auth::attempt($userdata)) {
+        $level = Auth::user()->level;
+        switch ($level) {
+             case 0:
+                # code...
+                return Redirect::to('admin');
+                break;
+             case 1:
+                # code...
+                return Redirect::to('pharmacy');
+                break; 
+             case 2:
+                # code...
+                return Redirect::to('laboratory');
+                break;  
+             case 3:
+                # code...
+                return Redirect::to('reception');
+                break; 
+             case 4:
+                # code...
+                return Redirect::to('doctor');
+            case 5:
+                # code...
+                return Redirect::to('account');
+                break;    
+                                  
+            default:
+                # code...
+                break;
+        }
+
+   }
+   else{
+
+        return Redirect::to('login');
+   }
+       
+
+}
+        public function logout(){
+            Auth::logout();
+            return Redirect::to('login');
+            
+        }
 }

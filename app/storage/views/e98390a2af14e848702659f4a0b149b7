@@ -1,5 +1,4 @@
-@extends('layouts.master')
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="navbar navbar-fixed-top">
 
     <div class="navbar-inner">
@@ -21,7 +20,7 @@
 
 <div id="login-container">
 
-    <center>{{HTML::image('packages/bootstrap/img/login.png')}}</center>
+    <center><?php echo HTML::image('packages/bootstrap/img/login.png'); ?></center>
 
 
    
@@ -38,13 +37,13 @@
 
 
 
-        {{Form::open(array('url'=>'/login'))}}
+        <?php echo Form::open(array('url'=>'/login')); ?>
 
 
         <fieldset>
-         @if($errors->any())
-            {{ implode('', $errors->all('<div class="alert alert-warning alert-dismissable">:message</div>') ) }}
-            @endif
+         <?php if($errors->any()): ?>
+            <?php echo implode('', $errors->all('<div class="alert alert-warning alert-dismissable">:message</div>') ); ?>
+            <?php endif; ?>
 
 
             <div class="control-group">
@@ -85,5 +84,7 @@
 
 
 </div> <!-- /login-wrapper -->
-@stop
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

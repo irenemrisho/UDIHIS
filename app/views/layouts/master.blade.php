@@ -1,5 +1,5 @@
 @include('layouts.incs.header')
 
-{{$content}}
+@yield('content')
 
 @include('layouts.incs.footer')

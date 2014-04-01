@@ -14,6 +14,7 @@ class CreatePatientsTable extends Migration {
 	{
 		Schema::create('patients',function($table){
 			$table->increments('id');
+			$table->integer('user_id')->references('id')->on('Users');
 			$table->String('first_name');
 			$table->String('middle_name');
             $table->String('last_name');

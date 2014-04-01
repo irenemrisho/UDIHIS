@@ -10,6 +10,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var string
      */
+
     protected $table = 'users';
 //    protected $fillable = array('user_id','password','s_name');
 //    public $timestamps = false;
@@ -20,9 +21,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      * @var array
      */
     protected $hidden = array('password');
-    public static $rules = array('username' => 'required|min:5', 'password' => 'required|min:4');
-    protected $table = 'Users';
-    protected $fillable = array('first_name','middle_name','designation','address','email','contact');
+    public static $rules = array('email' => 'required', 'password' => 'required|min:5');
+    protected $fillable = array('last_name','password','first_name','address','middle_name','level','email','contact');
 
     
     /**
@@ -58,6 +58,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function appointment(){
         return $this->hasMany('Appointment','user_id','id');
+
+    }
+      public function patient(){
+        return $this->hasMany('Patient','user_id','id');
 
     }
 

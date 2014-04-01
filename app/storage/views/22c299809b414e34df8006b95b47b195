@@ -1,0 +1,145 @@
+<div class="span3">
+
+                    <div class="account-container">
+
+                        <div class="account-avatar">
+                            <img src="./img/" alt="" class="thumbnail" />
+                        </div> <!-- /account-avatar -->
+
+                        <div class="account-details">
+                            Welcome,
+                            <span class="account-name">Administrator</span>
+
+                            <span class="account-actions">
+                                <a style="color:#888; text-decoration:none;" href="logout"><i class="icon-off"></i> Logout</a>
+                            </span>
+
+                        </div> <!-- /account-details -->
+
+                    </div> <!-- /account-container -->
+
+                    <hr />
+
+                    <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+                        <li class="active">
+                            <a href="admin">
+                                <i class="icon-home"></i>
+                                Dashboard 		
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="manage_user">
+                                <i class="icon-exchange"></i>
+                                Manage user	
+                            </a>
+                        </li>
+
+             
+
+                        <li>
+                            <a href="#">
+                                <i class="icon-hospital"></i>
+                                Setting
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-user"></i>
+                                My account
+                            </a>
+                        </li>
+
+
+                    </ul>	
+
+                    <hr />
+
+                    <div class="sidebar-extra">
+                        <p></p>
+                    </div> <!-- .sidebar-extra -->
+
+                    <br />
+
+                </div> <!-- /span3 -->
+
+
+                <div class="span3">
+
+                    <div class="account-container">
+
+                        <div class="account-avatar">
+                            <img src="./img/" alt="" class="thumbnail" />
+                        </div> <!-- /account-avatar -->
+
+                        <div class="account-details">
+                            Welcome,
+                            <span class="account-name">pharmacy</span>
+
+                            <span class="account-actions">
+                                <a style="color:#888; text-decoration:none;" href="./login.html"><i class="icon-off"></i> Logout</a>
+                            </span>
+
+                        </div> <!-- /account-details -->
+
+                    </div> <!-- /account-container -->
+
+                    <hr />
+
+                    <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+                        <li class="active">
+                            <a href="./index.html">
+                                <i class="icon-home"></i>
+                                Dashboard       
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="icon-exchange"></i>
+                                Provide medication  
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="patients.html">
+                                <i class="icon-user-md"></i>
+                                Manage medicine 
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="icon-stethoscope"></i>
+                                Medicine category
+                                <span class="label label-warning pull-right"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports.html">
+                                <i class="icon-hospital"></i>
+                                Manage Reports
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-user"></i>
+                                My account
+                            </a>
+                        </li>
+
+
+                    </ul>   
+
+                    <hr />
+
+                    <div class="sidebar-extra">
+                        <p></p>
+                    </div> <!-- .sidebar-extra -->
+
+                    <br />
+
+                </div> <!-- /span3 -->

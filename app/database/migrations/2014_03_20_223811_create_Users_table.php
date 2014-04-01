@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration {
             $table->String('middle_name');
             $table->String('last_name');	
             $table->String('address');
-            $table->String('designation');
+            $table->integer('level');
            	$table->String('contact'); 
 			$table->timestamps();
 

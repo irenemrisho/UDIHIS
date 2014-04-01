@@ -1,6 +1,6 @@
-@extends('layouts.master')
-@section('content')
-   <div class="navbar navbar-fixed-top">
+<?php $__env->startSection('content'); ?>
+
+    <div class="navbar navbar-fixed-top">
 
         <div class="navbar-inner">
 
@@ -59,7 +59,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="manage_user">
                                 <i class="icon-exchange"></i>
                                 Manage user	
                             </a>
@@ -68,7 +68,7 @@
              
 
                         <li>
-                            <a href="reports.html">
+                            <a href="#">
                                 <i class="icon-hospital"></i>
                                 Setting
                             </a>
@@ -85,22 +85,15 @@
 
                     <hr />
 
-                    <div class="sidebar-extra">
-                        <p></p>
-                    </div> <!-- .sidebar-extra -->
-
                     <br />
 
                 </div> <!-- /span3 -->
 
 
-
+                <div class="content">
                 <div class="span9">
 
-                    <h1 class="page-title">
-                        <i class="icon-user-md"></i>
-                        Patients					
-                    </h1>
+                   
 
                     <div class="action-nav-normal">
                         <div class="row">
@@ -108,33 +101,16 @@
 
 
                         </div> <!-- /stat-container -->
-
-                        <div class="widget-header">                                                
-</div>
-                            <div class="dropdown">
-                        <div class="tab-content">
-                                        <div class="widget-content" id="1">
                         
+                   <?php echo $__env->yieldContent('admin_content'); ?>
 
-                                            
-                                        </div>
-                        <div class="widget-content">
+
+
 
                    
 
-                        </div> <!-- /widget-content -->
-
-
-
-
-
-                    </div> <!-- /span9 -->
-
-
-                </div> <!-- /row -->
-
             </div> <!-- /container -->
-
+</div>
         </div> <!-- /content -->
 
 
@@ -152,5 +128,7 @@
             </div> <!-- /container -->
 
         </div> <!-- /footer -->
-        @stop
+        <?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
