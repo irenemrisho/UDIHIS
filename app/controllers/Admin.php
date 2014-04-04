@@ -11,7 +11,7 @@
  *
  * @author irene
  */
-class AdminController  extends BaseController{
+class Admin  extends BaseController{
             public function getIndex(){
             return View::make("admin.admini_page");
     }
