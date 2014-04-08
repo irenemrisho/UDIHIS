@@ -1,16 +1,22 @@
 <?php
-use Illuminate\Auth\UserInterface;
-class Patients_visit extends Eloquent implements UserInterface {
-	protected $table = 'Patients_visit';
-	protected $guarded=array('id');
-	protected $fillable=array('user_id','medicine_id','account_id','room_id','consultation','weight','disease','admission_date','discharge_date');
 
+class Patients_visit extends Eloquent  {
+	protected $table = 'patients_visits';
+	
 	public function user(){
-		return $this->belongsTo('Users','user_id','id');
+		return $this->belongsTo('Users','doctor_id','id');
 
 	}
 	public function patient(){
 		return $this->belongsTo('Patients','patient_id','id');
+
+	}
+        public function medicine(){
+		return $this->belongsTo('medicines','medicine_id','id');
+
+	}
+         public function room(){
+		return $this->belongsTo('rooms','room_id','id');
 
 	}
 }

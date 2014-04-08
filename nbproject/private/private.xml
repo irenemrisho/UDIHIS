@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/laravel-master/app/models/User.php</file>
-            <file>file:/var/www/laravel-master/app/routes.php</file>
-            <file>file:/var/www/laravel-master/app/views/login/login_page.blade.php</file>
-            <file>file:/var/www/laravel-master/app/controllers/UserController.php</file>
+            <file>file:/var/www/UDIHIS-master/app/controllers/DoctorController.php</file>
+            <file>file:/var/www/UDIHIS-master/app/controllers/Doctor.php</file>
+            <file>file:/var/www/UDIHIS-master/app/controllers/Admin.php</file>
+            <file>file:/var/www/UDIHIS-master/app/models/Laboratory.php</file>
+            <file>file:/var/www/UDIHIS-master/app/controllers/BaseController.php</file>
+            <file>file:/var/www/UDIHIS-master/app/models/Appointment.php</file>
+            <file>file:/var/www/UDIHIS-master/app/controllers/PharmacyController.php</file>
+            <file>file:/var/www/UDIHIS-master/app/views/sideMenu.blade.php</file>
+            <file>file:/var/www/UDIHIS-master/app/config/database.php</file>
+            <file>file:/var/www/UDIHIS-master/app/models/Recommended_medicine.php</file>
+            <file>file:/var/www/UDIHIS-master/app/routes.php</file>
         </group>
     </open-files>
 </project-private>

@@ -67,7 +67,7 @@ return array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
 			'database' => 'udihis',
-			'username' => 'postgres',
+			'username' => 'udihis',
 			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
