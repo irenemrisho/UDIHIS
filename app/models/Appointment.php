@@ -1,11 +1,11 @@
 <?php
-use Illuminate\Auth\UserInterface;
-class Appointment extends Eloquent implements UserInterface {
-	protected $guarded=array('id');
-	protected $fillable=array('date','amount','patient_id','user_id');
 
+class Appointment extends Eloquent {
+	
+        protected $table='appointments';
+        
 	public function user(){
-		return $this->belongsTo('Users','user_id','id');
+		return $this->belongsTo('Users','doctor_id','id');
 
 	}
 	public function patient(){

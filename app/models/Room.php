@@ -1,7 +1,9 @@
 <?php
-use Illuminate\Auth\UserInterface;
-class Room extends Eloquent implements UserInterface {
+class Room extends Eloquent  {
 	protected $table = 'rooms';
-	protected $guarded=array('id');
+	 public function service(){
+		return $this->belongsTo('services','service_id','id');
+	}
+         
 	
 }
