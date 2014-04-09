@@ -79,4 +79,10 @@ class UserController extends BaseController {
             return Redirect::to('login');
             
         }
+
+        public function destroy($id){
+            $user = User::find($id);
+            $user->delete();
+        }
+
 }
