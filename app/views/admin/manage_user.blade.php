@@ -34,21 +34,21 @@
 	                                                     <div class="control-group"> 
 	                                                    <label class="control-label" for="first_name">First name</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" >
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" required />
 	                                                            
 	                                                        </div> <!-- /controls --> 
 	                                                        </div>
 	                                                    <div class="control-group">                                         
 	                                                        <label class="control-label" for="middle_name">Middle name</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="middle_name">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="middle_name" >
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
 														<div class="control-group">                                         
 	                                                        <label class="control-label" for="last_name">Last name</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name" required />
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
@@ -68,7 +68,7 @@
 													 <div class="control-group">  
 	                                                     <label class="control-label" for="username">Email</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge" name="email" id="" value="">
+	                                                            <input type="text" class="input-xlarge" name="email" id="" value="" required />
 	                                                            
 	                                                        </div>                                       
 	                                              
@@ -93,7 +93,7 @@
 	                                                    <div class="control-group">                                         
 	                                                        <label class="control-label" for="username">Designation</label>
 	                                                        <div class="controls">
-	                                                        	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'))}}
+	                                                        	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'), '', array('required'=>'required'))}}
 	                        	
 	                                                        </div>
 	                                                                     
@@ -113,7 +113,7 @@
 										</div>
 										
 										<div class="tab-pane active" id="1">
-											<div class="widget widget-table">
+											<div class="widget-table">
 										
 												<div class="widget-header">
 
@@ -172,6 +172,7 @@
 																	</div>
 																	<div class="modal-body">
 																	  <img src="{{url("packages/bootstrap/img/loader.gif")}}" id="ajax" style="display:none2;z-index:3000;position:absolute;margin-left: 230px; margin-top:100px">
+																	  <span id="ajax2"><img src="{{url("packages/bootstrap/img/load.gif")}}"   style=""></span>
 															          <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:100px">
 															            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 															            <strong>Successfully updated! Redirecting...</strong> 
