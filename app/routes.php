@@ -20,8 +20,13 @@ Route::post('/users/store','UserController@storeUser');
 Route::post('users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
 Route::post('/manage_user','Admin@addUser');
+
+Route::post('/manage_user/{id}','AdminController@editUser');
+Route::get('/manage_user/{id}','Admin@manage_user');
+
 Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
+Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');

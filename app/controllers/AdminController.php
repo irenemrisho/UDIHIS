@@ -18,6 +18,22 @@ class AdminController  extends BaseController{
     		public function manage_user(){
             return View::make("admin.manage_user");
     }
+
+
+     public function editUser($id){
+            $inputs = Input::all();
+            $user   = User::find($id);
+            $user->first_name = $inputs['fn']; 
+            $user->last_name = $inputs['ln']; 
+            $user->middle_name = $inputs['mn']; 
+            $user->address = $inputs['a']; 
+            $user->level =   $inputs['l']; 
+            $user->contact = $inputs['c']; 
+            $user->email = $inputs['e']; 
+            $user->save();
+            return "ok";
+     }
+
 	public function addUser(){
 			$inputs = Input::all();
 			$usr = User::create(array(

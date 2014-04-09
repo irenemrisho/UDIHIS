@@ -65,4 +65,34 @@ $(document).ready(function(){
                    });
                 });
  });//endof deleting category
+
+	$('.fetchuser').on('click', function(){
+		$('#ajax').show();
+		var uid  = $(this).parent().attr('id');
+		$.get('loaduser/' + uid, function(data){
+			$('#ajax').hide();
+			$('#user_content').html(data);
+		});
+	});
+
+	$('#save').on('click', function(){
+		var action = $('#editform').attr('action');
+		var url    = $('#editform').attr('url');
+		var email       = $('#email').val();
+		var first_name  = $('#first_name').val();
+		var last_name	= $('#last_name').val();
+		var middle_name = $('#middle_name').val();
+		var contact     = $('#contact').val();
+		var level       = $('#level').val();
+		var address     = $('#address').val();
+		$('#ajax').show();
+		$('#editform').css('opacity', '0.2');
+		$.post(action, {e:email, fn:first_name, ln:last_name, mn:middle_name, c:contact, l:level, a:address}, function(data){
+			$('#ajax').hide();
+			$('#alrt').fadeIn(1000, function(){
+				window.location = url;
+			});
+		})
+	});	
+
 });

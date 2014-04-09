@@ -15,6 +15,8 @@ class Admin  extends BaseController{
             public function getIndex(){
             return View::make("admin.admini_page");
     }
+
+
     		public function manage_user(){
             return View::make("admin.manage_user");
     }

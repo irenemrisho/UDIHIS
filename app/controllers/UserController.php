@@ -85,4 +85,11 @@ class UserController extends BaseController {
             $user->delete();
         }
 
+        public function loaduser($id){
+            $user = User::find($id);
+            return View::make('admin.useredit', compact('user'));
+        }
+
+      
+
 }
