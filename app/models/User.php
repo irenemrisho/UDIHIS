@@ -53,7 +53,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     }
 
     public static function level($lv) {
-
+        if($lv == 1){
+            return "Pharmacist";
+        }else if($lv == 2){
+            return "Lab Tech";
+        }else if($lv == 3){
+            return "Receptionist";
+        }else if($lv == 4){
+            return "Doctor";
+        }else if($lv == 5){
+            return "Accountant";
+        }
     }
 
     public function appointment(){
