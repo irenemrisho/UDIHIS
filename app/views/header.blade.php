@@ -3,15 +3,30 @@
         <div class="navbar-inner">
 
             <div class="container">
-
-            	@if(Auth::user()->level == 0)
+<?php   if (Auth::user()) {
+    
+?>
+                @if(Auth::user()->level == 0)
                 <a class="brand" href="./index.html">Administrator</a>
                 @endif
 
-            	@if(Auth::user()->level == 1)
+                @if(Auth::user()->level == 1)
                 <a class="brand" href="">Pharmacy</a>
                 @endif
+
+                @if(Auth::user()->level == 2)
+                <a class="brand">Lab Technician</a>
+                @endif
+                @if(Auth::user()->level == 3)
+                <a class="brand">Receptionist</a>
+                @endif
+                @if(Auth::user()->level == 4)
+                <a class="brand">Doctor</a>
+                @endif 
+                <?php }else
+          ?>     
                 <div class="nav-collapse">
+           
 
                 </div> <!-- /nav-collapse -->
 
@@ -29,7 +44,9 @@
                 <div class="span3">
 
                     <div class="account-container">
-
+<?php   if (Auth::user()) {
+    
+?>
                         <div class="account-avatar">
                             <img src="./img/" alt="" class="thumbnail" />
                         </div> <!-- /account-avatar -->
@@ -42,7 +59,16 @@
                             @if(Auth::user()->level == 1)
                             <span class="account-name">Pharmacy</span>
                             @endif
-
+                            @if(Auth::user()->level == 2)
+                            <span class="account-name">Lab Technician</span>
+                            @endif
+                            @if(Auth::user()->level == 3)
+                            <span class="account-name">Receptionist</span>
+                            @endif
+                            @if(Auth::user()->level == 4)
+                            <span class="account-name">Doctor</span>
+                            @endif 
+     
                             <span class="account-actions">
                                 <a style="color:#888; text-decoration:none;" href="./logout"><i class="icon-off"></i> Logout</a>
                             </span>
@@ -52,3 +78,5 @@
                     </div> <!-- /account-container -->
 
                     <hr />
+                     <?php }else
+          ?> 
