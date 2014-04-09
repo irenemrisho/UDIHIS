@@ -17,6 +17,7 @@ Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
+Route::post('users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
 Route::post('/manage_user','Admin@addUser');
 Route::get('/logout','UserController@logout');
@@ -39,7 +40,7 @@ Route::get('edit_medicine', 'PharmacyController@getEditMedicine');
 Route::post('/edit_medicine', 'PharmacyController@updateMedicine');
 Route::get('manage_report','PharmacyController@getReport');
 Route::get('my_accountpharmacy','PharmacyController@getAccount');
-/*Billimh Route*/
+/*Billing Route*/
 Route::get('billing','BillingController@getIndex');
 Route::get('Pending_bills','BillingController@getBills');
 Route::get('Insurance_management','BillingController@getInsurance');
