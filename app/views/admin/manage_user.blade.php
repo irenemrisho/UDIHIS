@@ -111,7 +111,7 @@
 												<div class="widget-content">
 												
 													<table class="table table-striped table-bordered">
-													  <?php	$users = User::all();					
+													   <?php	$users = User::where('level', '!=', 0)->get();					
 															?>
 														
 														<thead>
@@ -121,7 +121,7 @@
 																<th>Last Name</th>
 																<th>Designation</th>
 																<th>Date</th>
-																<th>&nbsp;</th>
+																<th>operation</th>
 															</tr>
 														</thead>
 														
@@ -131,15 +131,31 @@
 																<td>{{$user->id}}</td>
 																<td>{{$user->first_name}}</td>
 																<td>{{$user->last_name}} </td>
-																<td>Mseto</td>
-																<td>Fri 21st Mar 2014</td>
-																<td class="action-td">
-																	<a href="javascript:;" class="btn btn-small btn-warning">
-																		<i class="icon-ok"></i>								
+																<td>{{User::level($user->level)}}</td>
+																<td>{{$user->created_at->format('j F, Y')}}</td>
+																<td class="action-td" id="{{$user->id}}">
+																	<a href="#myModal" class="btn btn-small btn-primary"  data-toggle="modal">
+																		<i class="icon-pencil"></i>								
 																	</a>					
-																	<a href="javascript:;" class="btn btn-small">
-																		<i class="icon-remove"></i>						
+																	<a href="javascript:;" class="btn btn-small btn-danger deleteuser">
+																		<i class="icon-trash"></i>								
 																	</a>
+																	<!-- Modal -->
+																	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+																	<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+																	<h3 id="myModalLabel">Edit User information</h3>
+																	</div>
+																	<div class="modal-body">
+																		<div id="user_content">
+
+																		</div>	
+																	</div>
+																	<div class="modal-footer">
+																	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+																	<button class="btn btn-primary">Save changes</button>
+																	</div>
+																	</div>
 																</td>
 															</tr>
 															@endforeach
