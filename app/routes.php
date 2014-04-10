@@ -20,6 +20,7 @@ Route::post('/users/store','UserController@storeUser');
 Route::post('users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
 Route::post('/manage_user','Admin@addUser');
+Route::post('manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');
 Route::get('/manage_user/{id}','Admin@manage_user');

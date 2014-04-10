@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration {
             $table->String('last_name');	
             $table->String('address');
             $table->integer('level');
-           	$table->String('contact'); 
+           	$table->String('contact');
+           	$table->String('status')->default('active'); 
 			$table->timestamps();
 
 		});

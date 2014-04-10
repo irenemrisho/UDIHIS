@@ -103,14 +103,14 @@
 											<div class="widget widget-table">
 										
 												<div class="widget-header">
-
-													<i class="icon-th-list"></i>
-													<h3>Patients report</h3>
+														    <form class="form-search" style="margin-left:4px">
+															    <input type="text" id="search" class="input-medium search-query" placeholder="Search">
+															</form> 
 												</div> <!-- /widget-header -->
 												
 												<div class="widget-content">
 												
-													<table class="table table-striped table-bordered">
+													<table class="table table-striped table-bordered" id="gtable">
 													   <?php	$users = User::where('level', '!=', 0)->get();					
 															?>
 														
@@ -120,7 +120,8 @@
 																<th>First Name</th>
 																<th>Last Name</th>
 																<th>Designation</th>
-																<th>Date</th>
+																<th>Status</th>
+																<th>Last Access</th>
 																<th>operation</th>
 															</tr>
 														</thead>
@@ -132,7 +133,8 @@
 																<td>{{$user->first_name}}</td>
 																<td>{{$user->last_name}} </td>
 																<td>{{User::level($user->level)}}</td>
-																<td>{{$user->created_at->format('j F, Y')}}</td>
+																<td>{{$user->status}}</td>
+																<td>{{User::ago($user->updated_at)}}</td>
 																<td class="action-td" id="{{$user->id}}">
 																	<a href="#myModal" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
 																		<i class="icon-pencil"></i>								
