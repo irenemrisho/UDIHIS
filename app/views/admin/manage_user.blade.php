@@ -24,96 +24,83 @@
 									  <li class=""><a href="#2" data-toggle="tab">Add user</a></li>
 									</ul>
 
-									<div class="tab-content" style="height: 400px">
-										<div class="tab-pane " id="2" style="position:absolute">
-										<form id="edit-profile" class="form-horizontal4" action="manage_user" method="post">	
-											<fieldset >
-											<div class="span4 pull-left">
-												
-	                                                
-	                                                     <div class="control-group"> 
-	                                                    <label class="control-label" for="first_name">First name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" required />
-	                                                            
-	                                                        </div> <!-- /controls --> 
-	                                                        </div>
-	                                                    <div class="control-group">                                         
-	                                                        <label class="control-label" for="middle_name">Middle name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="middle_name" >
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="last_name">Last name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name" required />
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-	                                                   
-	                                                    <div class="control-group">  
-	                                                     <label class="control-label" for="password">Password</label>
-	                                                        <div class="controls">
-	                                                            <input type="password" class="input-xlarge" name="password" id="" value="">
-	                                                            
-	                                                        </div>                                       
-	                                              
-	                                                    </div> <!-- /control-group -->
-	                                           
-											</div>
-											<div class="span5 pull-right">
+									<div class="tab-content">
+										<div class="tab-pane " id="2">
+						
 
-													 <div class="control-group">  
-	                                                     <label class="control-label" for="username">Email</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge" name="email" id="" value="" required />
-	                                                            
-	                                                        </div>                                       
-	                                              
-	                                                    </div> <!-- /control-group -->
-												
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="address">Address</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="address">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
+											<form id="edit-profile" class="form-horizontal" action="manage_user" method="post">
+                                                <fieldset>
+                                                    <div class="control-group">  
+                                                     <label class="control-label" for="username">Email</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge" name="email" id="" value="">
+                                                            
+                                                        </div>                                       
+                                              
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">  
+                                                     <label class="control-label" for="password">Password</label>
+                                                        <div class="controls">
+                                                            <input type="password" class="input-xlarge" name="password" id="" value="">
+                                                            
+                                                        </div>                                       
+                                              
+                                                    </div> <!-- /control-group -->
+                                                     <div class="control-group"> 
+                                                    <label class="control-label" for="first_name">First name</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" >
+                                                            
+                                                        </div> <!-- /controls --> 
+                                                        </div>
+                                                    <div class="control-group">                                         
+                                                        <label class="control-label" for="middle_name">Middle name</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge " id="" value="" name="middle_name">
+                                                            
+                                                        </div> <!-- /controls -->               
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">                                         
+                                                        <label class="control-label" for="last_name">Last name</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name">
+                                                            
+                                                        </div> <!-- /controls -->               
+                                                    </div> <!-- /control-group -->
+                                                    <div class="control-group">                                         
+                                                        <label class="control-label" for="address">Address</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge " id="" name="address">
+                                                            
+                                                        </div> <!-- /controls -->               
+                                                    </div> <!-- /control-group -->
 
-	                                                     <div class="control-group">                                         
-	                                                        <label class="control-label" for="contact">Contact</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="contact">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
+                                                     <div class="control-group">                                         
+                                                        <label class="control-label" for="contact">Contact</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge " id="" name="contact">
+                                                            
+                                                        </div> <!-- /controls -->               
+                                                    </div> <!-- /control-group -->
 
-	                                                    <div class="control-group">                                         
-	                                                        <label class="control-label" for="username">Designation</label>
-	                                                        <div class="controls">
-	                                                        	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'), '', array('required'=>'required'))}}
-	                        	
-	                                                        </div>
-	                                                                     
-	                                                    </div> <!-- /control-group -->
-	                                                    
-	                                                    <div class="pull-left">
-	                                                        <button class="btn">Cancel</button> <button type="submit" class="btn btn-primary">Add</button>
-	                                                    </div>
-											</div>	
-										</fieldset>	
-										</form>
-
-										<div>
-
-										</div>
-
+                                                    <div class="control-group">                                         
+                                                        <label class="control-label" for="username">Designation</label>
+                                                        <div class="controls">
+                                                        	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'))}}
+                        	
+                                                        </div>
+                                                                     
+                                                    </div> <!-- /control-group -->
+                                                    
+                                                    <div class="pull-right">
+                                                        <button class="btn">Cancel</button> <button type="submit" class="btn btn-primary">Add</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
 										</div>
 										
 										<div class="tab-pane active" id="1">
-											<div class="widget-table">
+											<div class="widget widget-table">
 										
 												<div class="widget-header">
 
@@ -172,7 +159,6 @@
 																	</div>
 																	<div class="modal-body">
 																	  <img src="{{url("packages/bootstrap/img/loader.gif")}}" id="ajax" style="display:none2;z-index:3000;position:absolute;margin-left: 230px; margin-top:100px">
-																	  <span id="ajax2"><img src="{{url("packages/bootstrap/img/load.gif")}}"   style=""></span>
 															          <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:100px">
 															            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 															            <strong>Successfully updated! Redirecting...</strong> 
