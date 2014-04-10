@@ -49,6 +49,18 @@ var Application = function () {
 
 
 $(document).ready(function(){
+
+	$('#search').keyup(function(){
+		var user = $(this).val();
+		$('#gtable').css('opacity', '0.2');
+		$.post('manage_user/search', {u:user}, function(data){
+			$('#gtable').css('opacity', '1');
+			$('#gtable').html(data);	
+		});
+	});
+
+	$('#alert').fadeOut(1000);
+
 	$(".deleteuser").click(function(){
                 var id1 = $(this).parent().attr('id');
                 $(".deleteuser").show("slow").parent().find("span").remove();
@@ -71,6 +83,7 @@ $(document).ready(function(){
 		var uid  = $(this).parent().attr('id');
 		$.get('loaduser/' + uid, function(data){
 			$('#ajax').hide();
+			$('#ajax2').hide();
 			$('#user_content').html(data);
 		});
 	});
@@ -85,14 +98,17 @@ $(document).ready(function(){
 		var contact     = $('#contact').val();
 		var level       = $('#level').val();
 		var address     = $('#address').val();
+		var status      = $("input[name='status']:checked").val();
+
 		$('#ajax').show();
 		$('#editform').css('opacity', '0.2');
-		$.post(action, {e:email, fn:first_name, ln:last_name, mn:middle_name, c:contact, l:level, a:address}, function(data){
+		$.post(action, {e:email, st:status, fn:first_name, ln:last_name, mn:middle_name, c:contact, l:level, a:address}, function(data){
 			$('#ajax').hide();
 			$('#alrt').fadeIn(1000, function(){
 				window.location = url;
 			});
 		})
 	});	
+
 
 });

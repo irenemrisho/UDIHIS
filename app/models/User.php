@@ -11,6 +11,61 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      * @var string
      */
 
+
+
+    public static function active($s){
+        if($s == "active"){
+            return "checked";
+        }else{
+            return "";
+        }
+    }
+
+    public static function blocked($s){
+        if($s == "blocked"){
+            return "checked";
+        }else{
+            return "";
+        }
+    }
+
+        public $timestamps = "false";
+
+        public static function  ago($datetime, $full = false)
+    {
+            
+            if($datetime == '0000-00-00 00:00:00'){
+                return 'never';
+            }else{
+                $now = new DateTime;
+                $ago = new DateTime($datetime);
+                $diff = $now->diff($ago);
+
+                $diff->w = floor($diff->d / 7);
+                $diff->d -= $diff->w * 7;
+
+                $string = array(
+                    'y' => 'year',
+                    'm' => 'month',
+                    'w' => 'week',
+                    'd' => 'day',
+                    'h' => 'hour',
+                    'i' => 'minute',
+                    's' => 'second',
+                );
+                foreach ($string as $k => &$v) {
+                    if ($diff->$k) {
+                        $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                    } else {
+                        unset($string[$k]);
+                    }
+                }
+
+                if (!$full) $string = array_slice($string, 0, 1);
+                return $string ? implode(', ', $string) . ' ago' : 'just now';
+                }
+    }
+
     protected $table = 'users';
 //    protected $fillable = array('user_id','password','s_name');
 //    public $timestamps = false;

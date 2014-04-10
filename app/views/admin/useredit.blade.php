@@ -54,5 +54,15 @@
             </div>
                          
         </div> <!-- /control-group -->
+
+         <div class="control-group">                                         
+            <label class="control-label" for="contact">Status</label>
+            <div class="controls">
+               <p> <input type="radio" name="status" id="optionsRadios1" value="active" {{ User::active($user->status) }}> Active
+                <input type="radio" name="status" id="optionsRadios2" value="blocked" {{ User::blocked($user->status) }}> Block </p>
+            </div> <!-- /controls -->               
+        </div> <!-- /control-group -->
+
+    
     </fieldset>
 </form>

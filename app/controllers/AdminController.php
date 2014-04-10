@@ -36,9 +36,55 @@ class AdminController  extends BaseController{
             $user->level =   $inputs['l']; 
             $user->contact = $inputs['c']; 
             $user->email = $inputs['e']; 
+            $user->status = $inputs['st'];
             $user->save();
             return "ok";
      }
+
+    public function search(){
+          $user = Input::get('u');
+
+          $users = User::where('first_name', 'LIKE', '%'.$user.'%')->get();
+
+
+
+          $res = "<thead>
+                    <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Designation</th>
+                    <th>Status</th>
+                    <th>Last Access</th>
+                    <th>operation</th>
+                    </tr>
+                </thead>
+                <tbody>";
+
+          foreach($users as $u){
+                $res .= "<tr>
+                            <td>".$u->id."</td>
+                            <td>".$u->first_name."</td>
+                            <td>".$u->last_name."</td>
+                            <td>".User::level($u->level)."</td>
+                            <td>".$u->status."</td>
+                            <td>".User::ago($u->updated_at)."</td>
+                            <td class='action-td' id=".$u->id.">
+                            <a href='#myModal' class='btn btn-small btn-primary fetchuser'  data-toggle='modal'>
+                            <i class='icon-pencil'></i>                             
+                            </a>                    
+                            <a href='javascript:;' class='btn btn-small btn-danger deleteuser'>
+                            <i class='icon-trash'></i>                              
+                            </a>
+                        </td>
+                        </tr>";
+          }      
+
+            $res .= "</tbody>";
+                                                        
+            return $res;                                       
+
+    }
 
 	public function addUser(){
 			$inputs = Input::all();
@@ -50,8 +96,8 @@ class AdminController  extends BaseController{
 				"level"=>$inputs['level'],
 				"password"=>Hash::make($inputs['password']),
 				"address" =>$inputs['address'],
-				"contact"=>$inputs['contact']
-
+				"contact"=>$inputs['contact'],
+                "updated_at"=>"0000-00-00 00:00:00"
 				));
 			if ($usr) {
 				return Redirect::to('manage_user');
