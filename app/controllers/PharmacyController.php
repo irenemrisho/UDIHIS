@@ -13,6 +13,10 @@
  */
 class PharmacyController extends BaseController {
 
+    public function __construct(){
+            $this->beforeFilter('auth', array('*'));
+    }
+
     public function getIndex(){
         
         return View::make('Pharmacy.pharmacy_page');

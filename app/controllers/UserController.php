@@ -13,7 +13,14 @@
  */
 class UserController extends BaseController {
 
+    
+    public function __construct(){
+            $this->beforeFilter('auth', array('except'=>array('getIndex','login')));
+    }
+
     protected $layout = 'layouts.master';
+
+
 
     public function getIndex() {
         $this->layout->content = View::make('login.login_page');
@@ -69,7 +76,7 @@ class UserController extends BaseController {
    }
    else{
 
-        return Redirect::to('login');
+        return View::make('login.login_page')->with('emsg', 'username/password incorrect!');
    }
        
 
