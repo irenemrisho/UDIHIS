@@ -12,6 +12,11 @@
  * @author irene
  */
 class Admin  extends BaseController{
+
+
+	 public function __construct(){
+            $this->beforeFilter('auth', array('*'));
+    }
             public function getIndex(){
             return View::make("admin.admini_page");
     }
