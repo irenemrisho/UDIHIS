@@ -44,26 +44,29 @@
         <fieldset>
          @if($errors->any())
             {{ implode('', $errors->all('<div class="alert alert-warning alert-dismissable">:message</div>') ) }}
-            @endif
+        @endif
+
+        @if(isset($emsg))
+            <div id="alert" class="alert alert-danger alert-dismissable">{{$emsg}}</div>
+        @endif
 
 
             <div class="control-group">
                 <label class="control-label" for="email">Email</label>
                 <div class="controls">
-                    <input type="text"  name="email" class="" id="email" placeholder="Email">
+                    <input type="text"  name="email" class="" id="email" placeholder="Email" required />
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label" for="password">Password</label>
                 <div class="controls">
-                    <input type="password"  name="password" class="" id="password" placeholder="Password">
+                    <input type="password"  name="password" class="" id="password" placeholder="Password" required />
                 </div>
             </div>
         </fieldset>
 
         <div id="remember-me" class="pull-left">
-            <input type="checkbox" name="remember" id="remember" />
-            <label id="remember-label" for="remember">Remember Me</label>
+            
         </div>
 
         <div class="pull-right">
@@ -77,7 +80,7 @@
 
 
     <div id="login-extra">
-        <p><a href="forgot_password.html">Forgot Password? </a></p>			
+        		
     </div> <!-- /login-extra -->
     <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
