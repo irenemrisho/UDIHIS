@@ -51,6 +51,21 @@ Route::get('billing','BillingController@getIndex');
 Route::get('Pending_bills','BillingController@getBills');
 Route::get('Insurance_management','BillingController@getInsurance');
 
+///Receptionist
+/*for listsing patients and adding*/
+Route::get('reception', 'ReceptionController@getIndex');
+Route::get('patients' , 'PatientController@index');
+/*to add a patient*/
+Route::post('patients/add' , 'PatientController@store');
+/*for editing a patient*/
+Route::get('patients/edit/{id}' , 'PatientController@edit');
+/*to update patient infor*/
+Route::post('patients/edit/{id}' , 'PatientController@update');
+/*to delete a patient*/
+Route::get('patients/delete/{id}' , 'PatientController@destroy');
+//});
+
+
 
 //Route::get('/login', function() {
 //    return Redirect::to('/');
