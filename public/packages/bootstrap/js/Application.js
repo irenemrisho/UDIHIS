@@ -50,6 +50,23 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('.fetch-patient').on('click', function(data){
+    	var id = $(this).parent().attr('id');
+    	$.post('patients/profile', {id:id}, function(data){
+    		$('#profile').html(data);
+    	});
+    });
+
+	$('#section').on('change',function(){
+		var sect = $(this).val();
+		$.post('loadsection', {sect:sect}, function(data){
+			$('#section-more').html(data);
+		});
+
+	});
+
+	$('.date').datepicker({});
+	
 	$('#search').keyup(function(){
 		var user = $(this).val();
 		$('#gtable').css('opacity', '0.2');
@@ -110,5 +127,11 @@ $(document).ready(function(){
 		})
 	});	
 
+$('#myWizard').easyWizard();
 
 });
+
+
+
+
+ 
