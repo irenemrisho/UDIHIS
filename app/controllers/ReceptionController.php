@@ -18,6 +18,22 @@ class ReceptionController  extends BaseController{
     		public function manage_patients(){
             return View::make("admin.manage_user");
     }
+
+
+    public function loadsection(){
+    	$section = Input::get('sect');
+    	return View::make('reception.section',compact('section'));
+    }
+
+    public function savepatientinfo(){
+
+    	$inputs = Input::all();
+
+    	Patient::create($inputs);
+
+
+    }
+
 	public function addUser(){
 			$inputs = Input::all();
 			$usr = User::create(array(
