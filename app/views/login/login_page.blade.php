@@ -24,7 +24,6 @@
     <center>{{HTML::image('packages/bootstrap/img/login.png')}}</center>
 
 
-   
 
     <div id="login-header">
 
@@ -70,7 +69,7 @@
         </div>
 
         <div class="pull-right">
-            <button type="submit" name="login" class="btn btn-primary btn-large" style="padding:6px 18px; border-radius:0px;">
+            <button type="submit" name="login" class="btn btn-primary btn-large" >
                 Login
             </button>
         </div>
@@ -82,9 +81,7 @@
     <div id="login-extra">
         		
     </div> <!-- /login-extra -->
-    <div id="rights" style="text-align:center;">
-        ©13-14 UDIHIS
-    </div>
+    
 
 
 </div> <!-- /login-wrapper -->

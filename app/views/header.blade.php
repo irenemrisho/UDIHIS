@@ -3,28 +3,7 @@
         <div class="navbar-inner">
 
             <div class="container">
-<?php   if (Auth::user()) {
-    
-?>
-                @if(Auth::user()->level == 0)
-                <a class="brand" href="./index.html">Administrator</a>
-                @endif
-
-                @if(Auth::user()->level == 1)
-                <a class="brand" href="">Pharmacy</a>
-                @endif
-
-                @if(Auth::user()->level == 2)
-                <a class="brand">Lab Technician</a>
-                @endif
-                @if(Auth::user()->level == 3)
-                <a class="brand">Receptionist</a>
-                @endif
-                @if(Auth::user()->level == 4)
-                <a class="brand">Doctor</a>
-                @endif 
-                <?php }else
-          ?>     
+<a class="brand" href="./login.html">UDSM Integrated Hospital Information System</a>    
                 <div class="nav-collapse">
            
 

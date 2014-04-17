@@ -32,10 +32,10 @@
 						<table id="patients" class="table table-striped table-bordered">
 							<thead>
 								<tr>
-									<th>ID</th>
+									<th>File Number</th>
 									<th>First Name</th>
 									<th>Last Name</th>
-									<th>Contact</th>
+									<th>Payment Type</th>
 									
 									<th>&nbsp;</th>
 								</tr>
@@ -44,14 +44,14 @@
 							<tbody>
 						
 						@foreach($patients as $patient)
-								<tr><td>{{$patient->id}}</td>
-									<td>{{$patient->first_name}}</td>
-									<td>{{$patient->middle_name}}</td>
-									<td>{{$patient->contact}}</td>
-									<td></td>
+								<tr><td>{{$patient->filenumber}}</td>
+									<td>{{$patient->firstname}}</td>
+									<td>{{$patient->lastname}}</td>
+									<td>{{$patient->paymenttype}}</td>
 									
-									<td class="action-td">
-										<a href="#myModal" role="button" class="btn" data-toggle="modal">Consult</a>
+									
+									<td class="action-td" id="{{$patient->id}}">
+										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
 									</td>
 								</tr>
 						@endforeach
@@ -64,22 +64,26 @@
 						</table>
 						<?php echo $patients->links(); ?>
 
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">{{$patient->first_name}}</h3>
-</div>
-<div class="modal-body">
-<textarea></textarea>
+				<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h3 id="myModalLabel">Patient Profile</h3>
+							</div>
+							<div class="modal-body">
+						
+							<div id="profile">
 
 
+							</div>																				
 
-</div>
-<div class="modal-footer">
-<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-<button class="btn btn-primary">Lab test</button>
-</div>
-</div>
+							</div>
+							<div class="modal-footer">
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+								<button class="btn btn-primary">Admit</button>
+								<button class="btn btn-primary">Laboratory</button>
+								<button class="btn btn-primary" id="prescribe">Prescribe</button>
+							</div>
+				</div>
 					
 					</div> <!-- /widget-content -->
 														
