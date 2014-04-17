@@ -23,10 +23,13 @@
 				'debug' : false,
 				'submitButton': true,
 				'submitButtonText': 'Submit',
-				'submitButtonClass': '',
+				'submitButtonClass': 'btn btn-success',
 				before: function(wizardObj, currentStepObj, nextStepObj) {},
 				after: function(wizardObj, prevStepObj, currentStepObj) {},
 				beforeSubmit: function(wizardObj) {
+					
+					alert( JSON.stringify(wizardObj) );
+
 					wizardObj.find('input, textarea').each(function() {
 						if(!this.checkValidity()) {
 							this.focus();
@@ -66,7 +69,8 @@
 						$(this).css({
 							'float': 'left',
 							'width': thisSettings.width,
-							'height': '1px'
+							'height': '1px',
+							'display': 'block'
 						}).attr('data-step', step);
 
 						if(!index) {
@@ -111,9 +115,22 @@
 
 					// beforeSubmit Callback
 					$this.find('[type="submit"]').bind('click.easyWizard', function(e) {
-						$wizard = $(this).parents('.easyWizardElement');
+						
+						var data = $('#myWizard').serializeArray();
+						$('#myWizard').css('opacity', '0.2');
+
+						$.post('savepatientinfo', data, function(data){
+							$('#alrt').fadeIn(1000, function(){
+								window.location = 'patients';
+							});
+						});
+
+						return false;
+
+						/*$wizard = $(this).parents('.easyWizardElement');
+						alert(JSON.stringify($wizard))
 						thisSettings.beforeSubmit($wizard);
-						return true;
+						return true;*/
 					});
 				}else if(thisSettings.debug) {
 					console.log('Can\'t make a wizard with only one step oO');
