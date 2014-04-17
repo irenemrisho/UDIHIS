@@ -13,7 +13,9 @@
     {{HTML::style('packages/bootstrap/css/style.css')}}
     {{HTML::style('packages/bootstrap/css/style-responsive.css')}}
     {{HTML::style('packages/bootstrap/css/login.css')}}
-    {{HTML::style('package/bootstrap/css/dashbord.css')}}
+    {{HTML::style('packages/bootstrap/css/dashbord.css')}}
+    {{HTML::style('packages/bootstrap/css/easyWizard.css')}}
+    {{HTML::style('packages/bootstrap/css/ui.css')}}
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
   
