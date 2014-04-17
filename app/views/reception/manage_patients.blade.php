@@ -24,7 +24,14 @@
 
 										<div class="tab-content">
 											<div class="tab-pane active " id="2">
-											
+										
+
+
+									          <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:150px">
+									            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									            <strong>Successfully updated! Redirecting...</strong> 
+									          </div>
+
 												 <form id="myWizard" type="get" action="">
 											        <section class="step" data-step-title="Personal Information">
 											            	
@@ -33,7 +40,7 @@
 														<div class="control-group"> 
 			                                                    <label class="control-label" for="first_name">Hospital File Number</label>
 			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge " id="" value="" name="" required />
+			                                                            <input type="text" class="input-xlarge " id="" value="" name="filenumber"/>
 			                                                            
 			                                                        </div> <!-- /controls --> 
 	                                                        </div>
@@ -41,7 +48,7 @@
 	                                                     <div class="control-group"> 
 			                                                    <label class="control-label" for="first_name">First name</label>
 			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" required />
+			                                                            <input type="text" class="input-xlarge " id="" value="" name="firstname"  />
 			                                                            
 			                                                        </div> <!-- /controls --> 
 	                                                        </div>
@@ -49,7 +56,7 @@
 														<div class="control-group">                                         
 	                                                        <label class="control-label" for="last_name">Last name</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name" required />
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="lastname"  />
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
@@ -57,7 +64,7 @@
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="gender">Gender</label>
 	                                                        <div class="controls">
-	                                                            <select class="form-control">
+	                                                            <select class="form-control" name="gender">
 	                                                            	<option>Male</option>
 	                                                            	<option>Female</option>
 	                                                            </select>
@@ -71,7 +78,7 @@
 												 <div class="control-group"> 
 			                                                    <label class="control-label" for="first_name">Date of birth</label>
 			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge date" id="" value="" name="birth" required />
+			                                                            <input type="text" class="input-xlarge date" id="" value="" name="birth" />
 			                                                            
 			                                                        </div> <!-- /controls --> 
 	                                                        </div>
@@ -86,7 +93,7 @@
 	                                                     <div class="control-group">                                         
 	                                                        <label class="control-label" for="contact">Phone number</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="contact">
+	                                                            <input type="text" class="input-xlarge " id="" name="phone">
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
@@ -97,7 +104,7 @@
 										</fieldset>	
 										
 											        </section>
-											        <section class="step" data-step-title="Initial Information">
+											        <section style="display:none" class="step" data-step-title="Initial Information">
 											            			<fieldset >
 											<div class="span4 pull-left">
 												
@@ -105,21 +112,21 @@
 	                                                     <div class="control-group"> 
 	                                                    <label class="control-label" for="temperature">Temperature</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="" required />
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="temperature" />
 	                                                            
 	                                                        </div> <!-- /controls --> 
 	                                                        </div>
 	                                                    <div class="control-group">                                         
 	                                                        <label class="control-label" for="bp">Blood Pressure</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="" >
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
 														<div class="control-group">                                         
 	                                                        <label class="control-label" for="">Weight</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="" required />
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="weight"  />
 	                                                            
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
@@ -127,16 +134,22 @@
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="password">Allergy</label>
 	                                                        <div class="controls">
-	                                                            <input type="password" class="input-xlarge" name="password" id="" value="">
+	                                                            <input type="text" class="input-xlarge" name="allergy" id="" value="allergy">
 	                                                            
 	                                                        </div>                                       
 	                                              
 	                                                    </div> <!-- /control-group -->
 
+	                                                    
+	                                           
+											</div>
+
+											<div class="span4 pull-right">
+
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="gender">Blood Group</label>
 	                                                        <div class="controls">
-	                                                            <select class="form-control">
+	                                                            <select class="form-control" name="bloodgroup">
 	                                                            	<option>A</option>
 	                                                            	<option>B</option>
 	                                                            	<option>O</option>
@@ -146,86 +159,80 @@
 	                                                    </div> <!-- /control-group -->
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="gender">Rhesus Factor</label>
-	                                                        <div class="controls">
-	                                                         
-	                                                            
+	                                                        <div class="control-group ">
+	                                                        <label class="radio">
+																<input type="radio" name="rhesus" id="" value="positive" checked>
+																Positive
+																</label>
+																<label class="radio">
+																<input type="radio" name="rhesus" id="" value="negative">
+																Negative</label>
 	                                                            
 	                                                        </div>                                       
 	                                              
 	                                                    </div> <!-- /control-group -->
-
-
-	                                                    
-	                                           
 											</div>
 												
 											
 										</fieldset>	
 											        </section>
-											        <section class="step" data-step-title="More Information">
-											            			<fieldset >
+
+
+											        
+											        <section style="display:none" class="step" id="last" data-step-title="More Information">
+											
+											
+									                 	
+
+											<fieldset >
 											<div class="span4 pull-left">
 												
-	                                                
-	                                                     <div class="control-group"> 
-	                                                    <label class="control-label" for="first_name">First name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="first_name" required />
+	                                                   <div class="control-group ">
+	                                                   <h4>Payment Type</h4>
+	                                                        <label class="radio">
+																<input type="radio" name="paymenttype" id="" value="Cash" checked>
+																Cash
+																</label>
+																<label class="radio">
+																<input type="radio" name="paymenttype" id="" value="NHIF">
+																NHIF</label>
 	                                                            
-	                                                        </div> <!-- /controls --> 
-	                                                        </div>
-	                                                    <div class="control-group">                                         
-	                                                        <label class="control-label" for="middle_name">Middle name</label>
+	                                                      </div> 
+	                                                      <h4>Next To Keen Information </h4>
+	                                                <div class="control-group">                                         
+	                                                        <label class="control-label" for="">Full Name</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="middle_name" >
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="last_name">Last name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="last_name" required />
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="fullname"  />
 	                                                            
 	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
+	                                                  </div> <!-- /control-group -->
+	                                                   <div class="control-group">                                         
+	                                                        <label class="control-label" for="">Phone Number</label>
+	                                                        <div class="controls">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="phone2"  />
+	                                                            
+	                                                        </div> <!-- /controls -->               
+	                                                  </div> <!-- /control-group -->
 	                                                   
-	                                                    <div class="control-group">  
-	                                                     <label class="control-label" for="password">Password</label>
-	                                                        <div class="controls">
-	                                                            <input type="password" class="input-xlarge" name="password" id="" value="">
-	                                                            
-	                                                        </div>                                       
-	                                              
-	                                                    </div> <!-- /control-group -->
+	                                                 
 	                                           
 											</div>
 											<div class="span4 pull-right" style="margin-left:4px;">
 
-													 <div class="control-group">  
-	                                                     <label class="control-label" for="username">Email</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge" name="email" id="" value="" required />
-	                                                            
-	                                                        </div>                                       
-	                                              
-	                                                    </div> <!-- /control-group -->
 												
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="address">Address</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="address">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
+	                                                   
+	                                                  <label class="control-label">Direct To &raquo</label>
+	                                                  <p>SECTION</p>
+	                                                  <select id="section" name="section" class="form-control">  
+	                                                    <option></option>
+	                                                  	<option>OPD</option>
+	                                                  	<option>IPD</option>	                      
+	                                                  	<option>ANC</option>
+	                                                  </select>
 
-	                                                     <div class="control-group">                                         
-	                                                        <label class="control-label" for="contact">Contact</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="contact">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-
+	                                                  <div id="section-more">
+														
+	                                                  </div>	
 	                                              
 											</div>	
 											
@@ -265,14 +272,12 @@
 														
 														@foreach($patients as $patient)
 																<tr><td>{{$patient->id}}</td>
-																	<td>{{$patient->first_name}}</td>
-																	<td>{{$patient->middle_name}}</td>
-																	<td>{{$patient->contact}}</td>
+																	<td>{{$patient->firstname}}</td>
+																	<td>{{$patient->lastname}}</td>
+																	<td>{{$patient->phone}}</td>
 																	<td></td>
 																	
-																	<td class="action-td">
-																		<a href="#myModal" role="button" class="btn" data-toggle="modal">Consult</a>
-																	</td>
+																	
 																</tr>
 														@endforeach
 															
