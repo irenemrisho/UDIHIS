@@ -11,6 +11,7 @@
   |
  */
 
+
 //Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
@@ -53,6 +54,8 @@ Route::get('Insurance_management','BillingController@getInsurance');
 
 ///Receptionist
 /*for listsing patients and adding*/
+Route::post('loadsection', 'ReceptionController@loadsection');
+Route::post('savepatientinfo', 'ReceptionController@savepatientinfo');
 Route::get('reception', 'ReceptionController@getIndex');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
@@ -63,6 +66,7 @@ Route::get('patients/edit/{id}' , 'PatientController@edit');
 Route::post('patients/edit/{id}' , 'PatientController@update');
 /*to delete a patient*/
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
+Route::post('patients/profile', 'PatientController@profile');
 //});
 
 
