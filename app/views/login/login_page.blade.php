@@ -35,7 +35,7 @@
     <div id="login-content" class="clearfix">
 
 
-
+       
 
         {{Form::open(array('url'=>'/login'))}}
 

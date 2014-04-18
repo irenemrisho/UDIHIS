@@ -33,10 +33,10 @@
                                     <?php $index=1; ?>
 				      @foreach($provided_medicines as $provided_medicine)
 					<tr><td>{{$index}}</td>
-					<td>{{$provided_medicine->created_at}}</td>
-					<td>{{Patient::find(Patients_visit::find($provided_medicine->pv_id)->patient_id)->first_name}}</td>
-					<td>{{User::find(Patients_visit::find($provided_medicine->pv_id)->doctor_id)->first_name}} </td>
-					<td>{{$provided_medicine->medicine_id}} </td>
+					<td>{{--$provided_medicine->created_at--}}</td>
+					<td>{{--Patient::find(Patients_visit::find($provided_medicine->pv_id)->patient_id)->first_name--}}</td>
+					<td>{{--User::find(Patients_visit::find($provided_medicine->pv_id)->doctor_id)->first_name--}} </td>
+					<td>{{--$provided_medicine->medicine_id--}} </td>
                                         <td>{{$provided_medicine->quantity}} </td>
                                                                                                                                 
                                                                                                                                 

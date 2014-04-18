@@ -50,6 +50,19 @@ var Application = function () {
 
 $(document).ready(function(){
 
+
+	$('#presc').on('click', function(){
+		var data = $('#presform').serializeArray();
+		$.post('recommended', data, function(data){
+			window.location = "backpatients";
+		});
+	});
+
+	$('#prescribe').on('click', function(){
+		var pid = $('#pid').val();
+		window.location = "patients/prescribe/" + pid;
+	});
+
     $('.fetch-patient').on('click', function(data){
     	var id = $(this).parent().attr('id');
     	$.post('patients/profile', {id:id}, function(data){

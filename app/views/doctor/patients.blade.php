@@ -98,6 +98,8 @@
             $('#patients').dataTable();
           
     });
+
+    
     </script>
 		@stop
 

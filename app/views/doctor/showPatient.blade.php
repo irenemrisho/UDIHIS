@@ -39,7 +39,7 @@
 										<td>{{ $patient->birth}}</td>
 										<td>{{ $patient->weight}}</td>
 										<td>{{ $patient->alergy}}</td>
-										<td>{{ $patient->gender}}</td>
+										<td>{{ $patient->gender}} <input id="pid" type="hidden" value="{{$patient->id}}"  /></td>
 									</tr>
 											
 

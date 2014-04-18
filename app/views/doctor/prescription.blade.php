@@ -29,40 +29,51 @@
 										<div class="tab-pane active" id="1">
 						
 
-											<form id="edit-profile" class="form-horizontal pull-center" action="">
+											<form id="presform" class="form-horizontal pull-center" action="">
 												<fieldset>
 													<div class="control-group">											
 														<label class="control-label" for="username">First name</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge " id="phone" value="">
+															{{$patient->firstname}}
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													<div class="control-group">											
 														<label class="control-label" for="username">Second name</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge " id="phone" value="">
+															{{$patient->lastname}}
+															
+														</div> <!-- /controls -->				
+													</div> <!-- /control-group -->
+												
+													
+													<div class="control-group">											
+														<label class="control-label" for="username">Prescribed Medicine</label>
+														<div class="controls">
+															<input type="text" class="input-xlarge " name="prescribedmedicine" >
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													<div class="control-group">											
-														<label class="control-label" for="username">Prescribed Medicine</label>
+														<label class="control-label" for="username">Quantity</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge " id="phone" value="">
+															<input type="text" class="input-xlarge " name="quantity">
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													<div class="control-group">											
 														<label class="control-label" for="username">Notes</label>
 														<div class="controls">
-															<textarea rows="3" class="input-xlarge "></textarea> 
-															
+															<textarea rows="3" class="input-xlarge " name="notes"></textarea> 
+															<input type="hidden" name="pid" value="{{$patient->id}}" />
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													
 													<div class="pull-right">
-														<button class="btn">Cancel</button> <button type="submit" class="btn btn-primary">Save</button>
+														<button class="btn">Cancel</button> <button type="button" id="presc" class="btn btn-primary">Save</button>
 													</div>
+											
+														
 												</fieldset>
 											</form>
 										</div>

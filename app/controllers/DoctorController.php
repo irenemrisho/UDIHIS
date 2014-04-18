@@ -18,6 +18,24 @@ class DoctorController extends BaseController {
 
 	}
 
+	public function recommend(){
+		$inputs      = Input::all();
+		//$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
+		$recommend   = Recommended_medicine::create(array(
+				"medicine_id"=>1,
+				"pv_id"=>1,
+				"status"=>"open",
+				"quantity"=>$inputs['quantity'],
+				"description"=>$inputs['notes']
+		));
+		return "ok";
+	}
+
+	public function prescribe($id){
+		$patient = Patient::find($id);
+		return View::make('doctor.prescription', compact('patient'));
+	}
+
 	public function appointment(){
 		return View::make('doctor.appointment');
 

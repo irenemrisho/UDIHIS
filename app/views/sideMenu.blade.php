@@ -12,10 +12,9 @@
 
 @if(Auth::user()->level == 1)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class="active"><a href=""><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="#"><i class="icon-exchange"></i>Provide medication</a></li>
-    <li><a href="patients"><i class="icon-user-md"></i>Manage medicine </a></li>
-    <li><a href="#"><i class="icon-stethoscope"></i>Medicine category<span class="label label-warning pull-right"></span></a></li>
+    <li class="active"><a href="dashboard"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="provide_medication"><i class="icon-exchange"></i>Provide medication</a></li>
+    <li><a href="manage_medicine"><i class="icon-user-md"></i>Manage medicine </a></li>
     <li><a href="reports.html"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="#"><i class="icon-user"></i>My account</a></li>
 </ul>

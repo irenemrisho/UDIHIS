@@ -12,6 +12,8 @@
  */
 
 
+
+
 //Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
@@ -33,10 +35,12 @@ Route::get('loaduser/{id}', 'UserController@loaduser');
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('patients','DoctorController@patients');
+Route::get('patients/prescribe/backpatients','DoctorController@patients');
 Route::get('profile','DoctorController@profile');
 Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
-
+Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
+Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');

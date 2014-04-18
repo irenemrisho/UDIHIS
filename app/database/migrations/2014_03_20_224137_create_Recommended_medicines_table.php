@@ -18,6 +18,7 @@ class CreateRecommendedMedicinesTable extends Migration {
             $table->integer('pv_id')->references('id')->on('patients_visits');
             $table->String('quantity');
             $table->String('status');
+           
 			$table->timestamps();
 
 		});
