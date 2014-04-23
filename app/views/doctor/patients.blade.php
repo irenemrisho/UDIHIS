@@ -51,7 +51,7 @@
 									
 									
 									<td class="action-td" id="{{$patient->id}}">
-										<a href="lab_test" role="button" class="btn fetch-patient">Attend</a>
+										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
 									</td>
 								</tr>
 						@endforeach
