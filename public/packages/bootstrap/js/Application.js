@@ -61,6 +61,11 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#laboratory').on('click', function(){
+		var pid = $('#pid').val();
+		window.location = "patients/lab_test/" + pid;
+	});
+
 	$('#prescribe').on('click', function(){
 		var pid = $('#pid').val();
 		window.location = "patients/prescribe/" + pid;

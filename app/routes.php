@@ -32,7 +32,7 @@ Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
-Route::get('lab_test','DoctorController@lab_test');
+Route::get('patients/lab_test/{id}','DoctorController@lab_test');
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('patients','DoctorController@patients');

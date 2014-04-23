@@ -2,6 +2,7 @@
 @section('main')
 <h3 class="page-title"><i class="icon-info-sign"></i>Receptionist dashboard</h3>
    
+   <div class="widget-content">
 		<div class="container-fluid padded">
             <div class="container-fluid padded">
 				<div class="row-fluid">
@@ -38,5 +39,6 @@
         		</div>
         	</div>		<!---DASHBOARD MENU BAR ENDS HERE-->
     	</div> 
+    	</div>
 
 @stop
