@@ -1,53 +1,28 @@
-							<table class="table table-striped">
-								<thead>
-										<tr>
-											<th>File Number</th>
-											<th>First Name</th>
-											<th>Last Name</th>
-											<th>Payment Type</th>
-											 <th>Blood Group</th>
-											 
-											
-											<th>&nbsp;</th>
-										</tr>
-									</thead>
-									
-										<tr>
-										<td>{{ $patient->filenumber}}</td>
-										<td>{{ $patient->firstname}}</td>
-										<td>{{ $patient->lastname}}</td>
-										<td>{{ $patient->paymenttype}}</td>
-										<td>{{ $patient->bloodgroup}}</td>
-										
+<div style="width:800px; margin:20px; font-size: 17px">
+	<div class="pull-left" style="width:400px; ">
+		<ul>
+			<li style="list-style: none">File Number:  {{ $patient->filenumber}}</li>
+			<li style="list-style: none">First Name:    {{ $patient->firstname}}</li>
+			<li style="list-style: none">Last Name :    {{ $patient->lastname}}</li>
+			<li style="list-style: none">Payment Type:   {{ $patient->paymenttype}}</li>
+			<li style="list-style: none">Blood Group :   {{ $patient->bloodgroup}}</li>
+			
+		</ul>
+	</div>
+	
+	<div class="pull-right" style="width:400px">
+ 		<ul>
+			<li style="list-style: none">Rhesus:   {{ $patient->rhesus}}</li>
+			<li style="list-style: none">Birth Date:   {{ $patient->birth}}</li>
+			<li style="list-style: none">Weight:   {{ $patient->weight}}</li>
+			<li style="list-style: none">Allergy:   {{ $patient->alergy}}</li>
+			<li style="list-style: none">Gender: {{ $patient->gender}} <input id="pid" type="hidden" value="{{$patient->id}}"/></li>
+			
+		</ul>
+	</div>
 
-									</tr>
-									<thead>	
-										<tr>
-											<th>Rhesus</th>
-											 <th>Birth Date</th>
-											 <th>Weight</th>
-											 <th>Allergy</th>
-											 <th>Gender</th>
-										</tr>
-								</thead>
-															
-
-
-									
-									<tr >
-										<td>{{ $patient->rhesus}}</td>
-										<td>{{ $patient->birth}}</td>
-										<td>{{ $patient->weight}}</td>
-										<td>{{ $patient->alergy}}</td>
-										<td>{{ $patient->gender}} <input id="pid" type="hidden" value="{{$patient->id}}"  /></td>
-									</tr>
-											
-
-							    		
-
-							</table>
-
-								
-								<label class="control-label" for="">Consultation Notes</label>
-
-									<textarea rows="2" class="form-control"></textarea>	
+	<div style="clear:both" style="width:400px; margin: 40px">
+		<label class="control-label" for="">Consultation Notes</label>
+	<textarea rows="2" style="width:600px;" class="form-control"></textarea>	
+	</div>	
+</div>
