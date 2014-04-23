@@ -66,7 +66,7 @@
 											<div class="span5 pull-right" style="margin-left:4px;">
 
 													 <div class="control-group">  
-	                                                     <label class="control-label" for="username">Email</label>
+	                                                     <label class="control-label" for="username">Username</label>
 	                                                        <div class="controls">
 	                                                            <input type="text" class="input-xlarge" name="email" id="" value="" required />
 	                                                            

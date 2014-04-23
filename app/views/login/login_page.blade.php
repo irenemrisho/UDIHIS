@@ -51,9 +51,9 @@
 
 
             <div class="control-group">
-                <label class="control-label" for="email">Email</label>
+                <label class="control-label" for="email">Username</label>
                 <div class="controls">
-                    <input type="text"  name="email" class="" id="email" placeholder="Email" required />
+                    <input type="text"  name="email" class="" id="" placeholder="Username" required />
                 </div>
             </div>
             <div class="control-group">

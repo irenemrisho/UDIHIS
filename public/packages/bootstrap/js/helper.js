@@ -1,3 +1,3 @@
 function toString(str){
-	return JSON.stringify(str);
+	alert(JSON.stringify(str));
 }

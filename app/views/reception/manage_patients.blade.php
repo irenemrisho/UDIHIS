@@ -8,9 +8,7 @@
 				<div class="row">
 					<div class="span9">
 							<div class="widget-content">
-								@if(Session::has('message'))
-								<div class="alert alert-info" id="message">{{ Session::get('message') }}</div>
-								@endif
+								
 								<div class="tabbable">
 									<ul class="nav nav-tabs">
 									  <li class="active">
@@ -33,27 +31,19 @@
 									            <strong>Successfully updated! Redirecting...</strong> 
 									          </div>
 
+									          @if(isset($message))
+												<div class="alert alert-info" id="message">{{ $message }}</div>
+											@endif
+
 												 <form id="myWizard" type="get" action="">
 
 											        <section style="display:none" class="step" data-step-title="Initial Information">
 											            			<fieldset >
+											          				
 											<div class="span4 pull-left">
 												
 	                                                
-	                                                     <div class="control-group"> 
-	                                                    <label class="control-label" for="temperature">Temperature</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="temperature" />
-	                                                            
-	                                                        </div> <!-- /controls --> 
-	                                                        </div>
-	                                                    <div class="control-group">                                         
-	                                                        <label class="control-label" for="bp">Blood Pressure</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
+	                                                    <h4 >Full name :  {{Patient::fullname($newpatient)}} </h4>
 														<div class="control-group">                                         
 	                                                        <label class="control-label" for="">Height</label>
 	                                                        <div class="controls">
@@ -73,6 +63,7 @@
 	                                                     <label class="control-label" for="password">Allergy</label>
 	                                                        <div class="controls">
 				                                               	<select class="form-control" name="allergy">
+				                                               		<option></option>
 				                                               		<option>Skin</option>
 				                                               		<option>None</option>	
 	                                                        	</select>
@@ -85,11 +76,27 @@
 											</div>
 
 											<div class="span4 pull-right">
+<h4> Hospital File no: <b>{{$newpatient->filenumber}}</b></h4>  
+													                                                     <div class="control-group"> 
+	                                                    <label class="control-label" for="temperature">Temperature</label>
+	                                                        <div class="controls">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="temperature" />
+	                                                            
+	                                                        </div> <!-- /controls --> 
+	                                                        </div>
+	                                                    <div class="control-group">                                         
+	                                                        <label class="control-label" for="bp">Blood Pressure</label>
+	                                                        <div class="controls">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
+	                                                            
+	                                                        </div> <!-- /controls -->               
+	                                                    </div> <!-- /control-group -->
 
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="gender">Blood Group</label>
 	                                                        <div class="controls">
 	                                                            <select class="form-control" name="bloodgroup">
+	                                                            	<option></option>
 	                                                            	<option>A</option>
 	                                                            	<option>B</option>
 	                                                            	<option>O</option>
@@ -101,7 +108,7 @@
 	                                                     <label class="control-label" for="gender">Rhesus Factor</label>
 	                                                        <div class="control-group ">
 	                                                        <label class="radio">
-																<input type="radio" name="rhesus" id="" value="positive" checked>
+																<input type="radio" name="rhesus" id="" value="positive" >
 																Positive
 																</label>
 																<label class="radio">
@@ -126,6 +133,7 @@
 
 											<fieldset >
 											<div class="span4 pull-left">
+	                                                    <h4 >Full name :  {{Patient::fullname($newpatient)}} </h4>
 												
 	                                                   <div class="control-group ">
 	                                                   <h4>Payment Type</h4>
@@ -146,7 +154,8 @@
 											<div class="span4 pull-right" style="margin-left:4px;">
 
 												
-	                                                   
+	       <h4> Hospital File no: <b>{{$newpatient->filenumber}}</b></h4>  
+	       <input name="pid" value="{{$newpatient->id}}" type="hidden" />                                            
 	                                                  <label class="control-label">Direct To &raquo</label>
 	                                                  <p>SECTION</p>
 	                                                  <select id="section" name="section" class="form-control">  

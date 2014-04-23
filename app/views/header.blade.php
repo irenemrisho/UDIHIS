@@ -49,7 +49,7 @@
                             @endif 
      
                             <span class="account-actions">
-                                <a style="color:#888; text-decoration:none;" href="./logout"><i class="icon-off"></i> Logout</a>
+                                <a style="color:#888; text-decoration:none;" href="{{url("logout")}}"><i class="icon-off"></i> Logout</a>
                             </span>
 
                         </div> <!-- /account-details -->

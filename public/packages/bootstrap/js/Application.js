@@ -51,7 +51,7 @@ var Application = function () {
 $(document).ready(function(){
 
 
-
+	$('.alert').fadeOut(3000);
 
 
 	$('#presc').on('click', function(){

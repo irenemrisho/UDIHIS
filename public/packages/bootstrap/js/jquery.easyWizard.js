@@ -119,11 +119,12 @@
 						var data = $('#myWizard').serializeArray();
 						$('#myWizard').css('opacity', '0.2');
 
-						$.post('savepatientinfo', data, function(data){
-							//alert(data);
+						$.post('savepatientinfo1', data, function(data){
+								
 							$('#alrt').fadeIn(1000, function(){
 								//$(this).text(data);
-								window.location = 'patients';
+								window.history.go(-2);
+
 							});
 						});
 

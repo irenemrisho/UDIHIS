@@ -24,5 +24,9 @@ class Patient extends Eloquent{
 		}
 
 	}
+
+	public static function fullname(Patient $p){
+		return $p->firstname . " " . $p->lastname;
+	}
 	
 }

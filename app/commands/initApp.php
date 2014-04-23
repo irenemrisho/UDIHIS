@@ -45,6 +45,7 @@ class initApp extends Command {
 
 	public function fire()
 	{
+
 				$this->info('Setup for admin account: ');
 			    $username = $this->ask('Enter username : ');
 			    $password = $this->secret('Enter password: ');
