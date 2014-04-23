@@ -32,10 +32,10 @@
 											<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 													<div class="control-group">											
-														<label class="control-label" for="username">Email</label>
+														<label class="control-label" for="username">Username</label>
 														<div class="controls">
 															<input type="text" class="input-xlarge disabled" id="username" value="{{ Auth::user()->email }}" disabled>
-															<p class="help-block">You cannot change your email.</p>
+														
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													

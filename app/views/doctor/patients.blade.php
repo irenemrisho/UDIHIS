@@ -77,10 +77,10 @@
 							</div>																				
 
 							</div>
-							<div class="modal-footer">
+							<div class="modal-footer" id="{{$patient->id}}">
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 								<button class="btn btn-primary">Admit</button>
-								<button class="btn btn-primary">Laboratory</button>
+								<button class="btn btn-primary" id="laboratory">Laboratory</button>
 								<button class="btn btn-primary" id="prescribe">Prescribe</button>
 							</div>
 				</div>
