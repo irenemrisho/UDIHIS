@@ -1,5 +1,6 @@
+@extends('dashboard')
+@section('main')	
 
-@section('main')				
 				<h1 class="page-title">
 					<i class="icon-th-large"></i>
 					Manage Patients					
@@ -33,77 +34,7 @@
 									          </div>
 
 												 <form id="myWizard" type="get" action="">
-											        <section class="step" data-step-title="Personal Information">
-											            	
-											<fieldset >
-											<div class="span4 pull-left">
-														<div class="control-group"> 
-			                                                    <label class="control-label" for="first_name">Hospital File Number</label>
-			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge " id="" value="" name="filenumber"/>
-			                                                            
-			                                                        </div> <!-- /controls --> 
-	                                                        </div>
-	                                                
-	                                                     <div class="control-group"> 
-			                                                    <label class="control-label" for="first_name">First name</label>
-			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge " id="" value="" name="firstname"  />
-			                                                            
-			                                                        </div> <!-- /controls --> 
-	                                                        </div>
-	                                                    
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="last_name">Last name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="lastname"  />
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-	                                                   
-	                                                    <div class="control-group">  
-	                                                     <label class="control-label" for="gender">Gender</label>
-	                                                        <div class="controls">
-	                                                            <select class="form-control" name="gender">
-	                                                            	<option>Male</option>
-	                                                            	<option>Female</option>
-	                                                            </select>
-	                                                        </div>                                       
-	                                              
-	                                                    </div> <!-- /control-group -->
-	                                                   
-	                                           
-											</div>
-											<div class="span4 pull-right" style="margin-left:4px;">
-												 <div class="control-group"> 
-			                                                    <label class="control-label" for="first_name">Date of birth</label>
-			                                                        <div class="controls">
-			                                                            <input type="text" class="input-xlarge date" id="" value="" name="birth" />
-			                                                            
-			                                                        </div> <!-- /controls --> 
-	                                                        </div>
-														<div class="control-group">                                         
-	                                                        <label class="control-label" for="address">Address</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="address">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
 
-	                                                     <div class="control-group">                                         
-	                                                        <label class="control-label" for="contact">Phone number</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" name="phone">
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                    </div> <!-- /control-group -->
-
-	                                              
-											</div>	
-											
-										</fieldset>	
-										
-											        </section>
 											        <section style="display:none" class="step" data-step-title="Initial Information">
 											            			<fieldset >
 											<div class="span4 pull-left">
@@ -124,6 +55,13 @@
 	                                                        </div> <!-- /controls -->               
 	                                                    </div> <!-- /control-group -->
 														<div class="control-group">                                         
+	                                                        <label class="control-label" for="">Height</label>
+	                                                        <div class="controls">
+	                                                            <input type="text" class="input-xlarge " id="" value="" name="height"  />
+	                                                            
+	                                                        </div> <!-- /controls -->               
+	                                                    </div> <!-- /control-group -->
+														<div class="control-group">                                         
 	                                                        <label class="control-label" for="">Weight</label>
 	                                                        <div class="controls">
 	                                                            <input type="text" class="input-xlarge " id="" value="" name="weight"  />
@@ -134,8 +72,10 @@
 	                                                    <div class="control-group">  
 	                                                     <label class="control-label" for="password">Allergy</label>
 	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge" name="allergy" id="" value="allergy">
-	                                                            
+				                                               	<select class="form-control" name="allergy">
+				                                               		<option>Skin</option>
+				                                               		<option>None</option>	
+	                                                        	</select>
 	                                                        </div>                                       
 	                                              
 	                                                    </div> <!-- /control-group -->
@@ -198,21 +138,7 @@
 																NHIF</label>
 	                                                            
 	                                                      </div> 
-	                                                      <h4>Next To Keen Information </h4>
-	                                                <div class="control-group">                                         
-	                                                        <label class="control-label" for="">Full Name</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="fullname"  />
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                  </div> <!-- /control-group -->
-	                                                   <div class="control-group">                                         
-	                                                        <label class="control-label" for="">Phone Number</label>
-	                                                        <div class="controls">
-	                                                            <input type="text" class="input-xlarge " id="" value="" name="phone2"  />
-	                                                            
-	                                                        </div> <!-- /controls -->               
-	                                                  </div> <!-- /control-group -->
+	                                                      
 	                                                   
 	                                                 
 	                                           
@@ -269,7 +195,7 @@
 															</thead>
 															
 															<tbody>
-														
+														<?php $patients = Patient::all(); ?>
 														@foreach($patients as $patient)
 																<tr><td>{{$patient->id}}</td>
 																	<td>{{$patient->firstname}}</td>

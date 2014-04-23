@@ -14,24 +14,24 @@ class CreatePatientsTable extends Migration {
 	{
 		Schema::create('patients',function($table){
 			$table->increments('id');
-			$table->String('firstname');
-			$table->String('filenumber');
-			$table->String('lastname');
-			$table->String('gender');
-			$table->String('birth');
-			$table->String('address');
-			$table->String('phone');
-			$table->String('temperature');
-			$table->String('bloodpressure');
-			$table->String('weight');
-			$table->String('allergy');
-			$table->String('bloodgroup');
-			$table->String('rhesus');
-			$table->String('paymenttype');
-			$table->String('fullname');
-			$table->String('phone2');
-			$table->String('section');
-			$table->String('sectioninfo');
+			$table->String('firstname')->nullable();
+			$table->integer('filenumber')->nullable();
+			$table->String('lastname')->nullable();
+			$table->String('gender')->nullable();
+			$table->String('birth')->nullable();
+			$table->String('address')->nullable();
+			$table->String('phone')->nullable();
+			$table->String('temperature')->nullable();
+			$table->String('bloodpressure')->nullable();
+			$table->String('weight')->nullable();
+			$table->String('allergy')->nullable();
+			$table->String('bloodgroup')->nullable();
+			$table->String('rhesus')->nullable();
+			$table->String('paymenttype')->nullable();
+			$table->String('fullname')->nullable();
+			$table->String('phone2')->nullable();
+			$table->String('section')->nullable();
+			$table->String('sectioninfo')->nullable();
 			$table->timestamps();
 
 		});

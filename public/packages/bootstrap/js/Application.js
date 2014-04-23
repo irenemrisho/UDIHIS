@@ -51,6 +51,9 @@ var Application = function () {
 $(document).ready(function(){
 
 
+
+
+
 	$('#presc').on('click', function(){
 		var data = $('#presform').serializeArray();
 		$.post('recommended', data, function(data){

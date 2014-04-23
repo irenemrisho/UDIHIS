@@ -120,7 +120,9 @@
 						$('#myWizard').css('opacity', '0.2');
 
 						$.post('savepatientinfo', data, function(data){
+							//alert(data);
 							$('#alrt').fadeIn(1000, function(){
+								//$(this).text(data);
 								window.location = 'patients';
 							});
 						});

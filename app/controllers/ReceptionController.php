@@ -27,10 +27,13 @@ class ReceptionController  extends BaseController{
 
     public function savepatientinfo(){
 
-    	$inputs = Input::all();
-
-    	Patient::create($inputs);
-
+    	$inputs     = Input::all();
+        $filenumber = array('filenumber' => Patient::fileno());
+        $inputs     = array_merge($inputs, $filenumber);
+    	$newpatient = Patient::create($inputs);
+        //return      Redirect::to('reception');
+        //return  
+        return View::make("reception.manage_patients", compact('newpatient'));
 
     }
 

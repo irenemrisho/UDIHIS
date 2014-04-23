@@ -14,14 +14,14 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users',function($table){
 			$table->increments('id');
-			$table->String('email');
-            $table->String('password');
-            $table->String('first_name');
-            $table->String('middle_name');
-            $table->String('last_name');	
-            $table->String('address');
-            $table->integer('level');
-           	$table->String('contact');
+			$table->String('email')->nullable();
+            $table->String('password')->nullable();
+            $table->String('first_name')->nullable();
+            $table->String('middle_name')->nullable();
+            $table->String('last_name')->nullable();	
+            $table->String('address')->nullable();
+            $table->integer('level')->nullable();
+           	$table->String('contact')->nullable();
            	$table->String('status')->default('active'); 
 			$table->timestamps();
 

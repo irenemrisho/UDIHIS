@@ -30,9 +30,10 @@ class PatientController extends \BaseController {
 			$patients = Patient::where('sectioninfo', $fullname )->get();
 			return View::make('doctor.patients', compact('patients'));
 		}else{
-			$patients = Patient::all();
-			$this->layout->content = View::make('reception.manage_patients')
-			->with ( 'patients' , $patients );
+			/*$patients = Patient::all();
+			$this->layout->content = View::make('reception.registerpatient')
+			->with ( 'patients' , $patients );*/
+			return   View::make('reception.registerpatient');
 		}
 
 		

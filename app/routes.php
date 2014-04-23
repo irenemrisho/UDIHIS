@@ -63,7 +63,7 @@ Route::post('savepatientinfo', 'ReceptionController@savepatientinfo');
 Route::get('reception', 'ReceptionController@getIndex');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
-Route::post('patients/add' , 'PatientController@store');
+Route::post('patients/add' , 'ReceptionController@savepatientinfo');
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/

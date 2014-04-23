@@ -4,6 +4,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 {{HTML::script('packages/bootstrap/js/jquery-1.9.1.min.js')}}
 {{HTML::script('packages/bootstrap/js/ui.js')}}
+{{HTML::script('packages/bootstrap/js/helper.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 {{HTML::script('packages/bootstrap/js/excanvas.min.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.flot.js')}}
