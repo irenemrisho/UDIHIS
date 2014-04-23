@@ -17,7 +17,9 @@ class DoctorController extends BaseController {
 		return View::make('doctor.doctor');
 
 	}
-
+	public function lab_test(){
+		return View::make('doctor.lab_request_form');
+	}
 	public function recommend(){
 		$inputs      = Input::all();
 		//$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
