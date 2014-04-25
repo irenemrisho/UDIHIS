@@ -1,9 +1,9 @@
 @extends('dashboard')
 @section('main')
 <h1 class="page-title">
-                        <i class="icon-exchange"></i>
-                        Pending Bills					
-                    </h1>
+                        <i class="icon-user-md"></i>
+                        Billing                    
+</h1>
 
                     <div class="action-nav-normal">
                         <div class="row">
@@ -14,38 +14,41 @@
 
                         <div class="widget-header">
                             <i class="icon-th-list"></i>
-                            <h3>Billing List</h3>
+                            <h3>Manage payment</h3>
                         </div> <!-- /widget-header -->
 
                         <div class="widget-content">
 
-                            <table class="table  table-bordered">
+                            <table class="table table-striped table-bordered">
+                                <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>date</th>
-                                        <th>Patient Name </th>
-                                        <th>Bill Type</th>
+                                        <th>ID</th>
+                                        <th>Patient Name</th>
                                         <th>Amount</th>
-                                        <th>Status</th>
-                                          <th>options</th>  
-                               
-                                    </tr>
-                                <tbody id="provide_medication">
-                                   
-                                    <tr>
+                                        <th>Option</th>
                                        
-
-
-
-                                        
-                                        
                                     </tr>
-                                    
-                                  
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>   
+                                                <button type="button" class="btn  btn-primary" >
+                                                    Take cash
+                                                </button>
+
+                                           
+                                        </td>
+                                    </tr>
+ 
 
                                 </tbody>
                             </table>
 
                         </div> <!-- /widget-content -->
-
 @stop
+
+
