@@ -9,11 +9,15 @@ class UsersTableSeeder extends Seeder {
 	{
 
 		User::create(array(
-				"email"=> "admin",
+
 				"first_name"=>"admin",
 				"last_name"=>"admin",
 				"middle_name"=>"irene",
 				"level"=>0,
+				"username"=>"admin",
+				"phone_no"=>"000 000 000",
+				"extension_no"=>"1",
+				"room_no"=>"1",
 				"address"=>"admin",
 				"contact"=>"dar",
 				"status"=>"active",

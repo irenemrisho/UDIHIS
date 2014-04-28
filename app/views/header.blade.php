@@ -32,8 +32,22 @@
 
                         <div class="account-details">
                             Welcome,
-                            <span class="account-name">{{Auth::user()->first_name}}</span>
-                           
+
+                            @if(Auth::user()->level == 0)
+                            <span class="account-name">Administrator</span>
+                            @endif
+                            @if(Auth::user()->level == 1)
+                            <span class="account-name">Pharmacy</span>
+                            @endif
+                            @if(Auth::user()->level == 2)
+                            <span class="account-name">Lab Technician</span>
+                            @endif
+                            @if(Auth::user()->level == 3)
+                            <span class="account-name">Receptionist</span>
+                            @endif
+                            @if(Auth::user()->level == 4)
+                            <span class="account-name">Doctor</span>
+                            @endif
                             <span class="account-actions">
                                 <a style="color:#888; text-decoration:none;" href="{{url("logout")}}"><i class="icon-off"></i> Logout</a>
                             </span>

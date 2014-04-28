@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/controllers/Admin.php" line="26" mnemonic="4" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bff4824f-0f83-4d40-955b-0b9415a1a8df" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_02_100220_create_medicines_table.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/packages/.gitkeep" afterPath="$PROJECT_DIR$/app/config/packages/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Symfony/Component/Translation/Tests/fixtures/empty.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/img/load.gif" afterPath="$PROJECT_DIR$/public/packages/bootstrap/img/load.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/img/loader.gif" afterPath="$PROJECT_DIR$/public/packages/bootstrap/img/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_03_20_223811_create_Users_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_03_20_223811_create_Users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_17_103909_create_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_17_103909_create_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_082225_add_remember_token_column_to_users_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_082225_add_remember_token_column_to_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_093458_add_location_column_to_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_093458_add_location_column_to_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_093735_remove_weight_from_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_093735_remove_weight_from_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_094146_remove_temperature_column_from_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_094146_remove_temperature_column_from_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_094413_remove_bloodgroup_column_from_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_094413_remove_bloodgroup_column_from_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_095225_add_temperature_column_to_Patients_visits_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_095225_add_temperature_column_to_Patients_visits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_095840_add_location_column_to_Patients_visits_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_095840_add_location_column_to_Patients_visits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_100140_add_height_column_to_Patients_visits_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_100140_add_height_column_to_Patients_visits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_101010_add_bloodpressure_column_to_Patients_visits_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_101010_add_bloodpressure_column_to_Patients_visits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_22_114219_add_workingplace_column_to_patients_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_22_114219_add_workingplace_column_to_patients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_23_144026_add_description_column_to_Patients_visits_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_23_144026_add_description_column_to_Patients_visits_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_04_23_144914_add_description_column_to_recommended_medicines_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_04_23_144914_add_description_column_to_recommended_medicines_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AbstractAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AbstractAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AbstractPreAuthenticatedListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AbstractPreAuthenticatedListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AbstractPreAuthenticatedListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AbstractPreAuthenticatedListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/AbstractRememberMeServices.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/AbstractRememberMeServices.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/AbstractRememberMeServicesTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/AbstractRememberMeServicesTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/AbstractToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/AbstractToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/AbstractTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/AbstractTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/AccessDecisionManager.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/AccessDecisionManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/AccessDecisionManagerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/AccessDecisionManagerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/AccessDecisionManagerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/AccessDecisionManagerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccessDeniedException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccessDeniedException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authorization/AccessDeniedHandlerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authorization/AccessDeniedHandlerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AccessListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AccessListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AccessListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AccessListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/AccessMap.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/AccessMap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/AccessMapInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/AccessMapInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/AccessMapTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/AccessMapTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccountExpiredException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccountExpiredException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccountStatusException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AccountStatusException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/Acl.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/Acl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/AclAlreadyExistsException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/AclAlreadyExistsException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclCacheInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclCacheInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/AclCollectionCache.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/AclCollectionCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/AclNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/AclNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/AclProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/AclProviderBenchmarkTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/AclProviderBenchmarkTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AclProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/AclProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/AclProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/AclTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/AclTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/AclVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/AclVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Voter/AclVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Voter/AclVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin.php" afterPath="$PROJECT_DIR$/app/controllers/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/AdvancedUserInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/AdvancedUserInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AnonymousAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/AnonymousAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AnonymousAuthenticationListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/AnonymousAuthenticationListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/AnonymousAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/AnonymousAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/AnonymousAuthenticationProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/AnonymousAuthenticationProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/AnonymousToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/AnonymousToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/AnonymousTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/AnonymousTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/js/Application.js" afterPath="$PROJECT_DIR$/public/packages/bootstrap/js/Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/AuditLogger.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/AuditLogger.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditLoggerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditLoggerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/AuditLoggerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/AuditLoggerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditableAclInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditableAclInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditableEntryInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/AuditableEntryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/AuthenticatedVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/AuthenticatedVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/AuthenticatedVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/AuthenticatedVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationCredentialsNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationCredentialsNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/AuthenticationEntryPointInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/AuthenticationEntryPointInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Event/AuthenticationEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Event/AuthenticationEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/AuthenticationEvents.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/AuthenticationEvents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Event/AuthenticationFailureEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Event/AuthenticationFailureEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/AuthenticationFailureHandlerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/AuthenticationFailureHandlerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationManagerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationManagerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/AuthenticationProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/AuthenticationProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationProviderManager.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationProviderManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/AuthenticationProviderManagerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/AuthenticationProviderManagerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationServiceException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/AuthenticationServiceException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/AuthenticationSuccessHandlerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/AuthenticationSuccessHandlerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationTrustResolver.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationTrustResolver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationTrustResolverInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/AuthenticationTrustResolverInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/AuthenticationTrustResolverTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/AuthenticationTrustResolverTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/BCryptPasswordEncoder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/BCryptPasswordEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/BCryptPasswordEncoderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/BCryptPasswordEncoderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/BadCredentialsException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/BadCredentialsException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Base.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/Base.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/BasePasswordEncoderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/BasePasswordEncoderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/BasicAuthenticationEntryPoint.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/BasicAuthenticationEntryPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/BasicAuthenticationEntryPointTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/BasicAuthenticationEntryPointTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/BasicAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/BasicAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/BasicAuthenticationListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/BasicAuthenticationListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/BasicPermissionMap.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/BasicPermissionMap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Permission/BasicPermissionMapTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Permission/BasicPermissionMapTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BillingController.php" afterPath="$PROJECT_DIR$/app/controllers/BillingController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/BrowserConsoleHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/BrowserConsoleHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/BrowserConsoleHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/BrowserConsoleHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/ChainUserProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/ChainUserProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/User/ChainUserProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/User/ChainUserProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ChannelListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ChannelListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/ChannelListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/ChannelListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/ClassUtils.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/ClassUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/ClassUtilsTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/ClassUtilsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/ConcurrentModificationException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/ConcurrentModificationException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ContextListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ContextListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/ContextListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/ContextListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/CookieClearingLogoutHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/CookieClearingLogoutHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/CookieClearingLogoutHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/CookieClearingLogoutHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/CookieTheftException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/CookieTheftException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/CredentialsExpiredException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/CredentialsExpiredException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfTokenManager.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfTokenManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfTokenManagerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/CsrfTokenManagerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/CsrfTokenManagerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/CsrfTokenManagerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/DaoAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/DaoAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/DaoAuthenticationProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/DaoAuthenticationProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/DefaultAuthenticationFailureHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/DefaultAuthenticationFailureHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/DefaultAuthenticationFailureHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/DefaultAuthenticationFailureHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/DefaultAuthenticationSuccessHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/DefaultAuthenticationSuccessHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/DefaultAuthenticationSuccessHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/DefaultAuthenticationSuccessHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/DefaultLogoutSuccessHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/DefaultLogoutSuccessHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/DefaultLogoutSuccessHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/DefaultLogoutSuccessHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/DigestAuthenticationEntryPoint.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/DigestAuthenticationEntryPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/DigestAuthenticationEntryPointTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/DigestAuthenticationEntryPointTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/DigestAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/DigestAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/DigestDataTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/DigestDataTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/DisabledException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/DisabledException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/DoctrineAclCache.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/DoctrineAclCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/DoctrineAclCacheTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/DoctrineAclCacheTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/DomainObjectInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/DomainObjectInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/EncoderFactory.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/EncoderFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/EncoderFactoryInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/EncoderFactoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/EncoderFactoryTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/EncoderFactoryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/Entry.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/Entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/EntryInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/EntryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/EntryTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/EntryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/EquatableInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/EquatableInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/Exception.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/Exception.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/ExceptionInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/ExceptionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ExceptionListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ExceptionListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Http/Firewall/ExceptionListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Http/Firewall/ExceptionListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/ExpressionLanguage.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/ExpressionLanguage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/ExpressionLanguageTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/ExpressionLanguageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Tests/ExpressionRequestMatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Tests/ExpressionRequestMatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/ExpressionVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/ExpressionVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/ExpressionVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/ExpressionVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/FieldEntry.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/FieldEntry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/FieldEntryInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/FieldEntryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/FieldEntryTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/FieldEntryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/FieldVote.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Voter/FieldVote.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FilterHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FilterHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FilterHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FilterHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/FirewallMap.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/FirewallMap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/FirewallMapInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/FirewallMapInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/FirewallMapTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/FirewallMapTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/FirewallTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/FirewallTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/FlowdockFormatter.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/FlowdockFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Formatter/FlowdockFormatterTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Formatter/FlowdockFormatterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FlowdockHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/FlowdockHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FlowdockHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/FlowdockHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/FormAuthenticationEntryPoint.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/FormAuthenticationEntryPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/FormAuthenticationEntryPointTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/FormAuthenticationEntryPointTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/GelfHandlerLegacyTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/GelfHandlerLegacyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/GitProcessor.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/GitProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/GitProcessorTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/GitProcessorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/HtmlFormatter.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/HtmlFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/HttpUtils.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/HttpUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/HttpUtilsTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/HttpUtilsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/InMemoryTokenProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/InMemoryTokenProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/RememberMe/InMemoryTokenProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/RememberMe/InMemoryTokenProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/InMemoryUserProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/InMemoryUserProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/User/InMemoryUserProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/User/InMemoryUserProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InsufficientAuthenticationException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InsufficientAuthenticationException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/billing/Insurance_management.blade.php" afterPath="$PROJECT_DIR$/app/views/billing/Insurance_management.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Event/InteractiveLoginEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Event/InteractiveLoginEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InvalidArgumentException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InvalidArgumentException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InvalidCsrfTokenException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/InvalidCsrfTokenException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/InvalidDomainObjectException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/InvalidDomainObjectException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ListenerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/ListenerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Crypt/RSA/LoadKeyTest.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Crypt/RSA/LoadKeyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/LockedException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/LockedException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/LogglyFormatter.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Formatter/LogglyFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Formatter/LogglyFormatterTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Formatter/LogglyFormatterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/LogoutException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/LogoutException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/LogoutHandlerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/LogoutHandlerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/LogoutListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/LogoutListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/LogoutListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/LogoutListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/LogoutSuccessHandlerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Capsule/Manager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Capsule/Manager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/MaskBuilder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/MaskBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Permission/MaskBuilderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Permission/MaskBuilderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/MessageDigestPasswordEncoderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/MessageDigestPasswordEncoderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/MutableAclInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/MutableAclInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/MutableAclProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/MutableAclProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/MutableAclProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/MutableAclProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Dbal/MutableAclProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/billing/My_account_billing.blade.php" afterPath="$PROJECT_DIR$/app/views/billing/My_account_billing.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/NTLMAuthenticatorTest.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/NTLMAuthenticatorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/NativeSessionTokenStorage.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/NativeSessionTokenStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenStorage/NativeSessionTokenStorageTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenStorage/NativeSessionTokenStorageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/NoAceFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/NoAceFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/NonceExpiredException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/NonceExpiredException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/NotAllAclsFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/NotAllAclsFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/ObjectIdentity.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/ObjectIdentity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/ObjectIdentityInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/ObjectIdentityInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/ObjectIdentityRetrievalStrategy.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/ObjectIdentityRetrievalStrategy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/ObjectIdentityRetrievalStrategyInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/ObjectIdentityRetrievalStrategyInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/ObjectIdentityRetrievalStrategyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/ObjectIdentityRetrievalStrategyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/ObjectIdentityTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/ObjectIdentityTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/OpenDKIMHeader.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/OpenDKIMHeader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/OpenDKIMSignerTest.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/OpenDKIMSignerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/PasswordEncoderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PatientController.php" afterPath="$PROJECT_DIR$/app/controllers/PatientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/Pbkdf2PasswordEncoder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/Pbkdf2PasswordEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/Pbkdf2PasswordEncoderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/Pbkdf2PasswordEncoderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/billing/Pending_bills.blade.php" afterPath="$PROJECT_DIR$/app/views/billing/Pending_bills.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/PermissionGrantingStrategy.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/PermissionGrantingStrategy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/PermissionGrantingStrategyInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/PermissionGrantingStrategyInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/PermissionGrantingStrategyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/PermissionGrantingStrategyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/PermissionMapInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Permission/PermissionMapInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/PersistentToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/PersistentToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/PersistentTokenBasedRememberMeServices.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/PersistentTokenBasedRememberMeServices.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/PersistentTokenBasedRememberMeServicesTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/PersistentTokenBasedRememberMeServicesTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/PersistentTokenInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/PersistentTokenInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/RememberMe/PersistentTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/RememberMe/PersistentTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/PlaintextPasswordEncoder.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Encoder/PlaintextPasswordEncoder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/PlaintextPasswordEncoderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Encoder/PlaintextPasswordEncoderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/PreAuthenticatedAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/PreAuthenticatedAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/PreAuthenticatedAuthenticationProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/PreAuthenticatedAuthenticationProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/PreAuthenticatedToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/PreAuthenticatedToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/PreAuthenticatedTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/PreAuthenticatedTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/ProviderNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/ProviderNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC2.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/README.md" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ReceptionController.php" afterPath="$PROJECT_DIR$/app/controllers/ReceptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Registry.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Registry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/RememberMeAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/RememberMeAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/RememberMeAuthenticationProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/RememberMeAuthenticationProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/RememberMeListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/RememberMeListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/RememberMeListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/RememberMeListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/RememberMeServicesInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/RememberMeServicesInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/RememberMeToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/RememberMeToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/Authentication/Token/RememberMeTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/Authentication/Token/RememberMeTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Tests/RequestStackTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Tests/RequestStackTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/ResponseListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/ResponseListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/ResponseListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/ResponseListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/RetryAuthenticationEntryPoint.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/EntryPoint/RetryAuthenticationEntryPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/RetryAuthenticationEntryPointTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/EntryPoint/RetryAuthenticationEntryPointTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/Role.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/Role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleHierarchy.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleHierarchy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleHierarchyInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleHierarchyInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/RoleHierarchyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/RoleHierarchyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/RoleHierarchyVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/RoleHierarchyVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleHierarchyVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleHierarchyVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/RoleInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/RoleSecurityIdentity.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/RoleSecurityIdentity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/RoleSecurityIdentityTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/RoleSecurityIdentityTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/RoleTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/RoleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/RoleVoter.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/RoleVoter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/RollbarHandler.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/RollbarHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/RuntimeException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/RuntimeException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Net/SSH1Test.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Net/SSH1Test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Net/SSH2Test.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/tests/Net/SSH2Test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/System/SSH_Agent.php" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/phpseclib/System/SSH_Agent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/Schema.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Dbal/Schema.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/SecureRandom.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/SecureRandom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/SecureRandomInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/SecureRandomInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/SecureRandomTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/SecureRandomTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/SecurityContext.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/SecurityContext.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/SecurityContextInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/SecurityContextInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/SecurityContextTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/SecurityContextTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/SecurityEvents.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/SecurityEvents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/SecurityIdentityInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/SecurityIdentityInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/SecurityIdentityRetrievalStrategy.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/SecurityIdentityRetrievalStrategy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/SecurityIdentityRetrievalStrategyInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Model/SecurityIdentityRetrievalStrategyInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/SecurityIdentityRetrievalStrategyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/SecurityIdentityRetrievalStrategyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Session/SessionAuthenticationStrategy.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Session/SessionAuthenticationStrategy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Session/SessionAuthenticationStrategyInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Session/SessionAuthenticationStrategyInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Session/SessionAuthenticationStrategyTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Session/SessionAuthenticationStrategyTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/SessionLogoutHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Logout/SessionLogoutHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/SessionLogoutHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Logout/SessionLogoutHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/SessionTokenStorage.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/SessionTokenStorage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenStorage/SessionTokenStorageTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenStorage/SessionTokenStorageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/SessionUnavailableException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/SessionUnavailableException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/SidNotLoadedException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Exception/SidNotLoadedException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/SimpleAuthenticationHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Authentication/SimpleAuthenticationHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/SimpleAuthenticationHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Authentication/SimpleAuthenticationHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/SimpleAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/SimpleAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimpleAuthenticatorInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimpleAuthenticatorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimpleFormAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimpleFormAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimpleFormAuthenticatorInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimpleFormAuthenticatorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimplePreAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SimplePreAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimplePreAuthenticatorInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/SimplePreAuthenticatorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/StringUtils.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Util/StringUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/StringUtilsTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Util/StringUtilsTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Event/SwitchUserEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Event/SwitchUserEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SwitchUserListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/SwitchUserListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/SwitchUserListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/SwitchUserListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/SwitchUserRole.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Role/SwitchUserRole.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/SwitchUserRoleTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Role/SwitchUserRoleTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/TagProcessor.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/TagProcessor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/TagProcessorTest.php" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/tests/Monolog/Processor/TagProcessorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/TokenBasedRememberMeServices.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/RememberMe/TokenBasedRememberMeServices.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/TokenBasedRememberMeServicesTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/RememberMe/TokenBasedRememberMeServicesTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/TokenGeneratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/TokenInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/TokenNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/TokenNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Exception/TokenNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Exception/TokenNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/TokenProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/RememberMe/TokenProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/TokenStorageInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenStorage/TokenStorageInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/UnsupportedUserException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/UnsupportedUserException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/UriSafeTokenGenerator.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/TokenGenerator/UriSafeTokenGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenGenerator/UriSafeTokenGeneratorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/Tests/TokenGenerator/UriSafeTokenGeneratorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/User.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/UserAuthenticationProviderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Provider/UserAuthenticationProviderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserChecker.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserChecker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserCheckerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserCheckerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/User/UserCheckerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Tests/Core/User/UserCheckerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPassword.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPassword.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPasswordValidator.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Validator/Constraints/UserPasswordValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Validator/Constraints/UserPasswordValidatorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Validator/Constraints/UserPasswordValidatorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/User/UserProviderInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/UserSecurityIdentity.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Domain/UserSecurityIdentity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/UserSecurityIdentityTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Tests/Domain/UserSecurityIdentityTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/User/UserTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/User/UserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/UsernameNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Exception/UsernameNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/UsernamePasswordFormAuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/UsernamePasswordFormAuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/UsernamePasswordToken.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authentication/Token/UsernamePasswordToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/UsernamePasswordTokenTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Tests/Authentication/Token/UsernamePasswordTokenTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/VoterInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Authorization/Voter/VoterInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/X509AuthenticationListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Firewall/X509AuthenticationListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/X509AuthenticationListenerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/Tests/Firewall/X509AuthenticationListenerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/auth.php" afterPath="$PROJECT_DIR$/app/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/cache.php" afterPath="$PROJECT_DIR$/app/config/cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/testing/cache.php" afterPath="$PROJECT_DIR$/app/config/testing/cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bin/classpreloader.php.bat" afterPath="$PROJECT_DIR$/vendor/bin/classpreloader.php.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset-tests.xml" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset-tests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset.xml" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/build/code-sniffer-ruleset.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/code_coverage_id_rsa" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/code_coverage_id_rsa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/compile.php" afterPath="$PROJECT_DIR$/app/config/compile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/composer.lock" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/db2.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/db2.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/drizzle.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/drizzle.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/css/easyWizard.css" afterPath="$PROJECT_DIR$/public/packages/bootstrap/css/easyWizard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/editpatient.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/editpatient.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/bin/generateSql.php" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/bin/generateSql.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/header.blade.php" afterPath="$PROJECT_DIR$/app/views/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/js/helper.js" afterPath="$PROJECT_DIR$/public/packages/bootstrap/js/helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/index.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/commands/initApp.php" afterPath="$PROJECT_DIR$/app/commands/initApp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/install-php-extensions.sh" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/install-php-extensions.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/js/jquery.easyWizard.js" afterPath="$PROJECT_DIR$/public/packages/bootstrap/js/jquery.easyWizard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctor/lab_request_form.blade.php" afterPath="$PROJECT_DIR$/app/views/doctor/lab_request_form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login/login_page.blade.php" afterPath="$PROJECT_DIR$/app/views/login/login_page.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/mail.php" afterPath="$PROJECT_DIR$/app/config/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/manage_patients.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/manage_patients.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/billing/manage_report.blade.php" afterPath="$PROJECT_DIR$/app/views/billing/manage_report.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/manage_user.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/manage_user.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/managepatients.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/managepatients.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/mssql.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/mssql.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/mysql.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/mysql.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/oracle.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/oracle.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Csrf/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Http/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/postgresql.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/postgresql.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/queue.php" afterPath="$PROJECT_DIR$/app/config/queue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/registerpatient.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/registerpatient.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/remote.php" afterPath="$PROJECT_DIR$/app/config/remote.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/reception/section.blade.php" afterPath="$PROJECT_DIR$/app/views/reception/section.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ar.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ar.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ar.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ar.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.bg.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.bg.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ca.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ca.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ca.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ca.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.cs.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.cs.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.cs.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.cs.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.da.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.da.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.da.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.da.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.de.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.de.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.de.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.de.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.el.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.el.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.el.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.el.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.en.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.en.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.en.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.en.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.es.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.es.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.es.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.es.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.fa.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.fa.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.fa.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.fa.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.fr.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.fr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.fr.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.fr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.gl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.gl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.gl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.gl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.hr.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.hr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.hu.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.hu.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.hu.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.hu.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.id.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.id.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.it.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.it.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.it.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.it.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ja.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ja.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.lb.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.lb.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.lb.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.lb.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.nl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.nl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.nl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.nl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.no.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.no.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.no.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.no.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pt_BR.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pt_BR.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pt_BR.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pt_BR.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pt_PT.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.pt_PT.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pt_PT.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.pt_PT.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ro.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ro.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ro.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ro.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ru.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ru.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ru.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ru.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sk.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sk.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sk.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sk.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sr_Cyrl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sr_Cyrl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sr_Cyrl.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sr_Cyrl.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sr_Latn.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sr_Latn.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sr_Latn.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sr_Latn.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sv.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.sv.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sv.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.sv.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.tr.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.tr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.tr.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.tr.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ua.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Core/Resources/translations/security.ua.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ua.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.ua.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.vi.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.vi.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.zh_CN.xlf" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Resources/translations/security.zh_CN.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/session.php" afterPath="$PROJECT_DIR$/app/config/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/testing/session.php" afterPath="$PROJECT_DIR$/app/config/testing/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctor/showPatient.blade.php" afterPath="$PROJECT_DIR$/app/views/doctor/showPatient.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/sqlite.sql" afterPath="$PROJECT_DIR$/vendor/symfony/security/Symfony/Component/Security/Acl/Resources/schema/sqlite.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/css/ui.css" afterPath="$PROJECT_DIR$/public/packages/bootstrap/css/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/js/ui.js" afterPath="$PROJECT_DIR$/public/packages/bootstrap/js/ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/upload-code-coverage.sh" afterPath="$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/upload-code-coverage.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/useredit.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/useredit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/view.php" afterPath="$PROJECT_DIR$/app/config/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/workbench.php" afterPath="$PROJECT_DIR$/app/config/workbench.php" />
+    </list>
+    <ignored path="UDIHIS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="UDIHIS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="registerpatient.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/reception/registerpatient.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="0" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="2460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="managepatients.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/reception/managepatients.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="86" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1215">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_page.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/login/login_page.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="0" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1455">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_patients.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/reception/manage_patients.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="19" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="2326" max-vertical-offset="3615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editpatient.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/reception/editpatient.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="28" selection-start="3280" selection-end="3280" vertical-scroll-proportion="-14.791667" vertical-offset="1100" max-vertical-offset="2580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/packages/bootstrap/js/Application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="160" column="0" selection-start="4702" selection-end="4702" vertical-scroll-proportion="0.20135364" vertical-offset="2281" max-vertical-offset="5070">
+              <folding>
+                <marker date="1398666261927" expanded="false" signature="2982:3008" placeholder="..." />
+                <marker date="1398666261927" expanded="false" signature="7693:7719" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding>
+                <marker date="1398335862000" expanded="true" signature="106:178" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <folding>
+                <marker date="1398335862000" expanded="true" signature="23:278" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="60:242" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="97:208" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="155:183" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sideMenu.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/sideMenu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+              <folding>
+                <marker date="1398335862000" expanded="true" signature="116:417" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="507:975" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="1066:1679" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="1769:2351" placeholder="..." />
+                <marker date="1398335862000" expanded="true" signature="2442:3075" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="34" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
+        <option value="$PROJECT_DIR$/app/config/database.php" />
+        <option value="$PROJECT_DIR$/app/start/artisan.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_04_17_103909_create_patients_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/commands/initApp.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ReceptionController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PatientController.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/manage_user.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/useredit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/reception/registerpatient.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/reception/managepatients.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_20_223811_create_Users_table.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/views/login/login_page.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/reception/manage_patients.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/reception/editpatient.blade.php" />
+        <option value="$PROJECT_DIR$/public/packages/bootstrap/js/Application.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="-4" />
+    <option name="width" value="1368" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reception" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UDIHIS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotel_management_system" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bff4824f-0f83-4d40-955b-0b9415a1a8df" name="Default" comment="" />
+      <created>1398325618871</created>
+      <updated>1398325618871</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05287009" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14954683" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31393567" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/packages/bootstrap/js/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="19" selection-start="3843" selection-end="3843" vertical-scroll-proportion="0.0" vertical-offset="1801" max-vertical-offset="2445" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="12" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="33" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/manage_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="64" selection-start="4316" selection-end="4316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3165" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/useredit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1095" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="34" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_223811_create_Users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="46" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="139" selection-start="751" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="33" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/packages/bootstrap/js/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="19" selection-start="3905" selection-end="3905" vertical-scroll-proportion="0.0" vertical-offset="1861" max-vertical-offset="2505" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="33" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="2325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/manage_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="64" selection-start="5532" selection-end="5633" vertical-scroll-proportion="0.0" vertical-offset="1104" max-vertical-offset="3420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/useredit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1095" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="34" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="604" column="44" selection-start="11180" selection-end="11180" vertical-scroll-proportion="0.8915009" vertical-offset="8567" max-vertical-offset="16635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Patient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PharmacyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="28.125" vertical-offset="675" max-vertical-offset="1770" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="52" selection-start="3184" selection-end="3184" vertical-scroll-proportion="-38.125" vertical-offset="0" max-vertical-offset="1305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/artisan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_223921_create_Patients_visits_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_224005_create_Laboratories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_04_24_132112_create_medicines_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="2145" selection-end="2145" vertical-scroll-proportion="-46.875" vertical-offset="0" max-vertical-offset="1950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_04_17_103909_create_patients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="50" selection-start="639" selection-end="639" vertical-scroll-proportion="-9.833333" vertical-offset="94" max-vertical-offset="945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="415" selection-end="415" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/commands/initApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="41" selection-start="1161" selection-end="1161" vertical-scroll-proportion="-13.708333" vertical-offset="526" max-vertical-offset="1440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="50" selection-start="1220" selection-end="1220" vertical-scroll-proportion="21.125" vertical-offset="1092" max-vertical-offset="1695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ReceptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="922" selection-end="922" vertical-scroll-proportion="16.041666" vertical-offset="940" max-vertical-offset="1530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PatientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="58" selection-start="2508" selection-end="2508" vertical-scroll-proportion="-3.125" vertical-offset="1530" max-vertical-offset="2190" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/addUser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="78.0" vertical-offset="1872" max-vertical-offset="2430" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/admini_page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/manage_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="38" selection-end="38" vertical-scroll-proportion="0.028957529" vertical-offset="0" max-vertical-offset="3390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/useredit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="443" selection-end="443" vertical-scroll-proportion="0.24770643" vertical-offset="0" max-vertical-offset="1410" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/reception.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="735">
+          <folding>
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/registerpatient.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="0" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0" vertical-offset="1915" max-vertical-offset="2460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding>
+            <marker date="1398335862000" expanded="true" signature="106:178" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+          <folding>
+            <marker date="1398335862000" expanded="true" signature="23:278" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="60:242" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="97:208" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="155:183" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sideMenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <folding>
+            <marker date="1398335862000" expanded="true" signature="116:417" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="507:975" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="1066:1679" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="1769:2351" placeholder="..." />
+            <marker date="1398335862000" expanded="true" signature="2442:3075" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="88" selection-start="2402" selection-end="2402" vertical-scroll-proportion="0.19354838" vertical-offset="1287" max-vertical-offset="2325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_223811_create_Users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="50" selection-start="806" selection-end="806" vertical-scroll-proportion="0.37096775" vertical-offset="153" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="26" selection-start="818" selection-end="818" vertical-scroll-proportion="0.458891" vertical-offset="270" max-vertical-offset="1545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/login/login_page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/managepatients.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="86" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/manage_patients.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="2326" max-vertical-offset="3615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="34" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reception/editpatient.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="28" selection-start="3280" selection-end="3280" vertical-scroll-proportion="-14.791667" vertical-offset="1100" max-vertical-offset="2580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/packages/bootstrap/js/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="0" selection-start="4702" selection-end="4702" vertical-scroll-proportion="0.20135364" vertical-offset="2281" max-vertical-offset="5070">
+          <folding>
+            <marker date="1398666261927" expanded="false" signature="2982:3008" placeholder="..." />
+            <marker date="1398666261927" expanded="false" signature="7693:7719" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

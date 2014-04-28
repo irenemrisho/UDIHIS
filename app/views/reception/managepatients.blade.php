@@ -29,7 +29,7 @@
 																	<th>ID</th>
 																	<th>First Name</th>
 																	<th>Last Name</th>
-																	<th>Contact</th>
+																	<th>Phone Number</th>
 																	<th>Operations</th>
 																	
 																</tr>
@@ -41,7 +41,9 @@
 																<tr><td>{{$patient->id}}</td>
 																	<td>{{$patient->firstname}}</td>
 																	<td>{{$patient->lastname}}</td>
-																	<td>{{$patient->phone}}</td>
+
+																	<td>{{$patient->phone_no}}</td>
+
 																	<td class="action-td" id="">
 																	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
 																		<i class="icon-pencil"></i>								

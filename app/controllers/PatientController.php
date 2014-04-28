@@ -106,10 +106,15 @@ class PatientController extends \BaseController {
 		 $patient->first_name = Input::get('first_name');
             $patient->middle_name = Input::get('middle_name');
             $patient->last_name = Input::get('last_name');
-            $patient->address = Input::get('address');
+            $patient->email = Input::get('email');
             $patient->birth_date = Input::get('birth_date');
-            $patient->contact = Input::get('contact');
-            $patient->gender      = Input::get('gender');
+            $patient->mobile_no = Input::get('mobile_no');
+            $patient->telephone_no      = Input::get('telephone_no');
+            $patient->street      = Input::get('street');
+            $patient->house_no      = Input::get('house_no');
+            $patient->district      = Input::get('district');
+            $patient->tribe      = Input::get('tribe');
+            $patient->religion      = Input::get('religion');
             $patient->save();
             // redirect
             Session::flash('message', 'Successfully updated!');

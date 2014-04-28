@@ -1,7 +1,9 @@
 <form id="editform" class="form-horizontal" url="{{url("manage_user")}}" action="{{url("manage_user/{$user->id}")}}" method="post">
     <fieldset>
         <div class="control-group">  
-         <label class="control-label" for="username">Email</label>
+
+         <label class="control-label" for="email">Email</label>
+
             <div class="controls">
                 <input type="text" class="input-xlarge" name="email" id="email" value="{{$user->email}}">
                 
@@ -31,23 +33,42 @@
             </div> <!-- /controls -->               
         </div> <!-- /control-group -->
         <div class="control-group">                                         
-            <label class="control-label" for="address">Address</label>
+
+            <label class="control-label" for="phone_no">Phone Number</label>
             <div class="controls">
-                <input type="text" class="input-xlarge " id="address" value="{{$user->address}}" name="address">
+                <input type="text" class="input-xlarge " id="phone_no" value="{{$user->phone_no}}" name="phone_no">
+
                 
             </div> <!-- /controls -->               
         </div> <!-- /control-group -->
 
          <div class="control-group">                                         
-            <label class="control-label" for="contact">Contact</label>
+
+            <label class="control-label" for="username">User Name</label>
             <div class="controls">
-                <input type="text" class="input-xlarge " id="contact" value="{{$user->contact}}" name="contact" >
+                <input type="text" class="input-xlarge " id="username" value="{{$user->username}}" name="username" >
                 
             </div> <!-- /controls -->               
         </div> <!-- /control-group -->
+         <div class="control-group">                                         
+            <label class="control-label" for="extension_no">Extension Number</label>
+            <div class="controls">
+                <input type="text" class="input-xlarge " id="extension_no" value="{{$user->extension_no}}" name="extension_no" >
+                
+            </div> <!-- /controls -->               
+        </div> <!-- /control-group -->
+         <div class="control-group">                                         
+                <label class="control-label" for="room_no">Room Number</label>
+                <div class="controls">
+               {{Form::select('room_no',array(''=>'' , '1'=>'1','2'=>'2','3'=>'3','4'=>'5'), $user->room_no ,array('required'=>'required'))}}
+
+                </div>
+                   
+            </div>
+
 
         <div class="control-group">                                         
-            <label class="control-label" for="username" id="">Designation</label>
+            <label class="control-label" for="level" id="">Designation</label>
             <div class="controls">
             	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'), $user->level, array('id'=>"level"))}}
 

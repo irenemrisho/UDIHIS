@@ -27,16 +27,21 @@ class AdminController  extends BaseController{
 
 
      public function editUser($id){
+
+
             $inputs = Input::all();
             $user   = User::find($id);
-            $user->first_name = $inputs['fn']; 
-            $user->last_name = $inputs['ln']; 
-            $user->middle_name = $inputs['mn']; 
-            $user->address = $inputs['a']; 
-            $user->level =   $inputs['l']; 
-            $user->contact = $inputs['c']; 
-            $user->email = $inputs['e']; 
-            $user->status = $inputs['st'];
+
+            $user->first_name = $inputs['first_name']; 
+            $user->last_name = $inputs['last_name']; 
+            $user->middle_name = $inputs['middle_name']; 
+            $user->phone_no = $inputs['phone_no']; 
+            $user->level =   $inputs['level']; 
+            $user->extension_no = $inputs['extension_no']; 
+            $user->email = $inputs['email']; 
+            $user->status = $inputs['status'];
+            $user->room_no = $inputs['room_no'];
+            $user->username = $inputs['username'];
             $user->save();
             return "ok";
      }
