@@ -39,8 +39,12 @@
 </div> <!-- /control-group -->
     <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('religion')}}" name="religion" required placeholder="Religion" />
+<select class="form-control"  data-placement="gender" name="religion" required>
+<option disabled> Select Religion</option>
 
+<option>Christian</option>
+<option>Islamic</option>
+</select>
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
 
@@ -53,7 +57,7 @@
 <div class="control-group">
 <div class="controls">
 <select class="form-control"  data-placement="gender" name="gender" required>
-<option></option>
+<option disabled> Select Gender</option>
 
 <option>Male</option>
 <option>Female</option>
@@ -95,8 +99,8 @@
     <div class="control-group">
 
         <div class="controls">
-            <select class="form-control"  data-placement="district" name="district" required>
-                <option></option>
+            <select class="form-control"  data-placement="district" name="district" required >
+                <option disabled>Select District</option>
                 <option>Kiondoni</option>
                 <option>Ilala</option>
                 <option>Temeke</option>

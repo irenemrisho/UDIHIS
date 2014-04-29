@@ -63,8 +63,9 @@
                         <label class="control-label" for="password">Allergy</label>
                         <div class="controls">
                             <select class="form-control" name="allergy">
-                                <option></option>
+                                <option disabled>Select Allergy</option>
                                 <option>Skin</option>
+                                <option>Asthma</option>
                                 <option>None</option>
                             </select>
                         </div>
@@ -96,10 +97,11 @@
                         <label class="control-label" for="gender">Blood Group</label>
                         <div class="controls">
                             <select class="form-control" name="bloodgroup">
-                                <option></option>
+                                <option disabled>Select Blood Group</option>
                                 <option>A</option>
                                 <option>B</option>
                                 <option>O</option>
+                                option>AB</option>
                             </select>
                         </div>
 
