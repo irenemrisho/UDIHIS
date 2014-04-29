@@ -34,8 +34,11 @@ class Admin  extends BaseController{
 				"middle_name"=>$inputs['middle_name'],
 				"level"=>$inputs['level'],
 				"password"=>Hash::make($inputs['password']),
-				"address" =>$inputs['address'],
-				"contact"=>$inputs['contact']
+				"username" =>$inputs['username'],
+				"room_no"=>$inputs['room_no'],
+				"extension_no" =>$inputs['extension_no'],
+				"phone_no" =>$inputs['phone_no'],
+
 
 				));
 			if ($usr) {

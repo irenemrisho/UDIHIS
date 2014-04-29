@@ -39,7 +39,8 @@ class ReceptionController  extends BaseController{
 
         $inputs     = Input::all();
         
-        $chk = Patient::where('phone', $inputs['phone'])->count();
+
+        $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
         if($chk == 0){
                 $filenumber = array('filenumber' => Patient::fileno());
                 $inputs     = array_merge($inputs, $filenumber);
@@ -76,18 +77,20 @@ class ReceptionController  extends BaseController{
 
     public function edit($id){
         $inputs         = Input::all();
-        $pat            = Patient::find($id);
-        $pat->firstname = $inputs['firstname']; 
-        $pat->lastname = $inputs['lastname']; 
-        $pat->address = $inputs['address']; 
-        $pat->birth = $inputs['birth'];
-        $pat->phone = $inputs['phone'];
-        $pat->gender = $inputs['gender'];
-        $pat->fullname = $inputs['fullname']; 
-        $pat->location = $inputs['location']; 
-        $pat->workingplace = $inputs['workingplace']; 
-        $pat->phone2 = $inputs['phone2']; 
-        $pat->save();
+        $patient            = Patient::find($id);
+        $patient->firstname = Input::get('first_name');
+        $patient->lastname = Input::get('last_name');
+        $patient->email = Input::get('email');
+        $patient->birth= Input::get('birth_date');
+        $patient->phone_no = Input::get('mobile_no');
+        $patient->telephone_no      = Input::get('telephone_no');
+        $patient->street      = Input::get('street');
+        $patient->house_no      = Input::get('house_no');
+        $patient->district      = Input::get('district');
+        $patient->tribe      = Input::get('tribe');
+        $patient->religion      = Input::get('religion');
+        $patient->save();
+
 
         return View::make('reception.managepatients')->with('message', 'updated successfully');
 

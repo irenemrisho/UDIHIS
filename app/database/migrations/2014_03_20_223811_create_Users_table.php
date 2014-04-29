@@ -18,10 +18,12 @@ class CreateUsersTable extends Migration {
             $table->String('password')->nullable();
             $table->String('first_name')->nullable();
             $table->String('middle_name')->nullable();
-            $table->String('last_name')->nullable();	
-            $table->String('address')->nullable();
+            $table->String('last_name')->nullable();
+            $table->String('extension_no')->nullable();
+            $table->String('username')->nullable();
             $table->integer('level')->nullable();
-           	$table->String('contact')->nullable();
+           	$table->String('phone_no')->nullable();
+           	$table->String('room_no')->nullable();
            	$table->String('status')->default('active'); 
 			$table->timestamps();
 

@@ -57,7 +57,7 @@ class initApp extends Command {
 			    }else{
 			    	$this->info("{$username} has been created successfully! ");
 			    	$this->call('migrate');
-			    	$this->user->email     = $username;
+			    	$this->user->username    = $username;
 			   		$this->user->password  = Hash::make($password);
 			   		$this->user->save();
 			    }
