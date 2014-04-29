@@ -67,6 +67,10 @@ class UserController extends BaseController {
                 # code...
                 return Redirect::to('account');
                 break;    
+            case 6:
+                # code...
+                return Redirect::to('admission');
+                break;
                                   
             default:
                 # code...
