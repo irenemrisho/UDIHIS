@@ -261,6 +261,15 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+    $('#appointment_date').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        minDate: 0,
+        yearRange: "0:+3" ,
+        showMonths: [3,3]
+    });
+
     $('.date').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,

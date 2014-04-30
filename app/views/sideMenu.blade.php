@@ -34,7 +34,7 @@
 
 @if(Auth::user()->level == 3)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class="active"><a href="{{url("index")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li class="active"><a href="{{url("reception")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Register Patients</a></li>
     <li><a href="{{url("manage/patients")}}" id="patient"><i class="icon-user-md"></i>Manage Patients</a></li>
     <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
