@@ -40,8 +40,7 @@
     <div class="control-group">
 <div class="controls">
 <select class="form-control"  data-placement="gender" name="religion" required>
-<option disabled> Select Religion</option>
-
+<option disabled>Select Religion</option>
 <option>Christian</option>
 <option>Islamic</option>
 </select>
@@ -50,7 +49,7 @@
 
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge date" id="" value="{{Input::get('birth')}}"  name="birth" required  placeholder=" Date of birth"/>
+<input type="text" class="input-xlarge" id="birthdate" value="{{Input::get('birth')}}"  name="birth" required  placeholder=" Date of birth"/>
 
 </div> <!-- /controls --> 
 </div>

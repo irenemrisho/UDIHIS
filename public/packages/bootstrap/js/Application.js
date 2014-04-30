@@ -255,7 +255,21 @@ $(document).ready(function(){
 
     });
 
-    $('.date').datepicker({});
+    $('#birthdate').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        maxDate: 0,
+        yearRange: "-100:+0" ,
+        showMonths: [3,3]
+    });
+
+    $('.date').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        Date: -1   
+    });
 
     $('#search').keyup(function(){
         var user = $(this).val();
