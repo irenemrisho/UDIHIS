@@ -54,6 +54,9 @@ $(document).ready(function(){
     $('.alert').fadeOut(3000);
 
 
+
+
+
     $('#presc').on('click', function(){
         var data = $('#presform').serializeArray();
         $.post('recommended', data, function(data){
