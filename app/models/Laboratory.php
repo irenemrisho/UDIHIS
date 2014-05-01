@@ -1,8 +1,10 @@
 <?php
 
-class Laboratory extends Eloquent implements UserInterface {
+class Laboratory extends Eloquent{
         
         protected $table='laboratories';
+
+        protected $guarded = array();
     
 	public function user(){
 		return $this->belongsTo('Users','user_id','id');
