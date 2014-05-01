@@ -28,17 +28,19 @@
 				after: function(wizardObj, prevStepObj, currentStepObj) {},
 				beforeSubmit: function(wizardObj) {
 					
-					alert( JSON.stringify(wizardObj) );
+					//alert( JSON.stringify(wizardObj) );
 
-					wizardObj.find('input, textarea').each(function() {
-						if(!this.checkValidity()) {
-							this.focus();
-							step = $(this).parents('.'+thisSettings.stepClassName).attr('data-step');
-							easyWizardMethods.goToStep.call(wizardObj, step);
+					// wizardObj.find('input, textarea').each(function() {
+					// 	if(!this.checkValidity()) {
+					// 		this.focus();
+					// 		step = $(this).parents('.'+thisSettings.stepClassName).attr('data-step');
+					// 		easyWizardMethods.goToStep.call(wizardObj, step);
 
-							return false;
-						}
-					});
+					// 		return false;
+					// 	}
+					// });
+
+					return false;
 				}
 			}, options);
 
@@ -117,10 +119,14 @@
 					$this.find('[type="submit"]').bind('click.easyWizard', function(e) {
 						
 						var data = $('#myWizard').serializeArray();
+					
+						console.log(data);
+
 						$('#myWizard').css('opacity', '0.2');
 
 						$.post('savepatientinfo1', data, function(data){
-								
+					
+
 							$('#alrt').fadeIn(1000, function(){
 								//$(this).text(data);
 								window.history.go(-2);

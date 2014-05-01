@@ -32,14 +32,55 @@ class ReceptionController  extends BaseController{
 
     public function patientinfo(){
         $inputs     = Input::all();
-        return $inputs;
+
+        $pid = $inputs['pid'];
+        $height = $inputs['height'];
+        $weight = $inputs['weight'];
+        $allergy = $inputs['allergy'];
+        $temperature = $inputs['temperature'];
+        $bloodpressure = $inputs['bloodpressure'];
+        $bloodgroup = $inputs['bloodgroup'];
+       // $rhesus = $inputs['rhesus'];
+        $paymenttype = $inputs['paymenttype'];
+        $section = $inputs['section'];
+
+      $pvInfo = Patients_visit::create(array(
+
+            'height' => $height,
+            "weight" => $weight,
+            "temperature" => $temperature,
+            
+            "bloodpressure" => $bloodpressure,
+            "patient_id"=>$pid,
+          ));
+        $this->addPayment("registration",$pid,$paymenttype);
+     }
+
+
+    public function addPayment($service_name,$patient_id,$pay_type) {
+        //$cash is boolean value true for cash , false for insured
+        if($pay_type=='Cash'){
+            $status="unpaid";
+        }else{
+            $status="paid";
+        }
+
+        //$service_id = Service::where('name',$service_name)->first()->id;
+
+
+
+        $payment = Payment::create(array(
+            "service_id"=>1,
+            "patient_id"=>$patient_id,
+            "status"=>$status
+        ));
+
     }
 
     public function savepatientinfo(){
 
         $inputs     = Input::all();
         
-
         $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
         if($chk == 0){
                 $filenumber = array('filenumber' => Patient::fileno());

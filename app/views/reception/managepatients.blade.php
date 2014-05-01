@@ -47,10 +47,9 @@
 																	<td class="action-td" id="">
 																	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
 																		<i class="icon-pencil"></i>								
-																	</a>					
-																	
-
-																</td>
+																	</a>
+                                                                      
+                                                                    </td>
 																	
 																	
 																</tr>

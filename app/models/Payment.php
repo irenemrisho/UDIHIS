@@ -2,7 +2,8 @@
 
 class Payment extends Eloquent{
 	
-	protected $table = 'Payments';
+	protected $table = 'payments';
+    public static $unguarded = true;
 	
 	
         public function patient_visit(){

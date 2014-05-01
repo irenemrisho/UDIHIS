@@ -10,6 +10,9 @@ class Patient extends Eloquent{
 	public function user(){
 		return $this->belongsTo('Users','user_id','id');
 	}
+	public function patient_visit(){
+		return $this->hasMany('patient_visit','patient_id','id');
+	}
 	
         //add payment
 	public static function fileno(){

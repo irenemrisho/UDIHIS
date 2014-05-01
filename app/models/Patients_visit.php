@@ -2,6 +2,7 @@
 
 class Patients_visit extends Eloquent  {
 	protected $table = 'patients_visits';
+    protected $guarded = array();
 	
 	public function user(){
 		return $this->belongsTo('Users','doctor_id','id');
