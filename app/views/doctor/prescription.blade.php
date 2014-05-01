@@ -29,7 +29,12 @@
 										<div class="tab-pane active" id="1">
 						
 
-											<form id="presform" class="form-horizontal pull-center" action="">
+											
+											<form  id="presform" action="{{url("patients/prescribe/recommended")}}" class="form-horizontal pull-center" method="POST">
+												
+										@if(Session::has('msg')) 
+										  <div class="alert alert-info">{{Session::get('msg')}}</div>
+										@endif
 												<fieldset>
 													<div class="control-group">											
 														<label class="control-label" for="username">First name</label>
@@ -46,7 +51,7 @@
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 												
-													
+										
 													<div class="control-group">											
 														<label class="control-label" for="username">Prescribed Medicine</label>
 														<div class="controls">
@@ -70,10 +75,11 @@
 													</div> <!-- /control-group -->
 													
 													<div class="pull-right">
-														<button class="btn">Cancel</button> <button type="button" id="presc" class="btn btn-primary">Save</button>
-													</div>
+														<button class="btn">Cancel</button> <input type="submit" id="presc1" class="btn btn-primary" value="Save" />
+													</div>			
+									
+																								
 											
-														
 												</fieldset>
 											</form>
 										</div>
