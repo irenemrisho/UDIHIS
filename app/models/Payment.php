@@ -3,11 +3,6 @@
 class Payment extends Eloquent{
 	
 	protected $table = 'payments';
-<<<<<<< HEAD
-    public static $unguarded = true;
-	
-=======
->>>>>>> 9ffa5d1d2ca4024db5ac913705c08827fd26729d
 	
 	protected $guarded = array();
 
