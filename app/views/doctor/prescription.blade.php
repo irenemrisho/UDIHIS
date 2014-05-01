@@ -50,12 +50,12 @@
 													<div class="control-group">											
 														<label class="control-label" for="username">Prescribed Medicine</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge " name="prescribedmedicine" >
+															<input type="text" class="input-xlarge" id="prescribedmedicine" name="prescribedmedicine" >
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													<div class="control-group">											
-														<label class="control-label" for="username">Quantity</label>
+														<label class="control-label" for="username">Dosage</label>
 														<div class="controls">
 															<input type="text" class="input-xlarge " name="quantity">
 															

@@ -17,10 +17,65 @@ class DoctorController extends BaseController {
 		return View::make('doctor.doctor');
 
 	}
+
+	public function getMedxn(){
+		$medicines = Medicine::all();
+
+		$mdx       = array();
+		foreach ($medicines as $m) {
+			# code...
+			$mdx[] = $m->name;
+		}
+
+		return json_encode($mdx);
+	}
+
+	public function autosave(){
+		$input = Input::get('consultation');
+		dd($input);
+		$consNotes = Patients_visit::find(1);
+		$consNotes->save();
+		return "ok";
+	}
+
 	public function lab_test($id){
 		$patient = Patient::find($id);
 		return View::make('doctor.lab_request_form',compact('patient'));
 	}
+
+    public function search(){
+          $user = Input::get('p');
+
+          $patients = Patient::where('firstname', 'LIKE', '%'.$user.'%')->get();
+
+
+
+          $tbl = "<thead>
+					<tr>
+						<th>File Number</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Payment Status</th>
+						
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				
+				<tbody>";
+
+          foreach($patients as $u){
+                $tbl .= "<tr>
+                           
+                          
+                        </tr>";
+          }      
+
+            $tbl .= "</tbody>";
+                                                        
+            return $tbl;                                       
+
+    }
+
 	public function recommend(){
 		$inputs      = Input::all();
 		//$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
