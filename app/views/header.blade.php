@@ -27,7 +27,8 @@
     
 ?>
                         <div class="account-avatar">
-                            <img src="./img/" alt="" class="thumbnail" />
+                        {{HTML::image('packages/bootstrap/img/login.png','',array('class'=>'thumbnail'))}}
+                            <!--<img src="packages/bootstrap/img/login.png" alt="" class="thumbnail" />-->
                         </div> <!-- /account-avatar -->
 
                         <div class="account-details">
