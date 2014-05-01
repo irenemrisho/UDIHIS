@@ -64,20 +64,7 @@
                                                         </div>                                       
                                               
                                                     </div> <!-- /control-group -->
-                                                    <div class="control-group">                                         
-                                                        <label class="control-label" for="Butch_number">Butch number</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" value="" name="Butch_number">
-                                                            
-                                                        </div> <!-- /controls -->               
-                                                    </div> <!-- /control-group -->
-                                                    <div class="control-group">                                         
-                                                        <label class="control-label" for="Strength">Strength</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" value="" name="Strength">
-                                                            
-                                                        </div> <!-- /controls -->               
-                                                    </div> <!-- /control-group -->
+                                              
                                                     <div class="control-group">                                         
                                                         <label class="control-label" for="Price">Price</label>
                                                         <div class="controls">
@@ -89,14 +76,14 @@
                                                      <div class="control-group">                                         
                                                         <label class="control-label" for="Manufactured_date">Manufactured date</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" name="Manufactured_date">
+                                                            <input type="text" class="input-xlarge date " id="" name="Manufactured_date">
                                                             
                                                         </div> <!-- /controls -->               
                                                     </div> <!-- /control-group -->
                                                     <div class="control-group">                                         
                                                         <label class="control-label" for="Expire_date">Expire date</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" name="Expire_date">
+                                                            <input type="text" class="input-xlarge date " id="" name="Expire_date">
                                                             
                                                         </div> <!-- /controls -->               
                                                     </div> <!-- /control-group -->
@@ -120,14 +107,15 @@
                                                                                         
 											<div class="widget widget-table">
 										
-												<div class="widget-header">
-                                                                                                         <input type="email" class="form-control "  placeholder="Search">
-													
-												</div> <!-- /widget-header -->
+	<div class="widget-header">
+			    <form class="form-search" style="margin-left:4px">
+				    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
+				</form> 
+	</div> <!-- /widget-header -->
 												
 												<div class="widget-content">
 												
-													<table class="table table-striped table-bordered">
+													<table class="table table-striped table-bordered" id="mtable">
 													 				
 															
 														
@@ -135,7 +123,7 @@
 															<tr>
 																<th>#</th>
 																<th>Medicine name</th>
-																<th>Butch number</th>
+																
 																<th>Price</th>
 																<th>Quantity</th>
                                                                                                                                 <th>Expire date</th>
@@ -148,7 +136,6 @@
 														@foreach($medicines as $medicine)
 															<tr>    <td>{{$index}}</td>
 																<td>{{$medicine->name}}</td>
-																<td>{{$medicine->batch_no}}</td>
 																<td>{{$medicine->price}} </td>
 																<td>{{$medicine->quantity}} </td>
                                                                                                                                 <td>{{$medicine->exp_date}} </td>

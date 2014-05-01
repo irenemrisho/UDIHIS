@@ -33,6 +33,7 @@ Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
 Route::get('patients/lab_test/{id}','DoctorController@lab_test');
+Route::post('patients/lab_test/{id}','DoctorController@lab_test_post');
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('patients','DoctorController@patients');
@@ -43,7 +44,7 @@ Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
 Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
 Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
-Route::post('consultaion/autosave','DoctorController@autosave');
+Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
 /*Pharmacy Route*/
 
@@ -55,10 +56,18 @@ Route::get('edit_medicine', 'PharmacyController@getEditMedicine');
 Route::post('/edit_medicine', 'PharmacyController@updateMedicine');
 Route::get('manage_report','PharmacyController@getReport');
 Route::get('my_accountpharmacy','PharmacyController@getAccount');
+Route::post('manage_medicine/search/', 'PharmacyController@search');
+Route::get('dashboard','PharmacyController@getDash');
 /*Billing Route*/
 Route::get('billing','BillingController@getIndex');
+Route::get('edit_service','BillingController@getEditService'); 
+Route::post('edit_service','BillingController@getService'); 
 Route::get('Pending_bills','BillingController@getBills');
 Route::get('Insurance_management','BillingController@getInsurance');
+Route::get('service_management','BillingController@getService');
+Route::post('service_management','BillingController@addService');
+Route::get('reports_billing','BillingController@getReports');
+Route::get('profile_billing','BillingController@getProfile');
 
 ///Receptionist
 /*for listsing patients and adding*/

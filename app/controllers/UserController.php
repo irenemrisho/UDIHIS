@@ -50,7 +50,7 @@ class UserController extends BaseController {
                 break;
              case 1:
                 # code...
-                return Redirect::to('pharmacy');
+                return Redirect::to('dashboard');
                 break; 
              case 2:
                 # code...
@@ -65,7 +65,7 @@ class UserController extends BaseController {
                 return Redirect::to('doctor');
             case 5:
                 # code...
-                return Redirect::to('account');
+                return Redirect::to('billing');
                 break;    
             case 6:
                 # code...

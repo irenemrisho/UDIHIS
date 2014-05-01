@@ -31,16 +31,33 @@ class DoctorController extends BaseController {
 	}
 
 	public function autosave(){
-		$input = Input::get('consultation');
-		dd($input);
-		$consNotes = Patients_visit::find(1);
-		$consNotes->save();
+		$input = Input::get('cN');
+		$pid   = Input::get('pid');
+		$patient = Patients_visit::where('patient_id', $pid)->first();
+		$patient->consultation=$input;
+		$patient->save();
 		return "ok";
+	}
+
+	public function lab_test_post($id){
+		$inputs = Input::get('tex');
+
+		$tests  = implode($inputs, ",");
+
+
+		$pv_id  = Patients_visit::where('patient_id',$id)->first()->id;
+		$test   = Laboratory::create(array(
+					"pv_id"=>$pv_id,
+					"test_type"=>$tests
+			));
+
+		return url('patients');
+
 	}
 
 	public function lab_test($id){
 		$patient = Patient::find($id);
-		return View::make('doctor.lab_request_form',compact('patient'));
+		return View::make('doctor.lab_request_form',compact('patient'))->with('pid', $id);
 	}
 
     public function search(){
@@ -48,45 +65,21 @@ class DoctorController extends BaseController {
 
           $patients = Patient::where('firstname', 'LIKE', '%'.$user.'%')->get();
 
-
-
-          $tbl = "<thead>
-					<tr>
-						<th>File Number</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Payment Status</th>
-						
-						<th>&nbsp;</th>
-					</tr>
-				</thead>
-				
-				<tbody>";
-
-          foreach($patients as $u){
-                $tbl .= "<tr>
-                           
-                          
-                        </tr>";
-          }      
-
-            $tbl .= "</tbody>";
-                                                        
-            return $tbl;                                       
+          return View::make('doctor.search_patient');                                     
 
     }
 
 	public function recommend(){
 		$inputs      = Input::all();
-		//$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
+		$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
 		$recommend   = Recommended_medicine::create(array(
-				"medicine_id"=>1,
+				"medicine_id"=>$medicine_id,
 				"pv_id"=>1,
 				"status"=>"open",
 				"quantity"=>$inputs['quantity'],
 				"description"=>$inputs['notes']
 		));
-		return "ok";
+		return Redirect::back()->with('msg',$inputs['prescribedmedicine']. ' was prescribed successfully');
 	}
 
 	public function prescribe($id){

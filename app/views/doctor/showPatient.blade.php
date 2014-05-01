@@ -41,16 +41,12 @@
 
 				function saveToDB()
 				{
-				    console.log('Saving to the db...');  
-				  $.ajax({
-                 type: "POST",
-                 url: "consultaion/autosave",
-               
-                 success: function(msg) {
-                 	console.log('Saved to the db.'); 
-                    // $('#autosavenotify').text(msg);
-                 }
-             });  
+				     
+					var conNotes = $('#consultNotes').val();
+					var pid      = $('#pid').val();
+					$.post('consultation/autosave', {cN:conNotes,pid:pid}, function(data){
+
+					}); 
 				}
 
 </script>
