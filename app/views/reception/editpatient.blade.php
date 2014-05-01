@@ -1,9 +1,6 @@
 @extends('dashboard')
 @section('main')
-<h1 class="page-title">
-					<i class="icon-th-large"></i>
-
-					Edit patient information
+<h1 class="page-title"><i class="icon-th-large"></i>Edit patient information</h1>
 
 <div class="widget-content">
 <section class="step" data-step-title="Personal Information">
