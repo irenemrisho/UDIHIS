@@ -13,7 +13,7 @@
     {{HTML::style('packages/bootstrap/css/style.css')}}
     {{HTML::style('packages/bootstrap/css/style-responsive.css')}}
     {{HTML::style('packages/bootstrap/css/login.css')}}
-    {{HTML::style('packages/bootstrap/css/dashbord.css')}}
+    {{HTML::style('packages/bootstrap/css/dashboard.css')}}
     {{HTML::style('packages/bootstrap/css/easyWizard.css')}}
     {{HTML::style('packages/bootstrap/css/ui.css')}}
     

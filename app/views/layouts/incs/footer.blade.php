@@ -11,13 +11,38 @@
 {{HTML::script('packages/bootstrap/js/jquery.flot.pie.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.flot.orderBars.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.flot.resize.js')}}
-{{HTML::script('packages/bootstrap/js/charts/bar.js')}}
+{{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
 <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
     </div>
 
-  
+@if (Auth::check())
+@if(Auth::user()->level == 4) 
+<?php
+
+	$medicines = Medicine::all();
+	$mdx       = array();
+	foreach ($medicines as $m) {
+		# code...
+		$mdx[] = $m->name;
+	}
+
+	$jsons = json_encode($mdx);
+
+
+?> 
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#prescribedmedicine').autocomplete({
+        source :  {{$jsons}}
+    });	
+});
+    
+</script>
+@endif
+
+@endif
 </body>
 </html>
