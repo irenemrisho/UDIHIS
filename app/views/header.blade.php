@@ -3,7 +3,7 @@
         <div class="navbar-inner">
 
             <div class="container">
-<a class="brand" href="">UDSM Integrated Hospital Information System</a>    
+<a class="brand" href="">UDSM Intergrated Hospital Information System</a>    
                 <div class="nav-collapse">
            
 
