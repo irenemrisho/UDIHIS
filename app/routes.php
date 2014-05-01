@@ -33,6 +33,7 @@ Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
 Route::get('patients/lab_test/{id}','DoctorController@lab_test');
+Route::post('patients/lab_test/{id}','DoctorController@lab_test_post');
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('patients','DoctorController@patients');
@@ -43,7 +44,7 @@ Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
 Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
 Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
-Route::post('consultaion/autosave','DoctorController@autosave');
+Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
 /*Pharmacy Route*/
 
