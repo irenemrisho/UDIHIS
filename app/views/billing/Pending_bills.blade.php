@@ -24,27 +24,32 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Patient Name</th>
+					<th>File number </th>
                                         <th>Amount</th>
-                                        <th>Option</th>
+                                        <th>Action</th>
                                        
                                     </tr>
                                 </thead>
 
                                 <tbody>
+ 				<?php $index=1; ?>
+				@foreach($payments as $payment)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>   
-                                                <button type="button" class="btn  btn-primary" >
-                                                    Take cash
-                                                </button>
 
-                                           
-                                        </td>
+					<td>{{$index}} </td>
+					<td>{{Patient::find($payment->patient_id)->firstname}}</td>
+					<td>{{Patient::find($payment->patient_id)->filenumber}}</td>
+                                        <td>{{Service::find($payment->service_id)->price}}</td>
+                                       <td class="action-td">
+                                       <a href="Pending_bills?pay={{$payment->id}}"  >
+						<span class=" btn btn-small btn btn-primary">Take cash</span>
+                                         </a>
+
+                                    	</td>
                                     </tr>
  
-
+    				<?php $index++; ?>
+				@endforeach
                                 </tbody>
                             </table>
 

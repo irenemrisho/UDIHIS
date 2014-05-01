@@ -109,6 +109,15 @@ $(document).ready(function(){
         });
     });
 
+    $('#search_m').keyup(function(){
+        var medicine = $(this).val();
+        $('#mtable').css('opacity', '0.2');
+        $.post('manage_medicine/search', {u:medicine}, function(data){
+            $('#mtable').css('opacity', '1');
+            $('#mtable').html(data);
+        });
+    });
+
     $('#alert').fadeOut(1000);
 
     $(".deleteuser").click(function(){

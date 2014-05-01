@@ -55,10 +55,18 @@ Route::get('edit_medicine', 'PharmacyController@getEditMedicine');
 Route::post('/edit_medicine', 'PharmacyController@updateMedicine');
 Route::get('manage_report','PharmacyController@getReport');
 Route::get('my_accountpharmacy','PharmacyController@getAccount');
+Route::post('manage_medicine/search/', 'PharmacyController@search');
+Route::get('dashboard','PharmacyController@getDash');
 /*Billing Route*/
 Route::get('billing','BillingController@getIndex');
+Route::get('edit_service','BillingController@getEditService'); 
+Route::post('edit_service','BillingController@getService'); 
 Route::get('Pending_bills','BillingController@getBills');
 Route::get('Insurance_management','BillingController@getInsurance');
+Route::get('service_management','BillingController@getService');
+Route::post('service_management','BillingController@addService');
+Route::get('reports_billing','BillingController@getReports');
+Route::get('profile_billing','BillingController@getProfile');
 
 ///Receptionist
 /*for listsing patients and adding*/

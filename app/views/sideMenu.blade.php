@@ -67,8 +67,17 @@
 </ul>
 @endif
 
-@if(Auth::user()->level == 5)
 
+@if(Auth::user()->level == 5)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class="active"><a href="{{url("billing")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
+    <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
+    <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
+    <li><a href="{{url("reports_billing")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("profile_billing")}}"><i class="icon-user"></i>My account</a></li>
+    
+</ul>
 @endif
 
 <hr />

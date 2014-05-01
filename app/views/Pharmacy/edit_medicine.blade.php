@@ -41,20 +41,7 @@
                                                         </div>                                       
                                               
                                                     </div> <!-- /control-group -->
-                                                    <div class="control-group">                                         
-                                                        <label class="control-label" for="Butch_number">Butch number</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" value="{{$medicine->batch_no}}" name="Butch_number">
-                                                            
-                                                        </div> <!-- /controls -->               
-                                                    </div> <!-- /control-group -->
-                                                    <div class="control-group">                                         
-                                                        <label class="control-label" for="Strength">Strength</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge " id="" value="{{$medicine->strength}}" name="Strength">
-                                                            
-                                                        </div> <!-- /controls -->               
-                                                    </div> <!-- /control-group -->
+
                                                     <div class="control-group">                                         
                                                         <label class="control-label" for="Price">Price</label>
                                                         <div class="controls">
