@@ -42,6 +42,9 @@ Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
 Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
+Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
+Route::post('consultaion/autosave','DoctorController@autosave');
+Route::post('patients/search','DoctorController@search');
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');
@@ -78,7 +81,9 @@ Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'PatientController@profile');
 //});
 
-
+/*Laboratory technician routes*/
+Route::get('laboratory','LaboratoryController@laboratory');
+Route::get('stock','LaboratoryController@stock');
 
 //Route::get('/login', function() {
 //    return Redirect::to('/');

@@ -23,6 +23,34 @@
 
 	<div style="clear:both" style="width:400px; margin: 40px">
 		<label class="control-label" for="">Consultation Notes</label>
-	<textarea rows="2" style="width:600px;" class="form-control"></textarea>	
+	<textarea rows="2" id="consultNotes" style="width:600px;" class="form-control" name="consultation"></textarea>	
 	</div>	
 </div>
+
+<script type="text/javascript">
+				var timeoutId;
+				$('#consultNotes').on('input propertychange', function() {
+				    console.log('Textarea Change');
+
+				    clearTimeout(timeoutId);
+				    timeoutId = setTimeout(function() {
+				        // Runs 1 second (1000 ms) after the last change    
+				        saveToDB();
+				    }, 1000);
+				});
+
+				function saveToDB()
+				{
+				    console.log('Saving to the db...');  
+				  $.ajax({
+                 type: "POST",
+                 url: "consultaion/autosave",
+               
+                 success: function(msg) {
+                 	console.log('Saved to the db.'); 
+                    // $('#autosavenotify').text(msg);
+                 }
+             });  
+				}
+
+</script>
