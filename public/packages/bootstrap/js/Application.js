@@ -91,6 +91,15 @@ $(document).ready(function(){
 
     $('.date').datepicker({});
 
+    $('#searchPatient').keyup(function(){
+        var patient = $(this).val();
+        $('#patients').css('opacity', '0.2');
+        $.post('patients/search', {p:patient}, function(data){
+            $('#patients').css('opacity', '1');
+            $('#patients').html(data);
+        });
+    });
+
     $('#search').keyup(function(){
         var user = $(this).val();
         $('#gtable').css('opacity', '0.2');
