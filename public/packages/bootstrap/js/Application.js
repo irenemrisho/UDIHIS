@@ -53,9 +53,22 @@ $(document).ready(function(){
 
     $('.alert').fadeOut(3000);
 
+    var tests = [];
+    $(".labreqrep").on('change', function(){
+        var chk = $(this).is(':checked');
+        if(chk == true){
+            var labreqrep = $(this).val();
+            tests.push(labreqrep);
+        }
+    });
 
-
-
+    $('#labtest').on('click',function(){
+        var pid = $('#pid').val();
+        var tex = tests;
+        $.post(pid,{tex:tex}, function(data){
+            window.location.assign(data);
+        });
+    });
 
     $('#presc').on('click', function(){
         var data = $('#presform').serializeArray();
@@ -233,9 +246,10 @@ $(document).ready(function(){
 
 
     $('#presc').on('click', function(){
+        alert(2)
         var data = $('#presform').serializeArray();
         $.post('recommended', data, function(data){
-            window.location = "backpatients";
+            
         });
     });
 
