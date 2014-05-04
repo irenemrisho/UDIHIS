@@ -68,7 +68,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'udihis',
 			'username' => 'udihis',
-			'password' => 'udihis',
+			'password' => 'udihis
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',

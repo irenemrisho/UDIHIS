@@ -15,7 +15,7 @@
 <div class="alert alert-info" id="message">{{ $message }}</div>
 @endif	
 												<div class="widget-header">
-														    <form class="form-search" style="margin-left:4px">
+														    <form class="form-search" id="data1" style="margin-left:4px">
 															    <input type="text" id="search" class="input-medium search-query" placeholder="Search">
 															</form> 
 												</div> <!-- /widget-header -->
@@ -30,7 +30,7 @@
 																	<th>First Name</th>
 																	<th>Last Name</th>
 																	<th>Phone Number</th>
-																	<th>Operations</th>
+																	<th style="text-align: center">Operations</th>
 																	
 																</tr>
 															</thead>
@@ -46,6 +46,16 @@
 
 																	<td class="action-td" id="">
 																	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
+																		<i class="icon-pencil"></i>								
+																	</a>
+																    </td>
+																    <td>
+																	<a href="{{url("patient/appoint/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
+																		<i class="icon-pencil"></i>								
+																	</a>
+																    </td>
+																    <td>
+																	<a href="{{url("patient/visit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
 																		<i class="icon-pencil"></i>								
 																	</a>
                                                                       

@@ -91,9 +91,9 @@ class PatientController extends \BaseController {
 	public function edit($id)
 	{
 		$patient = Patient::find($id);
-	  return View::make('reception.edit' , compact('patient'));
+		$pvInfo = Patients_visit::find($id);
+	  return View::make('reception.edit' , compact('patient', 'pvInfo'));
 	}
-
 	/**
 	 * Update the specified resource in storage.
 	 *

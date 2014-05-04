@@ -144,7 +144,7 @@
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('workingplace')}}" name="workingplace" required  placeholder="WOrking Place"/>
+<input type="text" class="input-xlarge " id="" value="{{Input::get('workingplace')}}" name="workingplace" required  placeholder="Working Place"/>
 
 
 </div> <!-- /controls -->               

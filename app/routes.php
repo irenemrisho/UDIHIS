@@ -94,11 +94,11 @@ Route::post('patients/profile', 'PatientController@profile');
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
 
-//Route::get('/login', function() {
-//    return Redirect::to('/');
-//});
-//
-//Route::post('/login', function() {
-//
 
-//});
+// appointment routes
+//return the appoitment form
+Route::get('patient/appoint/{id}' , 'PatientVisitController@index');
+//return patient visit form
+Route::get('patient/visit/{id}' , 'PatientVisitController@visit');
+
+
