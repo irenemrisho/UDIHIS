@@ -23,7 +23,7 @@
 												<div class="widget-content">
 
 												
-													<table id="patients" class="table table-striped table-bordered">
+													<table id="patients" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
 															<thead>
 																<tr>
 																	<th>ID</th>
@@ -36,30 +36,27 @@
 															</thead>
 															
 															<tbody>
-														<?php $patients = Patient::paginate(6); ?>
+														<?php $patients = Patient::paginate(5); ?>
 														@foreach($patients as $patient)
 																<tr><td>{{$patient->id}}</td>
 																	<td>{{$patient->firstname}}</td>
 																	<td>{{$patient->lastname}}</td>
 
 																	<td>{{$patient->phone_no}}</td>
-
-																	<td class="action-td" id="">
-																	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
-																		<i class="icon-pencil"></i>								
-																	</a>
-																    </td>
-																    <td>
-																	<a href="{{url("patient/appoint/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
-																		<i class="icon-pencil"></i>								
-																	</a>
-																    </td>
-																    <td>
-																	<a href="{{url("patient/visit/$patient->id")}}" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
-																		<i class="icon-pencil"></i>								
-																	</a>
-                                                                      
-                                                                    </td>
+																	
+																    <td align="center">
+																    	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small fetchuser"  data-toggle="modal">
+																		<i class="icon-wrench"></i>								
+																		</a>
+										                            	<a href="{{url("patient/appoint/$patient->id")}}" 
+										                                	rel="tooltip" data-placement="top" data-original-title="edit" class="btn btn-small btn-primary">
+										                                		<i class="icon-edit"></i>
+										                                </a>
+										                            	<a href="{{url("patient/visit/$patient->id")}}" 
+										                                	rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-success">
+										                                		<i class="icon-exchange"></i>
+										                                </a>
+										        					</td>
 																	
 																	
 																</tr>
