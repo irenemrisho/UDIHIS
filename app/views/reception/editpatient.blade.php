@@ -37,6 +37,14 @@ Manage Patients
     <div class="alert alert-info" id="message">{{ $message }}</div>
     @endif
 
+<?php
+        $patient_id = $patient->id;
+        $pt         = Patients_visit::where('patient_id', $patient_id)->first();
+
+
+?>
+
+
     <form id="myWizard" type="get" action="">
 
         <section style="display:none" class="step" data-step-title="Initial Information">
@@ -49,14 +57,14 @@ Manage Patients
                     <div class="control-group">
                         <label class="control-label" for="">Height</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge " id="" value="" name="height"  />
+                            <input type="text" class="input-xlarge " id="" value="{{$pt->height}}" name="height"  />
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
                     <div class="control-group">
                         <label class="control-label" for="">Weight</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge " id="" value="" name="weight"  />
+                            <input type="text" class="input-xlarge " id="" value="{{$pt->weight}}" name="weight"  />
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
@@ -65,7 +73,7 @@ Manage Patients
                         <label class="control-label" for="password">Allergy</label>
                         <div class="controls">
                             <select class="form-control" name="allergy">
-                                <option disabled>Select Allergy</option>
+                                <option disabled>{{$pt->allergy}}</option>
                                 <option>Skin</option>
                                 <option>Asthma</option>
                                 <option>None</option>
@@ -83,14 +91,14 @@ Manage Patients
                     <div class="control-group">
                         <label class="control-label" for="temperature">Temperature</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge " id="" value="" name="temperature" />
+                            <input type="text" class="input-xlarge " id="" value="{{$pt->temperature}}" name="temperature" />
 
                         </div> <!-- /controls -->
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="bp">Blood Pressure</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
+                            <input type="text" class="input-xlarge " id="" value="{{$pt->bloodpressure}}" name="bloodpressure" >
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
@@ -99,7 +107,7 @@ Manage Patients
                         <label class="control-label" for="gender">Blood Group</label>
                         <div class="controls">
                             <select class="form-control" name="bloodgroup">
-                                <option disabled>Select Blood Group</option>
+                                <option disabled>{{$pt->bloodgroup}} Group</option>
                                 <option>A</option>
                                 <option>B</option>
                                 <option>O</option>

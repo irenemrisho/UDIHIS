@@ -13,9 +13,10 @@ class PatientVisitController extends \BaseController {
 	}
 
 	public function visit($id)
-	{
-		
-                return View::make("reception.newVisit");
+	{			
+				$patient  = Patient::find($id);
+		   		$pVisit = Patients_visit::where('patient_id',$id)->first();
+                return View::make("reception.newVisit", compact('pVisit', 'patient'));
         }
 			
 

@@ -11,11 +11,8 @@
 
         <section style="display:none" class="step" data-step-title="Initial Information">
             <fieldset >
-
+                 <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
                 <div class="span4 pull-left">
-
-
-                  
                     <div class="control-group">
                         <label class="control-label" for="">Height</label>
                         <div class="controls">
@@ -47,9 +44,9 @@
 
 
                 </div>
-
+                       <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
                 <div class="span4 pull-right">
-                    
+                     
                     <div class="control-group">
                         <label class="control-label" for="temperature">Temperature</label>
                         <div class="controls">
@@ -69,7 +66,7 @@
                         <label class="control-label" for="gender">Blood Group</label>
                         <div class="controls">
                             <select class="form-control" name="bloodgroup">
-                                <option disabled>Select Blood Group</option>
+                                <option>{{$pVisit->bloodgroup}}</option>
                                 <option>A</option>
                                 <option>B</option>
                                 <option>O</option>
@@ -108,7 +105,7 @@
             <fieldset >
                 <div class="span4 pull-left">
                     
-
+                    <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
                     <div class="control-group ">
                         <h4>Payment Type</h4>
                         <label class="radio">
@@ -126,8 +123,7 @@
 
                 </div>
                 <div class="span4 pull-right" style="margin-left:4px;">
-
-                
+                     <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
                     <label class="control-label">Direct To &raquo</label>
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">

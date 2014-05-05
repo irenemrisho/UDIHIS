@@ -36,7 +36,7 @@
 															</thead>
 															
 															<tbody>
-														<?php $patients = Patient::paginate(5); ?>
+														<?php $patients = Patient::all(); ?>
 														@foreach($patients as $patient)
 																<tr><td>{{$patient->id}}</td>
 																	<td>{{$patient->firstname}}</td>
