@@ -19,7 +19,7 @@
 				    <input type="text" id="searchPatient" class="input-medium search-query" placeholder="Search">
 					</div> <!-- /widget-header -->
 					
-					<div id="content1" class="widget-content">
+					<div id="content1" class=" widget widget-content">
 					
 						<?php	
 						$patients = Patient::paginate(5);

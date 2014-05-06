@@ -10,25 +10,25 @@
 			            <div class="action-nav-normal">
 			                <div class="row-fluid">
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
+			                        <a href="appointment">
 			                        <i class="icon-exchange"></i>
 			                        <span>appointment</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="patients	">
+			                        <a href="manage/patients">
 			                        <i class="icon-user"></i>
 			                        <span>patient</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
+			                        <a href="reports">
 			                        <i class="icon-reorder"></i>
 			                        <span>Patient report</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="patients	">
+			                        <a href="#">
 			                        <i class="icon-hospital"></i>
 			                        <span>Archives</span>
 			                        </a>

@@ -22,6 +22,7 @@ class CreatePatientsVisitsTable extends Migration {
             $table->String('consultation');
             $table->String('weight');	
             $table->String('disease');
+            $table->String('bloodgroup');
             $table->date('admission_date');
            	$table->date('discharge_date'); 
 			$table->timestamps();

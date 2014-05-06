@@ -1,4 +1,22 @@
 @extends('dashboard')
+
+@section('page_specific_css')
+	<!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+	<!-- Datatable includes -->
+	{{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+	<script type="text/javascript">
+			$('#gtable').dataTable({
+				ordering:false,
+				info:true
+			});
+	</script>
+@stop
+
 @section('main')
 <h1 class="page-title">
 <i class="icon-th-large"></i>
@@ -128,15 +146,11 @@ Manage users
 </div>
 
 <div class="tab-pane active" id="1">
-<div class="widget-table">
+<div class="widget widget-table">
 
-	<div class="widget-header">
-			    <form class="form-search" style="margin-left:4px">
-				    <input type="text" id="search" class="input-medium search-query" placeholder="Search">
-				</form> 
-	</div> <!-- /widget-header -->
 	
-	<div class="widget-content">
+	
+	<div class="widget-content" style="padding:10px">
 	
 		<table class="table table-striped table-bordered" id="gtable">
 		   <?php	$users = User::where('level', '!=', 0)->get();					
