@@ -2,6 +2,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap includes -->
 {{HTML::script('packages/bootstrap/js/jquery-1.9.1.min.js')}}
 {{HTML::script('packages/bootstrap/js/ui.js')}}
 {{HTML::script('packages/bootstrap/js/helper.js')}}
@@ -14,8 +15,13 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
+<<<<<<< HEAD
+    
+    @yield('page_specific_scripts')
+=======
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
+>>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
 
 <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
@@ -70,9 +76,15 @@ $(document).ready(function(){
           return false;
         }
     });	
+     $('#example').dataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    } );
 });
     
 </script>
+
 @endif
 
 @if(Auth::user()->level == 2) 

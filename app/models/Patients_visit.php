@@ -20,4 +20,8 @@ class Patients_visit extends Eloquent  {
 		return $this->belongsTo('rooms','room_id','id');
 
 	}
+
+	public static function fullname(Patient $p){
+		return $p->firstname . " " . $p->lastname;
+}
 }
