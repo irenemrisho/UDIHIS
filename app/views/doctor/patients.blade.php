@@ -16,13 +16,13 @@
 										
 					<div class="widget-header">
 						
-				    <input type="text" id="searchPatient" class="input-medium search-query" placeholder="Search">
+				    <input type="text" style="margin-left:8px" id="searchPatient" class="input-medium search-query" placeholder="Search">
 					</div> <!-- /widget-header -->
 					
 					<div id="content1" class="widget-content">
 					
 						<?php	
-						$patients = Patient::paginate(5);
+						$patients = Patient::orderBy('filenumber','DESC')->take(5)->get();
 							
 						?>
 						<table id="patients" class="table table-striped table-bordered">
@@ -73,7 +73,7 @@
 							</div>
 							<div class="modal-footer" id="{{$patient->id}}">
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								<button class="btn btn-primary">Next Visit</button>
+								<button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
 								<button class="btn btn-primary">Admit</button>
 								<button class="btn btn-primary" id="laboratory">Laboratory</button>
