@@ -73,7 +73,7 @@
 							</div>
 							<div class="modal-footer" id="{{$patient->id}}">
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								<button class="btn btn-primary">Next Visit</button>
+								<button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
 								<button class="btn btn-primary">Admit</button>
 								<button class="btn btn-primary" id="laboratory">Laboratory</button>

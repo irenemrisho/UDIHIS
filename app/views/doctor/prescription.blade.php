@@ -46,23 +46,24 @@
 													<div class="control-group">											
 														<label class="control-label" for="username">Second name</label>
 														<div class="controls">
+
 															{{$patient->lastname}}
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
-												
+													
 										
 													<div class="control-group">											
 														<label class="control-label" for="username">Prescribed Medicine</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge" id="prescribedmedicine" name="prescribedmedicine" >
+														<input type="text" class="input-xlarge" name="prescribedmedicine" id="tokenfield" value="" />
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
 													<div class="control-group">											
 														<label class="control-label" for="username">Dosage</label>
 														<div class="controls">
-															<input type="text" class="input-xlarge " name="quantity">
+															<input type="text" class="input-xlarge" name="quantity" id="tokenfield2" />
 															
 														</div> <!-- /controls -->				
 													</div> <!-- /control-group -->
@@ -75,7 +76,7 @@
 													</div> <!-- /control-group -->
 													
 													<div class="pull-right">
-														<button class="btn">Cancel</button> <input type="submit" id="presc1" class="btn btn-primary" value="Save" />
+														<button type="button" class="btn">Cancel</button> <input type="submit" id="presc1" class="btn btn-primary" value="Save" />
 													</div>			
 									
 																								
