@@ -75,6 +75,23 @@ $(document).ready(function(){
 </script>
 @endif
 
+@if(Auth::user()->level == 2) 
+
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		@if(Laboratory::whereRaw('tested = FALSE')->count() != 0)
+			setInterval(function(){
+				$.get('getTests', function(data){
+						$('#labtest').hide().text(data).fadeIn(2000);
+					});
+			}, 2000);
+		@endif
+	});
+</script>
+@endif
+
 @endif
 </body>
 </html>
