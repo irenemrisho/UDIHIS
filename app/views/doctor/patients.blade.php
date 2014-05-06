@@ -16,13 +16,13 @@
 										
 					<div class="widget-header">
 						
-				    <input type="text" id="searchPatient" class="input-medium search-query" placeholder="Search">
+				    <input type="text" style="margin-left:8px" id="searchPatient" class="input-medium search-query" placeholder="Search">
 					</div> <!-- /widget-header -->
 					
 					<div id="content1" class="widget-content">
 					
 						<?php	
-						$patients = Patient::paginate(5);
+						$patients = Patient::orderBy('filenumber','DESC')->take(5)->get();
 							
 						?>
 						<table id="patients" class="table table-striped table-bordered">

@@ -44,12 +44,11 @@ class DoctorController extends BaseController {
 
 		$tests  = implode($inputs, ",");
 
-
-		$pv_id  = Patients_visit::where('patient_id',$id)->first()->id;
-		$test   = Laboratory::create(array(
-					"pv_id"=>$pv_id,
-					"test_type"=>$tests
-			));
+		// $pv_id  = Patients_visit::where('patient_id',$id)->first()->id;
+		// $test   = Laboratory::create(array(
+		// 			"pv_id"=>$pv_id,
+		// 			"test_type"=>$tests
+		// 	));
 
 		return url('patients');
 
@@ -63,10 +62,19 @@ class DoctorController extends BaseController {
     public function search(){
           $user = Input::get('p');
 
-          $patients = Patient::where('firstname', 'LIKE', '%'.$user.'%')->get();
-
-          return View::make('doctor.search_patient');                                     
-
+          if($user == ""){
+          		$patients = Patient::orderBy('filenumber','DESC')->take(5)->get();
+          		return View::make('doctor.search_patient',compact('patients')); 
+          }else{
+          	$patients = Patient::where('firstname', 'LIKE', '%'.$user.'%')->count();
+          	if($patients == 0){
+          		return View::make('doctor.search_patient');
+          	}else{
+          		$patients = Patient::where('firstname', 'LIKE', '%'.$user.'%')->get();
+          		return View::make('doctor.search_patient', compact('patients')); 
+          	}
+			 
+          }
     }
 
 	public function recommend(){
