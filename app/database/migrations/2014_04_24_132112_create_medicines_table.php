@@ -10,8 +10,6 @@ class CreateMedicinesTable extends Migration {
        Schema::create('medicines',function($table){
             $table->increments('id');
             $table->string('name')->nullable;
-            $table ->integer('batch_no')->nullable;
-            $table->string('strength')->nullable;
             $table->string('price')->nullable;
             $table->string('man_date')->nullable;
             $table->string('exp_date')->nullable;
