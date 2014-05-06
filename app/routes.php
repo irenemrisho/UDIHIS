@@ -81,6 +81,7 @@ Route::post('patient/edit/{id}', 'ReceptionController@edit');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
+Route::get('patients/add' , 'ReceptionController@index');
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/
@@ -88,17 +89,22 @@ Route::post('patients/edit/{id}' , 'PatientController@update');
 /*to delete a patient*/
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'PatientController@profile');
-//});
 
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
 
 
-// appointment routes
+
 //return the appoitment form
 Route::get('patient/appoint/{id}' , 'PatientVisitController@index');
 //return patient visit form
 Route::get('patient/visit/{id}' , 'PatientVisitController@visit');
 
+//patient visit routes
+Route::post('patient/visit/loadsection', 'PatientVisitController@loadsection');
+Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinfo');
+// appointment routes
+Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
 
+Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');

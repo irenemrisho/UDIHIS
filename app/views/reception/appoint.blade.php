@@ -67,20 +67,27 @@
     </div>
 </div>
 <div class="tab-pane active " id="2">
+        <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
+<form  action = "" method = "post">
 	<div class = "row-fluid">
 		<div class ="span6">
-          <p>Section</p>
+          
+                    <input name="pid" value="{{$patient->id}}" type="hidden" />
+                    <input name="user_id" value="{{$user->id}}" type="hidden" />
+                    
+                    <p>SECTION</p>
                     <select id="section" name="section" class="form-control">
                         <option></option>
                         <option>OPD</option>
                         <option>IPD</option>
                         <option>ANC</option>
                     </select>
-
                     <div id="section-more">
                           
                     </div>
 
+     <div class="control-group">
+    </div>
 <div class="control-group">
 <div class="controls">
     <label class="control-label" for="Date">Date</label>
@@ -96,7 +103,8 @@
         </div> <!-- /controls -->
     </div>
 		</div>
-
+            
+                       <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
 		<div class="span6">
 			
                    
@@ -112,12 +120,13 @@
                     </div> 
 
                     <div class="control-group">
-            			<input type="submit" class="btn btn-primary " id="" name="appoint" value = "Appoint">
+            			<input type="submit" class="btn btn-primary " id="submit" name="appoint" value = "Set Appointment">
     				</div>
 			</div>
       
 
 	</div>
+    </form>
   
     </div>
 

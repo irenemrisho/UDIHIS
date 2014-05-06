@@ -64,6 +64,7 @@
                         <div class="controls">
                             <select class="form-control" name="allergy">
                                 <option disabled>Select Allergy</option>
+                                <option></option>
                                 <option>Skin</option>
                                 <option>Asthma</option>
                                 <option>None</option>
@@ -98,10 +99,11 @@
                         <div class="controls">
                             <select class="form-control" name="bloodgroup">
                                 <option disabled>Select Blood Group</option>
+                                <option></option>
                                 <option>A</option>
                                 <option>B</option>
                                 <option>O</option>
-                                option>AB</option>
+                                <option>AB</option>
                             </select>
                         </div>
 
