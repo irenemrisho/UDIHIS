@@ -250,6 +250,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('#nextVisit').popover();
+
 
     $('.alert').fadeOut(3000);
 
