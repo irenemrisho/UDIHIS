@@ -17,6 +17,8 @@ class CreateLaboratoriesTable extends Migration {
 			$table->integer('pv_id')->references('id')->on('patients_visits');
 			$table->String('test_type');
 	        $table->String('result');
+	        $table->String('labteststatus')->default('No');
+	        $table->String('prescriptionstatus')->default('No');
 	        $table->date('date');
 	        $table->integer('service_id')->references('id')->on('services');
 	        $table->integer('user_id')->references('id')->on('users');
