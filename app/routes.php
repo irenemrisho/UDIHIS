@@ -93,6 +93,7 @@ Route::post('patients/profile', 'PatientController@profile');
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
+Route::get('getTests', 'LaboratoryController@getTests');
 
 
 // appointment routes
