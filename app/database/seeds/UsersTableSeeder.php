@@ -18,8 +18,6 @@ class UsersTableSeeder extends Seeder {
 				"phone_no"=>"000 000 000",
 				"extension_no"=>"1",
 				"room_no"=>"1",
-				"address"=>"admin",
-				"contact"=>"dar",
 				"status"=>"active",
 				"password"=>Hash::make('1234')
 			));

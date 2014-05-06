@@ -11,8 +11,12 @@
 
         <section style="display:none" class="step" data-step-title="Initial Information">
             <fieldset >
-                 <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
+
                 <div class="span4 pull-left">
+
+
+                    <h4 >Full name :  {{Patient::fullname($patient)}} </h4>
+                    <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <div class="control-group">
                         <label class="control-label" for="">Height</label>
                         <div class="controls">
@@ -33,6 +37,7 @@
                         <div class="controls">
                             <select class="form-control" name="allergy">
                                 <option disabled>Select Allergy</option>
+                                <option></option>
                                 <option>Skin</option>
                                 <option>Asthma</option>
                                 <option>None</option>
@@ -44,9 +49,9 @@
 
 
                 </div>
-                       <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+
                 <div class="span4 pull-right">
-                     
+                    <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
                     <div class="control-group">
                         <label class="control-label" for="temperature">Temperature</label>
                         <div class="controls">
@@ -66,7 +71,9 @@
                         <label class="control-label" for="gender">Blood Group</label>
                         <div class="controls">
                             <select class="form-control" name="bloodgroup">
-                                <option>{{$pVisit->bloodgroup}}</option>
+                                <option disabled>Select Blood Group</option>
+
+                                <option></option>
                                 <option>A</option>
                                 <option>B</option>
                                 <option>O</option>
@@ -104,8 +111,8 @@
 
             <fieldset >
                 <div class="span4 pull-left">
-                    
-                    <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
+                    <h4 >Full name :  {{Patient::fullname($patient)}} </h4>
+
                     <div class="control-group ">
                         <h4>Payment Type</h4>
                         <label class="radio">
@@ -123,7 +130,10 @@
 
                 </div>
                 <div class="span4 pull-right" style="margin-left:4px;">
-                     <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+
+
+                    <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+                    <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <label class="control-label">Direct To &raquo</label>
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">

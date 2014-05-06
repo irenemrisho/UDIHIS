@@ -50,6 +50,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    
+
 
     $('.alert').fadeOut(3000);
 
@@ -65,9 +67,9 @@ $(document).ready(function(){
     $('#labtest').on('click',function(){
         var pid = $('#pid').val();
         var tex = tests;
-        $.post(pid,{tex:tex}, function(data){
-            window.location.assign(data);
-        });
+         $.post(pid,{tex:tex}, function(data){
+             window.location.assign(data);
+         });
     });
 
     $('#presc').on('click', function(){
@@ -249,6 +251,10 @@ var Application = function () {
 
 
 $(document).ready(function(){
+
+
+
+    $('#nextVisit').popover();
 
 
     $('.alert').fadeOut(3000);

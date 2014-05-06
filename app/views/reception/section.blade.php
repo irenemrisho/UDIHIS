@@ -2,12 +2,15 @@
 
 <p>Doctor</p>
 <select id="opd" class="form-control" name="sectioninfo">  
-<?php $docts = User::where('level',4)->get(); ?>
+<?php 
+$docts = User::where('level',4)->get();
+ ?>
 @foreach($docts as $dr)
-	<option>{{$dr->first_name}} {{$dr->last_name}}</option>
+	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
+
 @endforeach
 </select>
-
+<label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
 @endif
 
 @if($section == "IPD")
@@ -15,9 +18,10 @@
 <select id="ipd" class="form-control" name="sectioninfo">  
 <?php $docts = User::where('level',4)->get(); ?>
 @foreach($docts as $dr)
-	<option>{{$dr->first_name}} {{$dr->last_name}}</option>
+	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 </select>
+<label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
 
 
 @endif
@@ -28,10 +32,10 @@
 <select id="ipd" class="form-control" name="sectioninfo">  
 <?php $docts = User::where('level',4)->get(); ?>
 @foreach($docts as $dr)
-	<option>{{$dr->first_name}} {{$dr->last_name}}</option>
+	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 
-
+<label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
 @endif
 
 

@@ -17,7 +17,15 @@
     {{HTML::style('packages/bootstrap/css/dashboard.css')}}
     {{HTML::style('packages/bootstrap/css/easyWizard.css')}}
     {{HTML::style('packages/bootstrap/css/ui.css')}}
+<<<<<<< HEAD
     @yield('page_specific_css')
+=======
+    {{HTML::style('packages/bootstrap/css/bootstrap-tokenfield.css')}}
+    {{HTML::style('packages/bootstrap/css/tokenfield-typeahead.css')}}
+    
+
+    
+>>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
   

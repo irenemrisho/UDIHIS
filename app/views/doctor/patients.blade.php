@@ -16,13 +16,13 @@
 										
 					<div class="widget-header">
 						
-				    <input type="text" id="searchPatient" class="input-medium search-query" placeholder="Search">
+				    <input type="text" style="margin-left:8px" id="searchPatient" class="input-medium search-query" placeholder="Search">
 					</div> <!-- /widget-header -->
 					
 					<div id="content1" class=" widget widget-content">
 					
 						<?php	
-						$patients = Patient::paginate(5);
+						$patients = Patient::orderBy('filenumber','DESC')->take(5)->get();
 							
 						?>
 						<table id="patients" class="table table-striped table-bordered">
@@ -31,9 +31,9 @@
 									<th>File Number</th>
 									<th>First Name</th>
 									<th>Last Name</th>
-									<th>Payment Status</th>
-									
-									<th>&nbsp;</th>
+									<th>Lab Test</th>
+									<th>Prescribe</th>
+									<th>operation</th>
 								</tr>
 							</thead>
 							
@@ -43,7 +43,9 @@
 								<tr><td>{{$patient->filenumber}}</td>
 									<td>{{$patient->firstname}}</td>
 									<td>{{$patient->lastname}}</td>
-									<td>{{$patient->paymenttype}}</td>
+									<td>{{$patient->labteststatus}}</td>
+									<td>{{$patient->prescriptionstatus}}</td>
+
 									<td class="action-td" id="{{$patient->id}}">
 										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
 									</td>
@@ -73,7 +75,7 @@
 							</div>
 							<div class="modal-footer" id="{{$patient->id}}">
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								<button class="btn btn-primary">Next Visit</button>
+								<button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
 								<button class="btn btn-primary">Admit</button>
 								<button class="btn btn-primary" id="laboratory">Laboratory</button>

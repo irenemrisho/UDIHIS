@@ -23,6 +23,10 @@ class LaboratoryController  extends BaseController{
     	return View::make('laboratory.stock');
     }
 
+    public function getTests(){
+        return Laboratory::whereRaw('tested = FALSE')->count();
+    }
+
    
   }
     //put your code here

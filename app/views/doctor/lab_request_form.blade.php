@@ -12,179 +12,179 @@
     <h5>1.HAEMATOLOGY</h5>
     <input type="hidden" value="{{$pid}}" id="pid" />
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep"   id="inlineCheckbox1" value="Bs for MPs.../200WBC"> Bs for MPs.../200WBC
+    <input type="checkbox" class="labreqrep"   id="inlineCheckbox1" value="HAEMATOLOGY_Bs for MPs.../200WBC"> Bs for MPs.../200WBC
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Haemoglobin.../dl"> Haemoglobin.../dl
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="HAEMATOLOGY_Haemoglobin.../dl"> Haemoglobin.../dl
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Sickling Test..."> Sickling Test...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_Sickling Test..."> Sickling Test...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Haemogram(Full Blood Picture)..."> Haemogram(Full Blood Picture)...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_Haemogram(Full Blood Picture)..."> Haemogram(Full Blood Picture)...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="ESR...mm/hr"> ESR...mm/hr
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_ESR...mm/hr"> ESR...mm/hr
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Bleeding Time..."> Bleeding Time...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_Bleeding Time..."> Bleeding Time...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Clotting Time..."> Clotting Time...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_Clotting Time..."> Clotting Time...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="P.T"> P.T
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_P.T"> P.T
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="PTT"> PTT
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_PTT"> PTT
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="B/Group RH Factors..."> B/Group RH Factors...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HAEMATOLOGY_B/Group RH Factors..."> B/Group RH Factors...
     </label>
     <h5>2.SEROLOGY</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="HIV..."> HIV...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="SEROLOGY_HIV..."> HIV...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="CD4/CD8 Profile..."> CD4/CD8 Profile...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="SEROLOGY_CD4/CD8 Profile..."> CD4/CD8 Profile...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="VDRL..."> VDRL...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_VDRL..."> VDRL...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Widal Test..."> Widal Test...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_Widal Test..."> Widal Test...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="TPHA..."> TPHA...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_TPHA..."> TPHA...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HB sAg..."> HB sAg...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_HB sAg..."> HB sAg...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="R.Factors..."> R.Factors...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_R.Factors..."> R.Factors...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="H.PYLORI..."> H.PYLORI...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SEROLOGY_H.PYLORI..."> H.PYLORI...
     </label>
 </div>
 
 <div class="span2 control-group">
 	<h5>3.URINALYSIS</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="Color..."> Color...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="URINALYSIS_Color..."> Color...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="PH..."> PH...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="URINALYSIS_PH..."> PH...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="SP Gravity..."> SP Gravity...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_SP Gravity..."> SP Gravity...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Glucose..."> Glucose...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Glucose..."> Glucose...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Protein..."> Protein...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Protein..."> Protein...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Ketones..."> Ketones...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Ketones..."> Ketones...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Urobilinogen..."> Urobilinogen...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Urobilinogen..."> Urobilinogen...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="WBs..."> WBs...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_WBs..."> WBs...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="RBC..."> RBC...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_RBC..."> RBC...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="EP Sales..."> EP Sales...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_EP Sales..."> EP Sales...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Yeast Cells..."> Yeast Cells...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Yeast Cells..."> Yeast Cells...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Crystals..."> Crystals...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Crystals..."> Crystals...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Ova..."> Ova...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Ova..."> Ova...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Others..."> Others...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_Others..."> Others...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="C/S..."> C/S...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="URINALYSIS_C/S..."> C/S...
     </label>
     <h5>4.OTHERS</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="HVs"> HVs
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="OTHERS_HVs"> HVs
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Semenalanalysis"> Semenalanalysis
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="OTHERS_Semenalanalysis"> Semenalanalysis
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="PSA"> PSA
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="OTHERS_PSA"> PSA
     </label>
 </div>
 
 <div class="span2 control-group">
 <h5>5.BIOCHEMISTRY</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="RBG.Fasting...mmo/l">  RBG.Fasting...mmo/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="BIOCHEMISTRY_RBG.Fasting...mmo/l">  RBG.Fasting...mmo/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Random...mml/l"> Random...mml/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="BIOCHEMISTRY_Random...mml/l"> Random...mml/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Cholesterol...mml/l"> Cholesterol...mml/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Cholesterol...mml/l"> Cholesterol...mml/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Uric Acid...mmol/l"> Uric Acid...mmol/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Uric Acid...mmol/l"> Uric Acid...mmol/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="S.Creatinine...umol"> S.Creatinine...umol
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_S.Creatinine...umol"> S.Creatinine...umol
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Urea...mmol/l"> Urea...mmol/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Urea...mmol/l"> Urea...mmol/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Bilirubin Total...umo/l"> Bilirubin Total...umo/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Bilirubin Total...umo/l"> Bilirubin Total...umo/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Direct...umol/l"> Direct...umol/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Direct...umol/l"> Direct...umol/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Indirect...umol/l"> Indirect...umol/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Indirect...umol/l"> Indirect...umol/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="ALAT...lu/l"> ALAT...lu/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_ALAT...lu/l"> ALAT...lu/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="ASAT...lu/l"> ASAT...lu/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_ASAT...lu/l"> ASAT...lu/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Alkaline phos...lu/l"> Alkaline phos...lu/l
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_Alkaline phos...lu/l"> Alkaline phos...lu/l
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="S.Amylase..."> S.Amylase...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BIOCHEMISTRY_S.Amylase..."> S.Amylase...
     </label>
 
     <h5>6.ELECTROLYTE</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="K+"> K+
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="ELECTROLYTE_K+"> K+
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Na"> Na
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="ELECTROLYTE_Na"> Na
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Cl"> Cl
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="ELECTROLYTE_Cl"> Cl
     </label>
     <div class="control-group">
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="HCO3"> HCO3
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="ELECTROLYTE_HCO3"> HCO3
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Ca"> Ca
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="ELECTROLYTE_Ca"> Ca
     </label>
 </div>
 </div>
@@ -192,57 +192,57 @@
 <div class="span2 control-group">
 <h5>7.STOOL</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="Appearance.."> Appearance..
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="STOOL_Appearance.."> Appearance..
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="WBC..."> WBC...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="STOOL_WBC..."> WBC...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="RBC..."> RBC...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="STOOL_RBC..."> RBC...
     </label>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="Macrophages.."> Macrophages..
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="STOOL_Macrophages.."> Macrophages..
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="Ova/Cyst..."> Ova/Cyst...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="STOOL_Ova/Cyst..."> Ova/Cyst...
     </label>
     
     <h5>8.BODY FLUIDS(S'fy)</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="Appearance..."> Appearance...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="BODY FLUIDS_Appearance..."> Appearance...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="ZN-Stain..."> ZN-Stain...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="BODY FLUIDS_ZN-Stain..."> ZN-Stain...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Gram Stain..."> Gram Stain...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BODY FLUIDS_Gram Stain..."> Gram Stain...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="C/S..."> C/S...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="BODY FLUIDS_C/S..."> C/S...
     </label>
 
     <h5>9.HORMONES</h5>
     <label class="checkbox">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="Prolactin..."> Prolactin...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox1" value="HORMONES_Prolactin..."> Prolactin...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="FSH..."> FSH...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox2" value="HORMONES_FSH..."> FSH...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="L.H...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HORMONES_L.H...
 "> L.H...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="TSH,T3,T4..."> TSH,T3,T4...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HORMONES_TSH,T3,T4..."> TSH,T3,T4...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Progesterone..."> Progesterone...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HORMONES_Progesterone..."> Progesterone...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Testosterone..."> Testosterone...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HORMONES_Testosterone..."> Testosterone...
     </label>
     <label class="checkbox ">
-    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="Androgen..."> Androgen...
+    <input type="checkbox" class="labreqrep" id="inlineCheckbox3" value="HORMONES_Androgen..."> Androgen...
     </label>
 </div>
 <div class="form-controls">

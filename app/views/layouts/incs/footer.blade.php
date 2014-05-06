@@ -15,8 +15,13 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
+<<<<<<< HEAD
     
     @yield('page_specific_scripts')
+=======
+{{HTML::script('packages/bootstrap/js/select2.min.js')}}
+{{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
+>>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
 
 <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
@@ -39,8 +44,37 @@
 ?> 
 <script type="text/javascript">
 $(document).ready(function(){
+
+	$('#tokenfield').tokenfield({
+	  autocomplete: {
+	    source: {{$jsons}},
+	    delay: 100
+	  },
+	  showAutocompleteOnFocus: false
+	});
+
+	$('#tokenfield2').tokenfield({
+	  autocomplete: {
+	    source: ['1x1','1x2','1x3','2x1','2x2','2x3','3x1','3x2','3x3'],
+	    delay: 100
+	  },
+	  showAutocompleteOnFocus: false
+	});
+	
+
 	$('#prescribedmedicine').autocomplete({
-        source :  {{$jsons}}
+        source :  {{$jsons}},
+        select: function( event, ui ) {
+          var terms = [];
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+        }
     });	
      $('#example').dataTable( {
         "paging":   true,
@@ -51,6 +85,23 @@ $(document).ready(function(){
     
 </script>
 
+@endif
+
+@if(Auth::user()->level == 2) 
+
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		@if(Laboratory::whereRaw('tested = FALSE')->count() != 0)
+			setInterval(function(){
+				$.get('getTests', function(data){
+						$('#labtest').hide().text(data).fadeIn(2000);
+					});
+			}, 2000);
+		@endif
+	});
+</script>
 @endif
 
 @endif
