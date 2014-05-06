@@ -45,7 +45,7 @@
 									<td>{{$patient->lastname}}</td>
 									<td><span class="label label-success">{{Patients_visit::wherePatient_id($patient->id)->first()->labteststatus}}</span></td>
 									<td><span class="label label-important">{{Patients_visit::wherePatient_id($patient->id)->first()->prescriptionstatus}}</span></td>
-									
+	
 
 									<td class="action-td" id="{{$patient->id}}">
 										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
