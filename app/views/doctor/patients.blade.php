@@ -31,9 +31,9 @@
 									<th>File Number</th>
 									<th>First Name</th>
 									<th>Last Name</th>
-									<th>Payment Status</th>
-									
-									<th>&nbsp;</th>
+									<th>Lab Test</th>
+									<th>Prescribe</th>
+									<th>operation</th>
 								</tr>
 							</thead>
 							
@@ -43,7 +43,9 @@
 								<tr><td>{{$patient->filenumber}}</td>
 									<td>{{$patient->firstname}}</td>
 									<td>{{$patient->lastname}}</td>
-									<td>{{$patient->paymenttype}}</td>
+									<td>{{$patient->labteststatus}}</td>
+									<td>{{$patient->prescriptionstatus}}</td>
+
 									<td class="action-td" id="{{$patient->id}}">
 										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
 									</td>
