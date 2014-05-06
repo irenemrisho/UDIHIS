@@ -16,6 +16,8 @@ class CreatePatientsVisitsTable extends Migration {
 			$table->increments('id');
 			$table->integer('doctor_id')->references('id')->on('users')->nullable();
 			$table->String('medicine_id')->references('id')->on('medicines')->nullable();
+			$table->String('labteststatus')->default('No');
+	        $table->String('prescriptionstatus')->default('No');
             $table->String('patient_id')->references('id')->on('patients')->nullable();
             $table->date('account_id')->references('id')->on('services')->nullable();
             $table->integer('room_id')->references('id')->on('rooms')->nullable();
