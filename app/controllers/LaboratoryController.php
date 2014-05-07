@@ -23,6 +23,12 @@ class LaboratoryController  extends BaseController{
     	return View::make('laboratory.stock');
     }
 
+    public function testpatients(){
+        return View::make('laboratory.testpatients');
+    }
+    public function testpatient(){
+        return View::make('laboratory.testpatient');
+    }
     public function getTests(){
         return Laboratory::whereRaw('tested = FALSE')->count();
     }
