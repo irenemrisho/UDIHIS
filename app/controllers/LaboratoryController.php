@@ -26,8 +26,9 @@ class LaboratoryController  extends BaseController{
     public function testpatients(){
         return View::make('laboratory.testpatients');
     }
-    public function testpatient(){
-        return View::make('laboratory.testpatient');
+    public function testpatient($id){
+        $patients = Laboratory::wherePv_id($id)->get();
+        return View::make('laboratory.testpatient',compact('patients'));
     }
     public function getTests(){
         return Laboratory::whereRaw('tested = FALSE')->count();
