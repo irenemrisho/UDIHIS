@@ -50,7 +50,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
-    
+  
+    $("[rel=tooltip]").tooltip({ placement: 'top'});
 
 
     $('.alert').fadeOut(3000);

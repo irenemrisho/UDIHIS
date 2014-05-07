@@ -1,4 +1,21 @@
 @extends('dashboard')
+
+@section('page_specific_css')
+    <!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+    <!-- Datatable includes -->
+    {{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+    <script type="text/javascript">
+            $('.table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+    </script>
+@stop
 @section('main')
     <h1 class="page-title">
                     <i class="icon-th-large"></i>
@@ -25,9 +42,7 @@
     <div class="widget-table">
 
         <div class="widget-header">
-            <form class="form-search" style="margin-left:4px">
-                <input type="text" id="search" class="input-medium search-query" placeholder="Search">
-            </form>
+        
         </div> <!-- /widget-header -->
 
         <div class="widget-content">
@@ -70,9 +85,21 @@
         
                                 
             <div class="widget-header">
-                <h3>Test Patients</h3>
+               
             </div> <!-- /widget-header -->
-                                                
+            
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="widget-content" style="padding:10px;">
                                                     <table id="patients_table" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
                                                             <thead>
@@ -98,12 +125,13 @@
                                                                     <td style="text-align:center;">
                                                                         
                                                                         <a href="{{url("testpatients/$patient->id")}}" 
-                                                                            rel="tooltip" data-placement="top" data-original-title="edit" class="btn btn-small btn-primary">
-                                                                                <i class="icon-edit"></i>
+                                                                           >
+                                                                                <i class="icon-edit btn btn-small btn-primary"  rel="tooltip"  data-original-title="take specimen" ></i>
                                                                         </a>
                                                                         <a href="{{url("patient/appoint/$patient->id")}}" 
-                                                                            rel="tooltip" data-placement="top" data-original-title="edit" class="btn btn-small btn-primary">
-                                                                                <i class="icon-edit"></i>
+                                                                            >
+                                                                                <i class="btn btn-small btn-primary icon-edit" rel="tooltip"  data-original-title="enter results"></i>
+
                                                                         </a>
                                                                         
                                                                     </td>
