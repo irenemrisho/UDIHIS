@@ -50,7 +50,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
-    
+  
+    $("[rel=tooltip]").tooltip({ placement: 'top'});
 
 
     $('.alert').fadeOut(3000);
@@ -259,7 +260,14 @@ var Application = function () {
 $(document).ready(function(){
 
 
-
+    $('.fetch-recommendation').on('click', function(data){
+        var id = $(this).parent().attr('id');
+        
+        $.post('pharmacy/recommended', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
+    
     $('#nextVisit').popover();
 
 
@@ -397,6 +405,11 @@ $(document).ready(function(){
 
 });
 
-
+    function toggle(source) {
+        checkboxes = document.getElementsByName('add[]');
+        for(var i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = source.checked;
+     }
+    }
 
 
