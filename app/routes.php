@@ -81,11 +81,8 @@ Route::post('patient/edit/{id}', 'ReceptionController@edit');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
-<<<<<<< HEAD
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
-=======
 Route::get('patients/add' , 'ReceptionController@index');
->>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/
@@ -98,6 +95,9 @@ Route::post('patients/profile', 'PatientController@profile');
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
 Route::get('getTests', 'LaboratoryController@getTests');
+Route::get('testpatients/getTests', 'LaboratoryController@getTests');
+Route::get('testpatients', 'LaboratoryController@testpatients');
+Route::get('testpatients/{id}', 'LaboratoryController@testpatient');
 
 
 
