@@ -1,8 +1,9 @@
 @extends('dashboard')
 @section('main')
  <h1 class="page-title">
-                        <i class="icon-stethoscope"></i>
-                        Provide medication					
+                        <i class="icon-th-list"></i>
+                            Prescription List
+			
                     </h1>
 
                     <div class="action-nav-normal">
@@ -13,50 +14,77 @@
                         </div> <!-- /stat-container -->
 
                         <div class="widget-header">
-                            <i class="icon-th-list"></i>
-                            <h3>Prescription List</h3>
+                         <form class="form-search" style="margin-left:4px">
+                    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
+                </form> 
+                           
                         </div> <!-- /widget-header -->
- 
+                    
                         <div class="widget-content">
-                          
+                           <?php if(isset($_GET['msg'])){
+                                                                        if($_GET['msg']==1){?>
+                                                                        <div class="alert alert-success alert-dismissable">
+                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                                            <strong>Successfully provided</strong>
+                                                                        </div>
+                                                                        <?php }elseif ($_GET['msg']==2) { ?>
+                                                                        <div class="alert alert-warning alert-dismissable">
+                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                                            <strong>Providing failed....Please select atleast one medicine</strong>
+                                                                        </div>
+                                                                        <?php }}?>
                             <table class="table  table-bordered">
+                            <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>date</th>
                                         <th>patient</th>
-                                        <th>medicine</th>
-                                        <th>quantity</th>
-                                        <th>options</th>  
+                                        <th>File number</th>
+                                        <th>Number medicine</th>
+                                        <th>Action</th>  
                                
                                     </tr>
+                            </thead>
+                            <tbody id="provide_medication">
                                     <?php $index=1; ?>
-				      @foreach($provided_medicines as $provided_medicine)
-					<tr><td>{{$index}}</td>
-					<td>{{($provided_medicine->created_at)}}</td>
-					<td>{{Patient::find($provided_medicine->pv_id)->firstname}}</td>
-					<td>{{Medicine::find($provided_medicine->medicine_id)->name}} </td>
-                                        <td>{{$provided_medicine->quantity}} </td>
-                                                                                                                                
-                                                                                                                                
-					<td class="action-td">
-                                            <a href="provide_medication?provide={{$provided_medicine->id}}"  >
-						    <span class=" btn btn-small btn btn-primary">
-                                                    Provide
-                                                    <span>
-                                         </a>
-
+                                    @foreach($provided_medicines as $provided_medicine)
+                                 <tr><td>{{$index}}</td>
+                                    <td>{{Patient::find($provided_medicine->pv_id)->firstname}}</td>
+                                    <td>{{Patient::find($provided_medicine->pv_id)->filenumber}}</td>
+                                    <td>{{$provided_medicine->count}}</td>
+                                    <td class="action-td" id="{{$provided_medicine->pv_id}}">
+                                        <a href="#recommended" role="button" class="btn btn-primary fetch-recommendation" data-toggle="modal">Provide</a>
                                     </td>
-                            </tr>
-                        <?php $index++; ?>
-                            @endforeach
-                                    
-                                <tbody id="provide_medication">
+                                </tr>
+                                    <?php $index++; ?>
+                                    @endforeach
                                     
                                 </tbody>
                             </table>
+
+                            <div id="recommended" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <form  action="provide_recommended" method="post">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">Recommended medicine</h3>
+                            </div>
+                            <div class="modal-body">
+                        
+                            <div id="profile">
+
+
+                            </div>                                                                              
+
+                            </div>
+                            <div class="modal-footer" id="">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                <button type="submit"  aria-hidden="true" class="btn btn-primary fetch-recommendation">Provide</button>
+                            </div>
+                            </form>
+                </div>
 
                         </div> <!-- /widget-content -->
 
 
 @stop
+
 
