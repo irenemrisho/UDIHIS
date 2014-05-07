@@ -5,7 +5,7 @@
 			<li style="list-style: none">First Name:    {{ $patient->firstname}}</li>
 			<li style="list-style: none">Last Name :    {{ $patient->lastname}}</li>
 			<li style="list-style: none">Payment Type:   {{ $patient->paymenttype}}</li>
-			<li style="list-style: none">Blood Group :   {{ $patient->bloodgroup}}</li>
+			<li style="list-style: none">Blood Group :   {{ $patient1->bloodgroup}}</li>
 			
 		</ul>
 	</div>
@@ -14,8 +14,8 @@
  		<ul>
 			<li style="list-style: none">Rhesus:   {{ $patient->rhesus}}</li>
 			<li style="list-style: none">Birth Date:   {{ $patient->birth}}</li>
-			<li style="list-style: none">Weight:   {{ $patient->weight}}</li>
-			<li style="list-style: none">Allergy:   {{ $patient->alergy}}</li>
+			<li style="list-style: none">Weight:   {{ $patient1->weight}}</li>
+			<li style="list-style: none">Allergy:   {{ $patient1->allergy}}</li>
 			<li style="list-style: none">Gender: {{ $patient->gender}} <input id="pid" type="hidden" value="{{$patient->id}}"/></li>
 			
 		</ul>
