@@ -57,7 +57,10 @@ Route::post('/edit_medicine', 'PharmacyController@updateMedicine');
 Route::get('manage_report','PharmacyController@getReport');
 Route::get('my_accountpharmacy','PharmacyController@getAccount');
 Route::post('manage_medicine/search/', 'PharmacyController@search');
-Route::get('dashboard','PharmacyController@getDash');
+Route::get('dashboard','PharmacyController@getDash'); 
+Route::post('pharmacy/recommended','PharmacyController@profile'); 
+Route::post('provide_recommended','PharmacyController@provide_selected'); 
+
 /*Billing Route*/
 Route::get('billing','BillingController@getIndex');
 Route::get('edit_service','BillingController@getEditService'); 
@@ -81,6 +84,8 @@ Route::post('patient/edit/{id}', 'ReceptionController@edit');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
+Route::get('patients/app_card' , 'ReceptionController@app_card_view');
+Route::get('patients/add' , 'ReceptionController@index');
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/
@@ -88,17 +93,26 @@ Route::post('patients/edit/{id}' , 'PatientController@update');
 /*to delete a patient*/
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'PatientController@profile');
-//});
 
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
+Route::get('getTests', 'LaboratoryController@getTests');
+Route::get('testpatients/getTests', 'LaboratoryController@getTests');
+Route::get('testpatients', 'LaboratoryController@testpatients');
+Route::get('testpatients/{id}', 'LaboratoryController@testpatient');
 
 
-// appointment routes
+
 //return the appoitment form
 Route::get('patient/appoint/{id}' , 'PatientVisitController@index');
 //return patient visit form
 Route::get('patient/visit/{id}' , 'PatientVisitController@visit');
 
+//patient visit routes
+Route::post('patient/visit/loadsection', 'PatientVisitController@loadsection');
+Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinfo');
+// appointment routes
+Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
 
+Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');

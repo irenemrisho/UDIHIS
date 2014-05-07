@@ -125,6 +125,8 @@
 						$('#myWizard').css('opacity', '0.2');
 
 						$.post('savepatientinfo1', data, function(data){
+
+							window.location.href = data;
 					
 
 							$('#alrt').fadeIn(1000, function(){

@@ -7,9 +7,11 @@ class PatientVisitController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($id)
 	{
-		return View::make('reception.appoint');
+		$user = User::find($id);
+		$patient  = Patient::find($id);
+		return View::make('laboratory.appoint',compact('patient' , 'user'));
 	}
 
 	public function visit($id)
@@ -19,6 +21,60 @@ class PatientVisitController extends \BaseController {
                 return View::make("reception.newVisit", compact('pVisit', 'patient'));
         }
 			
+
+
+    public function loadsection(){
+    	$section = Input::get('sect');
+    	return View::make('reception.section',compact('section'));
+    }
+
+    public function patientinfo(){
+        $inputs     = Input::all();
+        $pid = $inputs['pid'];
+        $height = $inputs['height'];
+        $weight = $inputs['weight'];
+        $allergy = $inputs['allergy'];
+        $temperature = $inputs['temperature'];
+        $bloodpressure = $inputs['bloodpressure'];
+        $bloodgroup = $inputs['bloodgroup'];
+       // $rhesus = $inputs['rhesus'];
+        $paymenttype = $inputs['paymenttype'];
+        $section = $inputs['section'];
+
+      $pvInfo = Patients_visit::create(array(
+
+            'height' => $height,
+            "weight" => $weight,
+            "temperature" => $temperature,
+            "bloodgroup"=>$bloodgroup,
+            "bloodpressure" => $bloodpressure,
+            "patient_id"=>$pid,
+          ));
+        $this->addPayment("registration",$pid,$paymenttype);
+
+        return url('manage/patients');
+     }
+
+
+    public function addPayment($service_name,$patient_id,$pay_type) {
+        //$cash is boolean value true for cash , false for insured
+        if($pay_type=='Cash'){
+            $status="unpaid";
+        }else{
+            $status="paid";
+        }
+
+        //$service_id = Service::where('name',$service_name)->first()->id;
+
+
+
+        $payment = Payment::create(array(
+            "service_id"=>1,
+            "patient_id"=>$patient_id,
+            "status"=>$status
+        ));
+
+    }
 
 
 
@@ -74,9 +130,31 @@ class PatientVisitController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function setAppointment($id)
 	{
-		//
+		$inputs = Input::all();
+		$pid = $inputs['pid'];
+		$user = $inputs['sectioninfo'];
+		$date = $inputs['appointment'];
+		$time = $inputs['time'];
+		$room_number = $inputs['room_no'];
+       
+        $paymenttype = $inputs['paymenttype'];
+        $section = $inputs['section'];
+
+      $pvInfo = Appointment::create(array(
+
+            "doctor_id" => $user,
+            //"time" => $time,
+            
+            "date" => $date,
+            "patient_id"=>$pid,
+            "room_number"=>$room_number,
+          ));
+        $this->addPayment("registration",$pid,$paymenttype);
+
+        return url('manage/patients');
+
 	}
 
 

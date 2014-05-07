@@ -2,6 +2,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap includes -->
 {{HTML::script('packages/bootstrap/js/jquery-1.9.1.min.js')}}
 {{HTML::script('packages/bootstrap/js/ui.js')}}
 {{HTML::script('packages/bootstrap/js/helper.js')}}
@@ -14,6 +15,7 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
+    @yield('page_specific_scripts')
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
 
@@ -70,8 +72,31 @@ $(document).ready(function(){
           return false;
         }
     });	
+     $('#example').dataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    } );
 });
     
+</script>
+
+@endif
+
+@if(Auth::user()->level == 2) 
+
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		@if(Laboratory::whereRaw('tested = FALSE')->count() != 0)
+			setInterval(function(){
+				$.get('getTests', function(data){
+						$('#labtest').hide().text(data).fadeIn(2000);
+					});
+			}, 2000);
+		@endif
+	});
 </script>
 @endif
 

@@ -24,7 +24,7 @@
 
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class="active"><a href="{{url("laboratory")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("#")}}" id="patient"><i class="icon-user-md"></i>Test Patients<span class="label label-warning pull-right">{{ Patient::find(1)->count() }}</span></a></li>
+    <li><a href="{{url("testpatients")}}" id="patient"><i class="icon-user-md"></i>Test Patients<span class="label label-warning pull-right" id="labtest">{{ Patients_visit::whereRaw('tested = FALSE')->count() }}</span></a></li>
     <li><a href="{{url("stock")}}"><i class="icon-exchange"></i>Manage Stock <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
 </ul>

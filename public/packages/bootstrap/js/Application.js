@@ -50,6 +50,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    
+
 
     $('.alert').fadeOut(3000);
 
@@ -65,9 +67,9 @@ $(document).ready(function(){
     $('#labtest').on('click',function(){
         var pid = $('#pid').val();
         var tex = tests;
-        $.post(pid,{tex:tex}, function(data){
-            window.location.assign(data);
-        });
+         $.post(pid,{tex:tex}, function(data){
+             window.location.assign(data);
+         });
     });
 
     $('#presc').on('click', function(){
@@ -87,10 +89,16 @@ $(document).ready(function(){
         window.location = "patients/prescribe/" + pid;
     });
 
+    $('#prescribe1').on('click', function(){
+        var pid = $('#pid').val();
+        window.location = "patients/prescribe/" + pid;
+    });
+
+
     $('.fetch-patient').on('click', function(data){
         var id = $(this).parent().attr('id');
         $.post('patients/profile', {id:id}, function(data){
-            $('#profile').html(data);
+            $('#profile').html(al);
         });
     });
 
@@ -249,6 +257,8 @@ var Application = function () {
 
 
 $(document).ready(function(){
+
+
 
     $('#nextVisit').popover();
 

@@ -49,7 +49,7 @@ class ReceptionController  extends BaseController{
             'height' => $height,
             "weight" => $weight,
             "temperature" => $temperature,
-            
+            "bloodgroup"=>$bloodgroup,
             "bloodpressure" => $bloodpressure,
             "patient_id"=>$pid,
           ));
