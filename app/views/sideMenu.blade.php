@@ -13,10 +13,10 @@
 @if(Auth::user()->level == 1)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class="active"><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication</a></li>
+    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">{{ Recommended_medicine::where('status','=','open')->count() }}</span></a></li>
     <li><a href="{{url("manage_medicine")}}"><i class="icon-user-md"></i>Manage medicine </a></li>
-    <li><a href="{{url("reports.html")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("#")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="my_accountpharmacy"><i class="icon-user"></i>My account</a></li>
 </ul>
 @endif
 
@@ -24,7 +24,7 @@
 
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class="active"><a href="{{url("laboratory")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("#")}}" id="patient"><i class="icon-user-md"></i>Test Patients<span class="label label-warning pull-right" id="labtest">{{ Laboratory::whereRaw('tested = FALSE')->count() }}</span></a></li>
+    <li><a href="{{url("testpatients")}}" id="patient"><i class="icon-user-md"></i>Test Patients<span class="label label-warning pull-right" id="labtest">{{ Patients_visit::whereRaw('tested = FALSE')->count() }}</span></a></li>
     <li><a href="{{url("stock")}}"><i class="icon-exchange"></i>Manage Stock <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
 </ul>

@@ -1,95 +1,94 @@
 @extends('dashboard')
+
+@section('page_specific_css')
+	<!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+	<!-- Datatable includes -->
+	{{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+	<script type="text/javascript">
+			$('#patients_table').dataTable({
+				ordering:false,
+				"jQueryUI": true
+			});
+	</script>
+@stop
+
 @section('main')
-				
+
 				<h1 class="page-title">
-					<i class="icon-user-md"></i>
-					Patients
-										
+					<i class="icon-th-large"></i>
+					Manage Patients					
 				</h1>
-				
-				<div class="action-nav-normal">
-				   <div class="row">
-					
-					
-					
-				</div> <!-- /stat-container -->
-										
-					<div class="widget-header">
-						
-				    <input type="text" style="margin-left:8px" id="searchPatient" class="input-medium search-query" placeholder="Search">
-					</div> <!-- /widget-header -->
-					
-					<div id="content1" class=" widget widget-content">
-					
-						<?php	
-						$patients = Patient::orderBy('filenumber','DESC')->take(5)->get();
+				<div class="row">
+					<div class="span9">
+							<div class="widget-content">
+								
+								
+											<div class=" widget widget-table">
+										 @if(isset($message))
+<div class="alert alert-info" id="message">{{ $message }}</div>
+@endif	
+												<div class="widget-content" style="padding:10px;">
+													<div id="loadpatientinfo">
+
+													</div>
+													<p id="loader" style="display:none">{{HTML::image('packages/bootstrap/img/loader.gif','',array('class'=>'thumbnail2','style'=>'position:absolute;top:130px;z-index: 30000; left: 380px; height:y26px'))}}</p>
+													<div id="table-content">
+
+													<table id="patients_table" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
+															<thead>
+																<tr>
 							
-						?>
-						<table id="patients" class="table table-striped table-bordered">
-							<thead>
-								<tr>
-									<th>File Number</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Lab Test</th>
-									<th>Prescribe</th>
-									<th>operation</th>
-								</tr>
-							</thead>
-							
-							<tbody>
-						
-						@foreach($patients as $patient)
-								<tr><td>{{$patient->filenumber}}</td>
-									<td>{{$patient->firstname}}</td>
-									<td>{{$patient->lastname}}</td>
-									<td>{{$patient->labteststatus}}</td>
-									<td>{{$patient->prescriptionstatus}}</td>
 
-									<td class="action-td" id="{{$patient->id}}">
-										<a href="#myModal" role="button" class="btn fetch-patient" data-toggle="modal">Attend</a>
-									</td>
-								</tr>
-						@endforeach
-							
-								
-								
-								
-								
-							</tbody>
-						</table>
-						
+																	<th style="text-align: center">File Number</th>
+																	<th style="text-align: center">First Name</th>
+																	<th style="text-align: center">Last Name</th>
+																	<th style="text-align: center">Tested</th>
+																	<th style="text-align: center">Prescribed</th>
+																	<th>Operations</th>
 
-				<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-								<h3 id="myModalLabel">Patient Profile</h3>
+																</tr>
+															</thead>
+															<tbody>
+														<?php $patients = Patient::orderBy('filenumber', 'DESC')->get(); $id=1;?>
+														@foreach($patients as $patient)
+																<tr>
+
+										        					<td style="text-align:center;">{{$patient->filenumber}}</td>
+																	<td style="text-align:center;">{{$patient->firstname}}</td>
+																	<td style="text-align:center;">{{$patient->lastname}}</td>
+																	<td style="text-align:center;"><span class="label label-success">{{Patients_visit::wherePatient_id($patient->id)->first()->labteststatus}}</span></td>
+																	<td style="text-align:center;"><span class="label label-important">{{Patients_visit::wherePatient_id($patient->id)->first()->prescriptionstatus}}</span></td>
+									
+
+																	<td class="action-td" id="{{$patient->id}}">
+																		<button class="btn fetchPatient" rel="tooltip"  data-original-title="attend" > <i class="icon-hospital" role="button"></i> </button>  
+																	</td>
+																	
+																	
+																</tr>
+														@endforeach
+															
+																
+																
+																
+																
+															</tbody>
+													</table>
+
+													</div>	
+												</div>	
 							</div>
-							<div class="modal-body">
-						
-							<div id="profile">
-
-
-							</div>																				
-
-							</div>
-							<div class="modal-footer" id="{{$patient->id}}">
-								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								<button class="btn btn-primary" id="nextVisit">Next Visit</button>
-
-								<button class="btn btn-primary">Admit</button>
-								<button class="btn btn-primary" id="laboratory">Laboratory</button>
-								<button class="btn btn-primary" id="prescribe">Prescribe</button>
-							</div>
+						</div>
+					</div>
 				</div>
-					
-					</div> <!-- /widget-content -->
-														
-					
-							
-					
-				
-			</div> <!-- /span9 -->
-			
-		@stop
+	</div>	
+
+
+@stop
+
 

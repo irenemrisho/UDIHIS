@@ -11,8 +11,9 @@ class PatientController extends \BaseController {
 
 	public function profile(){
 		$id = Input::get('id');
+		$patient1 = Patients_visit::wherePatient_id($id)->first();
 		$patient  = Patient::find($id);
-		return View::make('doctor.showPatient', compact('patient'));
+		return View::make('doctor.showPatient', compact('patient','patient1'));
 	}
 	public static $restfull = true;
 	protected $layout = 'reception.reception';

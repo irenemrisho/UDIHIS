@@ -50,6 +50,7 @@ var Application = function () {
 
 $(document).ready(function(){
 
+<<<<<<< HEAD
 
     $('#dt').datepicker({
         dateFormat: "yy-mm-dd",
@@ -85,6 +86,10 @@ $(document).ready(function(){
         });
     });
 
+=======
+  
+    $("[rel=tooltip]").tooltip({ placement: 'right'});
+>>>>>>> c274c21f6c9ce532df673d7f49875a0378ae8e88
 
 
     $('.alert').fadeOut(3000);
@@ -113,21 +118,34 @@ $(document).ready(function(){
         });
     });
 
-    $('#laboratory').on('click', function(){
+   
+
+    $('#attendP').on('click', function(){
         var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
+        window.location = "patient/attend/" + pid;
     });
 
-    $('#prescribe').on('click', function(){
+    
+
+    $('#prescribe1').on('click', function(){
         var pid = $('#pid').val();
         window.location = "patients/prescribe/" + pid;
     });
 
-    $('.fetch-patient').on('click', function(data){
+
+
+    $('.fetchPatient').on('click', function(){
         var id = $(this).parent().attr('id');
-        $.post('patients/profile', {id:id}, function(data){
-            $('#profile').html(data);
+        $('#table-content').css({
+            opacity: 0.1
         });
+        $('#loader').show();
+
+        $.post('patients/profile', {pid:id}, function(data){
+             $('#loader, #table-content').hide();
+             $('#loadpatientinfo').hide().html(data).fadeIn(1500);   
+        })
+
     });
 
     $('#section').on('change',function(){
@@ -286,8 +304,22 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('.fetch-payments').on('click', function(){
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/patients_payments', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
 
-
+    $('.fetch-recommendation').on('click', function(data){
+        var id = $(this).parent().attr('id');
+        
+        $.post('pharmacy/recommended', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
+    
     $('#nextVisit').popover();
 
 
@@ -426,7 +458,12 @@ $(document).ready(function(){
 
 });
 
-
+    function toggle(source) {
+        checkboxes = document.getElementsByName('add[]');
+        for(var i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = source.checked;
+     }
+    }
 
 
 

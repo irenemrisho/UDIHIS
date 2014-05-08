@@ -30,7 +30,8 @@ class PharmacyController extends BaseController {
              $update->save();
             
         }
-        $provided_medicines = Recommended_medicine::where('status','=','open')->get();
+
+        $provided_medicines = Recommended_medicine::groupBy('pv_id')->where('status','=','open')->get(array('pv_id', DB::raw('count(*) as count')));
        return  View::make('Pharmacy.provide_medication')->with('provided_medicines',$provided_medicines);
     }
     public function getMedic(){
@@ -58,7 +59,7 @@ class PharmacyController extends BaseController {
 
         
     }
- public function getDash(){
+    public function getDash(){
         return View::make('Pharmacy.dashboard');
 
         
@@ -66,33 +67,33 @@ class PharmacyController extends BaseController {
     public function addMedicine(){
                 
                  
-               	$inputs = Input::all();
-			$medicine = Medicine::create(array(
-				"name"=>$inputs['Medicine_name'],
-				"price"=>$inputs['Price'],
-				"man_date"=>$inputs['Manufactured_date'],
-				"exp_date"=>$inputs['Expire_date'],
-				"quantity" =>$inputs['Quantity']
+                $inputs = Input::all();
+            $medicine = Medicine::create(array(
+                "name"=>$inputs['Medicine_name'],
+                "price"=>$inputs['Price'],
+                "man_date"=>$inputs['Manufactured_date'],
+                "exp_date"=>$inputs['Expire_date'],
+                "quantity" =>$inputs['Quantity']
 
-				));
-			if ($medicine) {
+                ));
+            if ($medicine) {
                             
-			   return Redirect::to('manage_medicine?msg=1');
+               return Redirect::to('manage_medicine?msg=1');
                         }else{
                             
                             return Redirect::to('manage_medicine?msg=2');
                         }
-  	
+    
           }
     
-		
+        
     public function getEditMedicine(){
         
         return View::make('Pharmacy.edit_medicine');
         
     }
        
-public function search(){
+    public function search(){
           $medicine = Input::get('u');
 
           $medicines = Medicine::where('name', 'LIKE', '%'.$medicine.'%')->get();
@@ -111,8 +112,8 @@ public function search(){
                 </thead>
                 <tbody>";
 
-	
-	  $index=1; 
+    
+      $index=1; 
 
           foreach($medicines as $m){
                 $res .= "<tr>
@@ -124,13 +125,13 @@ public function search(){
                             <td class='action-td'>
                                                                                                                                     
                             <a href='edit_medicine?edit={$m->id}'><span class='icon-edit btn btn-small btn btn-primary'></span></a>
-				&nbsp;
+                &nbsp;
                             <a href='manage_medicine?dlt={$m->id}' onclick=\"return confirm('Are you sure you want to delete');\">
-			      <span class='icon-trash btn btn-small btn-danger'></span>
-			   </a>
+                  <span class='icon-trash btn btn-small btn-danger'></span>
+               </a>
                             </td>
                        </tr>";
-		$index++;
+        $index++;
           }      
 
             $res .= "</tbody>";
@@ -139,27 +140,62 @@ public function search(){
 
     }
        public function updateMedicine(){
-			$inputs = Input::all();
-			$medicine = Medicine::where('id',$_GET['edit'])
+            $inputs = Input::all();
+            $medicine = Medicine::where('id',$_GET['edit'])
                                 ->update(array(
-				"name"=>$inputs['Medicine_name'],
-				"price"=>$inputs['Price'],
-				"man_date"=>$inputs['Manufactured_date'],
-				"exp_date"=>$inputs['Expire_date'],
-				"quantity" =>$inputs['Quantity']
+                "name"=>$inputs['Medicine_name'],
+                "price"=>$inputs['Price'],
+                "man_date"=>$inputs['Manufactured_date'],
+                "exp_date"=>$inputs['Expire_date'],
+                "quantity" =>$inputs['Quantity']
 
-				));
-			if ($medicine) {
+                ));
+            if ($medicine) {
                             
-			   return Redirect::to('manage_medicine?msg=3');
+               return Redirect::to('manage_medicine?msg=3');
                         }else{
                             
                             return Redirect::to('manage_medicine?msg=4');
                         }
                      
-  	}
+    }
         
         
+    public function profile(){
         
+        $id = Input::get('id');
+        $provided_meds = Recommended_medicine::whereRaw('status=? and pv_id = ? ', array('open',$id))->get();
+        
+
+        return View::make('Pharmacy.showRecommendation')->with('provided_meds',$provided_meds);
+    }    
+
+    public function provide_selected(){
+
+            
+            if(isset($_POST['add'])){
+
+            $name = $_POST['add'];
+            foreach ($name as $medicine) {
+
+            $rec_medicine_id = mysql_real_escape_string(stripslashes($medicine));
+
+             $update = Recommended_medicine::find($rec_medicine_id);
+             $update->status='closed';
+             $update->save();
+
+                    }
+           
+            return Redirect::to('provide_medication?msg=1');
+                }else{
+             
+            return Redirect::to('provide_medication?msg=2');     
+                }
+            
+
+        
+       
+   
+    }
    
 }

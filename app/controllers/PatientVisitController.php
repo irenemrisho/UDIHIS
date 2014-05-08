@@ -11,7 +11,7 @@ class PatientVisitController extends \BaseController {
 	{
 		$user = User::find($id);
 		$patient  = Patient::find($id);
-		return View::make('reception.appoint',compact('patient' , 'user'));
+		return View::make('laboratory.appoint',compact('patient' , 'user'));
 	}
 
 	public function visit($id)

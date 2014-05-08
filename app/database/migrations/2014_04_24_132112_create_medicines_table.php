@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateMedicinesTable extends Migration {
 
-	
+
 	public function up(){
        Schema::create('medicines',function($table){
             $table->increments('id');
