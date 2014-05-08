@@ -130,6 +130,11 @@ class PatientVisitController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
+	public function getDrRooms(){
+		//var dr  = Input::get('dr');
+	}
+
 	public function setAppointment($id)
 	{
 		$inputs = Input::all();
@@ -137,7 +142,7 @@ class PatientVisitController extends \BaseController {
 		$user = $inputs['sectioninfo'];
 		$date = $inputs['appointment'];
 		$time = $inputs['time'];
-		$room_number = $inputs['room_no'];
+		//$room_number = $inputs['room_no'];
        
         $paymenttype = $inputs['paymenttype'];
         $section = $inputs['section'];
@@ -148,13 +153,17 @@ class PatientVisitController extends \BaseController {
             //"time" => $time,
             
             "date" => $date,
-            "patient_id"=>$pid,
-            "room_number"=>$room_number,
+            "patient_id"=>$pid
           ));
         $this->addPayment("registration",$pid,$paymenttype);
 
-        return url('manage/patients');
+        return Redirect::to('manage/patients');
 
+	}
+		public function appoint()
+
+	{
+	return View::make("reception.appointmentRegister");
 	}
 
 

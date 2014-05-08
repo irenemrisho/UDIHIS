@@ -71,6 +71,8 @@ Route::get('profile_billing','BillingController@getProfile');
 
 ///Receptionist
 /*for listsing patients and adding*/
+Route::get('reception/reports','ReceptionController@reports');
+Route::post('reception/reports','ReceptionController@getreports');
 Route::post('patients/loadsection', 'ReceptionController@loadsection');
 Route::post('patients/savepatientinfo', 'ReceptionController@savepatientinfo');
 Route::post('patients/savepatientinfo1', 'ReceptionController@patientinfo');
@@ -81,11 +83,11 @@ Route::post('patient/edit/{id}', 'ReceptionController@edit');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
-<<<<<<< HEAD
+
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
-=======
+
 Route::get('patients/add' , 'ReceptionController@index');
->>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
+
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/
@@ -113,3 +115,7 @@ Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinf
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
 
 Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
+Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
+Route::get('appointRegister', 'PatientVisitController@appoint');
+
+Route::get('print/{id}', 'ReceptionController@printView');

@@ -15,13 +15,11 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
-<<<<<<< HEAD
     
     @yield('page_specific_scripts')
-=======
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
->>>>>>> b6a24436f00f73107e9b9addeda77b1ba46a63e4
+
 
 <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
