@@ -61,6 +61,7 @@ Route::get('dashboard','PharmacyController@getDash');
 Route::post('pharmacy/recommended','PharmacyController@profile'); 
 Route::post('provide_recommended','PharmacyController@provide_selected'); 
 
+
 /*Billing Route*/
 Route::get('billing','BillingController@getIndex');
 Route::get('edit_service','BillingController@getEditService'); 
@@ -71,6 +72,8 @@ Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
 Route::get('reports_billing','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
+Route::post('billing/patients_payments','BillingController@profile');
+Route::post('provide_payments','BillingController@provide_payments'); 
 
 ///Receptionist
 /*for listsing patients and adding*/

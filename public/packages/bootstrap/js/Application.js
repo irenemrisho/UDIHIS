@@ -259,6 +259,13 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('.fetch-payments').on('click', function(){
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/patients_payments', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
 
     $('.fetch-recommendation').on('click', function(data){
         var id = $(this).parent().attr('id');
