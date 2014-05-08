@@ -21,7 +21,7 @@ Manage Stock
 <li class="active">
 <a href="#1" data-toggle="tab">Available Stock</a>
 </li>
-<li class=""><a href="#2" data-toggle="tab">Add New Stock</a></li>
+<li class=""><a href="#2" data-toggle="tab">Add New Item</a></li>
 </ul>
 
 <div class="tab-content" style="height: 400px">
@@ -52,26 +52,12 @@ Manage Stock
                     
                 </div> <!-- /controls -->               
             </div> <!-- /control-group -->
-           
-            <div class="control-group">  
-             <label class="control-label" for="password">Password</label>
-                <div class="controls">
-                    <input type="password" class="input-xlarge" name="password" id="" value="">
-                    
-                </div>                                       
-      
-            </div> <!-- /control-group -->
-          <div class="control-group">                                         
-                <label class="control-label" for="designation">Designation</label>
-                
-                             
-            </div> <!-- /control-group -->
 
    
 </div>
 <div class="span5 pull-right" style="margin-left:4px;">
 		<div class="control-group">  
-             <label class="control-label" for="username">Username</label>
+             <label class="control-label" for="username">From</label>
                 <div class="controls">
                     <input type="text" class="input-xlarge" name="username" id="username" value="">
                     
@@ -85,31 +71,15 @@ Manage Stock
                    
             </div> 
 
-	<h4 class = "text-left">Contact Information</h4>
+	<h4 class = "text-left">Other Information</h4>
 	 
 			<div class="control-group">                                         
                
                 <div class="controls">
-                    <input type="text" class="input-xlarge " id="phone_no" name="phone_no" placeholder = "phone_number">
+                    <input type="text" class="input-xlarge " id="phone_no" name="phone_no" placeholder = "">
                     
                 </div> <!-- /controls -->               
             </div> <!-- /control-group -->
-
-             <div class="control-group">                                         
-               
-                <div class="controls">
-                    <input type="text" class="input-xlarge " id="" name="email" placeholder = "email">
-                    
-                </div> <!-- /controls -->               
-            </div> <!-- /control-group -->
-<div class="control-group">                                         
-               
-                <div class="controls">
-                    <input type="text" class="input-xlarge " id="" name="extension_no" placeholder = "extension_number">
-                    
-                </div> <!-- /controls -->               
-            </div> 
-            
             <div class="pull-left">
                 <button class="btn">Cancel</button> <button type="submit" class="btn btn-primary">Add</button>
             </div>
@@ -136,8 +106,6 @@ Manage Stock
 	<div class="widget-content">
 	
 		<table class="table table-striped table-bordered" id="gtable">
-		   <?php	$users = User::where('level', '!=', 0)->get();					
-				?>
 			
 			<thead>
 				<tr>
@@ -152,15 +120,14 @@ Manage Stock
 			</thead>
 			
 			<tbody>
-			@foreach($users as $user)
 				<tr>
-					<td>{{$user->id}}</td>
-					<td>{{$user->first_name}}</td>
-					<td>{{$user->last_name}} </td>
-					<td>{{User::level($user->level)}}</td>
-					<td>{{$user->status}}</td>
-					<td>{{User::ago($user->updated_at)}}</td>
-					<td class="action-td" id="{{$user->id}}">
+					<td></td>
+					<td></td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="action-td" id="">
 						<a href="#myModal" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
 							<i class="icon-pencil"></i>								
 						</a>					
@@ -170,7 +137,7 @@ Manage Stock
 
 					</td>
 				</tr>
-				@endforeach
+				
 				
 
 				

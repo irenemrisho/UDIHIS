@@ -20,6 +20,7 @@ class CreateLaboratoriesTable extends Migration {
 	        $table->date('date');
 	        $table->integer('service_id')->references('id')->on('services');
 	        $table->integer('user_id')->references('id')->on('users');
+	        $table->boolean('tested')->default('FALSE');
 
 			$table->timestamps();
 
