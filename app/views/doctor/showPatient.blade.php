@@ -1,33 +1,71 @@
-<div style="width:800px; margin:20px; font-size: 17px">
-	<div class="pull-left" style="width:400px; ">
-		<ul>
-			<li style="list-style: none">File Number:  {{ $patient->filenumber}}</li>
-			<li style="list-style: none">First Name:    {{ $patient->firstname}}</li>
-			<li style="list-style: none">Last Name :    {{ $patient->lastname}}</li>
-			<li style="list-style: none">Payment Type:   {{ $patient->paymenttype}}</li>
-			<li style="list-style: none">Blood Group :   {{ $patient1->bloodgroup}}</li>
-			
-		</ul>
-	</div>
-	
-	<div class="pull-right" style="width:400px">
- 		<ul>
-			<li style="list-style: none">Rhesus:   {{ $patient->rhesus}}</li>
-			<li style="list-style: none">Birth Date:   {{ $patient->birth}}</li>
-			<li style="list-style: none">Weight:   {{ $patient1->weight}}</li>
-			<li style="list-style: none">Allergy:   {{ $patient1->allergy}}</li>
-			<li style="list-style: none">Gender: {{ $patient->gender}} <input id="pid" type="hidden" value="{{$patient->id}}"/></li>
-			
-		</ul>
-	</div>
+<?php 
+	$patient1 = Patients_visit::where('patient_id', $patient->id)->first();
+?>
+<div class="widget-header"><h3>Patient Information </h3> <span class="pull-right" id="back" style="cursor:pointer; margin-right:8px"><i class=" icon-share"></i> Back </span> </div>
+<table class="table">
+	<tr>
+		<td><b>File Number:</b></td>
+		<td style="text-align:left">{{ $patient->filenumber}}</td>
+		<td><b>Rhesus</b></td>
+		<td style="text-align:left">{{ $patient->rhesus}}</td>
+	</tr>
+	<tr>
+		<td><b>First Name:</b></td>
+		<td style="text-align:left">{{ $patient->firstname}}</td>
+		<td><b>Birth Date</td>
+		<td style="text-align:left">{{ $patient->birth}}</td>
+	</tr>
+	<tr>
+		<td><b>Last Name:</b></td>
+		<td style="text-align:left">{{ $patient->lastname}}</td>
+		<td><b>Weight:</td>
+		<td style="text-align:left">{{ $patient1->weight}}</td>
+	</tr>
+	<tr>
+		<td><b>Payment Type:</b></td>
+		<td style="text-align:left">{{ $patient->paymenttype}}</td>
+		<td><b>Allergy:</b></td>
+		<td style="text-align:left">{{ $patient1->allergy}}</td>
+	</tr>
+	<tr>
+		<td><b>Blood Group:</b></td>
+		<td style="text-align:left">{{ $patient1->bloodgroup }}</td>
+		<td><b>Gender:</b></td>
+		<td style="text-align:left">{{ $patient->gender}}</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<p><b>Consultation Notes</b></p>
+			<textarea class="span8 form-control"  rows="6" id="consultNotes" value="">
+			{{$patient1->consultation}}
+			</textarea>
+		</td>
+	</tr>
+</table>
+<div class="" id="{{$patient->id}}">
+<input id="pid" type="hidden" value="{{$patient->id}}" />
+<button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
-	<div style="clear:both" style="width:400px; margin: 40px">
-		<label class="control-label" for="">Consultation Notes</label>
-	<textarea rows="2" id="consultNotes" style="width:600px;" class="form-control" name="consultation"></textarea>	
-	</div>	
+<button class="btn btn-primary">Admit</button>
+<button class="btn btn-primary" id="laboratory">Laboratory</button>
+<button class="btn btn-primary" id="prescribe">Prescribe</button>
 </div>
-
 <script type="text/javascript">
+
+
+					 $('#laboratory').on('click', function(){
+        var pid = $('#pid').val();
+        window.location = "patients/lab_test/" + pid;
+    });
+					 $('#prescribe').on('click', function(){
+        var pid = $('#pid').val();
+        window.location = "patients/prescribe/" + pid;
+    });
+
+				    $('#back').on('click', function(){
+				        $('#loadpatientinfo').hide();
+				        $('#table-content').css('opacity','1').fadeIn(800);
+				    });
 				var timeoutId;
 				$('#consultNotes').on('input propertychange', function() {
 				    console.log('Textarea Change');

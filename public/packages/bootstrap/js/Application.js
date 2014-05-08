@@ -51,7 +51,7 @@ var Application = function () {
 $(document).ready(function(){
 
   
-    $("[rel=tooltip]").tooltip({ placement: 'top'});
+    $("[rel=tooltip]").tooltip({ placement: 'right'});
 
 
     $('.alert').fadeOut(3000);
@@ -80,15 +80,14 @@ $(document).ready(function(){
         });
     });
 
-    $('#laboratory').on('click', function(){
+   
+
+    $('#attendP').on('click', function(){
         var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
+        window.location = "patient/attend/" + pid;
     });
 
-    $('#prescribe').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/prescribe/" + pid;
-    });
+    
 
     $('#prescribe1').on('click', function(){
         var pid = $('#pid').val();
@@ -96,11 +95,19 @@ $(document).ready(function(){
     });
 
 
-    $('.fetch-patient').on('click', function(data){
+
+    $('.fetchPatient').on('click', function(){
         var id = $(this).parent().attr('id');
-        $.post('patients/profile', {id:id}, function(data){
-            $('#profile').html(al);
+        $('#table-content').css({
+            opacity: 0.1
         });
+        $('#loader').show();
+
+        $.post('patients/profile', {pid:id}, function(data){
+             $('#loader, #table-content').hide();
+             $('#loadpatientinfo').hide().html(data).fadeIn(1500);   
+        })
+
     });
 
     $('#section').on('change',function(){
