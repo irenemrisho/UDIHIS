@@ -17,7 +17,7 @@
                                  <tr>
                                  	<td>{{$index}}</td>
                                     <td>{{Service::find($patients_payment->service_id)->name}}</td>
-                                    <td>{{$patients_payment->amount}}</td>
+                                    <td>{{Service::find($patients_payment->service_id)->price}}</td>
                                     <td style="text-align:center"><input type="checkbox" id="pay_service_{{$patients_payment->id}}" value="{{$patients_payment->id}}" name="add[]"  class="checkbox" /></td>
                                  	
                                  </tr>
