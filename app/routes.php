@@ -46,6 +46,7 @@ Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
 Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
 Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
+Route::get('patient/attend/{id}','DoctorController@attend');
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');
@@ -92,7 +93,7 @@ Route::get('patients/edit/{id}' , 'PatientController@edit');
 Route::post('patients/edit/{id}' , 'PatientController@update');
 /*to delete a patient*/
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
-Route::post('patients/profile', 'PatientController@profile');
+Route::post('patients/profile', 'DoctorController@profile');
 
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
