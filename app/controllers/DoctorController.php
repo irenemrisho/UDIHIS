@@ -18,6 +18,12 @@ class DoctorController extends BaseController {
 
 	}
 
+	public function attend(){
+		$id    = Input::get('pid');
+		$patient = Patient::find($id);
+		return View::make('doctor.attend',compact('patient'));
+	}
+
 	public function getMedxn(){
 		$medicines = Medicine::all();
 
@@ -118,7 +124,9 @@ class DoctorController extends BaseController {
 	}
 
 	public function profile(){
-		return View::make('doctor.profile');
+		$pid = Input::get('pid');
+		$patient = Patient::find($pid);
+		return View::make('doctor.showPatient',compact('patient'));
 
 	}		
 
