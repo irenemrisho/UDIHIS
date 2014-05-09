@@ -20,6 +20,25 @@ class ReceptionController  extends BaseController{
             return View::make('reception.managepatients');
     }
 
+    public function reports(){
+        return View::make('reception.reports');
+    }
+
+    public function getreports(){
+        $inputs        = Input::all();
+        $gender        = $inputs['gender'];
+        $age           = $inputs['age'];
+        $district      = $inputs['district'];
+        $reporttype    = $inputs['reporttype'];
+        $report        = $inputs['report'];
+        $date          = $inputs['date'];
+
+        $patients      = Patient::all();
+
+        return View::make('reports.patients', compact('patients'));
+    }
+
+
     public function manage_patients(){
             return View::make("admin.manage_user");
     }
@@ -112,8 +131,9 @@ class ReceptionController  extends BaseController{
   	}
 
     public function update($id){
+        $pt = Patients_visit::where('patient_id',$id)->first();
         $patient = Patient::find($id);
-        return View::make('reception.editpatient', compact('patient'));
+        return View::make('reception.editpatient', compact('patient','pt'));
     }
 
     public function edit($id){
@@ -135,8 +155,12 @@ class ReceptionController  extends BaseController{
 
         return View::make('reception.managepatients')->with('message', 'updated successfully');
 
+    }
+    public function printView($id){
 
-
+    $newpatient = Patient::find($id);
+    return View::make('reception.viewPrint' , compact('newpatient'));
+   
     }
   }
     //put your code here

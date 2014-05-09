@@ -1,14 +1,15 @@
-    <div class="navbar navbar-fixed-top">
-
-        <div class="navbar-inner">
-
-            <div class="container">
-<a class="brand" href="">UDSM Intergrated Hospital Information System</a>    
-                <div class="nav-collapse">
-           
-
-                </div> <!-- /nav-collapse -->
-
+      <div class="container"> 
+      <div class="navbar navbar-relative">
+        
+             <div class="navbar-inner">
+                <div class ="span12 ">
+                    <div class =" pull-left">{{HTML::image('packages/bootstrap/img/logo1.png')}}</div>
+            
+               <div class = "span8">
+                 <a class="brand" href="">UDSM Intergrated Hospital Information System</a>
+               </div> 
+               <div class ="pull-right">{{HTML::image('packages/bootstrap/img/logo1.png')}}</div>
+                </div>
             </div> <!-- /container -->
 
         </div> <!-- /navbar-inner -->

@@ -50,8 +50,46 @@ var Application = function () {
 
 $(document).ready(function(){
 
+<<<<<<< HEAD
+
+    $('#dt').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        maxDate: 0,
+        yearRange: "-100:+0" ,
+        showMonths: [3,3]
+    });
+
+    $('#report').on('change', function(){
+        var r = $(this).val();
+        if(r == "daily"){
+            $('#date').fadeIn(1300);
+        }else{
+            $('#date').hide();
+        }
+    });
+
+    $('#go').on('click', function(){
+        var gender      = $('#gender').val();
+        var age         = $('#age').val();
+        var district    = $('#district').val();
+        var report      = $('#report').val();
+        var reporttype  = $('#reporttype').val();
+        var date        = $('#date').val();
+        $('#loader').show();
+        $('#iload').css('opacity', '0.2');
+        $.post('reports', {gender:gender,age:age,district:district,report:report,date:date,reporttype:reporttype}, function(data){
+             $('#loader').hide();
+             $('#iload').css('opacity', '1');
+             $('#ireport').hide().html(data).fadeIn(1000);
+        });
+    });
+
+=======
   
     $("[rel=tooltip]").tooltip({ placement: 'right'});
+>>>>>>> c274c21f6c9ce532df673d7f49875a0378ae8e88
 
 
     $('.alert').fadeOut(3000);
@@ -330,6 +368,7 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+
     $('#appointment_date').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,
@@ -425,5 +464,6 @@ $(document).ready(function(){
         checkboxes[i].checked = source.checked;
      }
     }
+
 
 

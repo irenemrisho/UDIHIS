@@ -52,11 +52,11 @@
 																	<td style="text-align:center;">{{$patient->phone_no}}</td>
 																    <td style="text-align:center;">
 																    	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small fetchuser"  data-toggle="modal">
-																		<i class="icon-wrench"></i>								
+																		<i class="icon-edit"></i>								
 																		</a>
-										                            	<a href="{{url("patient/appoint/$patient->id")}}" 
+										                            	<a href="{{url("print/$patient->id")}}" 
 										                                	rel="tooltip" data-placement="top" data-original-title="edit" class="btn btn-small btn-primary">
-										                                		<i class="icon-edit"></i>
+										                                		<i class="icon-print"></i>
 										                                </a>
 										                            	<a href="{{url("patient/visit/$patient->id")}}" 
 										                                	rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-success">
