@@ -50,7 +50,6 @@ var Application = function () {
 
 $(document).ready(function(){
 
-<<<<<<< HEAD
 
     $('#dt').datepicker({
         dateFormat: "yy-mm-dd",
@@ -86,11 +85,9 @@ $(document).ready(function(){
         });
     });
 
-=======
+
   
     $("[rel=tooltip]").tooltip({ placement: 'right'});
->>>>>>> c274c21f6c9ce532df673d7f49875a0378ae8e88
-
 
     $('.alert').fadeOut(3000);
 
@@ -152,6 +149,16 @@ $(document).ready(function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
             $('#section-more').html(data);
+        
+               
+        });
+
+    });
+    $('#insurance1').on('change',function(){
+        var sect = $(this).val();
+        $.post('loadsection', {sect:sect}, function(data){
+            $('#insurance-more').html(data);
+               
         });
 
     });
