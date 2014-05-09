@@ -16,6 +16,7 @@ class DoctorController extends BaseController {
 	public function index(){
 		return View::make('doctor.doctor');
 
+
 	}
 
 	public function attend(){
