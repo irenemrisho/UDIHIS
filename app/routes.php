@@ -47,6 +47,7 @@ Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
 Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
 Route::get('patient/attend/{id}','DoctorController@attend');
+
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');
