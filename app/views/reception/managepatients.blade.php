@@ -51,15 +51,16 @@
 																	<td style="text-align:center;">{{$patient->lastname}}</td>
 																	<td style="text-align:center;">{{$patient->phone_no}}</td>
 																    <td style="text-align:center;">
-																    	<a href="{{url("patient/edit/$patient->id")}}" class="btn btn-small fetchuser"  data-toggle="modal">
-																		<i class="icon-edit"></i>								
+																    	<a  href="{{url("patient/edit/$patient->id")}}" 
+																    	rel="tooltip" class="btn btn-small fetchuser" data-original-title="edit"  data-toggle="modal">
+																		<i class="icon-edit" ></i>								
 																		</a>
 										                            	<a href="{{url("print/$patient->id")}}" 
-										                                	rel="tooltip" data-placement="top" data-original-title="edit" class="btn btn-small btn-primary">
+										                                	rel="tooltip" data-placement="top" data-original-title="print" class="btn btn-small btn-primary">
 										                                		<i class="icon-print"></i>
 										                                </a>
 										                            	<a href="{{url("patient/visit/$patient->id")}}" 
-										                                	rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-success">
+										                                	rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-success">
 										                                		<i class="icon-exchange"></i>
 										                                </a>
 										        					</td>

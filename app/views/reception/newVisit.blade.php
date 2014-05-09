@@ -18,14 +18,14 @@
                     <h4 >Full name :  {{Patient::fullname($patient)}} </h4>
                     <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <div class="control-group">
-                        <label class="control-label" for="">Height</label>
+                        <label class="control-label" for="">Height (cm)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="height"  />
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
                     <div class="control-group">
-                        <label class="control-label" for="">Weight</label>
+                        <label class="control-label" for="">Weight (kg)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="weight"  />
 
@@ -124,7 +124,7 @@
                     </select>
 
                      <div id="section-more">
-a
+
                     </div>
 
                     </div>
