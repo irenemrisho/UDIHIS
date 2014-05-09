@@ -12,6 +12,7 @@
  * @author irene
  */
 class ReceptionController  extends BaseController{
+    
     public function getIndex(){
             return View::make("reception.reception");
     }
@@ -97,19 +98,32 @@ class ReceptionController  extends BaseController{
     }
 
     public function savepatientinfo(){
-
+       
         $inputs     = Input::all();
+        $rules = array(
+        'phone_no' => 'Min:10|Max:13|Alpha_num',
         
-        $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
-        if($chk == 0){
-                $filenumber = array('filenumber' => Patient::fileno());
-                $inputs     = array_merge($inputs, $filenumber);
-                $newpatient = Patient::create($inputs);
+            );
+
+            $v = Validator::make($inputs, $rules);
+            if( $v->passes() ) {
+                    # code for validation success!
+                $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
+            if($chk == 0){
+                    $filenumber = array('filenumber' => Patient::fileno());
+                    $inputs     = array_merge($inputs, $filenumber);
+                    $newpatient = Patient::create($inputs);
                 return View::make("reception.manage_patients", compact('newpatient'))->with('message', 'Patient successfully registered!');
         }else{
                 return View::make('reception.registerpatient')->with('error', 'Patient exists!')->with('input', Input::all());
                 //return Redirect::back()->withInput($inputs);
         }
+            } else {
+            return View::make('reception.registerpatient')->with('error', 'Please, write a correct mobile number!')->with('input', Input::all());
+                    # code for validation failure
+            }
+                    
+        
     }
 
 	public function addUser(){
@@ -162,5 +176,6 @@ class ReceptionController  extends BaseController{
     return View::make('reception.viewPrint' , compact('newpatient'));
    
     }
+
   }
     //put your code here

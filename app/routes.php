@@ -122,7 +122,6 @@ Route::post('patient/visit/loadsection', 'PatientVisitController@loadsection');
 Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinfo');
 // appointment routes
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
-
 Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
 Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
 Route::get('appointRegister', 'PatientVisitController@appoint');
