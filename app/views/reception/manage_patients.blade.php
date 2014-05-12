@@ -83,14 +83,14 @@
 
                     <h4 >Full name :  {{Patient::fullname($newpatient)}} </h4>
                     <div class="control-group">
-                        <label class="control-label" for="">Height</label>
+                        <label class="control-label" for="">Height (cm)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="height"  />
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
                     <div class="control-group">
-                        <label class="control-label" for="">Weight</label>
+                        <label class="control-label" for="">Weight (kg)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="weight"  />
 
@@ -118,14 +118,14 @@
                 <div class="span4 pull-right">
                     <h4> Hospital File no: <b>{{$newpatient->filenumber}}</b></h4>
                     <div class="control-group">
-                        <label class="control-label" for="temperature">Temperature</label>
+                        <label class="control-label" for="temperature">Temperature (c)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="temperature" />
 
                         </div> <!-- /controls -->
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="bp">Blood Pressure</label>
+                        <label class="control-label" for="bp">Blood Pressure (hg)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
 
@@ -177,18 +177,21 @@
                 <div class="span4 pull-left">
                     <h4 >Full name :  {{Patient::fullname($newpatient)}} </h4>
 
-                    <div class="control-group ">
-                        <h4>Payment Type</h4>
-                        <label class="radio">
-                            <input type="radio" name="paymenttype" id="" value="Cash" checked>
-                            Cash
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="paymenttype" id="" value="NHIF">
-                            NHIF</label>
+                     <div class="control-group ">
+                        <h4>Payment Mode</h4>
+                    <p>Choose type</p>
+                    <select id="insurance1" name="section" class="form-control">
+                        <option></option>
+                        <option>Cash</option>
+                        <option>Insurance</option>
+                        <option>Sick Sheet</option>
+                    </select>
+
+                     <div id="insurance-more">
 
                     </div>
 
+                    </div>
 
 
 

@@ -12,6 +12,7 @@
  * @author irene
  */
 class ReceptionController  extends BaseController{
+    
     public function getIndex(){
             return View::make("reception.reception");
     }
@@ -19,6 +20,25 @@ class ReceptionController  extends BaseController{
     public function index(){
             return View::make('reception.managepatients');
     }
+
+    public function reports(){
+        return View::make('reception.reports');
+    }
+
+    public function getreports(){
+        $inputs        = Input::all();
+        $gender        = $inputs['gender'];
+        $age           = $inputs['age'];
+        $district      = $inputs['district'];
+        $reporttype    = $inputs['reporttype'];
+        $report        = $inputs['report'];
+        $date          = $inputs['date'];
+
+        $patients      = Patient::all();
+
+        return View::make('reports.patients', compact('patients'));
+    }
+
 
     public function manage_patients(){
             return View::make("admin.manage_user");
@@ -78,19 +98,32 @@ class ReceptionController  extends BaseController{
     }
 
     public function savepatientinfo(){
-
+       
         $inputs     = Input::all();
+        $rules = array(
+        'phone_no' => 'Min:10|Max:13|Alpha_num',
         
-        $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
-        if($chk == 0){
-                $filenumber = array('filenumber' => Patient::fileno());
-                $inputs     = array_merge($inputs, $filenumber);
-                $newpatient = Patient::create($inputs);
+            );
+
+            $v = Validator::make($inputs, $rules);
+            if( $v->passes() ) {
+                    # code for validation success!
+                $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
+            if($chk == 0){
+                    $filenumber = array('filenumber' => Patient::fileno());
+                    $inputs     = array_merge($inputs, $filenumber);
+                    $newpatient = Patient::create($inputs);
                 return View::make("reception.manage_patients", compact('newpatient'))->with('message', 'Patient successfully registered!');
         }else{
                 return View::make('reception.registerpatient')->with('error', 'Patient exists!')->with('input', Input::all());
                 //return Redirect::back()->withInput($inputs);
         }
+            } else {
+            return View::make('reception.registerpatient')->with('error', 'Please, write a correct mobile number!')->with('input', Input::all());
+                    # code for validation failure
+            }
+                    
+        
     }
 
 	public function addUser(){
@@ -112,8 +145,9 @@ class ReceptionController  extends BaseController{
   	}
 
     public function update($id){
+        $pt = Patients_visit::where('patient_id',$id)->first();
         $patient = Patient::find($id);
-        return View::make('reception.editpatient', compact('patient'));
+        return View::make('reception.editpatient', compact('patient','pt'));
     }
 
     public function edit($id){
@@ -135,8 +169,13 @@ class ReceptionController  extends BaseController{
 
         return View::make('reception.managepatients')->with('message', 'updated successfully');
 
-
-
     }
+    public function printView($id){
+
+    $newpatient = Patient::find($id);
+    return View::make('reception.viewPrint' , compact('newpatient'));
+   
+    }
+
   }
     //put your code here

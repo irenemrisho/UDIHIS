@@ -15,7 +15,7 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
-    @yield('page_specific_scripts')
+ @yield('page_specific_scripts')
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
 	$('#tokenfield2').tokenfield({
 	  autocomplete: {
-	    source: ['1x1','1x2','1x3','2x1','2x2','2x3','3x1','3x2','3x3'],
+	    source: ['1x1x2','1x2x4','1x3x6','2x1x7','2x2x4','2x3x2','3x1x4','3x2x8','3x3x10'],
 	    delay: 100
 	  },
 	  showAutocompleteOnFocus: false

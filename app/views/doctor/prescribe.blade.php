@@ -1,4 +1,22 @@
 @extends('dashboard')
+
+@section('page_specific_css')
+	<!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+	<!-- Datatable includes -->
+	{{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+	<script type="text/javascript">
+			$('#patients').dataTable({
+				ordering:false,
+				"jQueryUI": true
+			});
+	</script>
+@stop
+
 @section('main')
 				
 				<h1 class="page-title">
@@ -13,11 +31,7 @@
 					
 					
 				</div> <!-- /stat-container -->
-										
-					<div class="widget-header">
-						
-				    <input type="text" style="margin-left:8px" id="searchPatient" class="input-medium search-query" placeholder="Search">
-					</div> <!-- /widget-header -->
+				
 					
 					<div id="content1" class=" widget widget-content">
 					

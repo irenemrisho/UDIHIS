@@ -33,6 +33,12 @@
 <div class="alert alert-info" id="message">{{ $message }}</div>
 @endif	
 												<div class="widget-content" style="padding:10px;">
+													<div id="loadpatientinfo">
+
+													</div>
+													<p id="loader" style="display:none">{{HTML::image('packages/bootstrap/img/loader.gif','',array('class'=>'thumbnail2','style'=>'position:absolute;top:130px;z-index: 30000; left: 380px; height:y26px'))}}</p>
+													<div id="table-content">
+
 													<table id="patients_table" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
 															<thead>
 																<tr>
@@ -60,10 +66,7 @@
 									
 
 																	<td class="action-td" id="{{$patient->id}}">
-																				<a href="#myModal" class="btn fetch-patient" data-toggle="modal" 
-										                                	rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-success">
-										                                		<i class="icon-hospital" role="button"></i>
-										                                </a>
+																		<button class="btn fetchPatient" rel="tooltip"  data-original-title="attend" > <i class="icon-hospital" role="button"></i> </button>  
 																	</td>
 																	
 																	
@@ -76,30 +79,9 @@
 																
 															</tbody>
 													</table>
-													<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-								<h3 id="myModalLabel">Patient Profile</h3>
-							</div>
-							<div class="modal-body">
-						
-							<div id="profile">
 
-
-							</div>																				
-
-							</div>
-							<div class="modal-footer" id="{{$patient->id}}">
-								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								<button class="btn btn-primary" id="nextVisit">Next Visit</button>
-
-								<button class="btn btn-primary">Admit</button>
-								<button class="btn btn-primary" id="laboratory">Laboratory</button>
-								<button class="btn btn-primary" id="prescribe">Prescribe</button>
-							</div>
-				</div>				
-									</div>	
-
+													</div>	
+												</div>	
 							</div>
 						</div>
 					</div>

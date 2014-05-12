@@ -50,9 +50,44 @@ var Application = function () {
 
 $(document).ready(function(){
 
-  
-    $("[rel=tooltip]").tooltip({ placement: 'top'});
 
+    $('#dt').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        maxDate: 0,
+        yearRange: "-100:+0" ,
+        showMonths: [3,3]
+    });
+
+    $('#report').on('change', function(){
+        var r = $(this).val();
+        if(r == "daily"){
+            $('#date').fadeIn(1300);
+        }else{
+            $('#date').hide();
+        }
+    });
+
+    $('#go').on('click', function(){
+        var gender      = $('#gender').val();
+        var age         = $('#age').val();
+        var district    = $('#district').val();
+        var report      = $('#report').val();
+        var reporttype  = $('#reporttype').val();
+        var date        = $('#date').val();
+        $('#loader').show();
+        $('#iload').css('opacity', '0.2');
+        $.post('reports', {gender:gender,age:age,district:district,report:report,date:date,reporttype:reporttype}, function(data){
+             $('#loader').hide();
+             $('#iload').css('opacity', '1');
+             $('#ireport').hide().html(data).fadeIn(1000);
+        });
+    });
+
+
+  
+    $("[rel=tooltip]").tooltip({ placement: 'right'});
 
     $('.alert').fadeOut(3000);
 
@@ -80,15 +115,14 @@ $(document).ready(function(){
         });
     });
 
-    $('#laboratory').on('click', function(){
+   
+
+    $('#attendP').on('click', function(){
         var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
+        window.location = "patient/attend/" + pid;
     });
 
-    $('#prescribe').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/prescribe/" + pid;
-    });
+    
 
     $('#prescribe1').on('click', function(){
         var pid = $('#pid').val();
@@ -96,17 +130,35 @@ $(document).ready(function(){
     });
 
 
-    $('.fetch-patient').on('click', function(data){
+
+    $('.fetchPatient').on('click', function(){
         var id = $(this).parent().attr('id');
-        $.post('patients/profile', {id:id}, function(data){
-            $('#profile').html(al);
+        $('#table-content').css({
+            opacity: 0.1
         });
+        $('#loader').show();
+
+        $.post('patients/profile', {pid:id}, function(data){
+             $('#loader, #table-content').hide();
+             $('#loadpatientinfo').hide().html(data).fadeIn(1500);   
+        })
+
     });
 
     $('#section').on('change',function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
             $('#section-more').html(data);
+        
+               
+        });
+
+    });
+    $('#insurance1').on('change',function(){
+        var sect = $(this).val();
+        $.post('loadsection', {sect:sect}, function(data){
+            $('#insurance-more').html(data);
+               
         });
 
     });
@@ -323,6 +375,7 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+
     $('#appointment_date').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,
@@ -418,5 +471,6 @@ $(document).ready(function(){
         checkboxes[i].checked = source.checked;
      }
     }
+
 
 
