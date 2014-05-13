@@ -104,7 +104,7 @@ class BillingController  extends BaseController{
             $name = $_POST['add'];
             foreach ($name as $Payment) {
 
-             $Payment_id = mysql_real_escape_string(stripslashes($Payment));
+             $Payment_id = $Payment;
 
              $update = Payment::find($Payment_id);
              $update->status='paid';

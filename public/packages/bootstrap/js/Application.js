@@ -1,3 +1,4 @@
+
 $(function () {
 
     Application.init ();
@@ -429,6 +430,7 @@ $(document).ready(function(){
             $('#user_content').html(data);
         });
     });
+
 
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');

@@ -119,19 +119,16 @@
 					$this.find('[type="submit"]').bind('click.easyWizard', function(e) {
 						
 						var data = $('#myWizard').serializeArray();
-					
-						console.log(data);
+						// var obj = toString(data);
+						// console.log(obj);
 
 						$('#myWizard').css('opacity', '0.2');
 
 						$.post('savepatientinfo1', data, function(data){
 
-							window.location.href = data;
-					
-
 							$('#alrt').fadeIn(1000, function(){
 								//$(this).text(data);
-								window.history.go(-2);
+								window.location.href = data;
 
 							});
 						});
