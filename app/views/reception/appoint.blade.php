@@ -1,6 +1,7 @@
 @extends('dashboard')
 @section('main')
     <h1 class="page-title">
+
                     <i class="icon-th-large"></i>
                     Appointments                    
                 </h1>
@@ -71,9 +72,9 @@
 <form  action = "" method = "post">
 	<div class = "row-fluid">
 		<div class ="span6">
-          
-                    <input name="pid" value="{{$patient->id}}" type="hidden" />
-                    <input name="user_id" value="{{$user->id}}" type="hidden" />
+          <input name="pid" value="{{$patient->id}}" type="hidden" />
+          <input name="sectioninfo" value="{{--$user->id--}}" type="hidden" />
+                    
                     
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">
@@ -98,7 +99,7 @@
         <div class="control-group">
 <label class="control-label" for="time">Time</label>
         <div class="controls">
-            <input type="text" class="input-xlarge " id="" name="time" placeholder = "">
+            <input type="text" class="input-xlarge " id="appointment_time" name="time" placeholder = "">
 
         </div> <!-- /controls -->
     </div>

@@ -311,6 +311,10 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+    $('#appointment_time').timepicker({
+        timeOnlyTitle: 'Appointment time'
+    });
+
     $('.date').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,

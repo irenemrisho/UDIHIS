@@ -5,9 +5,8 @@
 <?php 
 $docts = User::where('level',4)->get();
  ?>
-@foreach($docts as $dr)
-	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
-
+ @foreach($docts as $dr)
+  <option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 </select>
 <label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
@@ -17,11 +16,14 @@ $docts = User::where('level',4)->get();
 <p>Doctor</p>
 <select id="ipd" class="form-control" name="sectioninfo">  
 <?php $docts = User::where('level',4)->get(); ?>
+
 @foreach($docts as $dr)
 	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 </select>
-<label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
+<input type="hidden" id="url" value="{{url('getDrRooms')}}" />
+
+<div id="loadipdinfo"></div>
 
 
 @endif
@@ -35,7 +37,7 @@ $docts = User::where('level',4)->get();
 	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 
-<label class="form-control" value="{{$dr->id}}">Room no: {{$dr->room_no}}</label>
+
 @endif
 
 
