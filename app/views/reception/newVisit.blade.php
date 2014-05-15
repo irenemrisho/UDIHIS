@@ -18,14 +18,14 @@
                     <h4 >Full name :  {{Patient::fullname($patient)}} </h4>
                     <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <div class="control-group">
-                        <label class="control-label" for="">Height</label>
+                        <label class="control-label" for="">Height (cm)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="height"  />
 
                         </div> <!-- /controls -->
                     </div> <!-- /control-group -->
                     <div class="control-group">
-                        <label class="control-label" for="">Weight</label>
+                        <label class="control-label" for="">Weight (kg)</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge " id="" value="" name="weight"  />
 
@@ -114,14 +114,18 @@
                     <h4 >Full name :  {{Patient::fullname($patient)}} </h4>
 
                     <div class="control-group ">
-                        <h4>Payment Type</h4>
-                        <label class="radio">
-                            <input type="radio" name="paymenttype" id="" value="Cash" checked>
-                            Cash
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="paymenttype" id="" value="NHIF">
-                            NHIF</label>
+                        <h4>Payment Mode</h4>
+                    <p>Choose type</p>
+                    <select id="section" name="section" class="form-control">
+                        <option></option>
+                        <option>Cash</option>
+                        <option>Insurance</option>
+                        <option>Sick Sheet</option>
+                    </select>
+
+                     <div id="section-more">
+
+                    </div>
 
                     </div>
 

@@ -77,6 +77,10 @@ input {
 	font-size: 18px;
 	font-weight: 600;
     text-align:center;
+    left: 70px;
+}
+.span12{
+	width: 1076px;
 }
 
 .navbar .divider-vertical {

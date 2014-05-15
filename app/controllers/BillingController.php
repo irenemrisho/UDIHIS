@@ -15,11 +15,12 @@ class BillingController  extends BaseController{
         if(isset($_GET['pay'])){
              $update = Payment::find($_GET['pay']);
              $update->status='paid';
-             $update->save();
-            
+             $update->save();            
         }
-	
-        $payments = Payment::where('status','=','unpaid')->get();
+
+	       $payments = Payment::groupBy('patient_id')
+         ->where('status','=','unpaid')->get(array('patient_id', DB::raw('count(*) as count')));
+
         return  View::make('billing.Pending_bills')->with('payments',$payments);
 
     }
@@ -85,6 +86,46 @@ class BillingController  extends BaseController{
     public function getProfile(){
             return View::make("billing.profile_billing");
     }
-    
+
+    public function profile(){
+        
+        $id = Input::get('id');
+        $patients_payments = Payment::whereRaw('status=? and patient_id = ? ', array('unpaid',$id))->get();
+        
+
+        return View::make('billing.showPayements')->with('patients_payments',$patients_payments);
+    }   
+  
+    public function provide_payments(){
+
+            
+            if(isset($_POST['add'])){
+
+            $name = $_POST['add'];
+            foreach ($name as $Payment) {
+
+             $Payment_id = $Payment;
+
+             $update = Payment::find($Payment_id);
+             $update->status='paid';
+             $update->save();
+
+                    }
+           
+            return Redirect::to('Pending_bills?msg=1');
+                }else{
+             
+            return Redirect::to('Pending_bills?msg=2');     
+                }
+            
+
+        
+       
+   
+    }
+
+
+
  }
+ 
  

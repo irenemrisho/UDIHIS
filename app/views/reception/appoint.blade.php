@@ -69,12 +69,18 @@
 </div>
 <div class="tab-pane active " id="2">
         <h4 >Full name :  {{Patient::fullname( $patient)}} </h4>
-<form  action = "" method = "post">
+<form  action = "" method="post">
 	<div class = "row-fluid">
 		<div class ="span6">
+<<<<<<< HEAD
           <input name="pid" value="{{$patient->id}}" type="hidden" />
           <input name="sectioninfo" value="{{--$user->id--}}" type="hidden" />
                     
+=======
+          
+                    <input name="pid" value="{{$patient->id}}" type="hidden" />
+                   
+>>>>>>> 90a73878df2a2c0573a0724b7479a2c9f04bacad
                     
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">

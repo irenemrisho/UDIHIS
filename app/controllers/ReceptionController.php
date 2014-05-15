@@ -12,6 +12,7 @@
  * @author irene
  */
 class ReceptionController  extends BaseController{
+    
     public function getIndex(){
             return View::make("reception.reception");
     }
@@ -19,6 +20,25 @@ class ReceptionController  extends BaseController{
     public function index(){
             return View::make('reception.managepatients');
     }
+
+    public function reports(){
+        return View::make('reception.reports');
+    }
+
+    public function getreports(){
+        $inputs        = Input::all();
+        $gender        = $inputs['gender'];
+        $age           = $inputs['age'];
+        $district      = $inputs['district'];
+        $reporttype    = $inputs['reporttype'];
+        $report        = $inputs['report'];
+        $date          = $inputs['date'];
+
+        $patients      = Patient::all();
+
+        return View::make('reports.patients', compact('patients'));
+    }
+
 
     public function manage_patients(){
             return View::make("admin.manage_user");
@@ -31,7 +51,9 @@ class ReceptionController  extends BaseController{
     }
 
     public function patientinfo(){
-        $inputs     = Input::all();
+        $inputs     = Input::except('payReg','payCons');
+        $payReg =Input::get('payReg');
+        $payCons =Input::get('payCons');
 
         $pid = $inputs['pid'];
         $height = $inputs['height'];
@@ -51,18 +73,34 @@ class ReceptionController  extends BaseController{
             "temperature" => $temperature,
             "bloodgroup"=>$bloodgroup,
             "bloodpressure" => $bloodpressure,
+            "paymenttype" => $paymenttype,
+            "allergy" => $allergy,
             "patient_id"=>$pid,
           ));
-        $this->addPayment("registration",$pid,$paymenttype);
+      $patient_id = $pid;
+
+                    if($payReg == 1){
+                            $this->addPayment(1,$patient_id,'now');
+                        }
+                        else{
+                            $this->addPayment(1,$patient_id,'later');
+                        }
+                        if($payCons == 1){
+                             $this->addPayment(2,$patient_id,'now');
+                        }else{
+                            $this->addPayment(2,$patient_id,'later');
+                        }
+
+        
      }
 
 
-    public function addPayment($service_name,$patient_id,$pay_type) {
+    public function addPayment($service_id,$patient_id,$time) {
         //$cash is boolean value true for cash , false for insured
-        if($pay_type=='Cash'){
-            $status="unpaid";
-        }else{
+        if($time=='now'){
             $status="paid";
+        }else{
+            $status="unpaid";
         }
 
         //$service_id = Service::where('name',$service_name)->first()->id;
@@ -70,7 +108,7 @@ class ReceptionController  extends BaseController{
 
 
         $payment = Payment::create(array(
-            "service_id"=>1,
+            "service_id"=>$service_id,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));
@@ -78,19 +116,35 @@ class ReceptionController  extends BaseController{
     }
 
     public function savepatientinfo(){
-
+        
         $inputs     = Input::all();
         
-        $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
-        if($chk == 0){
-                $filenumber = array('filenumber' => Patient::fileno());
-                $inputs     = array_merge($inputs, $filenumber);
-                $newpatient = Patient::create($inputs);
+
+        $rules = array(
+        'phone_no' => 'Min:10|Max:13|Alpha_num',
+        
+            );
+
+            $v = Validator::make($inputs, $rules);
+            if( $v->passes() ) {
+                    # code for validation success!
+                $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
+            if($chk == 0){
+                    $filenumber = array('filenumber' => Patient::fileno());
+                    $inputs     = array_merge($inputs, $filenumber);
+                    $newpatient = Patient::create($inputs);
+                    
                 return View::make("reception.manage_patients", compact('newpatient'))->with('message', 'Patient successfully registered!');
         }else{
                 return View::make('reception.registerpatient')->with('error', 'Patient exists!')->with('input', Input::all());
                 //return Redirect::back()->withInput($inputs);
         }
+            } else {
+            return View::make('reception.registerpatient')->with('error', 'Please, write a correct mobile number!')->with('input', Input::all());
+                    # code for validation failure
+            }
+                    
+        
     }
 
 	public function addUser(){
@@ -112,8 +166,9 @@ class ReceptionController  extends BaseController{
   	}
 
     public function update($id){
+        $pt = Patients_visit::where('patient_id',$id)->first();
         $patient = Patient::find($id);
-        return View::make('reception.editpatient', compact('patient'));
+        return View::make('reception.editpatient', compact('patient','pt'));
     }
 
     public function edit($id){
@@ -135,8 +190,13 @@ class ReceptionController  extends BaseController{
 
         return View::make('reception.managepatients')->with('message', 'updated successfully');
 
-
-
     }
+    public function printView($id){
+
+    $newpatient = Patient::find($id);
+    return View::make('reception.viewPrint' , compact('newpatient'));
+   
+    }
+
   }
     //put your code here

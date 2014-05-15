@@ -2,15 +2,19 @@
 @section('content')
 <div class="navbar navbar-fixed-top">
 
-    <div class="navbar-inner">
+    <div class="container">
 
-        <div class="container">
-            <div class="row">
-                <a class="brand" href="./login.html">UDSM Integrated Hospital Information System</a>
+        <div class="navbar-inner">
+                <div class="span12 ">
+                    <div class=" pull-left"><img src="http://localhost/udihis/public/packages/bootstrap/img/logo1.png"></div>
+            
+               <div class="span8">
+                 <a class="brand" href="">UDSM Intergrated Hospital Information System</a>
+               </div> 
+               <div class="pull-right"><img src="http://localhost/udihis/public/packages/bootstrap/img/logo1.png"></div>
+                </div>
             </div>
-
-
-        </div> <!-- /container -->
+         <!-- /container -->
 
     </div> <!-- /navbar-inner -->
 

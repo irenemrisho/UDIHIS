@@ -16,6 +16,13 @@ class DoctorController extends BaseController {
 	public function index(){
 		return View::make('doctor.doctor');
 
+
+	}
+
+	public function attend(){
+		$id    = Input::get('pid');
+		$patient = Patient::find($id);
+		return View::make('doctor.attend',compact('patient'));
 	}
 
 	public function getMedxn(){
@@ -44,11 +51,17 @@ class DoctorController extends BaseController {
 
 		$tests  = implode($inputs, ",");
 
-		// $pv_id  = Patients_visit::where('patient_id',$id)->first()->id;
-		// $test   = Laboratory::create(array(
-		// 			"pv_id"=>$pv_id,
-		// 			"test_type"=>$tests
-		// 	));
+		
+
+		 $pv_id  = Patients_visit::where('patient_id',$id)->first()->id;
+		 $test   = Laboratory::create(array(
+		 			"pv_id"=>$pv_id,
+					"test_type"=>$tests
+		 	));
+
+		 $pv     = Patients_visit::where('patient_id',$id)->first();
+		 $pv->labteststatus = "Yes";
+		 $pv->save();
 
 		return url('patients');
 
@@ -106,12 +119,15 @@ class DoctorController extends BaseController {
 	}
 
 	public function prescription(){
-		return View::make('doctor.prescription');
+		
+		return View::make('doctor.prescribe');
 
 	}
 
 	public function profile(){
-		return View::make('doctor.profile');
+		$pid = Input::get('pid');
+		$patient = Patient::find($pid);
+		return View::make('doctor.showPatient',compact('patient'));
 
 	}		
 

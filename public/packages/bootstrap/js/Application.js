@@ -1,3 +1,4 @@
+
 $(function () {
 
     Application.init ();
@@ -44,14 +45,46 @@ var Application = function () {
 
 }();
 
-
-//////////////////////////////////////////////////////////////////////////////////
-
-
 $(document).ready(function(){
 
-    
 
+    $('#dt').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        maxDate: 0,
+        yearRange: "-100:+0" ,
+        showMonths: [3,3]
+    });
+
+    $('#report').on('change', function(){
+        var r = $(this).val();
+        if(r == "daily"){
+            $('#date').fadeIn(1300);
+        }else{
+            $('#date').hide();
+        }
+    });
+
+    $('#go').on('click', function(){
+        var gender      = $('#gender').val();
+        var age         = $('#age').val();
+        var district    = $('#district').val();
+        var report      = $('#report').val();
+        var reporttype  = $('#reporttype').val();
+        var date        = $('#date').val();
+        $('#loader').show();
+        $('#iload').css('opacity', '0.2');
+        $.post('reports', {gender:gender,age:age,district:district,report:report,date:date,reporttype:reporttype}, function(data){
+             $('#loader').hide();
+             $('#iload').css('opacity', '1');
+             $('#ireport').hide().html(data).fadeIn(1000);
+        });
+    });
+
+
+  
+    $("[rel=tooltip]").tooltip({ placement: 'right'});
 
     $('.alert').fadeOut(3000);
 
@@ -79,27 +112,50 @@ $(document).ready(function(){
         });
     });
 
-    $('#laboratory').on('click', function(){
+   
+
+    $('#attendP').on('click', function(){
         var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
+        window.location = "patient/attend/" + pid;
     });
 
-    $('#prescribe').on('click', function(){
+    
+
+    $('#prescribe1').on('click', function(){
         var pid = $('#pid').val();
         window.location = "patients/prescribe/" + pid;
     });
 
-    $('.fetch-patient').on('click', function(data){
+
+
+    $('.fetchPatient').on('click', function(){
         var id = $(this).parent().attr('id');
-        $.post('patients/profile', {id:id}, function(data){
-            $('#profile').html(data);
+        $('#table-content').css({
+            opacity: 0.1
         });
+        $('#loader').show();
+
+        $.post('patients/profile', {pid:id}, function(data){
+             $('#loader, #table-content').hide();
+             $('#loadpatientinfo').hide().html(data).fadeIn(1500);   
+        })
+
     });
 
     $('#section').on('change',function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
             $('#section-more').html(data);
+        
+               
+        });
+
+    });
+    $('#insurance1').on('change',function(){
+        var sect = $(this).val();
+        $.post('loadsection', {sect:sect}, function(data){
+            $('#insurance-more').html(data);
+               
         });
 
     });
@@ -252,8 +308,22 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('.fetch-payments').on('click', function(){
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/patients_payments', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
 
-
+    $('.fetch-recommendation').on('click', function(data){
+        var id = $(this).parent().attr('id');
+        
+        $.post('pharmacy/recommended', {id:id}, function(data){
+            $('#profile').html(data);
+        });
+    });
+    
     $('#nextVisit').popover();
 
 
@@ -301,6 +371,7 @@ $(document).ready(function(){
         yearRange: "-100:+0" ,
         showMonths: [3,3]
     });
+
 
     $('#appointment_date').datepicker({
         dateFormat: "yy-mm-dd",
@@ -360,6 +431,7 @@ $(document).ready(function(){
         });
     });
 
+
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');
         var url    = $('#editform').attr('url');
@@ -395,6 +467,12 @@ $(document).ready(function(){
 
 });
 
+    function toggle(source) {
+        checkboxes = document.getElementsByName('add[]');
+        for(var i=0, n=checkboxes.length;i<n;i++) {
+        checkboxes[i].checked = source.checked;
+     }
+    }
 
 
 
