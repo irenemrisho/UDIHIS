@@ -17,7 +17,7 @@
     {{HTML::style('packages/bootstrap/css/dashboard.css')}}
     {{HTML::style('packages/bootstrap/css/easyWizard.css')}}
     {{HTML::style('packages/bootstrap/css/ui.css')}}
-<<<<<<< HEAD
+
     {{HTML::style('packages/bootstrap/css/timepicker.css')}}
 
     @yield('page_specific_css')
@@ -26,13 +26,7 @@
     {{HTML::style('packages/bootstrap/css/tokenfield-typeahead.css')}}
     
 
-    
-
-=======
-
-    @yield('page_specific_css')
->>>>>>> 90a73878df2a2c0573a0724b7479a2c9f04bacad
-    
+    @yield('page_specific_css')    
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
   
     
