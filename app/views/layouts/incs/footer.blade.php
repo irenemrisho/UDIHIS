@@ -15,9 +15,19 @@
 {{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
+{{HTML::script('packages/bootstrap/js/timepicker.js')}}
+
+    
+    @yield('page_specific_scripts')
+
+{{HTML::script('packages/bootstrap/js/select2.min.js')}}
+{{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
+
+=======
  @yield('page_specific_scripts')
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
+
 
 <div id="rights" style="text-align:center;">
         ©13-14 UDIHIS
