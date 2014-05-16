@@ -21,6 +21,7 @@ $docts = User::where('level',4)->get();
 <option  value="nhif">NHIF</option>
 
 
+
 </select>
 
 @endif
@@ -80,6 +81,9 @@ $consultation = Service::where('name','consultation')->first();
 <select id="ipd" class="form-control" name="sectioninfo">  
 <?php $docts = User::where('level',4)->get(); ?>
 
+<option></option>
+
+
 @foreach($docts as $dr)
 	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
@@ -88,6 +92,9 @@ $consultation = Service::where('name','consultation')->first();
 <div id="ipdinfo"></div>
 
 <script type="text/javascript">
+
+
+
 
 
 

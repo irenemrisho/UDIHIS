@@ -76,6 +76,7 @@ class ReceptionController  extends BaseController{
             "paymenttype" => $paymenttype,
             "allergy" => $allergy,
             "patient_id"=>$pid,
+            "paymenttype"=>$paymenttype
           ));
       $patient_id = $pid;
 
