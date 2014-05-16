@@ -27,6 +27,7 @@ class CreatePatientsVisitsTable extends Migration {
             $table->date('admission_date')->nullable();
            	$table->date('discharge_date')->nullable(); 
            	$table->String('bloodgroup')->nullable();
+           	$table->String('paymenttype')->nullable();
 			$table->timestamps();
 
 		});
