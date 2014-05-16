@@ -51,7 +51,9 @@ class ReceptionController  extends BaseController{
     }
 
     public function patientinfo(){
-        $inputs     = Input::all();
+        $inputs     = Input::except('payReg','payCons');
+        $payReg =Input::get('payReg');
+        $payCons =Input::get('payCons');
 
         $pid = $inputs['pid'];
         $height = $inputs['height'];
@@ -71,19 +73,35 @@ class ReceptionController  extends BaseController{
             "temperature" => $temperature,
             "bloodgroup"=>$bloodgroup,
             "bloodpressure" => $bloodpressure,
+            "paymenttype" => $paymenttype,
+            "allergy" => $allergy,
             "patient_id"=>$pid,
             "paymenttype"=>$paymenttype
           ));
-        $this->addPayment("registration",$pid,$paymenttype);
+      $patient_id = $pid;
+
+                    if($payReg == 1){
+                            $this->addPayment(1,$patient_id,'now');
+                        }
+                        else{
+                            $this->addPayment(1,$patient_id,'later');
+                        }
+                        if($payCons == 1){
+                             $this->addPayment(2,$patient_id,'now');
+                        }else{
+                            $this->addPayment(2,$patient_id,'later');
+                        }
+
+        
      }
 
 
-    public function addPayment($service_name,$patient_id,$pay_type) {
+    public function addPayment($service_id,$patient_id,$time) {
         //$cash is boolean value true for cash , false for insured
-        if($pay_type=='Cash'){
-            $status="unpaid";
-        }else{
+        if($time=='now'){
             $status="paid";
+        }else{
+            $status="unpaid";
         }
 
         //$service_id = Service::where('name',$service_name)->first()->id;
@@ -91,7 +109,7 @@ class ReceptionController  extends BaseController{
 
 
         $payment = Payment::create(array(
-            "service_id"=>1,
+            "service_id"=>$service_id,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));
@@ -99,8 +117,10 @@ class ReceptionController  extends BaseController{
     }
 
     public function savepatientinfo(){
-       
+        
         $inputs     = Input::all();
+        
+
         $rules = array(
         'phone_no' => 'Min:10|Max:13|Alpha_num',
         
@@ -114,6 +134,7 @@ class ReceptionController  extends BaseController{
                     $filenumber = array('filenumber' => Patient::fileno());
                     $inputs     = array_merge($inputs, $filenumber);
                     $newpatient = Patient::create($inputs);
+                    
                 return View::make("reception.manage_patients", compact('newpatient'))->with('message', 'Patient successfully registered!');
         }else{
                 return View::make('reception.registerpatient')->with('error', 'Patient exists!')->with('input', Input::all());
@@ -165,6 +186,9 @@ class ReceptionController  extends BaseController{
         $patient->district      = Input::get('district');
         $patient->tribe      = Input::get('tribe');
         $patient->religion      = Input::get('religion');
+        $Patient->designation  = Input::get('designation');
+        $Patient->marital_status  = Input::get('marital_status');
+        $Patient->nationality  = Input::get('nationality');
         $patient->save();
 
 

@@ -1,3 +1,4 @@
+
 $(function () {
 
     Application.init ();
@@ -43,10 +44,6 @@ var Application = function () {
     }
 
 }();
-
-
-//////////////////////////////////////////////////////////////////////////////////
-
 
 $(document).ready(function(){
 
@@ -385,6 +382,10 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+    $('#appointment_time').timepicker({
+        timeOnlyTitle: 'Appointment time'
+    });
+
     $('.date').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,
@@ -429,6 +430,7 @@ $(document).ready(function(){
             $('#user_content').html(data);
         });
     });
+
 
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');

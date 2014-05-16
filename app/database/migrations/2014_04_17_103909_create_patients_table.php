@@ -39,6 +39,12 @@ class CreatePatientsTable extends Migration {
 			$table->String('street')->nullable();
 			$table->String('tribe')->nullable();
 			$table->String('religion')->nullable();
+	        $table->String('designation')->nullable();
+	        $table->String('marital_status')->nullable();
+	        $table->String('nationality')->nullable();
+
+
+
 
 			$table->timestamps();
 
