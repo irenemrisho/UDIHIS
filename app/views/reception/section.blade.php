@@ -15,17 +15,11 @@ $docts = User::where('level',4)->get();
 
 <p>Insurance Company</p>
 <select id="insurance" class="form-control" name="paymenttype">  
-<<<<<<< HEAD
-<option name="" value=""></option>
-<option name="nif" value="">NIF</option>
-<option name="aar" value="">AAR</option>
-<option name="nhif" value="">NHIF</option>
-=======
 <option  value=""></option>
 <option  value="nif">NIF</option>
 <option  value="aar">AAR</option>
 <option  value="nhif">NHIF</option>
->>>>>>> d3571e6cfaf203e888fe20e79d267178cb71a177
+
 
 
 </select>
@@ -86,26 +80,16 @@ $consultation = Service::where('name','consultation')->first();
 <p>Doctor</p>
 <select id="ipd" class="form-control" name="sectioninfo">  
 <?php $docts = User::where('level',4)->get(); ?>
-<<<<<<< HEAD
-
-=======
 <option></option>
->>>>>>> 90a73878df2a2c0573a0724b7479a2c9f04bacad
+
 @foreach($docts as $dr)
 	<option name="sectioninfo" value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
 @endforeach
 </select>
-<<<<<<< HEAD
-<input type="hidden" id="url" value="{{url('getDrRooms')}}" />
-
-<div id="loadipdinfo"></div>
-=======
 <input type="hidden" value={{url('getDrRooms')}} id="url" />
 <div id="ipdinfo"></div>
 
 <script type="text/javascript">
-
->>>>>>> 90a73878df2a2c0573a0724b7479a2c9f04bacad
 
 
 $(document).ready(function(){
