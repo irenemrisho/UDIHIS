@@ -54,6 +54,9 @@
 																</tr>
 															</thead>
 															<tbody>
+
+														@if(Patients_visit::count() > 0)	
+
 														<?php $patients = Patient::orderBy('filenumber', 'DESC')->get(); $id=1;?>
 														@foreach($patients as $patient)
 																<tr>
@@ -72,7 +75,7 @@
 																	
 																</tr>
 														@endforeach
-															
+															@endif	
 																
 																
 																

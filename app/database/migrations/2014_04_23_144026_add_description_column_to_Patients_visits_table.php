@@ -14,7 +14,7 @@ class AddDescriptionColumnToPatientsVisitsTable extends Migration {
 	{
 		Schema::table('patients_visits', function(Blueprint $table)
 		{
-			$table->text('description');
+			$table->text('description')->nullable();
 		});
 	}
 
