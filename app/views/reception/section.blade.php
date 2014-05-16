@@ -89,9 +89,6 @@ $consultation = Service::where('name','consultation')->first();
 
 <script type="text/javascript">
 
-
-
-
 $(document).ready(function(){
 	$('#ipd').on('change', function(){
 		var  dr  = $(this).val();
