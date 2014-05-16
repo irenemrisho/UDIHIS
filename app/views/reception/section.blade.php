@@ -15,7 +15,7 @@ $docts = User::where('level',4)->get();
 @if($section == "Insurance")
 
 <p>Insurance Company</p>
-<select id="insurance" class="form-control" name="sectioninfo">  
+<select id="insurance" class="form-control" name="paymenttype">  
 <option name="" value=""></option>
 <option name="nif" value="">NIF</option>
 <option name="aar" value="">AAR</option>

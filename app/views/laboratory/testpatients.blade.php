@@ -19,7 +19,7 @@
 @section('main')
     <h1 class="page-title">
                     <i class="icon-th-large"></i>
-                    Appointments                    
+                    Test Patients                   
                 </h1>
                                        
 <div class="row">
@@ -107,7 +107,7 @@
                                                                     <th style="text-align:center;">#</th>
                                                                     <th style="text-align:center;">First Name</th>
                                                                     <th style="text-align:center;">Last Name</th>
-                                                                    <th style="text-align:center;">Phone Number</th>
+                                                                    <th style="text-align:center;">File Number</th>
                                                                     <th style="text-align: center">Operations</th>
                                                                 </tr>
                                                             </thead>
@@ -121,14 +121,14 @@
                                                                 <tr><td style="text-align:center;">{{$id}}<?php $id++; ?></td>
                                                                     <td style="text-align:center;">{{$patient->firstname}}</td>
                                                                     <td style="text-align:center;">{{$patient->lastname}}</td>
-                                                                    <td style="text-align:center;">{{$patient->phone_no}}</td>
+                                                                    <td style="text-align:center;">{{$patient->filenumber}}</td>
                                                                     <td style="text-align:center;">
                                                                         
-                                                                        <a href="{{url("testpatients/$patient->id")}}" 
+                                                                        <a href="{{url("testpatients/$test->id")}}" 
                                                                            >
                                                                                 <i class="icon-edit btn btn-small btn-primary"  rel="tooltip"  data-original-title="take specimen" ></i>
                                                                         </a>
-                                                                        <a href="{{url("patient/appoint/$patient->id")}}" 
+                                                                        <a href="{{url("patient/lab_result/$patient->id")}}" 
                                                                             >
                                                                                 <i class="btn btn-small btn-primary icon-edit" rel="tooltip"  data-original-title="enter results"></i>
 

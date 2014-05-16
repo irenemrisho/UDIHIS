@@ -51,7 +51,7 @@
 							</thead>
 							
 							<tbody>
-						
+						@if(Patients_visit::count() > 0)
 						@foreach($patients as $patient)
 								<tr><td>{{$patient->filenumber}}</td>
 									<td>{{$patient->firstname}}</td>
@@ -66,7 +66,7 @@
 									</td>
 								</tr>
 						@endforeach
-							
+						@endif	
 								
 								
 								

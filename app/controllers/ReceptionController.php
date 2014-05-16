@@ -72,6 +72,7 @@ class ReceptionController  extends BaseController{
             "bloodgroup"=>$bloodgroup,
             "bloodpressure" => $bloodpressure,
             "patient_id"=>$pid,
+            "paymenttype"=>$paymenttype
           ));
         $this->addPayment("registration",$pid,$paymenttype);
      }

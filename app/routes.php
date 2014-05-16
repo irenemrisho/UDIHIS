@@ -110,6 +110,7 @@ Route::get('getTests', 'LaboratoryController@getTests');
 Route::get('testpatients/getTests', 'LaboratoryController@getTests');
 Route::get('testpatients', 'LaboratoryController@testpatients');
 Route::get('testpatients/{id}', 'LaboratoryController@testpatient');
+Route::get('patient/lab_result/{id}','LaboratoryController@lab_results');
 
 
 

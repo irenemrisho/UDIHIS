@@ -49,13 +49,13 @@ $(document).ready(function(){
 	  showAutocompleteOnFocus: false
 	});
 
-	$('#tokenfield2').tokenfield({
-	  autocomplete: {
-	    source: ['1x1x2','1x2x4','1x3x6','2x1x7','2x2x4','2x3x2','3x1x4','3x2x8','3x3x10'],
-	    delay: 100
-	  },
-	  showAutocompleteOnFocus: false
-	});
+	// $('#tokenfield2').tokenfield({
+	//   autocomplete: {
+	//     source: ['1x1x2','1x2x4','1x3x6','2x1x7','2x2x4','2x3x2','3x1x4','3x2x8','3x3x10'],
+	//     delay: 100
+	//   },
+	//   showAutocompleteOnFocus: false
+	// });
 	
 
 	$('#prescribedmedicine').autocomplete({
