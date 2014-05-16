@@ -31,16 +31,68 @@
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
 
-    <div class="control-group">
+<div class="control-group">
+<label class="control-label" for="username">Gender</label>
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('tribe')}}" name="tribe" required placeholder="Tribe" />
-
-</div> <!-- /controls -->
+<select class="form-control"  data-placement="gender" name="gender" required>
+<option disabled> Select Gender</option>
+<option></option>
+<option>Male</option>
+<option>Female</option>
+</select>
+</div> 
 </div> <!-- /control-group -->
-    <div class="control-group">
+
+<div class="control-group">
+ <label class="control-label" for="username">Marital Status</label>
 <div class="controls">
-<select class="form-control"  data-placement="gender" name="religion" required>
+<select class="form-control"  data-placement="marital_status" name="marital_status"  value = "">
+<option disabled> Select Marital Status</option>
+ <option></option>
+<option>Single</option>
+<option>Marriend</option>
+</select>
+</div>  
+</div> <!-- /control-group -->
+
+<div class="control-group">
+<div class="controls">
+<input type="text" class="input-xlarge" id="birthdate" value="{{Input::get('birth')}}"  name="birth" required  placeholder=" Date of birth"/>
+
+</div> <!-- /controls --> 
+</div><!-- /control-group --> 
+
+<div class="control-group">
+<label class="control-label" for="username">Nationality</label>
+<div class="controls">
+<select class="form-control"  data-placement="nationality" name="nationality"  value = "">
+<option disabled> Select Nationality</option>
+ <option></option>
+<option>tanzania</option>
+<option>kenya</option>
+</select>
+</div>  
+</div> <!-- /control-group -->
+
+<div class="control-group">
+     <label class="control-label" for="username">Designation</label>
+<div class="controls">
+<select class="form-control"  data-placement="designation" name="designation"  value = "">
+<option disabled> Select Designation</option>
+ <option></option>
+<option>Dr</option>
+<option>Bank Manager</option>
+</select>
+</div>                                       
+
+</div> <!-- /control-group -->
+
+    <div class="control-group">
+        <label class="control-label" for="username">Religion</label>
+<div class="controls">
+<select class="form-control"  data-placement="gender" name="religion">
 <option disabled>Select Religion</option>
+<option></option>
 <option>Christian</option>
 <option>Islamic</option>
 </select>
@@ -49,24 +101,15 @@
 
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge" id="birthdate" value="{{Input::get('birth')}}"  name="birth" required  placeholder=" Date of birth"/>
-
-</div> <!-- /controls --> 
-</div>
-<div class="control-group">
-<div class="controls">
-<select class="form-control"  data-placement="gender" name="gender" required>
-<option disabled> Select Gender</option>
-
-<option>Male</option>
-<option>Female</option>
-</select>
-</div>                                       
-
+<input type="text" class="input-xlarge " id="" value="{{Input::get('tribe')}}" name="tribe" placeholder="Tribe" />
+</div> <!-- /controls -->
 </div> <!-- /control-group -->
 
+</div>
 
-    <h4 class = "text-left">Contact Information</h4>
+<div class="span4 pull-right" style="margin-left:4px;">
+
+     <h4 class = "text-left">Contact Information</h4>
 
     <div class="control-group">
 
@@ -91,8 +134,6 @@
         </div> <!-- /controls -->
     </div>
 
-</div>
-<div class="span4 pull-right" style="margin-left:4px;">
     <h4 class = "text-left">Physical address</h4>
 
     <div class="control-group">
@@ -132,19 +173,19 @@
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('phone2')}}" name="phone2" required  placeholder="Phone Number"/>
+<input type="text" class="input-xlarge " id="" value="{{Input::get('phone2')}}" name="phone2"  placeholder="Phone Number"/>
 
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('location')}}" name="location"  required  placeholder="Location"/>
+<input type="text" class="input-xlarge " id="" value="{{Input::get('location')}}" name="location"    placeholder="Location"/>
 
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{Input::get('workingplace')}}" name="workingplace" required  placeholder="Working Place"/>
+<input type="text" class="input-xlarge " id="" value="{{Input::get('workingplace')}}" name="workingplace"  placeholder="Working Place"/>
 
 
 </div> <!-- /controls -->               

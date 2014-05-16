@@ -185,6 +185,9 @@ class ReceptionController  extends BaseController{
         $patient->district      = Input::get('district');
         $patient->tribe      = Input::get('tribe');
         $patient->religion      = Input::get('religion');
+        $Patient->designation  = Input::get('designation');
+        $Patient->marital_status  = Input::get('marital_status');
+        $Patient->nationality  = Input::get('nationality');
         $patient->save();
 
 

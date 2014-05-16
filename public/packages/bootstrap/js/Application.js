@@ -45,10 +45,6 @@ var Application = function () {
 
 }();
 
-
-//////////////////////////////////////////////////////////////////////////////////
-
-
 $(document).ready(function(){
 
 
@@ -383,6 +379,10 @@ $(document).ready(function(){
         minDate: 0,
         yearRange: "0:+3" ,
         showMonths: [3,3]
+    });
+
+    $('#appointment_time').timepicker({
+        timeOnlyTitle: 'Appointment time'
     });
 
     $('.date').datepicker({

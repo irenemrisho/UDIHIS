@@ -160,11 +160,11 @@ class PatientVisitController extends \BaseController {
         return Redirect::to('manage/patients');
 
 	}
-		public function appoint()
+		/*public function appoint()
 
 	{
 	return View::make("reception.appointmentRegister");
-	}
+	}*/
 
 
 	/**

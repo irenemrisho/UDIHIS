@@ -93,8 +93,11 @@ Route::get('patients' , 'PatientController@index');
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
 
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
+Route::get('patients/add' , 'ReceptionController@index');
+Route::get('patients/app_card' , 'ReceptionController@app_card_view');
 
 Route::get('patients/add' , 'ReceptionController@index');
+
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
 /*to update patient infor*/
@@ -125,6 +128,6 @@ Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinf
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
 Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
 Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
-Route::get('appointRegister', 'PatientVisitController@appoint');
+//Route::get('appointRegister', 'PatientVisitController@appoint');
 
 Route::get('print/{id}', 'ReceptionController@printView');
