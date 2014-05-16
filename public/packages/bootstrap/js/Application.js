@@ -150,7 +150,6 @@ $(document).ready(function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
             $('#section-more').html(data);
-        
                
         });
 

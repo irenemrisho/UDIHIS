@@ -20,7 +20,7 @@
                 <div class="tab-pane active" id="1">
                     <div class="widget-table">
                         <div class="span4 pull-left">
-                            <form id="pform" action="{{url("patients/edit")}}" method="POST">
+                            <form id="pform" action="{{url("patient/edit/$patient->id")}}" method="POST">
 
 <div class="control-group">
 <div class="controls">
@@ -85,7 +85,7 @@
     <div class="control-group">
 
         <div class="controls">
-            <input type="text" class="input-xlarge " id="" name="telephone_no" placeholder = "">
+            <input type="text" class="input-xlarge " id="telephone_no" value="{{$patient->telephone_no}}" name="telephone_no" placeholder = "">
 
         </div> <!-- /controls -->
     </div> <!-- /control-group -->
