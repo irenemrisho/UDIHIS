@@ -68,8 +68,8 @@
 <select class="form-control"  data-placement="nationality" name="nationality"  value = "">
 <option disabled> Select Nationality</option>
  <option></option>
-<option>tanzania</option>
-<option>kenya</option>
+<option>Tanzania</option>
+<option>Kenya</option>
 </select>
 </div>  
 </div> <!-- /control-group -->
