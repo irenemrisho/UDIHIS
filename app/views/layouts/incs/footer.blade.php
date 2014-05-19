@@ -16,7 +16,7 @@
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
 {{HTML::script('packages/bootstrap/js/timepicker.js')}}
-
+ @yield('page_specific_scripts-highchart')
  @yield('page_specific_scripts')
 {{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
