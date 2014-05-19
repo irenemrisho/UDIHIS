@@ -207,6 +207,24 @@ $(document).ready(function(){
         });
     });//endof deleting category
 
+	    //delete campany 
+    $(".deleteCampany").click(function(){
+        var id1 = $(this).parent().attr('id');
+        $(".deleteCampany").show("slow").parent().find("span").remove();
+        var btn = $(this).parent().parent();
+        $(this).hide("slow").parent().append("<span><br>Delete? <br /> <a href='#s' id='yes' class='btn btn-success btn-mini'><i class='fa fa-check'></i> Y</a> <a href='#s' id='no' class='btn btn-danger btn-mini'> <i class='fa fa-times'></i> N</a></span>");
+        $("#no").click(function(){
+            $(this).parent().parent().find(".deleteCampany").show("slow");
+            $(this).parent().parent().find("span").remove();
+        });
+        $("#yes").click(function(){
+            $(this).parent().html("<br><i class=''></i><span style='font-size: 11px; color:red'>deleting...</span>");
+            $.post("billing/delete/"+id1,function(data){
+                btn.hide("slow").next("hr").hide("slow");
+            });
+        });
+    });
+
     $('.fetchuser').on('click', function(){
         $('#ajax').show();
         var uid  = $(this).parent().attr('id');
@@ -371,6 +389,19 @@ $(document).ready(function(){
         showMonths: [3,3]
     });
 
+    $('#campanyfromdate').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        
+    });
+
+    $('#campanytodate').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        
+    });
 
     $('#appointment_date').datepicker({
         dateFormat: "yy-mm-dd",
