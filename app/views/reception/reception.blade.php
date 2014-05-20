@@ -96,7 +96,11 @@
 	    		</div>
 
 	    		<div class="span5">
-	    			Chart will appera here!
+	    			<div class="widget widget-content">
+                        <div class="widget-header">
+                            Notifications in this area are coming soon....
+                        </div>
+                    </div>
 	    		</div>
 	    	</div>
 
