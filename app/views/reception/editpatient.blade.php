@@ -5,34 +5,37 @@
 
 <div class="row">
 <div class="span9">
-    <div class="widget-header">
-        <h3>Edit Patient Information</h3>
-    </div> 
+<div class="widget-header">
+<h3>Edit Patient Information</h3>
+</div> 
 
-    <div class="widget-content">
-        <div class="tabbable">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#1" data-toggle="tab">Personal Information</a></li>
-                <li class=""><a href="#2" data-toggle="tab">Initial Patient Information</a></li>
-            </ul>
-        </div>
+<div class="widget-content">
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#1" data-toggle="tab">Personal Information</a></li>
+<li class=""><a href="#2" data-toggle="tab">Initial Patient Information</a></li>
+</ul>
+</div>
 
-        <div class="tab-pane active" id="1">
-            <div class="widget-table">
-                <div class="span4 pull-left">
-                    <form id="pform" action="{{url("patient/edit/$patient->id")}}" method="POST">
+<div class="tab-content" >
+<div class="tab-pane active" id="1">
+<div class="widget-table">
+<div class="span4 pull-left">
+<form id="pform" action="{{url("patient/edit/$patient->id")}}" method="POST">
 
 <div class="control-group">
+<label class="control-label" for="username">First Name</label>
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{$patient->firstname}}" name="firstname" required />
+<input type="text" class="input-xlarge " id="" value="{{$patient->firstname}}" name="first_name" required />
 
 </div> <!-- /controls --> 
 </div>
 
 
 <div class="control-group">
+<label class="control-label" for="username">Last Name</label>
 <div class="controls">
-<input type="text" class="input-xlarge " id="" value="{{$patient->lastname}}" name="lastname" required/>
+<input type="text" class="input-xlarge " id="" value="{{$patient->lastname}}" name="last_name" required/>
 
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
@@ -56,14 +59,15 @@
 <option disabled> Select Marital Status</option>
 <option></option>
 <option>Single</option>
-<option>Marriend</option>
+<option>Married</option>
 </select>
 </div>  
 </div> <!-- /control-group -->
 
 <div class="control-group">
+<label class="control-label" for="username">Birth Date</label>
 <div class="controls">
-<input type="text" class="input-xlarge" id="birthdate" value="{{$patient->birth}}"  name="birth" required />
+<input type="text" class="input-xlarge" id="birthdate" value="{{$patient->birth}}"  name="birth_date" required />
 
 </div> <!-- /controls --> 
 </div><!-- /control-group --> 
@@ -106,6 +110,7 @@
 </div> <!-- /control-group -->
 
 <div class="control-group">
+<label class="control-label" for="username">Tribe</label>
 <div class="controls">
 <input type="text" class="input-xlarge " id="" value="{{$patient->tribe}}" name="tribe"  />
 </div> <!-- /controls -->
@@ -120,7 +125,7 @@
 <div class="control-group">
 
 <div class="controls">
-    <input type="text" class="input-xlarge " id="phone_no" name="phone_no" value = "{{$patient->phone_no}}">
+<input type="text" class="input-xlarge " id="phone_no" name="phone_no" value = "{{$patient->phone_no}}">
 
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
@@ -128,7 +133,7 @@
 <div class="control-group">
 
 <div class="controls">
-    <input type="text" class="input-xlarge " id="telephone_no" value="{{$patient->telephone_no}}" name="telephone_no" placeholder = "">
+<input type="text" class="input-xlarge " id="telephone_no" value="{{$patient->telephone_no}}" name="telephone_no" placeholder = "">
 
 
 </div> <!-- /controls -->
@@ -136,7 +141,7 @@
 <div class="control-group">
 
 <div class="controls">
-    <input type="email" class="input-xlarge " id="" name="email"  value = "{{$patient->email}}">
+<input type="email" class="input-xlarge " id="" name="email"  value = "{{$patient->email}}">
 
 </div> <!-- /controls -->
 </div>
@@ -146,12 +151,12 @@
 <div class="control-group">
 
 <div class="controls">
-    <select class="form-control"  data-placement="district" name="district" required value = "{{$patient->district}}">
-        <option disabled>Select District</option>
-        <option>Kiondoni</option>
-        <option>Ilala</option>
-        <option>Temeke</option>
-    </select>
+<select class="form-control"  data-placement="district" name="district" required value = "{{$patient->district}}">
+<option disabled>Select District</option>
+<option>Kiondoni</option>
+<option>Ilala</option>
+<option>Temeke</option>
+</select>
 
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
@@ -159,14 +164,14 @@
 <div class="control-group">
 
 <div class="controls">
-    <input type="text" class="input-xlarge " id="" name="street" value = "{{$patient->street}}">
+<input type="text" class="input-xlarge " id="" name="street" value = "{{$patient->street}}">
 
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
 <div class="control-group">
 
 <div class="controls">
-    <input type="text" class="input-xlarge " id="" name="house_no" value = "{{$patient->house_no}}">
+<input type="text" class="input-xlarge " id="" name="house_no" value = "{{$patient->house_no}}">
 
 </div> <!-- /controls -->
 </div>
@@ -197,20 +202,25 @@
 
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
-<p><button type="submit" class="btn btn-primary" id="psave">Save</button></p>
-
+<div class="control-group">
+<div class="controls">
+<button type="reset" class="btn btn-warning" id="cancel" name = "cancel" value = "Cancel">Cancel</button>
+<button type="submit" class="btn btn-primary" id="psave">Save</button>
+</div> <!-- /controls -->               
+</div> <!-- /control-group -->
 </form>
-                </div>
-            </div>
-        </div>
-         <div class="tab-pane " id="2">
-            <!-- todd list tunaweka pane ya patient visiti -->
-         </div>
-
-    </div>
 </div>
 </div>
-
-
-
+</div>
+<div class="tab-pane " id="2">
+<div class="widget-table">
+<div class="span4 pull-left">
+Initial information (here) don't understand  . . .. we have to discuss
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 @stop

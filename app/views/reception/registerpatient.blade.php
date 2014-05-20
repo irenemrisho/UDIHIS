@@ -428,7 +428,12 @@
 
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
-<p><button type="submit" class="btn btn-primary" id="psave">Save</button></p>
+<div class="control-group">
+<div class="controls">
+<button type="reset" class="btn btn-warning" id="cancel" name = "cancel" value = "Cancel" >Cancel</button>
+<button type="submit" class="btn btn-primary" id="psave">Save</button>
+</div> <!-- /controls -->               
+</div> <!-- /control-group -->
 
 </form>
 

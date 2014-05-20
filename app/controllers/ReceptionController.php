@@ -120,7 +120,6 @@ class ReceptionController  extends BaseController{
         
         $inputs     = Input::all();
         
-
         $rules = array(
         'phone_no' => 'Min:10|Max:13|Alpha_num',
         
@@ -136,7 +135,9 @@ class ReceptionController  extends BaseController{
                     $newpatient = Patient::create($inputs);
                     
                 return View::make("reception.manage_patients", compact('newpatient'))->with('message', 'Patient successfully registered!');
-        }else{
+        }
+        else
+        {
                 return View::make('reception.registerpatient')->with('error', 'Patient exists!')->with('input', Input::all());
                 //return Redirect::back()->withInput($inputs);
         }
@@ -179,16 +180,16 @@ class ReceptionController  extends BaseController{
         $patient->lastname = Input::get('last_name');
         $patient->email = Input::get('email');
         $patient->birth= Input::get('birth_date');
-        $patient->phone_no = Input::get('mobile_no');
+        $patient->phone_no = Input::get('phone_no');
         $patient->telephone_no      = Input::get('telephone_no');
         $patient->street      = Input::get('street');
         $patient->house_no      = Input::get('house_no');
         $patient->district      = Input::get('district');
         $patient->tribe      = Input::get('tribe');
         $patient->religion      = Input::get('religion');
-        $Patient->designation  = Input::get('designation');
-        $Patient->marital_status  = Input::get('marital_status');
-        $Patient->nationality  = Input::get('nationality');
+        $patient->designation  = Input::get('designation');
+        $patient->marital_status  = Input::get('marital_status');
+        $patient->nationality  = Input::get('nationality');
         $patient->save();
 
 
