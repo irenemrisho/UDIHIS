@@ -35,9 +35,14 @@
 	</tr>
 	<tr>
 		<td colspan="4">
+			    <div class="btn-toolbar" data-role="editor-toolbar"
+    data-target="#consultNotes">
+   <a data-edit="bold">...</a>
+    </div> 
 			<p><b>Consultation Notes</b></p>
 			<textarea class="span8 form-control"  rows="6" id="consultNotes" value="">
 			{{$patient1->consultation}}
+
 			</textarea>
 		</td>
 	</tr>
@@ -51,7 +56,7 @@
 <button class="btn btn-primary" id="prescribe">Prescribe</button>
 </div>
 <script type="text/javascript">
-
+	    
 
 					 $('#laboratory').on('click', function(){
         var pid = $('#pid').val();

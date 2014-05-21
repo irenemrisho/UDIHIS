@@ -16,6 +16,8 @@
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
 {{HTML::script('packages/bootstrap/js/timepicker.js')}}
+{{HTML::script('packages/bootstrap/js/bootstrap-wysiwyg.js')}}
+
 
     
     @yield('page_specific_scripts')
@@ -82,11 +84,7 @@ $(document).ready(function(){
           return false;
         }
     });	
-     $('#example').dataTable( {
-        "paging":   true,
-        "ordering": true,
-        "info":     true
-    } );
+   
 });
     
 </script>
