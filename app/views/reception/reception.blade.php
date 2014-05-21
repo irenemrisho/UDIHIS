@@ -98,8 +98,30 @@
 	    		<div class="span5">
 	    			<div class="widget widget-content">
                         <div class="widget-header">
-                            Notifications in this area are coming soon....
+                            <span class="title"><i class="icon-tasks"></i></span>  Notifications
                         </div>
+                        <table class="table table-bordered">
+                            <colgroup>
+                              <col class="span4">
+                              <col class="span1">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>Message</th>
+                                <th>Schedule</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>HR make a new roster. All nurses should be on roaster this weekend</td>
+                                <td>Sat 12</td>
+                              </tr>
+                              <tr>
+                                <td>Board embers meeting. All doctors and head of section meeting</td>
+                                <td>Mon 24</td>
+                              </tr>
+                            </tbody>
+                        </table>
                     </div>
 	    		</div>
 	    	</div>
