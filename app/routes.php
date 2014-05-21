@@ -68,14 +68,21 @@ Route::post('provide_recommended','PharmacyController@provide_selected');
 Route::get('billing','BillingController@getIndex');
 Route::get('edit_service','BillingController@getEditService'); 
 Route::post('edit_service','BillingController@getService'); 
+
+Route::get('edit_insurance_campany','BillingController@getEditCampany'); 
+Route::post('edit_insurance_campany','BillingController@UpdateCampany');
+
 Route::get('Pending_bills','BillingController@getBills');
 Route::get('Insurance_management','BillingController@getInsurance');
+Route::post('Insurance_management','BillingController@addInsurance');
 Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
 Route::get('reports_billing','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
 Route::post('billing/patients_payments','BillingController@profile');
 Route::post('provide_payments','BillingController@provide_payments'); 
+Route::get('patient_pdf_invoice','BillingController@get_patient_invoice');
+Route::post('billing/delete/{id}','BillingController@destroyCampany');
 
 ///Receptionist
 /*for listsing patients and adding*/
