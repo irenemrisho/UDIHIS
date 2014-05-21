@@ -430,7 +430,7 @@
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<button type="reset" class="btn btn-warning" id="cancel" name = "cancel" value = "Cancel" >Cancel</button>
+<button type="reset" class="btn btn-danger" id="cancel" name = "cancel" value = "Cancel" >Reset</button>
 <button type="submit" class="btn btn-primary" id="psave">Save</button>
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
