@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 			$('#patients_table').dataTable({
 				ordering:false,
-				"jQueryUI": true
+				"jQueryUI": false
 			});
 	</script>
 @stop
