@@ -28,7 +28,7 @@
 							<div class="widget-content">
 								
 								
-											<div class=" widget widget-table">
+											<div class="widget-table">
 										 @if(isset($message))
 <div class="alert alert-info" id="message">{{ $message }}</div>
 @endif	

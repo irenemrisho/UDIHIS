@@ -1,8 +1,8 @@
 @extends('dashboard')
 @section('main')
  <h1 class="page-title">
-                        <i class="icon-user-md"></i>
-                        Patients                    
+                        <i class="icon-info-sign"></i>
+                        Admin Dashboard                    
                     </h1>
 
                     <div class="action-nav-normal">

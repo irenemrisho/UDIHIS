@@ -14,7 +14,7 @@ class AddTemperatureColumnToPatientsVisitsTable extends Migration {
 	{
 		Schema::table('patients_visits', function(Blueprint $table)
 		{
-			$table->string('temperature');
+			$table->string('temperature')->nullable();
 		});
 	}
 

@@ -14,7 +14,7 @@ class AddBloodpressureColumnToPatientsVisitsTable extends Migration {
 	{
 		Schema::table('patients_visits', function(Blueprint $table)
 		{
-			$table->string('bloodpressure');
+			$table->string('bloodpressure')->nullable();
 		});
 	}
 

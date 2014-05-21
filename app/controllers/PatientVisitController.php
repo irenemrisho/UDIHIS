@@ -131,8 +131,8 @@ class PatientVisitController extends \BaseController {
 	 * @return Response
 	 */
 
-	public function getDrRooms(){
-		//var dr  = Input::get('dr');
+	public function appoint(){
+		return View::make('reception.appointment');
 	}
 
 	public function setAppointment($id)
