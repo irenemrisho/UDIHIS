@@ -51,7 +51,7 @@
 <input id="pid" type="hidden" value="{{$patient->id}}" />
 <button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
-<button class="btn btn-primary">Admit</button>
+<button class="btn btn-primary" id="admit">Admit</button>
 <button class="btn btn-primary" id="laboratory">Laboratory</button>
 <button class="btn btn-primary" id="prescribe">Prescribe</button>
 </div>
@@ -59,13 +59,17 @@
 	    
 
 					 $('#laboratory').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
-    });
+					        var pid = $('#pid').val();
+					        window.location = "patients/lab_test/" + pid;
+					    });
 					 $('#prescribe').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/prescribe/" + pid;
-    });
+					        var pid = $('#pid').val();
+					        window.location = "patients/prescribe/" + pid;
+					    });
+					 $('#admit').on('click',function(){
+					 	var pid =  $('#pid').val();
+					 	window.location = "patients/admit/" + pid;
+					 });
 
 				    $('#back').on('click', function(){
 				        $('#loadpatientinfo').hide();
