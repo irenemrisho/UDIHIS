@@ -139,3 +139,6 @@ Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
 Route::get('appointRegister', 'PatientVisitController@appoint');
 
 Route::get('print/{id}', 'ReceptionController@printView');
+
+// Reports code goes here
+Route::post('reception/generateReports', 'ReportsController@generateReports');

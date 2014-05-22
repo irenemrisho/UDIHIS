@@ -409,7 +409,7 @@
 <div class="control-group">
 
 <div class="controls">
-<input type="text" class="input-xlarge " id="" name="house_no" value = "{{$patient->house_no}}">
+<input type="text" class="input-xlarge" id="" name="house_no" value = "{{$patient->house_no}}">
 
 </div> <!-- /controls -->
 </div>

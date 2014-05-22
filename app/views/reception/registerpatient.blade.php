@@ -313,13 +313,15 @@
 </div> <!-- /control-group -->
 
 <div class="control-group">
-     <label class="control-label" for="username">Designation</label>
+     <label class="control-label" for="username">Category</label>
 <div class="controls">
 <select class="form-control"  data-placement="designation" name="designation"  value = "">
-<option disabled> Select Designation</option>
+<option disabled> Select Category</option>
  <option></option>
-<option>Dr</option>
-<option>Bank Manager</option>
+<option>Student</option>
+<option>Staff</option>
+<option>Family Member</option>
+<option>Private</option>
 </select>
 </div>                                       
 
