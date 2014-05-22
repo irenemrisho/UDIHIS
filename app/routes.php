@@ -86,6 +86,10 @@ Route::post('provide_payments','BillingController@provide_payments');
 Route::get('patient_pdf_invoice','BillingController@get_patient_invoice');
 Route::post('billing/delete/{id}','BillingController@destroyCampany');
 
+
+Route::get('add_campany_price','BillingController@addCampanyPrice');
+Route::post('add_campany_price','BillingController@saveCampanyPrice');
+
 ///Receptionist
 /*for listsing patients and adding*/
 Route::get('reception/reports','ReceptionController@reports');
@@ -138,6 +142,6 @@ Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinf
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
 Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
 Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
-//Route::get('appointRegister', 'PatientVisitController@appoint');
+Route::get('appointRegister', 'PatientVisitController@appoint');
 
 Route::get('print/{id}', 'ReceptionController@printView');

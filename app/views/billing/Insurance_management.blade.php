@@ -76,7 +76,7 @@
                                         <div class="tab-pane " id="2">
                         
 
-                                                                                    <form id="edit-profile" class="form-horizontal" action="Insurance_management" method="post">
+                                                <form id="edit-profile" class="form-horizontal" action="Insurance_management" method="post">
                                                 <fieldset>
                                                     <div class="control-group">  
                                                      <label class="control-label" for="campany_name">Campany name</label>

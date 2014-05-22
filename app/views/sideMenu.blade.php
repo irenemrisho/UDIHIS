@@ -15,6 +15,8 @@
     <li class=""><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">{{ Recommended_medicine::where('status','=','open')->count() }}</span></a></li>
 
+<li class="active"><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
+
     <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">
     {{ Recommended_medicine::groupBy('pv_id')->
     where('status','=','open')->count() 
@@ -43,7 +45,7 @@
     <li class=""><a href="{{url("reception")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Register Patients</a></li>
     <li><a href="{{url("manage/patients")}}" id="patient"><i class="icon-user-md"></i>Manage Patients</a></li>
-    <li><a href="{{url("patient/appoint/{id}")}}"><i class="icon-exchange"></i>Appointment </a></li>
+    <li><a href="{{url("appointRegister")}}"><i class="icon-exchange"></i>Appointment </a></li>
 
     <li><a href="{{url("reception/reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
