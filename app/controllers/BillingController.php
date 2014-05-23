@@ -178,7 +178,10 @@ class BillingController  extends BaseController{
     public function getProfile(){
             return View::make("billing.profile_billing");
     }
-
+    public function getAccount(){
+        return View::make("billing.My_account_billing");
+    }
+      
     public function profile(){
         
         $id = Input::get('id');
