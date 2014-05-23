@@ -1,19 +1,21 @@
 <div class="widget-content" style="padding:10px;">
-	<div class="widget-header" style="font-weight:bold; padding-left:10px"> Cases</div>
+	<div class="widget-header" style="font-weight:bold; padding-left:10px">All Cases</div>
 	<table id="reporttable" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
 		<thead>
 			<tr>
 				<th style="text-align:center;">Category</th>
-				<th style="text-align:center;">Student</th>
-				<th style="text-align:center;">Staff</th>
-				<th style="text-align:center;">Family Member</th>
-				<th style="text-align: center">Private</th>
-				<th style="text-align: center">Total</th>
+				<th style="text-align:center;" colspan="2">Student</th>
+				<th style="text-align:center;" colspan="2">Staff</th>
+				<th style="text-align:center;" colspan="2">Family Member</th>
+				<th style="text-align: center" colspan="2">Private</th>
+				<th style="text-align: center" colspan="2">Total</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td style="">Sex</td>
+				<td style="">Male</td>
+				<td style="">Female</td>
 				<td style="">Male</td>
 				<td style="">Female</td>
 				<td style="">Male</td>
@@ -33,9 +35,13 @@
 				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
+				<td style="">...</td>
+				<td style="">...</td>
 			</tr>
 			<tr>
 				<td style="">Total</td>
+				<td style="">...</td>
+				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
@@ -57,11 +63,14 @@
 				<th style="text-align:center;" colspan="2">Staff</th>
 				<th style="text-align:center;" colspan="2">Family Member</th>
 				<th style="text-align: center" colspan="2">Private</th>
+				<th style="text-align: center" colspan="2">Total</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td style="">Sex</td>
+				<td style="">Male</td>
+				<td style="">Female</td>
 				<td style="">Male</td>
 				<td style="">Female</td>
 				<td style="">Male</td>
@@ -81,9 +90,13 @@
 				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
+				<td style="">...</td>
+				<td style="">...</td>
 			</tr>
 			<tr>
 				<td style="">Total</td>
+				<td style="">...</td>
+				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
 				<td style="">...</td>
