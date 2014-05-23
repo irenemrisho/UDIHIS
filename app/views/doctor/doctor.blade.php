@@ -8,10 +8,7 @@
 		
 		
 								
-			<div class="widget-header">
-				<i class="icon-signal"></i>
-				<h3>Weekly patients traffic</h3>
-			</div> <!-- /widget-header -->
+			
 												
 			<div class="widget-content">	
 
@@ -53,12 +50,7 @@ $(function () {
             tooltip: {
                 valueSuffix: ''
             },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle',
-                borderWidth: 0
-            },
+            
             plotOptions: {
             series: {
                 animation: {
