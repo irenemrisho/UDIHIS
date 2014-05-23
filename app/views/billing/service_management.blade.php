@@ -117,18 +117,15 @@
 														@foreach($services as $service)
 															<tr>    <td>{{$index}}</td>
 																<td>{{$service->name}}</td>
-																<td>{{$service->price}}</td>											<td class="action-td">
-                                                                                                                                    
-                                                                                                                                    <a href="edit_service?edit={{$service->id}}"><span class="icon-edit btn btn-small btn btn-primary">
-                                                                                                                                        </span>
-                                                                                                                                    </a>&nbsp;
-                                                                                                                                        <a href="service_management?dlt={{$service->id}}" onclick="return confirm('Are you sure you want to delete');" ><span class="icon-trash  btn btn-small btn-danger ">
-                                                                                                                                        <span>
-                                                                                                                                     </a>
-                                                                                                                                        
-																</td>
+													<td>{{$service->price}}</td>											
+													<td class="action-td">
+                                                                                                                        
+                                                        <a href="edit_service?edit={{$service->id}}"><span class="icon-edit btn btn-small btn btn-primary">
+                                                            </span>
+                                                        </a>                                                       
+													 </td>
 															</tr>
-                                                                                                                    <?php $index++; ?>
+                                                  <?php $index++; ?>
 															@endforeach
 															
 			

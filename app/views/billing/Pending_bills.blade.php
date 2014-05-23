@@ -10,7 +10,7 @@
 
 
 
-                        </div> <!-- /stat-container -->
+                        </div> <!-- lp/stat-container -->
 
                         <div class="widget-header">
                             <i class="icon-th-list"></i>
@@ -35,7 +35,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Patient Name</th>
-					                   <th>File number </th>
+					                    <th>File number </th>
                                         <th>Payment #</th>
                                         <th>Action</th>
                                        
@@ -51,8 +51,16 @@
 					<td>{{Patient::find($payment->patient_id)->firstname." ".Patient::find($payment->patient_id)->lastname}}</td>
 					<td>{{Patient::find($payment->patient_id)->filenumber}}</td>
                     <td>{{$payment->count}}</td>
+                    
                     <td class="action-td" id="{{$payment->patient_id}}">
-                    <a href="" role="button" class="btn btn-primary fetch-payments" data-toggle="modal" data-target="#payment">Pay</a>
+                    <a href="" 
+                            rel="tooltip" data-placement="top" data-original-title="pay" class="btn btn-small btn-primary fetch-payments" data-toggle="modal" data-target="#payment" >
+                                <i class="icon-money"></i>
+                        </a>
+                        <a href="patient_pdf_invoice" 
+                            rel="tooltip" data-placement="top" data-original-title="print invoice" class="btn btn-small btn-success">
+                                <i class="icon-print"></i>
+                        </a>                               
                                     </td>
 
                       

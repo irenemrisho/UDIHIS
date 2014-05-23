@@ -36,7 +36,7 @@ Route::get('patients/lab_test/{id}','DoctorController@lab_test');
 Route::post('patients/lab_test/{id}','DoctorController@lab_test_post');
 Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
-Route::get('patients','DoctorController@patients');
+Route::get('allpatients','DoctorController@patients');
 Route::get('patients/prescribe/backpatients','DoctorController@patients');
 Route::get('profile','DoctorController@profile');
 Route::get('reports','DoctorController@reports');
@@ -47,6 +47,8 @@ Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
 Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
 Route::get('patient/attend/{id}','DoctorController@attend');
+Route::get('patients/admit/{id}','DoctorController@admit');
+Route::post('patients/admit/{id}','DoctorController@admit_post');
 
 /*Pharmacy Route*/
 
@@ -83,6 +85,10 @@ Route::post('billing/patients_payments','BillingController@profile');
 Route::post('provide_payments','BillingController@provide_payments'); 
 Route::get('patient_pdf_invoice','BillingController@get_patient_invoice');
 Route::post('billing/delete/{id}','BillingController@destroyCampany');
+
+
+Route::get('add_campany_price','BillingController@addCampanyPrice');
+Route::post('add_campany_price','BillingController@saveCampanyPrice');
 
 ///Receptionist
 /*for listsing patients and adding*/

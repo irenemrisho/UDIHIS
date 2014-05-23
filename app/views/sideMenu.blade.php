@@ -70,8 +70,8 @@
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
     <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
-    <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
-    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right")}}"></span></a></li>
+    <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
+    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>

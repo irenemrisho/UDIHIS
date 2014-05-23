@@ -7,18 +7,12 @@
 {{HTML::script('packages/bootstrap/js/ui.js')}}
 {{HTML::script('packages/bootstrap/js/helper.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
-{{HTML::script('packages/bootstrap/js/excanvas.min.js')}}
-{{HTML::script('packages/bootstrap/js/jquery.flot.js')}}
-{{HTML::script('packages/bootstrap/js/jquery.flot.pie.js')}}
-{{HTML::script('packages/bootstrap/js/jquery.flot.orderBars.js')}}
-{{HTML::script('packages/bootstrap/js/jquery.flot.resize.js')}}
-{{HTML::script('packages/bootstrap/js/bar/bar.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
 {{HTML::script('packages/bootstrap/js/timepicker.js')}}
  @yield('page_specific_scripts-highchart')
+
  @yield('page_specific_scripts')
-{{HTML::script('packages/bootstrap/js/select2.min.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap-tokenfield.js')}}
 
 
@@ -75,11 +69,7 @@ $(document).ready(function(){
           return false;
         }
     });	
-     $('#example').dataTable( {
-        "paging":   true,
-        "ordering": true,
-        "info":     true
-    } );
+   
 });
     
 </script>
