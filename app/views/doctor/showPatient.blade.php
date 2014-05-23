@@ -35,9 +35,14 @@
 	</tr>
 	<tr>
 		<td colspan="4">
+			    <div class="btn-toolbar" data-role="editor-toolbar"
+    data-target="#consultNotes">
+   <a data-edit="bold">...</a>
+    </div> 
 			<p><b>Consultation Notes</b></p>
 			<textarea class="span8 form-control"  rows="6" id="consultNotes" value="">
 			{{$patient1->consultation}}
+
 			</textarea>
 		</td>
 	</tr>
@@ -46,21 +51,25 @@
 <input id="pid" type="hidden" value="{{$patient->id}}" />
 <button class="btn btn-primary" id="nextVisit">Next Visit</button>
 
-<button class="btn btn-primary">Admit</button>
+<button class="btn btn-primary" id="admit">Admit</button>
 <button class="btn btn-primary" id="laboratory">Laboratory</button>
 <button class="btn btn-primary" id="prescribe">Prescribe</button>
 </div>
 <script type="text/javascript">
-
+	    
 
 					 $('#laboratory').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/lab_test/" + pid;
-    });
+					        var pid = $('#pid').val();
+					        window.location = "patients/lab_test/" + pid;
+					    });
 					 $('#prescribe').on('click', function(){
-        var pid = $('#pid').val();
-        window.location = "patients/prescribe/" + pid;
-    });
+					        var pid = $('#pid').val();
+					        window.location = "patients/prescribe/" + pid;
+					    });
+					 $('#admit').on('click',function(){
+					 	var pid =  $('#pid').val();
+					 	window.location = "patients/admit/" + pid;
+					 });
 
 				    $('#back').on('click', function(){
 				        $('#loadpatientinfo').hide();

@@ -12,7 +12,10 @@
  * @author Owden
  */
 class DoctorController extends BaseController {
-
+	 public function __construct(){
+            $this->beforeFilter('auth', array('*'));
+    }
+	
 	public function index(){
 		return View::make('doctor.doctor');
 
@@ -23,6 +26,18 @@ class DoctorController extends BaseController {
 		$id    = Input::get('pid');
 		$patient = Patient::find($id);
 		return View::make('doctor.attend',compact('patient'));
+	}
+	public function admit($id){
+		$patient = Patient::find($id);
+		return View::make('doctor.admit', compact('patient'));
+	}
+	public function admit_post($id){
+		$patient   = Patients_visit::where('patient_id',$id)->first();
+		$patient   ->admission_date = Input::get('admit_date');;
+		$patient   ->admit_notes = Input::get('notes');
+		$patient   ->save();
+
+		return Redirect::back()->with('msg','Patient admitted!');
 	}
 
 	public function getMedxn(){
