@@ -70,6 +70,7 @@ $(document).ready(function(){
         var from       = $('#From').val();
         var to         = $('#To').val();
         var reporttype = $('#reporttype').val();
+        
         $('#loader').show();
         $('#iload').css('opacity', '0.2');
 

@@ -320,7 +320,7 @@
  <option></option>
 <option>Student</option>
 <option>Staff</option>
-<option>Family Member</option>
+<option>FamilyMember</option>
 <option>Private</option>
 </select>
 </div>                                       

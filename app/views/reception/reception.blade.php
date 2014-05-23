@@ -10,7 +10,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Weekly Average Registration'
+                text: 'Monthly Average Registration'
             },
             subtitle: {
                 text: 'Source: Reception'
