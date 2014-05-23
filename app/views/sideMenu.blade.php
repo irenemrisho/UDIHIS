@@ -15,8 +15,6 @@
     <li class=""><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">{{ Recommended_medicine::where('status','=','open')->count() }}</span></a></li>
 
-<li class="active"><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
-
     </span></a></li>
     <li><a href="{{url("manage_medicine")}}"><i class="icon-user-md"></i>Manage medicine </a></li>
     <li><a href="{{url("#")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
