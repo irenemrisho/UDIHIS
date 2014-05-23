@@ -83,6 +83,7 @@ Route::post('billing/patients_payments','BillingController@profile');
 Route::post('provide_payments','BillingController@provide_payments'); 
 Route::get('patient_pdf_invoice','BillingController@get_patient_invoice');
 Route::post('billing/delete/{id}','BillingController@destroyCampany');
+Route::post('billing/campanies_price','BillingController@campanyPrice');
 
 
 Route::get('add_campany_price','BillingController@addCampanyPrice');

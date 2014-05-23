@@ -325,6 +325,16 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    $('.fetch-price').on('click', function(){
+
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/campanies_price', {id:id}, function(data){
+            $('#price_campany').html(data);
+
+        });
+    });
+
     $('.fetch-payments').on('click', function(){
         var id = $(this).parent().attr('id');
         

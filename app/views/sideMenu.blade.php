@@ -84,8 +84,8 @@
     <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
     <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
     <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
-    <li><a href="{{url("reports_billing")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("profile_billing")}}"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("manage_report")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("My_account_billing")}}"><i class="icon-user"></i>My account</a></li>
     
 </ul>
 @endif

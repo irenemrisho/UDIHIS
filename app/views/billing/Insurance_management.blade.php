@@ -44,33 +44,33 @@
                                     </ul>
                                                                    
                                              
-                                                                       <?php if(isset($_GET['msg'])){
-                                                                        if($_GET['msg']==1){?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully added</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==2) { ?>
-                                                                        <div class="alert alert-warning alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Adding failed</strong>
-                                                                        </div>
-                                                                        <?php }elseif($_GET['msg']==3){?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully updated</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==4) { ?>
-                                                                        <div class="alert alert-warning alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Update failed</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==5) { ?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully deleted</strong>
-                                                                        </div>
-                                                                        <?php }}?>
+                                           <?php if(isset($_GET['msg'])){
+                                            if($_GET['msg']==1){?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully added</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==2) { ?>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Adding failed</strong>
+                                            </div>
+                                            <?php }elseif($_GET['msg']==3){?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully updated</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==4) { ?>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Update failed</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==5) { ?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully deleted</strong>
+                                            </div>
+                                            <?php }}?>
                                                                         
                                     <div class="tab-content">
                                         <div class="tab-pane " id="2">
@@ -196,11 +196,7 @@
                                                             </tr>
                                                             <?php $index++; ?> 
                                                             @endforeach
-                                                            
-                                                            
-            
-                                                            
-                                                            
+                                                           
                                                         </tbody>
                                                     </table>
                                                 

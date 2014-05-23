@@ -6,7 +6,10 @@ class BillingController  extends BaseController{
             
 }
     public function getEditService(){
-            return View::make("billing.edit_service");
+
+        $Price_companies = Price_company::where('service_id',$_GET['edit'])->get(); 
+
+        return View::make("billing.edit_service")->with('Price_companies',$Price_companies);
             
 }
 
@@ -96,14 +99,20 @@ class BillingController  extends BaseController{
     public function getService(){
      
   	if(isset($_GET['edit'])){
-			$inputs = Input::all();
-			$service = Service::where('id',$_GET['edit'])
-                                ->update(array(
-				"name"=>$inputs['name'],
-				"price"=>$inputs['price']
 
-				));
-			if ($service) {
+            $service_id=$_GET['edit'];            
+			$Price_companies = Price_company::where('service_id',$service_id)->get(); 
+
+            foreach ($Price_companies as $Price_company) {
+
+                    $update = Price_company::whereRaw('service_id=? and company_id = ? ', array($service_id,$Price_company->company_id))->first();
+                    $update->price=Input::get('campany_'.$Price_company->company_id);;
+                    $update->save();
+                    
+                    }
+
+                                //
+			if ($update) {
                             
 			   return Redirect::to('service_management?msg=3');
                         }else{
@@ -128,12 +137,29 @@ class BillingController  extends BaseController{
                  
             $inputs = Input::all();
 			$service = Service::create(array(
-				"name"=>$inputs['service_name'],
-				"price"=>$inputs['service_price']
-				
+				"name"=>$inputs['service_name']				
 				));
+
 			if ($service) {
                             
+                $Service_id =$service->id;
+                $Campanies =InsuranceCompany::all();
+
+                foreach ($Campanies as $Campany) {
+
+                    $Campany_id = $Campany->id;
+
+                    $Price_company = Price_company::create(array(
+                    "service_id"=> $Service_id,             
+                    "company_id"=>$Campany_id ,             
+                    "price"=>$inputs['Campany_'.$Campany_id.''] 
+
+                        ));
+                    
+
+                    }
+
+
 			   return Redirect::to('service_management?msg=1');
                         }else{
                            
@@ -161,7 +187,14 @@ class BillingController  extends BaseController{
 
         return View::make('billing.showPayements')->with('patients_payments',$patients_payments);
     }   
-  
+    
+    public function campanyPrice(){
+        
+        $id = Input::get('id');      
+
+        return View::make('billing.showCampanyPrice')->with('service_id',$id); 
+    }  
+
     public function provide_payments(){
 
             
