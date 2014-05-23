@@ -25,6 +25,9 @@
 $(function () {
 	
         $('#bar-chart').highcharts({
+             chart: {
+                type: 'column'
+            },
             title: {
                 text: 'Weekly Patients Visits',
                 x: -20 //center
@@ -51,20 +54,14 @@ $(function () {
                 valueSuffix: ''
             },
             
-            plotOptions: {
-            series: {
-                animation: {
-                    duration: 5000
-	                }
-	            }
-	        },
+            
 	        
             series: [{
                 name: 'Male',
-                data: [15, 6, 19, 14, 18, 21, 25]
+                data: [15, 29, 19, 14, 18, 21, 25]
             }, {
                 name: 'Female',
-                data: [10, 12, 23, 8, 17.0, 22, 24]
+                data: [10, 12, 23, 26, 17.0, 22, 24]
             }, {
                 name: 'Children',
                 data: [20, 16, 7, 8, 13, 17, 30]
