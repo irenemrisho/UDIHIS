@@ -326,10 +326,12 @@
 <label class="control-label" for="username">Designation</label>
 <div class="controls">
 <select class="form-control"  data-placement="designation" name="designation"  value = "{{$patient->designation}}">
-<option disabled> Select Designation</option>
+<option disabled> Select Category</option>
 <option></option>
-<option>Dr</option>
-<option>Bank Manager</option>
+<option>Student</option>
+<option>Staff</option>
+<option>FamilyMember</option>
+<option>Private</option>
 </select>
 </div>                                       
 
