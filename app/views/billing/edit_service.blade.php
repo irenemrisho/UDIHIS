@@ -34,16 +34,16 @@
                                                                                      
                                                 <form id="edit-profile" class="form-horizontal" action="edit_service?edit={{$_GET['edit']}}" method="post">
                                                 <fieldset>
-                                                    
+                                                    @foreach($Price_companies as $Price_company)
                                                     <div class="control-group">  
-                                                     <label class="control-label" for="service_price">Price</label>
+                                                     <label class="control-label" for="campany_{{$Price_company->company_id}}">{{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="price" id="" value="{{$Service->price}}">
+                                                            <input type="text" class="input-xlarge" name="campany_{{$Price_company->company_id}}" id="" value="{{$Price_company->price}}">
                                                             
                                                         </div>                                       
                                               
                                                     </div> <!-- /control-group -->
-                                                    
+                                                    @endforeach
                                                     <div class="pull-right"> 
                                                         <button type="submit" class="btn btn-primary">Update</button>
                                                     </div>

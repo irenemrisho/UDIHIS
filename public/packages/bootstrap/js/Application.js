@@ -48,7 +48,7 @@ var Application = function () {
 $(document).ready(function(){
 
 
-    $('#dt').datepicker({
+    $('#From, #To').datepicker({
         dateFormat: "yy-mm-dd",
         changeMonth: true,
         changeYear: true,
@@ -67,15 +67,14 @@ $(document).ready(function(){
     });
 
     $('#go').on('click', function(){
-        var gender      = $('#gender').val();
-        var age         = $('#age').val();
-        var district    = $('#district').val();
-        var report      = $('#report').val();
-        var reporttype  = $('#reporttype').val();
-        var date        = $('#date').val();
+        var from       = $('#From').val();
+        var to         = $('#To').val();
+        var reporttype = $('#reporttype').val();
+        
         $('#loader').show();
         $('#iload').css('opacity', '0.2');
-        $.post('reports', {gender:gender,age:age,district:district,report:report,date:date,reporttype:reporttype}, function(data){
+
+        $.post('generateReports', {from:from, to:to, reporttype: reporttype} , function(data){
              $('#loader').hide();
              $('#iload').css('opacity', '1');
              $('#ireport').hide().html(data).fadeIn(1000);
@@ -325,6 +324,16 @@ var Application = function () {
 
 
 $(document).ready(function(){
+
+    $('.fetch-price').on('click', function(){
+
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/campanies_price', {id:id}, function(data){
+            $('#price_campany').html(data);
+
+        });
+    });
 
     $('.fetch-payments').on('click', function(){
         var id = $(this).parent().attr('id');

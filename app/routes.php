@@ -81,10 +81,12 @@ Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
 Route::get('reports_billing','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
+Route::get('My_account_billing','BillingController@getAccount');
 Route::post('billing/patients_payments','BillingController@profile');
 Route::post('provide_payments','BillingController@provide_payments'); 
 Route::get('patient_pdf_invoice','BillingController@get_patient_invoice');
 Route::post('billing/delete/{id}','BillingController@destroyCampany');
+Route::post('billing/campanies_price','BillingController@campanyPrice');
 
 
 Route::get('add_campany_price','BillingController@addCampanyPrice');
@@ -145,3 +147,6 @@ Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
 Route::get('appointRegister', 'PatientVisitController@appoint');
 
 Route::get('print/{id}', 'ReceptionController@printView');
+
+// Reports code goes here
+Route::post('reception/generateReports', 'ReportsController@generateReports');
