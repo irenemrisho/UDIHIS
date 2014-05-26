@@ -234,6 +234,7 @@ $(document).ready(function(){
             $('#user_content').html(data);
         });
     });
+    
 
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');
@@ -411,6 +412,7 @@ $(document).ready(function(){
         yearRange: "0:+3" ,
         showMonths: [3,3]
     });
+   
 
     $('#appointment_time').timepicker({
         timeOnlyTitle: 'Appointment time'
