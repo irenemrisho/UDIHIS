@@ -1,6 +1,7 @@
 <?php   if (Auth::user()) {
     
 ?>
+@if(Auth::check())
 @if(Auth::user()->level == 0)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admin"><i class="icon-home"></i>Dashboard</a></li>
@@ -83,7 +84,7 @@
     
 </ul>
 @endif
-
+    @endif
 <hr />
 <br />
 <?php }else ?>
