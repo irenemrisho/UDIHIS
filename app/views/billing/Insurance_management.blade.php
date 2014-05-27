@@ -119,12 +119,14 @@
                                               
                                                     </div> <!-- /control-group -->
                                                     <div class="control-group">  
-                                                     <label class="control-label" for="payment_type">Payment type</label>
+                                                     <label class="control-label" for="payment_type">Payment type
+
+                                                     </label>
                                                         <div class="controls">
                                                             <input type="text" class="input-xlarge" name="payment_type" id="" value="">
                                                             
-                                                        </div>                                       
-                                              
+                                                        </div>
+
                                                     </div> <!-- /control-group -->
                                                     
                                                     <div class="control-group">  
