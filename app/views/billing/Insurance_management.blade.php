@@ -172,7 +172,7 @@
                                                                 <th>#</th>
                                                                 <th>Campany name</th>
                                                                 <th>Contact person</th>
-                                                                <th>Addree</th>
+                                                                <th>Address</th>
                                                                 <th>Payment type</th>
                                                                 <th>Action</th>
                                                             </tr>

@@ -109,7 +109,7 @@ class ReceptionController  extends BaseController{
 
 
         $payment = Payment::create(array(
-            "service_id"=>$service_id,
+            "amount"=>Price_company::whereRaw('service_id=? and company_id = ? ', array($service_id,0))->first()->price,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));

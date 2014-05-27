@@ -150,3 +150,4 @@ Route::get('print/{id}', 'ReceptionController@printView');
 
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
+

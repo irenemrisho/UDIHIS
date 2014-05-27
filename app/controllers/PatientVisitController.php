@@ -38,7 +38,7 @@ class PatientVisitController extends \BaseController {
         $bloodpressure = $inputs['bloodpressure'];
         $bloodgroup = $inputs['bloodgroup'];
        // $rhesus = $inputs['rhesus'];
-        $paymenttype = $inputs['paymenttype'];
+        //$paymenttype = $inputs['paymenttype'];
         $section = $inputs['section'];
 
       $pvInfo = Patients_visit::create(array(
@@ -64,12 +64,10 @@ class PatientVisitController extends \BaseController {
             $status="paid";
         }
 
-        //$service_id = Service::where('name',$service_name)->first()->id;
-
-
+        $service_id = Service::where('name',$service_name)->first()->id;
 
         $payment = Payment::create(array(
-            "service_id"=>1,
+            "amount"=>Price_company::whereRaw('service_id=? and company_id = ? ', array($service_id,0))->first()->price,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));

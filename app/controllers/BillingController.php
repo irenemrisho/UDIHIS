@@ -140,11 +140,20 @@ class BillingController  extends BaseController{
 				"name"=>$inputs['service_name']				
 				));
 
+            
+
 			if ($service) {
                             
                 $Service_id =$service->id;
                 $Campanies =InsuranceCompany::all();
 
+                $cash_price = Price_company::create(array(
+                "service_id"=> $Service_id,             
+                "company_id"=>0,  // zero is used as campany_id for cash doesn't reference in any table           
+                "price"=>$inputs['cash']
+
+                )); 
+                
                 foreach ($Campanies as $Campany) {
 
                     $Campany_id = $Campany->id;
