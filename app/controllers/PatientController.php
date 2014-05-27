@@ -7,7 +7,9 @@ class PatientController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-
+ public function __construct(){
+            $this->beforeFilter('auth', array('*'));
+    }
 
 	public function profile(){
 		$id = Input::get('id');

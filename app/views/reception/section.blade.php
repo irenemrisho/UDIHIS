@@ -51,7 +51,8 @@ $consultation = Service::where('name','consultation')->first();
                                  <tr>
                                  	<td>1</td>
                                     <td>{{$registration->name}}</td>
-                                    <td>{{$registration->price}}</td>
+                                    <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
+                                    array(Service::where('name','registration')->first()->id,0))->first()->price}}</td>
                                     <td style="text-align:center;">
 								    	<label name="first" id="first1"   class="btn-small btn-primary">Pay now</label>
 		                            	<label name="" id="second1" class="btn-small btn-warning">Later</label>
@@ -61,7 +62,8 @@ $consultation = Service::where('name','consultation')->first();
                                  <tr>
                                  	<td>2</td>
                                     <td>{{$consultation->name}}</td>
-                                    <td>{{$consultation->price}}</td>
+                                    <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
+                                    array(Service::where('name','consultation')->first()->id,0))->first()->price}}</td>
                                     <td style="text-align:center;">
 								    	<label name="" id="first2"  class="btn-small btn-primary">Pay now</label>
 		                            	<label name="" id="second2" class="btn-small btn-warning">Later</label>

@@ -7,14 +7,14 @@
 @stop
 
 @section('page_specific_scripts')
-<!-- Datatable includes -->
-{{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
-<script type="text/javascript">
-$('#patients_table').dataTable({
-ordering:false,
-"jQueryUI": true
-});
-</script>
+	<!-- Datatable includes -->
+	{{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+	<script type="text/javascript">
+			$('#patients_table').dataTable({
+				ordering:false,
+				"jQueryUI": false
+			});
+	</script>
 @stop
 
 @section('main')

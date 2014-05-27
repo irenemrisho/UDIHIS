@@ -66,12 +66,10 @@ class PatientVisitController extends \BaseController {
             $status="paid";
         }
 
-        //$service_id = Service::where('name',$service_name)->first()->id;
-
-
+        $service_id = Service::where('name',$service_name)->first()->id;
 
         $payment = Payment::create(array(
-            "service_id"=>1,
+            "service_id"=>$service_id,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));
@@ -133,8 +131,8 @@ class PatientVisitController extends \BaseController {
 	 * @return Response
 	 */
 
-	public function getDrRooms(){
-		//var dr  = Input::get('dr');
+	public function appoint(){
+		return View::make('reception.appointment');
 	}
 
 	public function setAppointment($id)

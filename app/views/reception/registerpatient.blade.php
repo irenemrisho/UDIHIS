@@ -313,13 +313,15 @@
 </div> <!-- /control-group -->
 
 <div class="control-group">
-     <label class="control-label" for="username">Designation</label>
+     <label class="control-label" for="username">Category</label>
 <div class="controls">
 <select class="form-control"  data-placement="designation" name="designation"  value = "">
-<option disabled> Select Designation</option>
+<option disabled> Select Category</option>
  <option></option>
-<option>Dr</option>
-<option>Bank Manager</option>
+<option>Student</option>
+<option>Staff</option>
+<option>FamilyMember</option>
+<option>Private</option>
 </select>
 </div>                                       
 
@@ -430,7 +432,7 @@
 </div> <!-- /control-group -->
 <div class="control-group">
 <div class="controls">
-<button type="reset" class="btn btn-warning" id="cancel" name = "cancel" value = "Cancel" >Cancel</button>
+<button type="reset" class="btn btn-danger" id="cancel" name = "cancel" value = "Cancel" >Reset</button>
 <button type="submit" class="btn btn-primary" id="psave">Save</button>
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->

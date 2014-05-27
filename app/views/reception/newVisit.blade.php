@@ -51,7 +51,7 @@ Manage Patients New Visit
 </div>
 
 <div class="span4 pull-right">
-<h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+<h4> Hospital File no: UD/<b>{{$patient->filenumber}}</b></h4>
 <div class="control-group">
 <label class="control-label" for="temperature">Temperature (c)</label>
 <div class="controls">
@@ -64,34 +64,54 @@ Manage Patients New Visit
 <div class="controls">
     <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
 
+</div> <!-- /control-group -->
+
+
+
+</div>
+
+<div class="span4 pull-right">
+<h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+<div class="control-group">
+<label class="control-label" for="temperature">Temperature (c)</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="temperature" />
+
+</div> <!-- /controls -->
+</div>
+<div class="control-group">
+<label class="control-label" for="bp">Blood Pressure (mmHg)</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
+
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
 
 <div class="control-group">
 <label class="control-label" for="gender">Blood Group</label>
 <div class="controls">
-    <select class="form-control" name="bloodgroup">
-        <option disabled>Select Blood Group</option>
+<select class="form-control" name="bloodgroup">
+<option disabled>Select Blood Group</option>
 
-        <option></option>
-        <option>A</option>
-        <option>B</option>
-        <option>O</option>
-        <option>AB</option>
-    </select>
+<option></option>
+<option>A</option>
+<option>B</option>
+<option>O</option>
+<option>AB</option>
+</select>
 </div>
 
 </div> <!-- /control-group -->
 <div class="control-group">
 <label class="control-label" for="gender">Rhesus Factor</label>
 <div class="control-group ">
-    <label class="radio">
-        <input type="radio" name="rhesus" id="" value="positive" >
-        Positive
-    </label>
-    <label class="radio">
-        <input type="radio" name="rhesus" id="" value="negative">
-        Negative</label>
+<label class="radio">
+<input type="radio" name="rhesus" id="" value="positive" >
+Positive
+</label>
+<label class="radio">
+<input type="radio" name="rhesus" id="" value="negative">
+Negative</label>
 
 </div>
 
@@ -132,8 +152,7 @@ Manage Patients New Visit
 </div>
 <div class="span4 pull-right" style="margin-left:4px;">
 
-
-<h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+<h4> Hospital File no:  UD/<b>{{$patient->filenumber}}</b></h4>
 <input name="pid" value="{{$patient->id}}" type="hidden" />
 <label class="control-label">Direct To &raquo</label>
 <p>SECTION</p>
@@ -143,6 +162,7 @@ Manage Patients New Visit
 <option>IPD</option>
 <option>ANC</option>
 </select>
+
 
 <div id="section-more">
 

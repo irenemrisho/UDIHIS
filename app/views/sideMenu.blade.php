@@ -1,6 +1,7 @@
 <?php   if (Auth::user()) {
     
 ?>
+@if(Auth::check())
 @if(Auth::user()->level == 0)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admin"><i class="icon-home"></i>Dashboard</a></li>
@@ -15,10 +16,6 @@
     <li class=""><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">{{ Recommended_medicine::where('status','=','open')->count() }}</span></a></li>
 
-    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">
-    {{ Recommended_medicine::groupBy('pv_id')->
-    where('status','=','open')->count() 
-    }}
     </span></a></li>
     <li><a href="{{url("manage_medicine")}}"><i class="icon-user-md"></i>Manage medicine </a></li>
     <li><a href="{{url("#")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
@@ -43,7 +40,7 @@
     <li class=""><a href="{{url("reception")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Register Patients</a></li>
     <li><a href="{{url("manage/patients")}}" id="patient"><i class="icon-user-md"></i>Manage Patients</a></li>
-    <li><a href="{{url("patient/appoint/{id}")}}"><i class="icon-exchange"></i>Appointment </a></li>
+    <li><a href="{{url("appointRegister")}}"><i class="icon-exchange"></i>Appointment </a></li>
 
     <li><a href="{{url("reception/reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
@@ -68,8 +65,8 @@
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
     <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
-    <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
-    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right")}}"></span></a></li>
+    <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
+    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
@@ -82,12 +79,12 @@
     <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
     <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
     <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
-    <li><a href="{{url("reports_billing")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("profile_billing")}}"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("manage_report")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("My_account_billing")}}"><i class="icon-user"></i>My account</a></li>
     
 </ul>
 @endif
-
+    @endif
 <hr />
 <br />
 <?php }else ?>

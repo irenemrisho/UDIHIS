@@ -1,4 +1,21 @@
 @extends('dashboard')
+@section('page_specific_css')
+    <!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+    <!-- Datatable includes -->
+    {{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+    <script type="text/javascript">
+            $('#insurance_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+    </script>
+@stop
+
 @section('main')
 <h1 class="page-title">
                     <i class="icon-th-large"></i>
@@ -27,39 +44,39 @@
                                     </ul>
                                                                    
                                              
-                                                                       <?php if(isset($_GET['msg'])){
-                                                                        if($_GET['msg']==1){?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully added</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==2) { ?>
-                                                                        <div class="alert alert-warning alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Adding failed</strong>
-                                                                        </div>
-                                                                        <?php }elseif($_GET['msg']==3){?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully updated</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==4) { ?>
-                                                                        <div class="alert alert-warning alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Update failed</strong>
-                                                                        </div>
-                                                                        <?php }elseif ($_GET['msg']==5) { ?>
-                                                                        <div class="alert alert-success alert-dismissable">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                                                            <strong>Successfully deleted</strong>
-                                                                        </div>
-                                                                        <?php }}?>
+                                           <?php if(isset($_GET['msg'])){
+                                            if($_GET['msg']==1){?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully added</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==2) { ?>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Adding failed</strong>
+                                            </div>
+                                            <?php }elseif($_GET['msg']==3){?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully updated</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==4) { ?>
+                                            <div class="alert alert-warning alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Update failed</strong>
+                                            </div>
+                                            <?php }elseif ($_GET['msg']==5) { ?>
+                                            <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                <strong>Successfully deleted</strong>
+                                            </div>
+                                            <?php }}?>
                                                                         
                                     <div class="tab-content">
                                         <div class="tab-pane " id="2">
                         
 
-                                                                                    <form id="edit-profile" class="form-horizontal" action="service_management" method="post">
+                                                <form id="edit-profile" class="form-horizontal" action="Insurance_management" method="post">
                                                 <fieldset>
                                                     <div class="control-group">  
                                                      <label class="control-label" for="campany_name">Campany name</label>
@@ -94,14 +111,6 @@
                                               
                                                     </div> <!-- /control-group -->
                                                     <div class="control-group">  
-                                                     <label class="control-label" for="phone">Phone</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="phone" id="" value="">
-                                                            
-                                                        </div>                                       
-                                              
-                                                    </div> <!-- /control-group -->
-                                                    <div class="control-group">  
                                                      <label class="control-label" for="email">Email</label>
                                                         <div class="controls">
                                                             <input type="text" class="input-xlarge" name="email" id="" value="">
@@ -110,9 +119,20 @@
                                               
                                                     </div> <!-- /control-group -->
                                                     <div class="control-group">  
+                                                     <label class="control-label" for="payment_type">Payment type
+
+                                                     </label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge" name="payment_type" id="" value="">
+                                                            
+                                                        </div>
+
+                                                    </div> <!-- /control-group -->
+                                                    
+                                                    <div class="control-group">  
                                                      <label class="control-label" for="contract_from">Contract from</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="contract_from" id="" value="">
+                                                            <input type="text" class="input-xlarge" id="campanyfromdate" name="contract_from" id="" value="">
                                                             
                                                         </div>                                       
                                               
@@ -120,7 +140,7 @@
                                                     <div class="control-group">  
                                                      <label class="control-label" for="contract_to">Contract to</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="contract_to" id="" value="">
+                                                            <input type="text" class="input-xlarge" id="campanytodate" name="contract_to" id="" value="">
                                                             
                                                         </div>                                       
                                               
@@ -139,14 +159,11 @@
                                                                                         
                                             <div class="widget widget-table">
                                         
-                                                <div class="widget-header">
-                                                                                                         <input type="email" class="form-control "  placeholder="Search">
-                                                    
-                                                </div> <!-- /widget-header -->
+                    
                                                 
                                                 <div class="widget-content">
                                                 
-                                                    <table class="table table-striped table-bordered">
+                                                    <table id="insurance_table" class="table table-striped table-bordered">
                                                                     
                                                             
                                                         
@@ -155,25 +172,33 @@
                                                                 <th>#</th>
                                                                 <th>Campany name</th>
                                                                 <th>Contact person</th>
-                                                                <th>Phone</th>
+                                                                <th>Address</th>
                                                                 <th>Payment type</th>
+                                                                <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         
                                                        <tbody>
                                                                                                                 
-                                                       
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td class="action-td"></td>
+                                                            <?php $index=1; ?>                                                    
+                                                            @foreach($campanies as $campany)
+                                                            <tr>    
+                                                                <td>{{$index}}</td>
+                                                                <td>{{$campany->name}}</td>
+                                                                <td>{{$campany->contact_name}}</td>
+                                                                <td>{{$campany->pobox}} </td>
+                                                                <td>{{$campany->payement_type}} </td>                                                             
+                                                                <td class="action-td" id="{{$campany->id}}">
+                                                                    <a href="edit_insurance_campany?edit={{$campany->id}}" class="icon-edit btn btn-small btn btn-primary"></a> &nbsp;                  
+                                                                    <a href="javascript:;" class="btn btn-small btn-danger deleteCampany">
+                                                                        <i class="icon-trash"></i>                              
+                                                                    </a>
+
+                                                                </td>
                                                             </tr>
-                                                            
-                                                            
-            
-                                                            
-                                                            
+                                                            <?php $index++; ?> 
+                                                            @endforeach
+                                                           
                                                         </tbody>
                                                     </table>
                                                 
@@ -190,6 +215,7 @@
     </div>  
 
 @stop
+
 
 
 
