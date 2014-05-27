@@ -35,6 +35,7 @@
 										<option>Pie</option>	
 										<option>Column</option>	
 										<option>Line</option>	
+										<option>Combine</option>	
 									</select>
 									<span id="date" style="display:none">
 										<input type="text" id="dt" style="width:80px" placeholder="Enter date" />
@@ -45,6 +46,7 @@
 								</form>
 								<center style="display:none" id="loader">{{HTML::image('packages/bootstrap/img/load.gif')}}</center>
 								<div id="ireport"></div>
+								<div id="container"></div>
 							</div>
 						</div>
 					</div>

@@ -8,6 +8,7 @@
 {{HTML::script('packages/bootstrap/js/helper.js')}}
 {{HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 {{HTML::script('packages/bootstrap/js/jquery.easyWizard.js')}}
+{{HTML::script('packages/charts/js/highcharts.js')}}
 {{HTML::script('packages/bootstrap/js/Application.js')}}
 {{HTML::script('packages/bootstrap/js/timepicker.js')}}
  @yield('page_specific_scripts-highchart')

@@ -70,15 +70,69 @@ $(document).ready(function(){
         var from       = $('#From').val();
         var to         = $('#To').val();
         var reporttype = $('#reporttype').val();
-        
-        $('#loader').show();
-        $('#iload').css('opacity', '0.2');
+        if(from == "" || to == "" || reporttype == ""){
+                alert("Please fill the fields");
+        }else{
+                    $('#loader').show();
+                    $('#iload').css('opacity', '0.2');
 
-        $.post('generateReports', {from:from, to:to, reporttype: reporttype} , function(data){
-             $('#loader').hide();
-             $('#iload').css('opacity', '1');
-             $('#ireport').hide().html(data).fadeIn(1000);
-        });
+                    $.post('generateReports', {from:from, to:to, reporttype: reporttype} , function(data){
+
+                        if(reporttype == "Table"){
+                             $('#loader').hide();
+                             $('#iload').css('opacity', '1');
+                             $('#ireport').hide().html(data).fadeIn(1000);
+                        }else{
+                            //Charts Things go here ......
+                            $('#loader').hide();
+                            $('#iload').css('opacity', '1');
+                            $('#ireport').html('');
+                            var obj   = JSON.parse(data);
+                            $('#ireport').highcharts({
+                                    chart: {
+                                        type: obj.chartType 
+                                    },
+                                    title: {
+                                        text: obj.title
+                                    },
+                                    subtitle: {
+                                        text: obj.subtitle
+                                    },
+                                    xAxis: {
+                                        categories: obj.xAxisData
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: 'Number (#)'
+                                        }
+                                    },
+                                    plotOptions: {
+                                        line: {
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            enableMouseTracking: false
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Student',
+                                        data: obj.yAxisDataStudent
+                                    },  {
+                                        name: 'Staff',
+                                        data: obj.yAxisDataStaff
+                                    },
+                                        {
+                                        name: 'Family members',
+                                        data: obj.yAxisDataFamily
+                                    },
+                                        {
+                                        name: 'Private',
+                                        data: obj.yAxisDataPrivate
+                                    }],
+                                });
+                            }
+                    });
+        }
     });
 
 
