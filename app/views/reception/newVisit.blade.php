@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="span4 pull-right">
-                    <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+                    <h4> Hospital File no: UD/<b>{{$patient->filenumber}}</b></h4>
                     <div class="control-group">
                         <label class="control-label" for="temperature">Temperature (c)</label>
                         <div class="controls">
@@ -136,7 +136,7 @@
                 <div class="span4 pull-right" style="margin-left:4px;">
 
 
-                    <h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+                    <h4> Hospital File no:  UD/<b>{{$patient->filenumber}}</b></h4>
                     <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <label class="control-label">Direct To &raquo</label>
                     <p>SECTION</p>
