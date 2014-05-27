@@ -50,7 +50,7 @@
 <option disabled> Select Marital Status</option>
  <option></option>
 <option>Single</option>
-<option>Marriend</option>
+<option>Married</option>
 </select>
 </div>  
 </div> <!-- /control-group -->

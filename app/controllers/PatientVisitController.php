@@ -37,18 +37,20 @@ class PatientVisitController extends \BaseController {
         $temperature = $inputs['temperature'];
         $bloodpressure = $inputs['bloodpressure'];
         $bloodgroup = $inputs['bloodgroup'];
-       // $rhesus = $inputs['rhesus'];
-        $paymenttype = $inputs['paymenttype'];
+        /*$rhesus = $inputs['rhesus'];*/
+        $paymenttype = $inputs['section'];
         $section = $inputs['section'];
 
       $pvInfo = Patients_visit::create(array(
 
             'height' => $height,
-            "weight" => $weight,
-            "temperature" => $temperature,
-            "bloodgroup"=>$bloodgroup,
-            "bloodpressure" => $bloodpressure,
-            "patient_id"=>$pid,
+            'weight' => $weight,
+            'temperature' => $temperature,
+            'bloodgroup'=>$bloodgroup,
+            'bloodpressure' => $bloodpressure,
+            'paymenttype' =>$paymenttype,
+            /*'rhesus' =>$rhesus,*/
+            'patient_id' =>$pid,
           ));
         $this->addPayment("registration",$pid,$paymenttype);
 

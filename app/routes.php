@@ -88,6 +88,7 @@ Route::get('reception', 'ReceptionController@getIndex');
 Route::get('manage/patients', 'ReceptionController@index');
 Route::get('patient/edit/{id}', 'ReceptionController@update');
 Route::post('patient/edit/{id}', 'ReceptionController@edit');
+Route::post('patient/editInitial/{id}', 'ReceptionController@editInitial');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
