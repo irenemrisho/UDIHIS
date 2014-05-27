@@ -36,7 +36,14 @@
                                                 <fieldset>
                                                     @foreach($Price_companies as $Price_company)
                                                     <div class="control-group">  
-                                                     <label class="control-label" for="campany_{{$Price_company->company_id}}">{{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}</label>
+                                                     <label class="control-label" for="campany_{{$Price_company->company_id}}">
+                                                    <?php if($Price_company->company_id == 0){ ?>
+                                                        {{"Cash"}}
+                                                    <?php }else{?>
+                                                     {{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}
+                                                    <?php }?>
+
+                                                     </label>
                                                         <div class="controls">
                                                             <input type="text" class="input-xlarge" name="campany_{{$Price_company->company_id}}" id="" value="{{$Price_company->price}}">
                                                             

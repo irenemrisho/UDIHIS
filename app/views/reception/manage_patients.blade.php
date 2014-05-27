@@ -56,7 +56,7 @@
                     context.font = " normal 12px tahoma";
 
                     context.fillText("{{Patient::fullname($newpatient)}}",100,162);
-                    context.fillText("{{$newpatient->filenumber}}",120,183);
+                    context.fillText(" UD/{{$newpatient->filenumber}}",120,183);
                     context.fillText("{{ date('D d M Y',time()) }}",140,205);
                 };
                 bg.src="{{ asset('packages/bootstrap/img/app_card.png')}}";
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="span4 pull-right">
-                    <h4> Hospital File no: <b>{{$newpatient->filenumber}}</b></h4>
+                    <h4> Hospital File no:  UD/<b>{{$newpatient->filenumber}}</b></h4>
                     <div class="control-group">
                         <label class="control-label" for="temperature">Temperature (c)</label>
                         <div class="controls">
@@ -180,7 +180,7 @@
                      <div class="control-group ">
                         <h4>Payment Mode</h4>
                     <p>Choose type</p>
-                    <select id="insurance1" name="section" class="form-control">
+                    <select id="insurance1" name="payment" class="form-control">
                         <option></option>
                         <option>Cash</option>
                         <option>Insurance</option>
@@ -199,21 +199,20 @@
                 <div class="span4 pull-right" style="margin-left:4px;">
 
 
-                    <h4> Hospital File no: <b>{{$newpatient->filenumber}}</b></h4>
+                    <h4> Hospital File no:  UD/<b>{{$newpatient->filenumber}}</b></h4>
                     <input name="pid" value="{{$newpatient->id}}" type="hidden" />
                     <label class="control-label">Direct To &raquo</label>
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">
                         <option></option>
-                        <option>OPD</option>
-                        <option>IPD</option>
-                        <option>ANC</option>
+                        <option value = "OPD">OPD</option>
+                        <option value = "IPD">IPD</option>
+                        <option value = "ANC">ANC</option>
                     </select>
 
                     <div id="section-more">
 
                     </div>
-
                 </div>
 
             </fieldset>

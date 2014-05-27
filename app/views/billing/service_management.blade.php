@@ -74,7 +74,7 @@
 										<div class="tab-pane " id="2">
 						
 
-                                                                                    <form id="edit-profile" class="form-horizontal" action="service_management" method="post">
+                                                <form id="edit-profile" class="form-horizontal" action="service_management" method="post">
                                                 <fieldset>
                                                     <div class="control-group">  
                                                      <label class="control-label" for="service_name">Service name</label>
@@ -84,7 +84,15 @@
                                                         </div>                                       
                                               
                                                     </div> <!-- /control-group -->
-                                                    <!-- retrieve all campies-->
+                                                    <div class="control-group">  
+                                                     <label class="control-label" for="cash">Cash</label>
+                                                        <div class="controls">
+                                                            <input type="text" class="input-xlarge" name="cash" id="" value="" placeholder="price">
+                                                            
+                                                        </div>                                       
+                                              
+                                                    </div> <!-- /control-group -->
+                                                    <!-- retrieve all campanies-->
                                                     <?php  $Campanies =InsuranceCompany::all(); ?>
                                                     @foreach($Campanies as $Campany )
                                                     <div class="control-group">  
