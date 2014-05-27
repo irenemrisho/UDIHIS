@@ -180,7 +180,7 @@
                      <div class="control-group ">
                         <h4>Payment Mode</h4>
                     <p>Choose type</p>
-                    <select id="insurance1" name="payment" class="form-control">
+                    <select id="insurance1" name="section" class="form-control">
                         <option></option>
                         <option>Cash</option>
                         <option>Insurance</option>

@@ -488,7 +488,7 @@
 </div><!-- /control-group --> 
 
 <div class="control-group">
-<label class="control-label" for="username">Blood Pressure</label>
+<label class="control-label" for="username">Blood Pressure (mmHg)</label>
 <div class="controls">
 <input type="text" class="input-xlarge " id="" value="" name="blood_pressure"  />
 </div> <!-- /controls -->
