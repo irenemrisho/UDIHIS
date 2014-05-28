@@ -46,7 +46,7 @@
                         <div class="control-group">
                             <label class="control-label" for="time">Time</label>
                             <div class="controls">
-                                <input type="text" class="input-xlarge " id="appointment_time" name="time" >
+                                <input type="text" class="input-xlarge " id="appointment_time" name="time" value={{$appointment->time}}>
                             </div> <!-- /controls -->
                         </div> <!-- /control-group -->
                         <div class="control-group">
