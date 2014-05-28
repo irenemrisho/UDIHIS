@@ -82,7 +82,7 @@ Manage users
           <div class="control-group">                                         
                 <label class="control-label" for="designation">Designation</label>
                 <div class="controls">
-                	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant'), '', array('required'=>'required'))}}
+                	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','6'=>'Nurse','7'=>'HR Officer'), '', array('required'=>'required'))}}
 
                 </div>
                              
@@ -100,7 +100,7 @@ Manage users
 		  <div class="control-group">                                         
                 <label class="control-label" for="room_no">Room Number</label>
                 <div class="controls">
-               {{Form::select('room_no',array(''=>'' , '1'=>'1','2'=>'2','3'=>'3','4'=>'5'), '', array('required'=>'required'))}}
+               {{Form::select('room_no',array(''=>'' , '1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7'), '', array('required'=>'required'))}}
 
                 </div>
                    

@@ -153,3 +153,9 @@ Route::get('print/{id}', 'ReceptionController@printView');
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
 
+//Routes for HumanResource
+
+Route::get('hr', 'HumanResourceController@index');
+//Route::get('hrdashboard', 'HumanResourceController@show');
+
+
