@@ -455,7 +455,55 @@
 <div class="tab-pane " id="2">
 <div class="widget-table">
 <div class="span4 pull-left">
-Initial information (here) don't understand  . . .. we have to discuss
+
+
+<form id="pform" action="{{url("patient/editInitial/$patient->id")}}" method="POST">
+
+<div class="control-group">
+<label class="control-label" for="username">Height (cm)</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="height" required />
+
+</div> <!-- /controls --> 
+</div>
+
+
+<div class="control-group">
+<label class="control-label" for="username">Weight (kg)</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="weight" required/>
+
+</div> <!-- /controls -->               
+</div> <!-- /control-group -->
+
+
+<div class="span4 pull-right" style="margin-left:4px;">
+
+<div class="control-group">
+<label class="control-label" for="username">Blood Group</label>
+<div class="controls">
+<input type="text" class="input-xlarge" id="" value=""  name="blood_group" required />
+
+</div> <!-- /controls --> 
+</div><!-- /control-group --> 
+
+<div class="control-group">
+<label class="control-label" for="username">Blood Pressure</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="blood_pressure"  />
+</div> <!-- /controls -->
+</div> <!-- /control-group -->
+
+</div>
+<div class="control-group">
+<div class="controls">
+<button type="reset" class="btn btn-warning" id="cancel" name = "cancel" value = "Cancel">Cancel</button>
+<button type="submit" class="btn btn-primary" id="psave">Save</button>
+</div> <!-- /controls -->               
+</div> <!-- /control-group -->
+</form>
+
+
 </div>
 </div>
 </div>

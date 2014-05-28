@@ -103,6 +103,7 @@ Route::get('reception', 'ReceptionController@getIndex');
 Route::get('manage/patients', 'ReceptionController@index');
 Route::get('patient/edit/{id}', 'ReceptionController@update');
 Route::post('patient/edit/{id}', 'ReceptionController@edit');
+Route::post('patient/editInitial/{id}', 'ReceptionController@editInitial');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
@@ -120,6 +121,7 @@ Route::post('patients/edit/{id}' , 'PatientController@update');
 /*to delete a patient*/
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'DoctorController@profile');
+
 
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
@@ -153,3 +155,10 @@ Route::get('print/{id}', 'ReceptionController@printView');
 
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
+
+//Routes for HumanResource
+
+Route::get('hr', 'HumanResourceController@index');
+//Route::get('hrdashboard', 'HumanResourceController@show');
+
+
