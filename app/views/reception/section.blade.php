@@ -1,7 +1,7 @@
 @if($section == "OPD")
 
 <p>Doctor</p>
-<select id="opd" class="form-control" name="paymenttype">  
+<select id="opd" class="form-control" name="opd_doctor">  
 <?php 
 $docts = User::where('level',4)->get();
  ?>
@@ -11,10 +11,11 @@ $docts = User::where('level',4)->get();
 </select>
 
 @endif
+
 @if($section == "Insurance")
 
 <p>Insurance Company</p>
-<select id="insurance" class="form-control" name="paymenttype">  
+<select id="insurence" class="form-control" name="company">  
 <option  value=""></option>
 <option  value="nif">NIF</option>
 <option  value="aar">AAR</option>
@@ -50,7 +51,8 @@ $consultation = Service::where('name','consultation')->first();
                                  <tr>
                                  	<td>1</td>
                                     <td>{{$registration->name}}</td>
-                                    <td>{{$registration->price}}</td>
+                                    <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
+                                    array(Service::where('name','registration')->first()->id,0))->first()->price}}</td>
                                     <td style="text-align:center;">
 								    	<label name="first" id="first1"   class="btn-small btn-primary">Pay now</label>
 		                            	<label name="" id="second1" class="btn-small btn-warning">Later</label>
@@ -60,7 +62,8 @@ $consultation = Service::where('name','consultation')->first();
                                  <tr>
                                  	<td>2</td>
                                     <td>{{$consultation->name}}</td>
-                                    <td>{{$consultation->price}}</td>
+                                    <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
+                                    array(Service::where('name','consultation')->first()->id,0))->first()->price}}</td>
                                     <td style="text-align:center;">
 								    	<label name="" id="first2"  class="btn-small btn-primary">Pay now</label>
 		                            	<label name="" id="second2" class="btn-small btn-warning">Later</label>
@@ -78,7 +81,7 @@ $consultation = Service::where('name','consultation')->first();
 
 @if($section == "IPD")
 <p>Doctor</p>
-<select id="ipd" class="form-control" name="sectioninfo">  
+<select id="ipd" class="form-control" name="ipd_doctor">  
 <?php $docts = User::where('level',4)->get(); ?>
 
 <option></option>

@@ -1,5 +1,8 @@
  <?php 
         $Price_companies = Price_company::where('service_id',$service_id)->get(); 
+        
+
+
         ?>
  <form  action="edit_service?edit={{$service_id}}" method="">
     <div class="modal-header">
@@ -28,7 +31,13 @@
                                     @foreach($Price_companies as $Price_company)
                                  <tr>
                                     <td>{{$index}}</td>
-                                    <td>{{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}</td>
+                                    <td>
+                                    <?php if($Price_company->company_id == 0){ ?>
+                                    {{"Cash"}}
+                                    <?php }else{?>
+                                    {{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}
+                                    <?php }?>
+                                    </td>
                                     <td>{{$Price_company->price}}</td>
                                 
                                  </tr>

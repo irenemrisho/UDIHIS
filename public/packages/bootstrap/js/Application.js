@@ -70,15 +70,181 @@ $(document).ready(function(){
         var from       = $('#From').val();
         var to         = $('#To').val();
         var reporttype = $('#reporttype').val();
-        
-        $('#loader').show();
-        $('#iload').css('opacity', '0.2');
+        if(from == "" || to == "" || reporttype == ""){
+                alert("Please fill the fields");
+        }else{
+                    $('#loader').show();
+                    $('#iload').css('opacity', '0.2');
 
-        $.post('generateReports', {from:from, to:to, reporttype: reporttype} , function(data){
-             $('#loader').hide();
-             $('#iload').css('opacity', '1');
-             $('#ireport').hide().html(data).fadeIn(1000);
-        });
+                    $.post('generateReports', {from:from, to:to, reporttype: reporttype} , function(data){
+
+                        if(reporttype == "Table"){
+                             $('#loader').hide();
+                             $('#iload').css('opacity', '1');
+                             $('#ireport').hide().html(data).fadeIn(1000);
+                        }else if(reporttype == "Column" || reporttype == "Line"){
+                            //Charts Things go here ......
+                            $('#loader').hide();
+                            $('#iload').css('opacity', '1');
+                            $('#ireport').html('');
+                            var obj   = JSON.parse(data);
+                            $('#ireport').highcharts({
+                                    chart: {
+                                        type: obj.chartType 
+                                    },
+                                    title: {
+                                        text: obj.title
+                                    },
+                                    subtitle: {
+                                        text: obj.subtitle
+                                    },
+                                    xAxis: {
+                                        categories: obj.xAxisData
+                                    },
+                                    yAxis: {
+                                        title: {
+                                            text: 'Number (#)'
+                                        }
+                                    },
+                                    plotOptions: {
+                                        line: {
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            enableMouseTracking: false
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Student',
+                                        data: obj.yAxisDataStudent
+                                    },  {
+                                        name: 'Staff',
+                                        data: obj.yAxisDataStaff
+                                    },
+                                        {
+                                        name: 'Family members',
+                                        data: obj.yAxisDataFamily
+                                    },
+                                        {
+                                        name: 'Private',
+                                        data: obj.yAxisDataPrivate
+                                    }],
+                                });
+                        }else if(reporttype == "Pie"){
+                            $('#loader').hide();
+                            $('#iload').css('opacity', '1');
+                            $('#ireport').html('');
+                            var obj   = JSON.parse(data);
+                             $('#ireport').highcharts({
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false
+                                    },
+                                    title: {
+                                        text: obj.title
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                                style: {
+                                                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                                }
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                        type: 'pie',
+                                        name: 'Patient Registration',
+                                        data: [
+                                            ['Family Member',   obj.family_per],
+                                            ['Staff',       obj.staff_per],
+                                            {
+                                                name: 'Student',
+                                                y: obj.student_per,
+                                                sliced: true,
+                                                selected: true
+                                            },
+                                            ['Private',    obj.private_per]
+                                        ]
+                                    }]
+                                });
+                        }else {
+                            $('#loader').hide();
+                            $('#iload').css('opacity', '1');
+                            $('#ireport').html('');
+                            var obj   = JSON.parse(data);
+                            $('#ireport').highcharts({
+                                    title: {
+                                        text: obj.title
+                                    },
+                                    xAxis: {
+                                        categories: obj.xAxisData
+                                    },
+                                    labels: {
+                                        items: [{
+                                            html: 'Total patient registration',
+                                            style: {
+                                                left: '50px',
+                                                top: '18px',
+                                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                                            }
+                                        }]
+                                    },
+                                    series: [{
+                                        type: 'column',
+                                        name: 'Student',
+                                        data: obj.yAxisDataStudent
+                                    }, {
+                                        type: 'column',
+                                        name: 'Staff',
+                                        data: obj.yAxisDataStaff
+                                    }, {
+                                        type: 'column',
+                                        name: 'Family Members',
+                                        data: obj.yAxisDataFamily
+                                    },{
+                                        type: 'column',
+                                        name: 'Private',
+                                        data: obj.yAxisDataPrivate
+                                    },  {
+                                        type: 'pie',
+                                        name: 'Patient Registration',
+                                        data: [{
+                                            name: 'Student',
+                                            y: obj.student_per,
+                                            color: Highcharts.getOptions().colors[0] // Jane's color
+                                        }, {
+                                            name: 'Staff',
+                                            y: obj.staff_per,
+                                            color: Highcharts.getOptions().colors[1] // John's color
+                                        }, {
+                                            name: 'Family',
+                                            y: obj.family_per,
+                                            color: Highcharts.getOptions().colors[2] // Joe's color
+                                        },{
+                                            name: 'Private',
+                                            y: obj.private_per,
+                                            color: Highcharts.getOptions().colors[2] // Joe's color
+                                        }],
+                                        center: [100, 80],
+                                        size: 100,
+                                        showInLegend: false,
+                                        dataLabels: {
+                                            enabled: false
+                                        }
+                                    }]
+                                });
+                        }
+                    });
+        }
     });
 
 
