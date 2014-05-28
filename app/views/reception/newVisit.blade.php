@@ -163,9 +163,6 @@ Negative</label>
 <option>ANC</option>
 </select>
 
-
-<div id="section-more">
-
 </div>
 
 </div>

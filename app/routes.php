@@ -122,6 +122,7 @@ Route::post('patients/edit/{id}' , 'PatientController@update');
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'DoctorController@profile');
 
+
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
