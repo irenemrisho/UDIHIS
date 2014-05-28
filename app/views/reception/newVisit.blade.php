@@ -140,14 +140,14 @@
                     <input name="pid" value="{{$patient->id}}" type="hidden" />
                     <label class="control-label">Direct To &raquo</label>
                     <p>SECTION</p>
-                    <select id="section" name="section" class="form-control">
+                    <select id="section2" name="section" class="form-control">
                         <option></option>
                         <option>OPD</option>
                         <option>IPD</option>
                         <option>ANC</option>
                     </select>
 
-                    <div id="section-more">
+                    <div id="section-more2">
 
                     </div>
 

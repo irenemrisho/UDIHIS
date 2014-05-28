@@ -149,6 +149,16 @@ $(document).ready(function(){
         });
 
     });
+
+    $('#section2').on('change',function(){
+        var sect = $(this).val();
+        $.post('loadsection', {sect:sect}, function(data){
+            $('#section-more2').html(data);
+               
+        });
+
+    });
+
     $('#insurance1').on('change',function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
