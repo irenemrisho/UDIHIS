@@ -12,6 +12,11 @@ class HumanResourceController extends \BaseController {
 		return View::make('hr.hrdashboard');
 	}
 
+	public function person()
+	{
+		return View::make('hr.register_person');
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.
