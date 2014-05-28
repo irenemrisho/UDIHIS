@@ -410,6 +410,11 @@ $(document).ready(function(){
         });
     });
 
+    
+       // $('mydiv').printElement();
+  
+    
+
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');
         var url    = $('#editform').attr('url');
