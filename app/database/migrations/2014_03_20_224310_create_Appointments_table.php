@@ -14,7 +14,9 @@ class CreateAppointmentsTable extends Migration {
 	{
 		Schema::create('appointments',function($table){
 			$table->increments('id');
-            $table->String('client_name');
+            $table->String('first_name');
+            $table->String('last_name');
+            $table->String('phone_number');
 			$table->integer('patient_id')->references('id')->on('patients');
             $table->integer('user_id')->references('id')->on('users');
             $table->String('date');

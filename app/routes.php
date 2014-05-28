@@ -142,9 +142,12 @@ Route::post('patient/visit/loadsection', 'PatientVisitController@loadsection');
 Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinfo');
 // appointment routes
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
-Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
+Route::post('appoitment/add', 'PatientVisitController@setAppointment');
 Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
 Route::get('appointRegister', 'PatientVisitController@appoint');
+Route::get('appointment/delete/{id}', 'PatientVisitController@destroy');
+Route::get('appointment/edit/{id}', 'PatientVisitController@edit');
+Route::post('appointment/edit/{id}', 'PatientVisitController@update');
 
 Route::get('print/{id}', 'ReceptionController@printView');
 
