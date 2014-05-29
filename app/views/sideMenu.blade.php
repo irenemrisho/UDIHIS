@@ -48,6 +48,29 @@
 
 @endif
 
+@if(Auth::user()->level == 4)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
+    <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
+    <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
+    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
+    <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
+</ul>
+@endif
+
+@if(Auth::user()->level == 5)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="{{url("billing")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
+    <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
+    <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
+    <li><a href="{{url("manage_report")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("My_account_billing")}}"><i class="icon-user"></i>My account</a></li>
+    
+</ul>
+@endif
+
 @if(Auth::user()->level == 6)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("index")}}"><i class="icon-home"></i>Dashboard</a></li>
@@ -61,30 +84,18 @@
 
 @endif
 
-@if(Auth::user()->level == 4)
+@if(Auth::user()->level == 7)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
-    <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
-    <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
-    <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
-    <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
+    <li class=""><a href="{{url("hr")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("hr/person")}}" id="patient"><i class="icon-user-md"></i>Manage People</a></li>
+    <li><a href="#" id="patient"><i class="icon-user-md"></i>Search Records</a></li>
+    <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="#"><i class="icon-user"></i>My account</a></li>
 </ul>
+
 @endif
 
-
-@if(Auth::user()->level == 5)
-<ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class=""><a href="{{url("billing")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
-    <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
-    <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
-    <li><a href="{{url("manage_report")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("My_account_billing")}}"><i class="icon-user"></i>My account</a></li>
-    
-</ul>
 @endif
-    @endif
 <hr />
 <br />
 <?php }else ?>

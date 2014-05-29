@@ -66,10 +66,14 @@ class UserController extends BaseController {
             case 5:
                 # code...
                 return Redirect::to('billing');
-                break;    
+                break;
             case 6:
                 # code...
-                return Redirect::to('admission');
+                return Redirect::to('nurse');
+                break;    
+            case 7:
+                # code...
+                return Redirect::to('hr');
                 break;
                                   
             default:

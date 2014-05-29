@@ -122,6 +122,7 @@ Route::post('patients/edit/{id}' , 'PatientController@update');
 Route::get('patients/delete/{id}' , 'PatientController@destroy');
 Route::post('patients/profile', 'DoctorController@profile');
 
+
 /*Laboratory technician routes*/
 Route::get('laboratory','LaboratoryController@laboratory');
 Route::get('stock','LaboratoryController@stock');
@@ -143,12 +144,21 @@ Route::post('patient/visit/loadsection', 'PatientVisitController@loadsection');
 Route::post('patient/visit/savepatientinfo1', 'PatientVisitController@patientinfo');
 // appointment routes
 Route::post('patient/appoint/loadsection', 'PatientVisitController@loadsection');
-Route::post('patient/appoint/{id}', 'PatientVisitController@setAppointment');
+Route::post('appoitment/add', 'PatientVisitController@setAppointment');
 Route::post('getDrRooms', 'PatientVisitController@getDrRooms');
 Route::get('appointRegister', 'PatientVisitController@appoint');
+Route::get('appointment/delete/{id}', 'PatientVisitController@destroy');
+Route::get('appointment/edit/{id}', 'PatientVisitController@edit');
+Route::post('appointment/edit/{id}', 'PatientVisitController@update');
 
 Route::get('print/{id}', 'ReceptionController@printView');
 
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
+
+//Routes for HumanResource
+
+Route::get('hr', 'HumanResourceController@index');
+Route::get('hr/person', 'HumanResourceController@person');
+
 
