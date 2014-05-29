@@ -48,21 +48,42 @@ Manage Patients New Visit
 </div>
 
 <div class="span4 pull-right">
+<<<<<<< HEAD
 <h4> Hospital File no: UD/<b>{{$patient->filenumber}}</b></h4>
 <div class="control-group">
 <label class="control-label" for="temperature">Temperature (c)</label>
 <div class="controls">
     <input type="text" class="input-xlarge " id="" value="" name="temperature" />
+=======
+<h4> Hospital File no: UD/2014/<b>{{$patient->filenumber}}</b></h4>
+<div class="control-group">
+<label class="control-label" for="temperature">Temperature (c)</label>
+<div class="controls">
+<input type="text" class="input-xlarge " id="" value="" name="temperature" />
+>>>>>>> 3ff67d0a4780db607562e5dd19426932f6ac968d
 
 </div> <!-- /controls -->
 </div>
 <div class="control-group">
 <label class="control-label" for="bp">Blood Pressure (mmHg)</label>
 <div class="controls">
-    <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
+<input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
 
+</div> <!-- /controls -->
 </div> <!-- /control-group -->
 
+<div class="control-group">
+<label class="control-label" for="gender">Blood Group</label>
+<div class="controls">
+<select class="form-control" name="bloodgroup">
+<option disabled>Select Blood Group</option>
+
+<option></option>
+<option>A</option>
+<option>B</option>
+<option>O</option>
+<option>AB</option>
+</select>
 </div>
 <div class="control-group">
 <label class="control-label" for="gender">Rhesus Factor</label>
@@ -123,14 +144,7 @@ Negative</label>
 <option>OPD</option>
 <option>IPD</option>
 <option>ANC</option>
-</select>
-
-
-<div id="section-more">
-
-</div>
-
-</div>
+</select>                   
 
 </fieldset>
 </section>
