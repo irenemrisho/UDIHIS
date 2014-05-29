@@ -152,3 +152,8 @@ Route::get('print/{id}', 'ReceptionController@printView');
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
 
+
+//Admission routes
+Route::get('/admission', 'AdmissionController@index');
+Route::get('admitted_patients', 'AdmissionController@patients');
+
