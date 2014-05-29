@@ -133,10 +133,6 @@
 				<input type="text" class="input-xlarge " id="" value="" name="location" required/>
 				</div>
 			</div>
-			
-		</div>
-
-		<div class="span4 pull-right" style="margin-left:4px;">
 
 			<h4 class = "text-left">Demographic Information</h4>
 
@@ -177,6 +173,18 @@
 				<input type="text" class="input-xlarge " id="" value="" name="" require />
 				</div>
 			</div>
+		</div>
+
+		<div class="span4 pull-right" style="margin-left:4px;">
+			<h4 class="text-left">Contact Information</h4>
+
+			<h5 class="text-left">Personal Contact</h5>
+			<div class="control-group">
+			<label class="control-label" for="username">Mobile Phone Number*</label>
+			    <div class="controls">
+			       <input type="text" class="input-xlarge " id="mobile_phone" name="mobile_phone" required />
+			    </div> <!-- /controls -->
+		    </div>
 		</div>		
 	</form>
 </div>

@@ -160,5 +160,6 @@ Route::post('reception/generateReports', 'ReportsController@generateReports');
 
 Route::get('hr', 'HumanResourceController@index');
 Route::get('hr/person', 'HumanResourceController@person');
+Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 
 
