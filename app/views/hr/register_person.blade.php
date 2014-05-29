@@ -173,6 +173,8 @@
 				<input type="text" class="input-xlarge " id="" value="" name="" require />
 				</div>
 			</div>
+            </div>
+
 
 			<div class="span4 pull-right" style="margin-left:4px;">
 				<h4 class="text-left">Contact Information</h4>
@@ -186,7 +188,6 @@
 		    	</div>
 			</div>
 		</form>
-	</div>
 </div>
 
 

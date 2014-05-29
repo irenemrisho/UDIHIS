@@ -433,11 +433,8 @@
 <button type="submit" class="btn btn-primary" id="psave">Save</button>
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
-
-</form>
-
-</div>	
-
+</div>
+ </form>
 </fieldset>	
 
 </section>
