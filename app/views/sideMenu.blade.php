@@ -96,7 +96,11 @@
 @endif
 
 @endif
+
 <hr />
 <br />
-<?php }else ?>
+<?php }
+else {
+    return Redirect::to('login.login_page');
+}?>
 </div> <!-- /span3 -->
