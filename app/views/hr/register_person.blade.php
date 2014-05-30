@@ -177,6 +177,9 @@
 				<input type="text" class="input-xlarge " id="" value="" name="" require />
 				</div>
 			</div>
+			<br>
+			<button type="reset" class="btn">Reset</button>
+			<button type="submit" class="btn">Add</button>
 		</div>		
 	</form>
 </div>
