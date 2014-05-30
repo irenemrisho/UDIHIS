@@ -6,8 +6,8 @@
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#contact" data-toggle="tab">Contact Information</a></li>
               <li><a href="#nextofkin" data-toggle="tab">Next of Kin Information</a></li>
-              <li><a href="#position" data-toggle="tab">Position Information</a></li>
-              <li><a href="#disciplinary" data-toggle="tab">Current Disciplinary Actions</a></li>              
+              <li><a href="#position" data-toggle="tab">Qualification Information</a></li>
+              <li><a href="#uploadfile" data-toggle="tab">Position Information</a></li>              
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade in active" id="contact">                
@@ -93,10 +93,21 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="relationship">Relationship*</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="relationship" required/>
-								</div>
+		                		<label class="control-label" for="relationship">Relationship*</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="Relationship" required/>
+							            <option disabled>Select Relationship</option>
+							            <option></option>
+							            <option>Mother</option>
+							            <option>Father</option>
+							            <option>Sister</option>
+							            <option>Brother</option>
+							            <option>Uncle</option>
+							            <option>Aunt</option>
+							            <option>In law</option>
+							            <option>Guardian</option>
+							        </select>
+							    </div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="email">Email Address</label>
@@ -142,7 +153,7 @@
                			</div>
                 	</form>
               </div>
-              <div class="tab-pane fade" id="position">                
+              <div class="tab-pane fade" id="uploadfile">                
 	                <form id="position_form" action="" method="POST">
 	                	<div class="span4 pull-left">
 	                		<div class="control-group">
@@ -155,90 +166,86 @@
 							            <option>Empty position</option>
 							            <option>None</option>
 							        </select>
-							    </div> <!-- /controls -->
+							    </div>
 							</div>
-	                	</div>
-	                </form>
-              </div>
-              <div class="tab-pane fade" id="disciplinary">
-                	<form id="disciplinaryform" action="" method="POST">
-                		<div class="span4 pull-left">
-                			<h4>Current Disciplinary actions</h4>
-	                		<div class="control-group">
-	                			<label class="control-label" for="username">Action Taken*</label>
-						        <div class="controls">
-						            <select class="form-control input-xlarge" name="action" required/>
-						                <option disabled>Select Action</option>
-						                <option></option>
-						                <option>Dismissal</option>
-						                <option>Invalid</option>
-						                <option>None</option>
-						                <option>Probation</option>
-						                <option>Warning</option>
-						            </select>
-						        </div>
+							<div class="control-group">
+							    <label class="control-label" for="Date">Date of first appointment*</label>
+							    <div class="controls">
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+							    </div>          
 						    </div>
 						    <div class="control-group">
-	                			<label class="control-label" for="action">Reason for Action*</label>
-						        <div class="controls">
-						            <select class="form-contro input-xlarge" name="action" required/>
-						                <option disabled>Select one</option>
-						                <option></option>
-						                <option>Assessed Mentally Incompetent</option>
-						                <option>Death of Patient</option>
-						                <option>Drug-Related</option>
-						                <option>Failure to Disclose Criminal Conviction</option>
-						                <option>Falsification of Credentials</option>
-						                <option>Harm to Public</option>
-						                <option>Injury to Patient</option>
-						                <option>Insurance Fraud</option>
-						                <option>Minor Injury of Patient</option>
-						                <option>Permanent Injury of Patient</option>
-						                <option>Physical Abuse</option>
-						                <option>Practicing With Expired License</option>						                
-						                <option>Serious Injury of Patient</option>
-						                <option>Stealing</option>
-						                <option>Verbal Abuse</option>
-						            </select>
-						        </div>
+							    <label class="control-label" for="Date">End Date*</label>
+							    <div class="controls">
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+							    </div>          
 						    </div>
-							<div class="control-group">
-								<label class="control-label" for="actionstart">Start of Action*</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge" id="birthdate" value=""  name="actionstart" required/>
-								</div>
+	                	</div>
+	                	<div class="span4 pull-right">
+	                		<div class="control-group">
+		                		<label class="control-label" for="username">Type of Employmnet*</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="action" required/>
+							            <option disabled>Select Employment Type</option>
+							            <option></option>
+							            <option>Contract</option>
+							            <option>Permanent</option>
+							            <option>Volunteer</option>
+							        </select>
+							    </div>
 							</div>
-							<div class="control-group">
-								<label class="control-label" for="actionend">End of Action*</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="actionend" required/>
-								</div>
-							</div>
-               			</div>
-               			<div class="span4 pull-right">
-               				<h4><br></h4>
-               				<div class="control-group">
-								<label class="control-label" for="discussiondate">Date of Discussion*</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="discussiondate" required/>
-								</div>
-							</div><div class="control-group">
-								<label class="control-label" for="people_present">People Present</label>
-								<div class="controls">
-								<textarea rows="3" name="people_present" class="input-xlarge"></textarea>
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="notes">Notes</label>
-								<div class="controls">
-								<textarea rows="3" name="notes" class="input-xlarge"></textarea>
-								</div>
+	                		<div class="control-group">
+		                		<label class="control-label" for="username">Employmnet Status*</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="action" required/>
+							            <option disabled>Select Status</option>
+							            <option></option>
+							            <option>On leave</option>
+							            <option>Training</option>
+							            <option>Maternity Leave</option>
+							        </select>
+							    </div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
 							<button type="submit" class="btn">Add</button>
-               			</div>
-                	</form>
-              	</div>
+	                	</div>
+	                </form>
+              </div>
+              <div class="tab-pane fade" id="position">
+                	<form id="qualification_form" action="" method="POST">
+	                	<div class="span4 pull-left">
+	                		<div class="control-group">
+		                		<label class="control-label" for="username">Basic Education Level*</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="action" required/>
+							            <option disabled>Select Level</option>
+							            <option></option>
+							            <option>Primary</option>
+							            <option>Ordinary</option>
+							            <option>Advanced</option>
+							        </select>
+							    </div>
+							</div>
+							<div class="control-group">
+		                		<label class="control-label" for="username">Profession Education Level</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="action"/>
+							            <option disabled>Select Level</option>
+							            <option></option>
+							            <option>Certificate</option>
+							            <option>Diploma</option>
+							            <option>Bachelor</option>
+							            <option>Masters</option>
+							            <option>Postgraduate</option>
+							            <option>PhD</option>
+							        </select>
+							    </div>
+							</div>
+							<button type="reset" class="btn">Reset</button>
+							<button type="submit" class="btn">Add</button>
+	                	</div>
+	                </form>
+              </div>
             </div>
           </div>
 
