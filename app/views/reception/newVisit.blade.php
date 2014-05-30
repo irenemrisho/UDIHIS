@@ -48,19 +48,11 @@ Manage Patients New Visit
 </div>
 
 <div class="span4 pull-right">
-<<<<<<< HEAD
 <h4> Hospital File no: UD/<b>{{$patient->filenumber}}</b></h4>
 <div class="control-group">
 <label class="control-label" for="temperature">Temperature (c)</label>
 <div class="controls">
     <input type="text" class="input-xlarge " id="" value="" name="temperature" />
-=======
-<h4> Hospital File no: UD/2014/<b>{{$patient->filenumber}}</b></h4>
-<div class="control-group">
-<label class="control-label" for="temperature">Temperature (c)</label>
-<div class="controls">
-<input type="text" class="input-xlarge " id="" value="" name="temperature" />
->>>>>>> 3ff67d0a4780db607562e5dd19426932f6ac968d
 
 </div> <!-- /controls -->
 </div>
@@ -121,9 +113,9 @@ Negative</label>
 <p>Choose type</p>
 <select id="section" name="section" class="form-control">
 <option></option>
-<option value = "cash">Cash</option>
-<option value = "insurance">Insurance</option>
-<option value = "seeksheet">Sick Sheet</option>
+<option value = "Cash">Cash</option>
+<option value = "Insurance">Insurance</option>
+<option value = "Sicksheet">Sick Sheet</option>
 </select>
 
 <div id="section-more">
@@ -141,10 +133,14 @@ Negative</label>
 <p>SECTION</p>
 <select id="section" name="section" class="form-control">
 <option></option>
-<option>OPD</option>
-<option>IPD</option>
-<option>ANC</option>
-</select>                   
+<option value ="OPD">OPD</option>
+<option value = "OPD">IPD</option>
+<option value = "ANC">ANC</option>
+</select>  
+
+<div id="section-more">
+
+</div>                 
 
 </fieldset>
 </section>

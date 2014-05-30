@@ -11,9 +11,6 @@
   |
  */
 
-
-
-
 //Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
