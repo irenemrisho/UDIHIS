@@ -30,7 +30,7 @@
 				<div class="control-group">
 					<label class="control-label" for="nationality">Nationality</label>
 					<div class="controls">
-					<select class="form-control"  data-placement="nationality" name="nationality"  value = "">
+					<select class="form-control input-xlarge"  data-placement="nationality" name="nationality"  value = "">
 					<option disabled> Select Nationality</option>
 					 <option></option
 					<option value='US'>American</option>
@@ -133,6 +133,12 @@
 					<input type="text" class="input-xlarge " id="" value="" name="residence" required/>
 					</div>
 				</div>
+				<div class="control-group">
+					<label class="control-label" for="domicide">Place of Domicede*</label>
+					<div class="controls">
+					<input type="text" class="input-xlarge " id="" value="" name="domicide" required/>
+					</div>
+				</div>
 			</div>
 
 			<div class="span4 pull-right">
@@ -147,7 +153,7 @@
 				<div class="control-group">
 					<label class="control-label" for="gender">Gender*</label>
 					<div class="controls">
-						<select class="form-control"  data-placement="gender" name="gender" required/>
+						<select class="form-control input-xlarge"  data-placement="gender" name="gender" required/>
 							<option disabled> Select Gender</option>
 							<option></option>
 							<option>Male</option>
@@ -158,11 +164,25 @@
 				<div class="control-group">
 					<label class="control-label" for="marital_status">Marital Status*</label>
 					<div class="controls">
-						<select class="form-control"  data-placement="marital_status" name="marital_status"  value = "" required/>
+						<select class="form-control input-xlarge"  data-placement="marital_status" name="marital_status"  value = "" required/>
 							<option disabled> Select Marital Status</option>
 							<option></option>
 							<option>Single</option>
 							<option>Married</option>
+						</select>
+					</div>  
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="marital_status">Physical Disability*</label>
+					<div class="controls">
+						<select class="form-control input-xlarge"  data-placement="marital_status" name="marital_status"  value = "" required/>
+							<option disabled> Select Disability</option>
+							<option></option>
+							<option>None</option>
+							<option>Blind</option>
+							<option>Deaf</option>
+							<option>Cripple</option>
+							<option></option>
 						</select>
 					</div>  
 				</div>
