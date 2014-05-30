@@ -409,6 +409,7 @@ $(document).ready(function(){
             $('#user_content').html(data);
         });
     });
+    
 
     
        // $('mydiv').printElement();
@@ -601,6 +602,7 @@ $(document).ready(function(){
         yearRange: "0:+3" ,
         showMonths: [3,3]
     });
+   
 
     $('#appointment_time').timepicker({
         timeOnlyTitle: 'Appointment time'

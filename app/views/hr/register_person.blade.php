@@ -133,10 +133,6 @@
 				<input type="text" class="input-xlarge " id="" value="" name="location" required/>
 				</div>
 			</div>
-			
-		</div>
-
-		<div class="span4 pull-right" style="margin-left:4px;">
 
 			<h4 class = "text-left">Demographic Information</h4>
 
@@ -158,7 +154,6 @@
 					</select>
 				</div> 
 			</div>
-
 			<div class="control-group">
 				<label class="control-label" for="username">Marital Status*</label>
 				<div class="controls">
@@ -170,7 +165,6 @@
 					</select>
 				</div>  
 			</div>
-
 			<div class="control-group">
 				<label class="control-label" for="username">Number of Dependancies*</label>
 				<div class="controls">
