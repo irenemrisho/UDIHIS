@@ -192,6 +192,12 @@
 					<input type="text" class="input-xlarge " id="" value="" name="no_of_dependancy" require />
 					</div>
 				</div>
+				<div style="position:relative;">
+					<a class='btn btn-primary' href='javascript:;'>
+					Upload photo...
+					<input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+					</a>&nbsp;<span class='label label-info' id="upload-file-info"></span>
+				</div>
 				<br>
 				<button type="reset" class="btn">Reset</button>
 				<button type="submit" class="btn">Add</button>
