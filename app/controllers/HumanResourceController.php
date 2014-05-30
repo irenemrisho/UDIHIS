@@ -17,6 +17,11 @@ class HumanResourceController extends \BaseController {
 		return View::make('hr.register_person');
 	}
 
+	public function personOtherInfo()
+	{
+		return View::make('hr.person_other_information');
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.
@@ -29,6 +34,12 @@ class HumanResourceController extends \BaseController {
 	}
 
 
+    public function positionShow()
+    {
+       return View::make('hr.positionAdd');
+    }
+
+
 	/**
 	 * Store a newly created resource in storage.
 	 *
@@ -36,7 +47,17 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $position = new Position();
+        $position->name = Input::get('position_name');
+        $position->facility = Input::get('facility');
+        $position->proposed_hiring_date = Input::get('proposed_hiring_date');
+        $position->status = Input::get('position_status');
+        $position->proposed_salary = Input::get('proposed_salary');
+        $position->save();
+
+        Session::flash('message', 'Successfully added!');
+        return View::make('hr.positionAdd');
+
 	}
 
 

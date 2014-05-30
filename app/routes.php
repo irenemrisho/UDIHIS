@@ -157,5 +157,11 @@ Route::post('reception/generateReports', 'ReportsController@generateReports');
 
 Route::get('hr', 'HumanResourceController@index');
 Route::get('hr/person', 'HumanResourceController@person');
+Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
+Route::get('hr/position', 'HumanResourceController@positionShow');
+Route::post('position/add', 'HumanResourceController@store');
+Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
+
+
 
 
