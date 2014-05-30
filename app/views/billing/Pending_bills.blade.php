@@ -1,4 +1,20 @@
 @extends('dashboard')
+@section('page_specific_css')
+    <!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+    <!-- Datatable includes -->
+    {{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+    <script type="text/javascript">
+            $('#payment_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+    </script>
+@stop
 @section('main')
 <h1 class="page-title">
                         <i class="icon-user-md"></i>
@@ -29,8 +45,11 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 <strong>adding payment failed....Please select atleast one payment</strong>
                                 </div>
-                                <?php }}?>                          
-                            <table class="table table-striped table-bordered">
+                                <?php }}?> 
+                            
+
+                        <div> 
+                            <table id="payment_table" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -53,19 +72,17 @@
                     <td>{{$payment->count}}</td>
                     
                     <td class="action-td" id="{{$payment->patient_id}}">
-                    <a href="" 
+                        <a href="" 
                             rel="tooltip" data-placement="top" data-original-title="pay" class="btn btn-small btn-primary fetch-payments" data-toggle="modal" data-target="#payment" >
                                 <i class="icon-money"></i>
                         </a>
-                        <a href="patient_pdf_invoice" 
-                            rel="tooltip" data-placement="top" data-original-title="print invoice" class="btn btn-small btn-success">
+                        <a href="" 
+                            rel="tooltip" data-placement="top" data-original-title="print invoice" class="btn btn-small btn-success get-invoice" >
                                 <i class="icon-print"></i>
                         </a>                               
-                                    </td>
+                    </td>
 
-                      
-
-                                    </tr>
+                    </tr>
  
     				<?php $index++; ?>
 				@endforeach

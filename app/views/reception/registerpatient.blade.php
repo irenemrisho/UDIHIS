@@ -1,9 +1,6 @@
 @extends('dashboard')
 @section('main')
-<h1 class="page-title">
-					<i class="icon-th-large"></i>
-					Register Patient					
-</h1>
+<h1 class="page-title"><i class="icon-th-large"></i>Register Patient</h1>
 <div class="widget-content">
 <section class="step" data-step-title="Personal Information">
 <fieldset >
@@ -317,7 +314,7 @@
 <div class="controls">
 <select class="form-control"  data-placement="designation" name="designation"  value = "">
 <option disabled> Select Category</option>
- <option></option>
+<option></option>
 <option>Student</option>
 <option>Staff</option>
 <option>FamilyMember</option>
@@ -436,11 +433,8 @@
 <button type="submit" class="btn btn-primary" id="psave">Save</button>
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
-
-</form>
-
-</div>	
-
+</div>
+ </form>
 </fieldset>	
 
 </section>
