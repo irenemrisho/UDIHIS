@@ -44,37 +44,45 @@ Manage Appointment
 
 <div class="tab-content" style="height: 400px">
 <div class="tab-pane " id="2" style="position:absolute">
-<form id="edit-profile" class="form-horizontal4" action="manage_appointment" method="post">    
+<form id="edit-profile" class="form-horizontal4" action="{{url("appoitment/add")}}" method="post">
 <fieldset >
 <div class="span4 pull-left">
 
-             <div class="control-group"> 
-            <label class="control-label" for="first_name">Client's name</label>
-                <div class="controls">
-                    <input type="text" class="input-xlarge " id="" value="" name="client's_name" required />
-                    
-                </div> <!-- /controls --> 
-                
+             <div class="control-group">  <div class="controls">
+
+                    <input type="text" class="input-xlarge " id="" value="" placeholder="First Name" name="first_name" required />
+
+                </div> <!-- /controls -->
+                 <div class="control-group">  <div class="controls">
+
+                         <input type="text" class="input-xlarge " id="" value="" placeholder="Last Name" name="last_name" required />
+
+                     </div> <!-- /controls -->
+                   <div class="control-group">  <div class="controls">
+
+                         <input type="text" class="input-xlarge " id="" value="" placeholder="Phone Number" name="phone_number" required />
+
+                     </div> <!-- /controls -->
+
                     <div class="control-group ">
-                                                         
-              <p>Select a doctor</p>
-                    <select id="section" name="section" class="form-control">
-                        <option></option>
-                        <option>OPD</option>
-                        <option>IPD</option>
-                        <option>ANC</option>
-                    </select>
+                        <p>SECTION</p>
+                        <select id="section" name="section" class="form-control">
+                            <option></option>
+                            <option>OPD</option>
+                            <option>IPD</option>
+                            <option>ANC</option>
+                        </select>
 
-                     <div id="section-more">
+                        <div id="section-more">
 
-                    </div>
+                        </div>
 
                     </div>
         
 <div class="control-group">
     <label class="control-label" for="Date">Date</label>
     <div class="controls">
-<input type="text" class="input-xlarge" id="appointment_date" value="{{Input::get('Appointment')}}"  name="appointment" required  placeholder=" "/>
+<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
         </div>  <!-- /control-->            
     </div> <!-- /control-group -->
 
@@ -90,7 +98,8 @@ Manage Appointment
          
             
             <div class="pull-left">
-                <button class="btn">Cancel</button> <button type="submit" class="btn btn-primary">Add</button></div>
+                <button type="reset" class="btn btn-danger" id="cancel" name = "cancel" value = "Cancel" >Reset</button>
+                <button type="submit" class="btn btn-primary">Add</button></div>
             </div> 
 
             </div>  
@@ -112,36 +121,40 @@ Manage Appointment
     <div class="widget-content" style="padding:10px">
     
         <table class="table table-striped table-bordered" id="appointment_table">
-           <?php    $users = User::where('level', '!=', 0)->get();                  
-                ?>
             
             <thead>
                 <tr>
                     
                                         <th style="text-align:center;">#</th>
-                                        <th style="text-align:center;">Client's Name</th>
-                                        <th style="text-align:center;">Appointment Date</th>
+                                        <th style="text-align:center;">First Name</th>
+                                        <th style="text-align:center;">Last Name</th>
                                         <th style="text-align:center;">Phone Number</th>
-                                        <th style="text-align: center">Doctor</th>
-                                                      </tr>
+                                        <th style="text-align:center;">Date/Time</th>
+                                        <th style="text-align: center">Specialist</th
+                </tr>
             </thead>
             
             <tbody>
-            @foreach($users as $user)
+            <?php
+            $appointment = Appointment::orderBy('id','DESC')->get();
+              $aid=1;?>
+            @foreach($appointment as $appointment)
                 <tr>
-                    <td>{{$user->id}}</td>
-                    <td>{{$user->first_name}}</td>
-                    <td>{{$user->last_name}} </td>
-                    <td>{{User::level($user->level)}}</td>
-                    <td>{{User::ago($user->updated_at)}}</td>
-                    <td class="action-td" id="{{$user->id}}">
-                        <a href="#myModal" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
-                            <i class="icon-pencil"></i>                             
-                        </a>                    
-                        <a href="javascript:;" class="btn btn-small btn-danger deleteuser">
-                            <i class="icon-trash"></i>                              
-                        </a>
+                    <td>{{$aid}}<?php $aid++;?></td>
+                    <td>{{$appointment->first_name}}</td>
+                    <td>{{$appointment->last_name}} </td>
+                    <td>{{$appointment->phone_number}}</td>
+                    <td>{{$appointment->date}}/{{$appointment->time}}</td>
 
+                    <td class="action-td" id="{{$appointment->id}}">
+                        <a  href="{{url("appointment/edit/$appointment->id")}}"
+                        rel="tooltip" class="btn btn-small fetchuser" data-original-title="edit"  data-toggle="modal">
+                        <i class="icon-edit" ></i>
+                        </a>
+                        <a href="{{url("appointment/delete/$appointment->id")}}" onclick="return confirm('delete')"
+                        rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-danger">
+                        <i class="icon-trash"></i>
+                        </a>
                     </td>
                 </tr>
                 @endforeach

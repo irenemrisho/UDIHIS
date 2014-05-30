@@ -63,7 +63,7 @@ class ReceptionController  extends BaseController{
         $bloodpressure = $inputs['bloodpressure'];
         $bloodgroup = $inputs['bloodgroup'];
        // $rhesus = $inputs['rhesus'];
-        $paymenttype = $inputs['paymenttype'];
+        $payment = $inputs['payment'];
         $section = $inputs['section'];
 
       $pvInfo = Patients_visit::create(array(
@@ -73,10 +73,10 @@ class ReceptionController  extends BaseController{
             "temperature" => $temperature,
             "bloodgroup"=>$bloodgroup,
             "bloodpressure" => $bloodpressure,
-            "paymenttype" => $paymenttype,
+            "paymenttype" => $payment,
             "allergy" => $allergy,
             "patient_id"=>$pid,
-            "paymenttype"=>$paymenttype
+            "paymenttype"=>$payment
           ));
       $patient_id = $pid;
 
@@ -109,7 +109,7 @@ class ReceptionController  extends BaseController{
 
 
         $payment = Payment::create(array(
-            "amount"=>Price_company::whereRaw('service_id=? and company_id = ? ', array($service_id,0))->first()->price,
+            "service_id"=>$service_id,
             "patient_id"=>$patient_id,
             "status"=>$status
         ));
@@ -170,7 +170,7 @@ class ReceptionController  extends BaseController{
     public function update($id){
         $pt = Patients_visit::where('patient_id',$id)->first();
         $patient = Patient::find($id);
-        return View::make('reception.editpatient', compact('patient','pt'));
+        return View::make('reception.editpatient', compact('patient','pt' ));
     }
 
     public function edit($id){
@@ -192,6 +192,18 @@ class ReceptionController  extends BaseController{
         $patient->nationality  = Input::get('nationality');
         $patient->save();
 
+        return View::make('reception.managepatients')->with('message', 'updated successfully');
+
+    }
+        public function editInitial($id){
+        $inputs         = Input::all();
+        $patient= Patients_visit::where('patient_id',$id)->first();
+       
+        $patient->height = Input::get('height');
+        $patient->weight = Input::get('weight');
+        $patient->bloodgroup = Input::get('blood_group');
+        $patient->bloodpressure = Input::get('blood_presure');
+        $patient->save();
 
         return View::make('reception.managepatients')->with('message', 'updated successfully');
 

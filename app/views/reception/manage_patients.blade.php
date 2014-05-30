@@ -180,7 +180,7 @@
                      <div class="control-group ">
                         <h4>Payment Mode</h4>
                     <p>Choose type</p>
-                    <select id="insurance1" name="section" class="form-control">
+                    <select id="insurance1" name="payment" class="form-control">
                         <option></option>
                         <option>Cash</option>
                         <option>Insurance</option>
@@ -205,15 +205,14 @@
                     <p>SECTION</p>
                     <select id="section" name="section" class="form-control">
                         <option></option>
-                        <option>OPD</option>
-                        <option>IPD</option>
-                        <option>ANC</option>
+                        <option value = "OPD">OPD</option>
+                        <option value = "IPD">IPD</option>
+                        <option value = "ANC">ANC</option>
                     </select>
 
                     <div id="section-more">
 
                     </div>
-
                 </div>
 
             </fieldset>

@@ -119,16 +119,17 @@
 					$this.find('[type="submit"]').bind('click.easyWizard', function(e) {
 						
 						var data = $('#myWizard').serializeArray();
-						// var obj = toString(data);
+						 var obj = toString(data);
 						// console.log(obj);
+						alert(obj);
 
 						$('#myWizard').css('opacity', '0.2');
 
-						$.post('savepatientinfo1', data, function(data){
+						$.post('savepatientinfo1', data, function(result){
 
 							$('#alrt').fadeIn(1000, function(){
 								//$(this).text(data);
-								window.location.href = data;
+								window.location.href = result;
 
 							});
 						});

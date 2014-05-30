@@ -1,7 +1,7 @@
 @if($section == "OPD")
 
 <p>Doctor</p>
-<select id="opd" class="form-control" name="paymenttype">  
+<select id="opd" class="form-control" name="opd_doctor">  
 <?php 
 $docts = User::where('level',4)->get();
  ?>
@@ -11,10 +11,11 @@ $docts = User::where('level',4)->get();
 </select>
 
 @endif
+
 @if($section == "Insurance")
 
 <p>Insurance Company</p>
-<select id="insurance" class="form-control" name="paymenttype">  
+<select id="insurence" class="form-control" name="company">  
 <option  value=""></option>
 <option  value="nif">NIF</option>
 <option  value="aar">AAR</option>
@@ -80,7 +81,7 @@ $consultation = Service::where('name','consultation')->first();
 
 @if($section == "IPD")
 <p>Doctor</p>
-<select id="ipd" class="form-control" name="sectioninfo">  
+<select id="ipd" class="form-control" name="ipd_doctor">  
 <?php $docts = User::where('level',4)->get(); ?>
 
 <option></option>
@@ -95,15 +96,6 @@ $consultation = Service::where('name','consultation')->first();
 
 <script type="text/javascript">
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> d62dd36e7a01c2a4a1aa087912aea8f99a300df6
 $(document).ready(function(){
 	$('#ipd').on('change', function(){
 		var  dr  = $(this).val();
