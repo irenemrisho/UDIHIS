@@ -162,6 +162,21 @@ class HumanResourceController extends \BaseController {
         return "ok";
     }
 
+
+    public function updateFourth($id)
+    {
+        $person4 = Persons::find($id);
+        $person4->position_id = Input::get('position');
+        $person4->date_first = Input::get('date_start');
+        $person4->date_last = Input::get('date_end');
+        $person4->employ_status = Input::get('employ_status');
+        $person4->employ_type = Input::get('employ_type');
+        $person4->save();
+        // redirect
+        Session::flash('message', 'Successfully updated!');
+        return "ok";
+    }
+
 	/**
 	 * Remove the specified resource from storage.
 	 *

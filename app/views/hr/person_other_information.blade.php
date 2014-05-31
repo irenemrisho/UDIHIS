@@ -157,38 +157,39 @@
                 	</form>
               </div>
               <div class="tab-pane fade" id="uploadfile">                
-	                <form id="position_form" action="" method="POST">
+	                <form id="position_form" action="{{URL::to('person/edit4/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Position*</label>
+		                		<label class="control-label" for="position">Position*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="position" required/>
 							            <option disabled>Select Position</option>
-							            <option></option>
-							            <option>Empty position</option>
-							            <option>Empty position</option>
-							            <option>None</option>
+                                    <?php $position = Position::all(); ?>
+                                      @foreach($position as $position)
+							           <option value={{$position->id}}>{{$position->name}}</option>
+							            @endforeach
 							        </select>
 							    </div>
 							</div>
 							<div class="control-group">
-							    <label class="control-label" for="Date">Date of first appointment*</label>
+							    <label class="control-label" for="date_start">Date of first appointment*</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_start" required  placeholder=" "/>
 							    </div>          
 						    </div>
 						    <div class="control-group">
-							    <label class="control-label" for="Date">End Date*</label>
+							    <label class="control-label" for="date_end">End Date*</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_end" required  placeholder=" "/>
 							    </div>          
 						    </div>
 	                	</div>
 	                	<div class="span4 pull-right">
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Type of Employmnet*</label>
+		                		<label class="control-label" for="employ_type">Type of Employmnet*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="employ_type" required/>
 							            <option disabled>Select Employment Type</option>
 							            <option></option>
 							            <option>Contract</option>
@@ -198,9 +199,9 @@
 							    </div>
 							</div>
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Employmnet Status*</label>
+		                		<label class="control-label" for="employ_status">Employmnet Status*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="employ_status" required/>
 							            <option disabled>Select Status</option>
 							            <option></option>
 							            <option>On leave</option>
