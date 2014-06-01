@@ -153,7 +153,7 @@ class PatientVisitController extends \BaseController {
 	public function setAppointment()
 	{
         $appoint = new Appointment;
-        $appoint->doctor_id = Input::get('uid');
+        $appoint->doctor_id = Input::get('specialist');
         $appoint->date = Input::get('date');
         $appoint->time = Input::get('time');
         $appoint->first_name = Input::get('first_name');

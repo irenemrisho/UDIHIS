@@ -157,10 +157,20 @@ Route::post('reception/generateReports', 'ReportsController@generateReports');
 
 Route::get('hr', 'HumanResourceController@index');
 Route::get('hr/person', 'HumanResourceController@person');
+Route::post('person/add', 'HumanResourceController@personStore');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 Route::get('hr/position', 'HumanResourceController@positionShow');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
+
+//update the person informations  first
+Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
+// second
+Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
+//third
+Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
+//fourth
+Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 
 
 

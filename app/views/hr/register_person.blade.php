@@ -14,9 +14,9 @@
 				</div>
 
 				<div class="control-group">
-					<label class="control-label" for="secondname">Second Name*</label>
+					<label class="control-label" for="surname">Surname*</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="" name="secondname" required/>
+					<input type="text" class="input-xlarge " id="" value="" name="surname" required/>
 					</div>
 				</div>
 
@@ -173,9 +173,9 @@
 					</div>  
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="marital_status">Physical Disability*</label>
+					<label class="control-label" for="physical_disability">Physical Disability*</label>
 					<div class="controls">
-						<select class="form-control input-xlarge"  data-placement="marital_status" name="marital_status"  value = "" required/>
+						<select class="form-control input-xlarge"  data-placement="physical_disability" name="physical_disability"  value = "" required/>
 							<option disabled> Select Disability</option>
 							<option></option>
 							<option>None</option>

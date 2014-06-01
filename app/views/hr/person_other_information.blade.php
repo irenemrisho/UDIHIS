@@ -10,71 +10,74 @@
               <li><a href="#uploadfile" data-toggle="tab">Position Information</a></li>              
             </ul>
             <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade in active" id="contact">                
-                	<form id="contactform" action="" method="POST">
+              <div class="tab-pane fade in active" id="contact">
+
+                	<form id="contactform" action="{{URL::to('person/edit1/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
+                         <h4>{{$person->firstname}}</h4>
                 			<h4>Personal Contact Information</h4>
 	                		<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="mobilephone" required/>
+								<input type="text" class="input-xlarge " id="" name="mobilephone"   required value={{$person->mobile_phone}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="telephone">Telephone Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="telephone" />
+								<input type="text" class="input-xlarge " id="" name="telephone" value={{$person->telephone}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="email">Email Address</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="email" />
+								<input type="text" class="input-xlarge " id="" name="email" value={{$person->email}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="faxnumber">Fax Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="faxnumber" />
+								<input type="text" class="input-xlarge " id=""  name="faxnumber" value={{$person->fax}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="mailing">Mailing Address</label>
 								<div class="controls">
-								<textarea rows="3" name="mailing" class="input-xlarge"></textarea>
+								<textarea rows="3" name="mailing" class="input-xlarge" >{{$person->mailing_address}}</textarea>
 								</div>
 							</div>
                			</div>
                			<div class="span4 pull-right">
+
                				<h4>Work Contact Information</h4>	
                				<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="mobilephone" required/>
+								<input type="text" class="input-xlarge " id="" name="offcmobilephone" required value={{$person->offc_mobile_phone}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="telephone">Telephone Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="telephone" />
+								<input type="text" class="input-xlarge " id="" name="offctelephone" value={{$person->offc_telephone}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="email">Email Address</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="email" />
+								<input type="text" class="input-xlarge " id="" name="offcemail" value={{$person->offc_email}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="faxnumber">Fax Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="faxnumber" />
+								<input type="text" class="input-xlarge " id="" value="" name="offcfaxnumber" value={{$person->offc_fax}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="mailing">Mailing Address</label>
 								<div class="controls">
-								<textarea rows="3" name="mailing" class="input-xlarge"></textarea>
+								<textarea rows="3" name="offcmailing" class="input-xlarge">{{$person->offc_mailing_address}}</textarea>
 								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
@@ -83,21 +86,21 @@
                 	</form>
               </div>
               <div class="tab-pane fade" id="nextofkin">
-                <form id="nextofkinform" action="" method="POST">
+                <form id="nextofkinform" action="{{URL::to('person/edit2/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
                 			<h4>Next of Kin Information</h4>
 	                		<div class="control-group">
 								<label class="control-label" for="name">Name*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="name" required/>
+								<input type="text" class="input-xlarge " id=""  name="name" required value={{$person->next_kn_name}}>
 								</div>
 							</div>
 							<div class="control-group">
 		                		<label class="control-label" for="relationship">Relationship*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="Relationship" required/>
+							        <select class="form-control input-xlarge" name="Relationship" required>
 							            <option disabled>Select Relationship</option>
-							            <option></option>
+							            <option>{{$person->next_kn_name}}</option>
 							            <option>Mother</option>
 							            <option>Father</option>
 							            <option>Sister</option>
@@ -112,13 +115,13 @@
 							<div class="control-group">
 								<label class="control-label" for="email">Email Address</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="email" />
+								<input type="text" class="input-xlarge " id="" name="email" value={{$person->next_kn_email}} >
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="mailing">Mailing Address</label>
 								<div class="controls">
-								<textarea rows="3" name="mailing" class="input-xlarge"></textarea>
+								<textarea rows="3" name="mailing" class="input-xlarge">{{$person->next_kn_mailing}} </textarea>
 								</div>
 							</div>
                			</div>
@@ -127,25 +130,25 @@
                				<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="mobilephone" required/>
+								<input type="text" class="input-xlarge " id="" name="mobilephone" required value={{$person->next_kn_mob_no}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="telephone">Telephone Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="telephone" />
+								<input type="text" class="input-xlarge " id=""  name="telephone" value={{$person->next_kn_tel_no}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="faxnumber">Fax Number</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="faxnumber" />
+								<input type="text" class="input-xlarge " id=""  name="faxnumber" value={{$person->next_kn_fax_no}}>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="notes">Notes</label>
 								<div class="controls">
-								<textarea rows="3" name="notes" class="input-xlarge"></textarea>
+								<textarea rows="3" name="faxnumber" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
 								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
@@ -154,38 +157,39 @@
                 	</form>
               </div>
               <div class="tab-pane fade" id="uploadfile">                
-	                <form id="position_form" action="" method="POST">
+	                <form id="position_form" action="{{URL::to('person/edit4/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Position*</label>
+		                		<label class="control-label" for="position">Position*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="position" required/>
 							            <option disabled>Select Position</option>
-							            <option></option>
-							            <option>Empty position</option>
-							            <option>Empty position</option>
-							            <option>None</option>
+                                    <?php $position = Position::all(); ?>
+                                      @foreach($position as $position)
+							           <option value={{$position->id}}>{{$position->name}}</option>
+							            @endforeach
 							        </select>
 							    </div>
 							</div>
 							<div class="control-group">
-							    <label class="control-label" for="Date">Date of first appointment*</label>
+							    <label class="control-label" for="date_start">Date of first appointment*</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_start" required  placeholder=" "/>
 							    </div>          
 						    </div>
 						    <div class="control-group">
-							    <label class="control-label" for="Date">End Date*</label>
+							    <label class="control-label" for="date_end">End Date*</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_end" required  placeholder=" "/>
 							    </div>          
 						    </div>
 	                	</div>
 	                	<div class="span4 pull-right">
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Type of Employmnet*</label>
+		                		<label class="control-label" for="employ_type">Type of Employmnet*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="employ_type" required/>
 							            <option disabled>Select Employment Type</option>
 							            <option></option>
 							            <option>Contract</option>
@@ -195,9 +199,9 @@
 							    </div>
 							</div>
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Employmnet Status*</label>
+		                		<label class="control-label" for="employ_status">Employmnet Status*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="employ_status" required/>
 							            <option disabled>Select Status</option>
 							            <option></option>
 							            <option>On leave</option>
@@ -212,14 +216,14 @@
 	                </form>
               </div>
               <div class="tab-pane fade" id="position">
-                	<form id="qualification_form" action="" method="POST">
+                	<form id="qualification_form" action="{{URL::to('person/edit3/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
 	                		<div class="control-group">
-		                		<label class="control-label" for="username">Basic Education Level*</label>
+		                		<label class="control-label" for="basic_edu">Basic Education Level*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action" required/>
+							        <select class="form-control input-xlarge" name="basic_edu" required/>
 							            <option disabled>Select Level</option>
-							            <option></option>
+							            <option>{{$person->basic_edu}}</option>
 							            <option>Primary</option>
 							            <option>Ordinary</option>
 							            <option>Advanced</option>
@@ -227,11 +231,11 @@
 							    </div>
 							</div>
 							<div class="control-group">
-		                		<label class="control-label" for="username">Profession Education Level</label>
+		                		<label class="control-label" for="profession">Profession Education Level</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="action"/>
+							        <select class="form-control input-xlarge" name="profession"/>
 							            <option disabled>Select Level</option>
-							            <option></option>
+							            <option>{{$person->profession}}</option>
 							            <option>Certificate</option>
 							            <option>Diploma</option>
 							            <option>Bachelor</option>

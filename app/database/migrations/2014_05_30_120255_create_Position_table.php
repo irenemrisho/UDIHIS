@@ -14,11 +14,11 @@ class CreatePositionTable extends Migration {
     {
         Schema::create('position',function($table){
             $table->increments('id');
-            $table->String('name');
-            $table->String('facility');
-            $table->String('proposed_hiring_date');
-            $table->String('status');
-            $table->String('proposed_salary');
+            $table->String('name')->nullable();
+            $table->String('facility')->nullable();
+            $table->String('proposed_hiring_date')->nullable();
+            $table->String('status')->nullable();
+            $table->String('proposed_salary')->nullable();
             $table->timestamps();
 
         });
