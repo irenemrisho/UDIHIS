@@ -52,9 +52,10 @@
 @if(Auth::user()->level == 6)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admission"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="allocate_ward" id="patient"><i class="icon-user-md"></i>Allocate_Patient</a></li>
     <li><a href="admitted_patients" id="patient"><i class="icon-user-md"></i>Manage Patients</a></li>
-    <li><a href="" id="patient"><i class="icon-user-md"></i>Manage Wards</a></li>
-    <li><a href=""><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="maintain_inp_info"><i class="icon-hospital"></i>Manage inpatient Information</a></li>
+    <li><a href=""><i class="icon-user"></i>Manage Reports</a></li>
     <li><a href=""><i class="icon-user"></i>My account</a></li>
 </ul>
 

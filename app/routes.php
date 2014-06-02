@@ -159,9 +159,11 @@ Route::post('reception/generateReports', 'ReportsController@generateReports');
 
 
 //Admission routes
-Route::get('/admission', 'AdmissionController@index');
+Route::get('/nurse', 'AdmissionController@index');
 Route::get('admitted_patients', 'AdmissionController@patients');
-
+Route::get('allocate_ward', 'AdmissionController@allocate_ward');
+Route::get('administer_dosage', 'AdmissionController@patients');
+Route::get('maintain_inp_info', 'AdmissionController@manage_inp_info');
 //Routes for HumanResource
 
 Route::get('hr', 'HumanResourceController@index');

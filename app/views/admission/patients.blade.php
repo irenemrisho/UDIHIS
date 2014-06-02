@@ -47,8 +47,7 @@
 																	<th style="text-align: center">File Number</th>
 																	<th style="text-align: center">First Name</th>
 																	<th style="text-align: center">Last Name</th>
-																	<th style="text-align: center">Ward No.</th>
-																	<th style="text-align: center">Bed No.</th>
+																	<th style="text-align: center">Admission_Date</th>
 																	<th>Operations</th>
 
 																</tr>

@@ -31,7 +31,8 @@ class AdmissionController  extends BaseController{
     }
 
 
-    public function update($id){
+    public function manage_inp_info(){
+      return View::make('admission.manage_inp',compact('patient'));  
         
     }
 
