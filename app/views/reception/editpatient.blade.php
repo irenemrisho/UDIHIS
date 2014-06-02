@@ -460,7 +460,7 @@
 <form id="pform" action="{{url("patient/editInitial/$patient->id")}}" method="POST">
 
 <div class="control-group">
-<label class="control-label" for="username">Height (cm)</label>
+<label class="control-label" for="height">Height (cm)</label>
 <div class="controls">
 <input type="text" class="input-xlarge " id="" value="" name="height" required />
 
@@ -469,7 +469,7 @@
 
 
 <div class="control-group">
-<label class="control-label" for="username">Weight (kg)</label>
+<label class="control-label" for="weight">Weight (kg)</label>
 <div class="controls">
 <input type="text" class="input-xlarge " id="" value="" name="weight" required/>
 

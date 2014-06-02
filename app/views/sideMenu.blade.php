@@ -95,6 +95,17 @@
 
 @endif
 
+@if(Auth::user()->level == 8)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="#"><i class="icon-user-md"></i>Manage Patients</a></li>
+    <li><a href="#"><i class="icon-user-md"></i>Add</a></li>
+    <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+</ul>
+
+@endif
+
 @endif
 
 <hr />

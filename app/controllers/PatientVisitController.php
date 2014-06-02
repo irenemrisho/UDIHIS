@@ -33,12 +33,12 @@ class PatientVisitController extends \BaseController {
         $pid = $inputs['pid'];
         $height = $inputs['height'];
         $weight = $inputs['weight'];
-        $allergy = $inputs['allergy'];
+        /*$allergy = $inputs['allergy'];*/
         $temperature = $inputs['temperature'];
         $bloodpressure = $inputs['bloodpressure'];
-        $bloodgroup = $inputs['bloodgroup'];
+        /*$bloodgroup = $inputs['bloodgroup'];*/
         /*$rhesus = $inputs['rhesus'];*/
-        $paymenttype = $inputs['section'];
+        $paymenttype = $inputs['payment'];
         $section = $inputs['section'];
 
       $pvInfo = Patients_visit::create(array(
@@ -46,9 +46,10 @@ class PatientVisitController extends \BaseController {
             'height' => $height,
             'weight' => $weight,
             'temperature' => $temperature,
-            'bloodgroup'=>$bloodgroup,
+            /*'bloodgroup'=>$bloodgroup,*/
             'bloodpressure' => $bloodpressure,
             'paymenttype' =>$paymenttype,
+
             /*'rhesus' =>$rhesus,*/
             'patient_id' =>$pid,
           ));
