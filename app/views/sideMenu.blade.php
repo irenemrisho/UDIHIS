@@ -48,6 +48,7 @@
 
 @endif
 
+
 @if(Auth::user()->level == 6)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admission"><i class="icon-home"></i>Dashboard</a></li>
@@ -58,6 +59,7 @@
 </ul>
 
 @endif
+
 
 @if(Auth::user()->level == 4)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
@@ -70,7 +72,6 @@
 </ul>
 @endif
 
-
 @if(Auth::user()->level == 5)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("billing")}}"><i class="icon-home"></i>Dashboard</a></li>
@@ -82,8 +83,25 @@
     
 </ul>
 @endif
-    @endif
+
+
+@if(Auth::user()->level == 7)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="{{url("hr")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Manage People</a></li>
+    <li><a href="{{url("hr/position")}}"><i class="icon-user-md"></i>Add Position</a></li>
+    <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+</ul>
+
+@endif
+
+@endif
+
 <hr />
 <br />
-<?php }else ?>
+<?php }
+else {
+    return Redirect::to('login.login_page');
+}?>
 </div> <!-- /span3 -->

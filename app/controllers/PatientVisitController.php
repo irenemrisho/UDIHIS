@@ -88,6 +88,20 @@ class PatientVisitController extends \BaseController {
 		//
 	}
 
+    public function update($id)
+    {
+        $inputs = Input::all();
+        $appointment   = Appointment::find($id);
+        $appointment->first_name = $inputs['first_name'];
+        $appointment->last_name = $inputs['last_name'];
+        $appointment->date = $inputs['date'];
+        $appointment->phone_number = $inputs['phone_number'];
+        $appointment->time = $inputs['time'];
+
+        $appointment->save();
+        return View::make('reception.appointment');
+    }
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -119,8 +133,9 @@ class PatientVisitController extends \BaseController {
 	 * @return Response
 	 */
 	public function edit($id)
-	{
-		//
+    {
+        $appointment = Appointment::find($id);
+        return View::make('reception.editappointment', compact('appointment'));
 	}
 
 
@@ -135,29 +150,18 @@ class PatientVisitController extends \BaseController {
 		return View::make('reception.appointment');
 	}
 
-	public function setAppointment($id)
+	public function setAppointment()
 	{
-		$inputs = Input::all();
-		$pid = $inputs['pid'];
-		$user = $inputs['sectioninfo'];
-		$date = $inputs['appointment'];
-		$time = $inputs['time'];
-		//$room_number = $inputs['room_no'];
-       
-        $paymenttype = $inputs['paymenttype'];
-        $section = $inputs['section'];
+        $appoint = new Appointment;
+        $appoint->doctor_id = Input::get('specialist');
+        $appoint->date = Input::get('date');
+        $appoint->time = Input::get('time');
+        $appoint->first_name = Input::get('first_name');
+        $appoint->last_name = Input::get('last_name');
+        $appoint->phone_number = Input::get('phone_number');
+        $appoint->save();
 
-      $pvInfo = Appointment::create(array(
-
-            "doctor_id" => $user,
-            //"time" => $time,
-            
-            "date" => $date,
-            "patient_id"=>$pid
-          ));
-        $this->addPayment("registration",$pid,$paymenttype);
-
-        return Redirect::to('manage/patients');
+        return View::make('reception.appointment');
 
 	}
 		/*public function appoint()
@@ -175,8 +179,11 @@ class PatientVisitController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
-	}
+		$appointment = Appointment::find($id);
+          $appointment->delete();
+        return View::make('reception.appointment');
+
+;	}
 
 
 }

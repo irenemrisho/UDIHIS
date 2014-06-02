@@ -51,27 +51,7 @@ Manage Patients New Visit
 </div>
 
 <div class="span4 pull-right">
-<h4> Hospital File no: UD/<b>{{$patient->filenumber}}</b></h4>
-<div class="control-group">
-<label class="control-label" for="temperature">Temperature (c)</label>
-<div class="controls">
-    <input type="text" class="input-xlarge " id="" value="" name="temperature" />
-
-</div> <!-- /controls -->
-</div>
-<div class="control-group">
-<label class="control-label" for="bp">Blood Pressure (mmHg)</label>
-<div class="controls">
-    <input type="text" class="input-xlarge " id="" value="" name="bloodpressure" >
-
-</div> <!-- /control-group -->
-
-
-
-</div>
-
-<div class="span4 pull-right">
-<h4> Hospital File no: <b>{{$patient->filenumber}}</b></h4>
+<h4> Hospital File no: UD/2014/<b>{{$patient->filenumber}}</b></h4>
 <div class="control-group">
 <label class="control-label" for="temperature">Temperature (c)</label>
 <div class="controls">
@@ -161,14 +141,7 @@ Negative</label>
 <option>OPD</option>
 <option>IPD</option>
 <option>ANC</option>
-</select>
-
-
-<div id="section-more">
-
-</div>
-
-</div>
+</select>                   
 
 </fieldset>
 </section>

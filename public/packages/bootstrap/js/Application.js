@@ -315,6 +315,16 @@ $(document).ready(function(){
         });
 
     });
+
+    $('#section2').on('change',function(){
+        var sect = $(this).val();
+        $.post('loadsection', {sect:sect}, function(data){
+            $('#section-more2').html(data);
+               
+        });
+
+    });
+
     $('#insurance1').on('change',function(){
         var sect = $(this).val();
         $.post('loadsection', {sect:sect}, function(data){
@@ -399,6 +409,12 @@ $(document).ready(function(){
             $('#user_content').html(data);
         });
     });
+    
+
+    
+       // $('mydiv').printElement();
+  
+    
 
     $('#save').on('click', function(){
         var action = $('#editform').attr('action');
@@ -586,6 +602,7 @@ $(document).ready(function(){
         yearRange: "0:+3" ,
         showMonths: [3,3]
     });
+   
 
     $('#appointment_time').timepicker({
         timeOnlyTitle: 'Appointment time'

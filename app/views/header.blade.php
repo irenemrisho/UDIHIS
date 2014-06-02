@@ -50,6 +50,12 @@
                             @if(Auth::user()->level == 4)
                             <span class="account-name">Doctor</span>
                             @endif
+                            @if(Auth::user()->level == 6)
+                            <span class="account-name">Nurse</span>
+                            @endif
+                            @if(Auth::user()->level == 7)
+                            <span class="account-name">HR Officer</span>
+                            @endif
                             <span class="account-actions">
                                 <a style="color:#888; text-decoration:none;" href="{{url("logout")}}"><i class="icon-off"></i> Logout</a>
                             </span>
