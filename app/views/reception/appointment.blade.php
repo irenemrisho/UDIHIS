@@ -81,7 +81,7 @@ Manage Appointment
                            ?>
                            @foreach($docts as $dr)
                            <option></option>
-                           <option value="{{$dr->id}}">{{$dr->first_name}} {{$dr->last_name}}</option>
+                           <option value="{{$dr->id}}">{{$dr->firstame}} {{$dr->last_name}}</option>
                            @endforeach
                        </select>
                    </div>
@@ -134,13 +134,14 @@ Manage Appointment
                                         <th style="text-align:center;">Last Name</th>
                                         <th style="text-align:center;">Phone Number</th>
                                         <th style="text-align:center;">Date/Time</th>
-                                        <th style="text-align: center">Specialist</th
+                                        <th style="text-align: center">Action</th
                 </tr>
             </thead>
             
             <tbody>
             <?php
             $appointment = Appointment::orderBy('id','DESC')->get();
+            $docts = User::where('level',4)->get();
               $aid=1;?>
             @foreach($appointment as $appointment)
                 <tr>
@@ -149,6 +150,7 @@ Manage Appointment
                     <td>{{$appointment->last_name}} </td>
                     <td>{{$appointment->phone_number}}</td>
                     <td>{{$appointment->date}}/{{$appointment->time}}</td>
+
 
                     <td class="action-td" id="{{$appointment->id}}">
                         <a  href="{{url("appointment/edit/$appointment->id")}}"

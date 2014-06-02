@@ -158,6 +158,14 @@ Route::get('print/{id}', 'ReceptionController@printView');
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
 
+
+
+//Admission routes
+Route::get('/nurse', 'AdmissionController@index');
+Route::get('admitted_patients', 'AdmissionController@patients');
+Route::get('allocate_ward', 'AdmissionController@allocate_ward');
+Route::get('administer_dosage', 'AdmissionController@patients');
+Route::get('maintain_inp_info', 'AdmissionController@manage_inp_info');
 //Routes for HumanResource
 
 Route::get('hr', 'HumanResourceController@index');
@@ -168,7 +176,8 @@ Route::get('hr/position', 'HumanResourceController@positionShow');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 
-//update the person informations  first
+//update the person informations  for the first time
+//first
 Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
 Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
@@ -176,6 +185,9 @@ Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
 Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 //fourth
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
+//display the page for persons
+Route::get('hr/manage_person', 'HumanResourceController@edit');
+
 
 
 

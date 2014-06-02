@@ -18,10 +18,10 @@ class AdmissionController  extends BaseController{
         return View::make('admission.nurse',compact('patient'));
     }
 
-      public function dosage(){
+      public function patients(){
 
         /*$patient = Patient::find();*/
-        return View::make('admission.dosage',compact('patient'));
+        return View::make('admission.patients',compact('patient'));
     }
 
      public function allocate_ward(){
@@ -31,7 +31,8 @@ class AdmissionController  extends BaseController{
     }
 
 
-    public function update($id){
+    public function manage_inp_info(){
+      return View::make('admission.manage_inp',compact('patient'));  
         
     }
 
