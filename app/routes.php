@@ -22,6 +22,8 @@ Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
+Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
+Route::post('/notification/add','AdminController@addNoticeboard');
 Route::post('/manage_user','Admin@addUser');
 Route::post('manage_user/search/', 'AdminController@search');
 

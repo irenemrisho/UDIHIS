@@ -6,6 +6,7 @@
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admin"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="manage_user"><i class="icon-exchange"></i>Manage users</a></li>
+    <li><a href="manage_noticeboard"><i class="icon-exchange"></i>Manage noticeboard</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Setting</a></li>
     <li><a href="#"><i class="icon-user"></i>My account</a></li>
 </ul>
