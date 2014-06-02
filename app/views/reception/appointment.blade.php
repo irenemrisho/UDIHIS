@@ -42,74 +42,78 @@ Manage Appointment
 <li class=""><a href="#2" data-toggle="tab">Add Appointment</a></li>
 </ul>
 
-<div class="tab-content" style="height: 400px">
+<div class="tab-content" style="height: 600px">
 <div class="tab-pane " id="2" style="position:absolute">
 <form id="edit-profile" class="form-horizontal4" action="{{url("appoitment/add")}}" method="post">
-<fieldset >
-<div class="span4 pull-left">
+   <div class="contents">
+       <fieldset >
+           <div class="span4 pull-left">
 
-             <div class="control-group">  <div class="controls">
+               <div class="control-group">
+                   <div class="controls">
+                       <label class="control-label" for="first_name">First Name</label>
+                       <input type="text" class="input-xlarge " id="" value="" name="first_name" required />
 
-                    <input type="text" class="input-xlarge " id="" value="" placeholder="First Name" name="first_name" required />
+                   </div> <!-- /controls -->
+               </div>
+               <div class="control-group">
+                   <div class="controls">
+                       <label class="control-label" for="last_name">Last Name</label>
+                       <input type="text" class="input-xlarge " id="" value="" name="last_name" required />
 
-                </div> <!-- /controls -->
-                 <div class="control-group">  <div class="controls">
+                   </div> <!-- /controls -->
+                </div>
+                   <div class="control-group">
+                       <div class="controls">
+                           <label class="control-label" for="phone_number">Phone Number</label>
+                           <input type="text" class="input-xlarge " id="" value=""  name="phone_number" required />
 
-                         <input type="text" class="input-xlarge " id="" value="" placeholder="Last Name" name="last_name" required />
+                       </div> <!-- /controls -->
+                   </div>
+                       </div>
+           <div class="span4 pull-right">
+                   <div class="control-group ">
+                       <p>SPECIALIST</p>
+                       <select id="section" name="specialist" class="form-control">
+                           <option disabled>Select Position</option>
+                           <?php
+                           $docts = User::where('level',4)->get();
+                           ?>
+                           @foreach($docts as $dr)
+                           <option></option>
+                           <option value="{{$dr->id}}">{{$dr->firstame}} {{$dr->last_name}}</option>
+                           @endforeach
+                       </select>
+                   </div>
 
-                     </div> <!-- /controls -->
-                   <div class="control-group">  <div class="controls">
+                   <div class="control-group">
+                       <label class="control-label" for="Date">Date</label>
+                       <div class="controls">
+                           <input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
+                       </div>  <!-- /control-->
+                   </div> <!-- /control-group -->
 
-                         <input type="text" class="input-xlarge " id="" value="" placeholder="Phone Number" name="phone_number" required />
+                   <div class="control-group">
+                       <label class="control-label" for="time">Time</label>
+                       <div class="controls">
+                           <input type="text" class="input-xlarge " id="appointment_time" name="time" placeholder = "">
 
-                     </div> <!-- /controls -->
+                       </div> <!-- /controls -->
 
-                    <div class="control-group ">
-                        <p>SECTION</p>
-                        <select id="section" name="section" class="form-control">
-                            <option></option>
-                            <option>OPD</option>
-                            <option>IPD</option>
-                            <option>ANC</option>
-                        </select>
+                   </div>
+               </div>
+       </fieldset>
+       <center>
+           <div class="control-group" >
+               <div class="controls">
+                   <button type="reset" class="btn btn-danger" id="cancel" name = "cancel" value = "Cancel" >Reset</button>
+                   <button type="submit" class="btn btn-primary">Add</button>
+               </div>
+           </div>
+       </center>
 
-                        <div id="section-more">
-
-                        </div>
-
-                    </div>
-        
-<div class="control-group">
-    <label class="control-label" for="Date">Date</label>
-    <div class="controls">
-<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date" required  placeholder=" "/>
-        </div>  <!-- /control-->            
-    </div> <!-- /control-group -->
-
-        <div class="control-group">
-<label class="control-label" for="time">Time</label>
-        <div class="controls">
-            <input type="text" class="input-xlarge " id="appointment_time" name="time" placeholder = "">
-
-        </div> <!-- /controls -->
-   
-</div>
-        
-         
-            
-            <div class="pull-left">
-                <button type="reset" class="btn btn-danger" id="cancel" name = "cancel" value = "Cancel" >Reset</button>
-                <button type="submit" class="btn btn-primary">Add</button></div>
-            </div> 
-
-            </div>  
-
-</fieldset> 
+   </div>
 </form>
-
-<div>
-
-</div>
 
 </div>
 
@@ -130,13 +134,14 @@ Manage Appointment
                                         <th style="text-align:center;">Last Name</th>
                                         <th style="text-align:center;">Phone Number</th>
                                         <th style="text-align:center;">Date/Time</th>
-                                        <th style="text-align: center">Specialist</th
+                                        <th style="text-align: center">Action</th
                 </tr>
             </thead>
             
             <tbody>
             <?php
             $appointment = Appointment::orderBy('id','DESC')->get();
+            $docts = User::where('level',4)->get();
               $aid=1;?>
             @foreach($appointment as $appointment)
                 <tr>
@@ -145,6 +150,7 @@ Manage Appointment
                     <td>{{$appointment->last_name}} </td>
                     <td>{{$appointment->phone_number}}</td>
                     <td>{{$appointment->date}}/{{$appointment->time}}</td>
+
 
                     <td class="action-td" id="{{$appointment->id}}">
                         <a  href="{{url("appointment/edit/$appointment->id")}}"

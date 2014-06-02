@@ -18,7 +18,7 @@ class CreateAppointmentsTable extends Migration {
             $table->String('last_name');
             $table->String('phone_number');
 			$table->integer('patient_id')->references('id')->on('patients');
-            $table->integer('user_id')->references('id')->on('users');
+            $table->integer('user_id')->references('id')->on('users')->nullable();
             $table->String('date');
             $table->String('time');
 			$table->timestamps();
