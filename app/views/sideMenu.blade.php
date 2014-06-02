@@ -87,7 +87,8 @@
 @if(Auth::user()->level == 7)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("hr")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Manage People</a></li>
+    <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Register Employee</a></li>
+    <li><a href="{{url("hr/manage_person")}}"><i class="icon-user-md"></i>Manage Employees</a></li>
     <li><a href="{{url("hr/position")}}"><i class="icon-user-md"></i>Add Position</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="#"><i class="icon-user"></i>My account</a></li>
