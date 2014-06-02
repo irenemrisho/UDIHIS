@@ -79,7 +79,7 @@ Route::get('Insurance_management','BillingController@getInsurance');
 Route::post('Insurance_management','BillingController@addInsurance');
 Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
-Route::get('reports_billing','BillingController@getReports');
+Route::get('manage_report','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
 Route::get('My_account_billing','BillingController@getAccount');
 Route::post('billing/patients_payments','BillingController@profile');
