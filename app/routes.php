@@ -156,6 +156,14 @@ Route::get('print/{id}', 'ReceptionController@printView');
 // Reports code goes here
 Route::post('reception/generateReports', 'ReportsController@generateReports');
 
+
+
+//Admission routes
+Route::get('/nurse', 'AdmissionController@index');
+Route::get('admitted_patients', 'AdmissionController@patients');
+Route::get('allocate_ward', 'AdmissionController@allocate_ward');
+Route::get('administer_dosage', 'AdmissionController@patients');
+Route::get('maintain_inp_info', 'AdmissionController@manage_inp_info');
 //Routes for HumanResource
 
 Route::get('hr', 'HumanResourceController@index');
@@ -177,6 +185,7 @@ Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //display the page for persons
 Route::get('hr/manage_person', 'HumanResourceController@edit');
+
 
 
 

@@ -70,7 +70,10 @@
         <div class="control-group">                                         
             <label class="control-label" for="level" id="">Designation</label>
             <div class="controls">
+
+            	
             	{{Form::select('level',array('1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','6'=>'Nurse','7'=>'HR Officer'), $user->level, array('id'=>"level"))}}
+
 
             </div>
                          
