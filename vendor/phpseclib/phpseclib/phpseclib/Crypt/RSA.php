@@ -1,4 +1,5 @@
 <?php
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
  * Pure-PHP PKCS#1 (v2.1) compliant implementation of RSA.
@@ -47,10 +48,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -59,12 +60,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @category  Crypt
- * @package   Crypt_RSA
- * @author    Jim Wigginton <terrafrost@php.net>
- * @copyright MMIX Jim Wigginton
- * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
- * @link      http://phpseclib.sourceforge.net
+ * @category   Crypt
+ * @package    Crypt_RSA
+ * @author     Jim Wigginton <terrafrost@php.net>
+ * @copyright  MMIX Jim Wigginton
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       http://phpseclib.sourceforge.net
  */
 
 /**
@@ -72,17 +73,17 @@
  */
 // the class_exists() will only be called if the crypt_random_string function hasn't been defined and
 // will trigger a call to __autoload() if you're wanting to auto-load classes
-// call function_exists() a second time to stop the include_once from being called outside
+// call function_exists() a second time to stop the require_once from being called outside
 // of the auto loader
 if (!function_exists('crypt_random_string')) {
-    include_once 'Random.php';
+    require_once('Random.php');
 }
 
 /**
  * Include Crypt_Hash
  */
 if (!class_exists('Crypt_Hash')) {
-    include_once 'Hash.php';
+    require_once('Hash.php');
 }
 
 /**#@+
@@ -144,7 +145,7 @@ define('CRYPT_RSA_ASN1_INTEGER',   2);
 /**
  * ASN1 Bit String
  */
-define('CRYPT_RSA_ASN1_BITSTRING', 3);
+define('CRYPT_RSA_ASN1_BITSTRING', 3); 
 /**
  * ASN1 Sequence (with the constucted bit set)
  */
@@ -171,6 +172,7 @@ define('CRYPT_RSA_MODE_OPENSSL', 2);
  * Default openSSL configuration file.
  */
 define('CRYPT_RSA_OPENSSL_CONFIG', dirname(__FILE__) . '/../openssl.cnf');
+
 
 /**#@+
  * @access public
@@ -239,13 +241,12 @@ define('CRYPT_RSA_PUBLIC_FORMAT_PKCS1', 7);
 /**
  * Pure-PHP PKCS#1 compliant implementation of RSA.
  *
- * @package Crypt_RSA
  * @author  Jim Wigginton <terrafrost@php.net>
  * @version 0.1.0
  * @access  public
+ * @package Crypt_RSA
  */
-class Crypt_RSA
-{
+class Crypt_RSA {
     /**
      * Precomputed Zero
      *
@@ -433,7 +434,7 @@ class Crypt_RSA
     /**
      * OpenSSL configuration file name.
      *
-     * Set to null to use system configuration file.
+     * Set to NULL to use system configuration file.
      * @see Crypt_RSA::createKey()
      * @var Mixed
      * @Access public
@@ -461,49 +462,17 @@ class Crypt_RSA
     function Crypt_RSA()
     {
         if (!class_exists('Math_BigInteger')) {
-            include_once 'Math/BigInteger.php';
+            require_once('Math/BigInteger.php');
         }
 
         $this->configFile = CRYPT_RSA_OPENSSL_CONFIG;
 
         if ( !defined('CRYPT_RSA_MODE') ) {
-            // Math/BigInteger's openssl requirements are a little less stringent than Crypt/RSA's. in particular,
-            // Math/BigInteger doesn't require an openssl.cfg file whereas Crypt/RSA does. so if Math/BigInteger
-            // can't use OpenSSL it can be pretty trivially assumed, then, that Crypt/RSA can't either.
-            if ( defined('MATH_BIGINTEGER_OPENSSL_DISABLE') ) {
-                define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
-            }
-
-            switch ( !defined('CRYPT_RSA_MODE') ) { // ie. only run this if the above didn't set CRYPT_RSA_MODE already
+            switch (true) {
                 case extension_loaded('openssl') && version_compare(PHP_VERSION, '4.2.0', '>=') && file_exists($this->configFile):
-                    // some versions of XAMPP have mismatched versions of OpenSSL which causes it not to work
-                    ob_start();
-                    phpinfo();
-                    $content = ob_get_contents();
-                    ob_end_clean();
-
-                    preg_match_all('#OpenSSL (Header|Library) Version(.*)#im', $content, $matches);
-
-                    $versions = array();
-                    if (!empty($matches[1])) {
-                       for ($i = 0; $i < count($matches[1]); $i++) {
-                          $versions[$matches[1][$i]] = trim(str_replace('=>', '', strip_tags($matches[2][$i])));
-                       }
-                    }
-
-                    // it doesn't appear that OpenSSL versions were reported upon until PHP 5.3+
-                    switch (true) {
-                        case !isset($versions['Header']):
-                        case !isset($versions['Library']):
-                        case $versions['Header'] == $versions['Library']:
-                            define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_OPENSSL);
-                            break;
-                        default:
-                            define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
-                            define('MATH_BIGINTEGER_OPENSSL_DISABLE', true);
-                    }
+                    define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_OPENSSL);
                     break;
-                case true:
+                default:
                     define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
             }
         }
@@ -555,7 +524,7 @@ class Crypt_RSA
                 $config['config'] = $this->configFile;
             }
             $rsa = openssl_pkey_new(array('private_key_bits' => $bits) + $config);
-            openssl_pkey_export($rsa, $privatekey, null, $config);
+            openssl_pkey_export($rsa, $privatekey, NULL, $config);
             $publickey = openssl_pkey_get_details($rsa);
             $publickey = $publickey['key'];
 
@@ -673,12 +642,12 @@ class Crypt_RSA
                 $exponents[$i] = $e->modInverse($temp);
             }
 
-            list($temp) = $lcm['top']->divide($lcm['bottom']);
-            $gcd = $temp->gcd($e);
+            list($lcm) = $lcm['top']->divide($lcm['bottom']);
+            $gcd = $lcm->gcd($e);
             $i0 = 1;
         } while (!$gcd->equals($this->one));
 
-        $d = $e->modInverse($temp);
+        $d = $e->modInverse($lcm);
 
         $coefficients[2] = $primes[2]->modInverse($primes[1]);
 
@@ -760,7 +729,7 @@ class Crypt_RSA
                               strlen($this->comment), $this->comment, strlen($public), $public
                 );
                 $public = base64_encode($public);
-                $key.= "Public-Lines: " . ((strlen($public) + 63) >> 6) . "\r\n";
+                $key.= "Public-Lines: " . ((strlen($public) + 32) >> 6) . "\r\n";
                 $key.= chunk_split($public, 64);
                 $private = pack('Na*Na*Na*Na*',
                     strlen($raw['privateExponent']), $raw['privateExponent'], strlen($raw['prime1']), $raw['prime1'],
@@ -773,7 +742,7 @@ class Crypt_RSA
                     $private.= crypt_random_string(16 - (strlen($private) & 15));
                     $source.= pack('Na*', strlen($private), $private);
                     if (!class_exists('Crypt_AES')) {
-                        include_once 'Crypt/AES.php';
+                        require_once('Crypt/AES.php');
                     }
                     $sequence = 0;
                     $symkey = '';
@@ -791,10 +760,10 @@ class Crypt_RSA
                 }
 
                 $private = base64_encode($private);
-                $key.= 'Private-Lines: ' . ((strlen($private) + 63) >> 6) . "\r\n";
+                $key.= 'Private-Lines: ' . ((strlen($private) + 32) >> 6) . "\r\n";
                 $key.= chunk_split($private, 64);
                 if (!class_exists('Crypt_Hash')) {
-                    include_once 'Crypt/Hash.php';
+                    require_once('Crypt/Hash.php');
                 }
                 $hash = new Crypt_Hash('sha1');
                 $hash->setKey(pack('H*', sha1($hashkey)));
@@ -834,7 +803,7 @@ class Crypt_RSA
                     $symkey = pack('H*', md5($this->password . $iv)); // symkey is short for symmetric key
                     $symkey.= substr(pack('H*', md5($symkey . $this->password . $iv)), 0, 8);
                     if (!class_exists('Crypt_TripleDES')) {
-                        include_once 'Crypt/TripleDES.php';
+                        require_once('Crypt/TripleDES.php');
                     }
                     $des = new Crypt_TripleDES();
                     $des->setKey($symkey);
@@ -984,7 +953,7 @@ class Crypt_RSA
                    DES-EDE3-CBC as an algorithm, however, is not discussed anywhere, near as I can tell.
                    DES-CBC and DES-EDE are discussed in RFC1423, however, DES-EDE3-CBC isn't, nor is its key derivation
                    function.  As is, the definitive authority on this encoding scheme isn't the IETF but rather OpenSSL's
-                   own implementation.  ie. the implementation *is* the standard and any bugs that may exist in that
+                   own implementation.  ie. the implementation *is* the standard and any bugs that may exist in that 
                    implementation are part of the standard, as well.
 
                    * OpenSSL is the de facto standard.  It's utilized by OpenSSH and other projects */
@@ -992,42 +961,41 @@ class Crypt_RSA
                     $iv = pack('H*', trim($matches[2]));
                     $symkey = pack('H*', md5($this->password . substr($iv, 0, 8))); // symkey is short for symmetric key
                     $symkey.= pack('H*', md5($symkey . $this->password . substr($iv, 0, 8)));
-                    // remove the Proc-Type / DEK-Info sections as they're no longer needed
-                    $key = preg_replace('#^(?:Proc-Type|DEK-Info): .*#m', '', $key);
-                    $ciphertext = $this->_extractBER($key);
+                    $ciphertext = preg_replace('#.+(\r|\n|\r\n)\1|[\r\n]|-.+-| #s', '', $key);
+                    $ciphertext = preg_match('#^[a-zA-Z\d/+]*={0,2}$#', $ciphertext) ? base64_decode($ciphertext) : false;
                     if ($ciphertext === false) {
                         $ciphertext = $key;
                     }
                     switch ($matches[1]) {
                         case 'AES-256-CBC':
                             if (!class_exists('Crypt_AES')) {
-                                include_once 'Crypt/AES.php';
+                                require_once('Crypt/AES.php');
                             }
                             $crypto = new Crypt_AES();
                             break;
                         case 'AES-128-CBC':
                             if (!class_exists('Crypt_AES')) {
-                                include_once 'Crypt/AES.php';
+                                require_once('Crypt/AES.php');
                             }
                             $symkey = substr($symkey, 0, 16);
                             $crypto = new Crypt_AES();
                             break;
                         case 'DES-EDE3-CFB':
                             if (!class_exists('Crypt_TripleDES')) {
-                                include_once 'Crypt/TripleDES.php';
+                                require_once('Crypt/TripleDES.php');
                             }
                             $crypto = new Crypt_TripleDES(CRYPT_DES_MODE_CFB);
                             break;
                         case 'DES-EDE3-CBC':
                             if (!class_exists('Crypt_TripleDES')) {
-                                include_once 'Crypt/TripleDES.php';
+                                require_once('Crypt/TripleDES.php');
                             }
                             $symkey = substr($symkey, 0, 24);
                             $crypto = new Crypt_TripleDES();
                             break;
                         case 'DES-CBC':
                             if (!class_exists('Crypt_DES')) {
-                                include_once 'Crypt/DES.php';
+                                require_once('Crypt/DES.php');
                             }
                             $crypto = new Crypt_DES();
                             break;
@@ -1038,7 +1006,8 @@ class Crypt_RSA
                     $crypto->setIV($iv);
                     $decoded = $crypto->decrypt($ciphertext);
                 } else {
-                    $decoded = $this->_extractBER($key);
+                    $decoded = preg_replace('#-.+-|[\r\n]| #', '', $key);
+                    $decoded = preg_match('#^[a-zA-Z\d/+]*={0,2}$#', $decoded) ? base64_decode($decoded) : false;
                 }
 
                 if ($decoded !== false) {
@@ -1240,7 +1209,7 @@ class Crypt_RSA
                 switch ($encryption) {
                     case 'aes256-cbc':
                         if (!class_exists('Crypt_AES')) {
-                            include_once 'Crypt/AES.php';
+                            require_once('Crypt/AES.php');
                         }
                         $symkey = '';
                         $sequence = 0;
@@ -1342,6 +1311,9 @@ class Crypt_RSA
                 break;
             case 'D':
                 $this->current = &$this->components['privateExponent'];
+                break;
+            default:
+                unset($this->current);
         }
         $this->current = '';
     }
@@ -1357,10 +1329,11 @@ class Crypt_RSA
      */
     function _stop_element_handler($parser, $name)
     {
-        if (isset($this->current)) {
-            $this->current = new Math_BigInteger(base64_decode($this->current), 256);
-            unset($this->current);
+        //$name = strtoupper($name);
+        if ($name == 'RSAKEYVALUE') {
+            return;
         }
+        $this->current = new Math_BigInteger(base64_decode($this->current), 256);
     }
 
     /**
@@ -1391,53 +1364,6 @@ class Crypt_RSA
      */
     function loadKey($key, $type = false)
     {
-        if (is_object($key) && strtolower(get_class($key)) == 'crypt_rsa') {
-            $this->privateKeyFormat = $key->privateKeyFormat;
-            $this->publicKeyFormat = $key->publicKeyFormat;
-            $this->k = $key->k;
-            $this->hLen = $key->hLen;
-            $this->sLen = $key->sLen;
-            $this->mgfHLen = $key->mgfHLen;
-            $this->encryptionMode = $key->encryptionMode;
-            $this->signatureMode = $key->signatureMode;
-            $this->password = $key->password;
-            $this->configFile = $key->configFile;
-            $this->comment = $key->comment;
-
-            if (is_object($key->hash)) {
-                $this->hash = new Crypt_Hash($key->hash->getHash());
-            }
-            if (is_object($key->mgfHash)) {
-                $this->mgfHash = new Crypt_Hash($key->mgfHash->getHash());
-            }
-
-            if (is_object($key->modulus)) {
-                $this->modulus = $key->modulus->copy();
-            }
-            if (is_object($key->exponent)) {
-                $this->exponent = $key->exponent->copy();
-            }
-            if (is_object($key->publicExponent)) {
-                $this->publicExponent = $key->publicExponent->copy();
-            }
-
-            $this->primes = array();
-            $this->exponents = array();
-            $this->coefficients = array();
-
-            foreach ($this->primes as $prime) {
-                $this->primes[] = $prime->copy();
-            }
-            foreach ($this->exponents as $exponent) {
-                $this->exponents[] = $exponent->copy();
-            }
-            foreach ($this->coefficients as $coefficient) {
-                $this->coefficients[] = $coefficient->copy();
-            }
-
-            return true;
-        }
-
         if ($type === false) {
             $types = array(
                 CRYPT_RSA_PUBLIC_FORMAT_RAW,
@@ -1452,7 +1378,7 @@ class Crypt_RSA
                     break;
                 }
             }
-
+            
         } else {
             $components = $this->_parseKey($key, $type);
         }
@@ -1519,11 +1445,6 @@ class Crypt_RSA
      */
     function setPublicKey($key = false, $type = false)
     {
-        // if a public key has already been loaded return false
-        if (!empty($this->publicExponent)) {
-            return false;
-        }
-
         if ($key === false && !empty($this->modulus)) {
             $this->publicExponent = $this->exponent;
             return true;
@@ -1646,18 +1567,6 @@ class Crypt_RSA
         }
         $key = $this->_getPrivatePublicKey($this->publicKeyFormat);
         return $key !== false ? $key : '';
-    }
-
-    /**
-     *  __clone() magic method
-     *
-     * @access public
-     */
-    function __clone()
-    {
-        $key = new Crypt_RSA();
-        $key->loadKey($this);
-        return $key;
     }
 
     /**
@@ -2152,7 +2061,7 @@ class Crypt_RSA
      *
      * See {@link http://tools.ietf.org/html/rfc3447#section-7.1.2 RFC3447#section-7.1.2}.  The fact that the error
      * messages aren't distinguishable from one another hinders debugging, but, to quote from RFC3447#section-7.1.2:
-     *
+     * 
      *    Note.  Care must be taken to ensure that an opponent cannot
      *    distinguish the different error conditions in Step 3.g, whether by
      *    error message or timing, or, more generally, learn partial
@@ -2780,32 +2689,5 @@ class Crypt_RSA
             default:
                 return $this->_rsassa_pss_verify($message, $signature);
         }
-    }
-
-    /**
-     * Extract raw BER from Base64 encoding
-     *
-     * @access private
-     * @param String $str
-     * @return String
-     */
-    function _extractBER($str)
-    {
-        /* X.509 certs are assumed to be base64 encoded but sometimes they'll have additional things in them
-         * above and beyond the ceritificate.
-         * ie. some may have the following preceding the -----BEGIN CERTIFICATE----- line:
-         *
-         * Bag Attributes
-         *     localKeyID: 01 00 00 00
-         * subject=/O=organization/OU=org unit/CN=common name
-         * issuer=/O=organization/CN=common name
-         */
-        $temp = preg_replace('#.*?^-+[^-]+-+#ms', '', $str, 1);
-        // remove the -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- stuff
-        $temp = preg_replace('#-+[^-]+-+#', '', $temp);
-        // remove new lines
-        $temp = str_replace(array("\r", "\n", ' '), '', $temp);
-        $temp = preg_match('#^[a-zA-Z\d/+]*={0,2}$#', $temp) ? base64_decode($temp) : false;
-        return $temp != false ? $temp : $str;
     }
 }

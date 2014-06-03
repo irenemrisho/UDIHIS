@@ -54,19 +54,12 @@ class Seeder {
 		{
 			$instance = $this->container->make($class);
 
-			$instance->setContainer($this->container);
+			return $instance->setContainer($this->container)->setCommand($this->command);
 		}
 		else
 		{
-			$instance = new $class;
+			return new $class;
 		}
-
-		if (isset($this->command))
-		{
-			$instance->setCommand($this->command);
-		}
-
-		return $instance;
 	}
 
 	/**

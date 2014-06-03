@@ -138,13 +138,13 @@ class ProcessBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldEscapeArguments()
     {
-        $pb = new ProcessBuilder(array('%path%', 'foo " bar', '%baz%baz'));
+        $pb = new ProcessBuilder(array('%path%', 'foo " bar'));
         $proc = $pb->getProcess();
 
         if (defined('PHP_WINDOWS_VERSION_BUILD')) {
-            $this->assertSame('^%"path"^% "foo \\" bar" "%baz%baz"', $proc->getCommandLine());
+            $this->assertSame('^%"path"^% "foo "\\"" bar"', $proc->getCommandLine());
         } else {
-            $this->assertSame("'%path%' 'foo \" bar' '%baz%baz'", $proc->getCommandLine());
+            $this->assertSame("'%path%' 'foo \" bar'", $proc->getCommandLine());
         }
     }
 

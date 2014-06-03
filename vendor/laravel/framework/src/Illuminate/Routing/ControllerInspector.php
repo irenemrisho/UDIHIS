@@ -10,7 +10,7 @@ class ControllerInspector {
 	 * @var array
 	 */
 	protected $verbs = array(
-		'any', 'get', 'post', 'put', 'patch',
+		'any', 'get', 'post', 'put',
 		'delete', 'head', 'options'
 	);
 

@@ -1,4 +1,5 @@
 <?php
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
  * Random Number Generator
@@ -20,10 +21,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -32,12 +33,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * @category  Crypt
- * @package   Crypt_Random
- * @author    Jim Wigginton <terrafrost@php.net>
- * @copyright MMVII Jim Wigginton
- * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
- * @link      http://phpseclib.sourceforge.net
+ * @category   Crypt
+ * @package    Crypt_Random
+ * @author     Jim Wigginton <terrafrost@php.net>
+ * @copyright  MMVII Jim Wigginton
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ * @link       http://phpseclib.sourceforge.net
  */
 
 /**
@@ -131,7 +132,9 @@ function crypt_random_string($length)
         $old_session_id = session_id();
         $old_use_cookies = ini_get('session.use_cookies');
         $old_session_cache_limiter = session_cache_limiter();
-        $_OLD_SESSION = isset($_SESSION) ? $_SESSION : false;
+        if (isset($_SESSION)) {
+            $_OLD_SESSION = $_SESSION;
+        }
         if ($old_session_id != '') {
             session_write_close();
         }
@@ -164,7 +167,7 @@ function crypt_random_string($length)
             ini_set('session.use_cookies', $old_use_cookies);
             session_cache_limiter($old_session_cache_limiter);
         } else {
-           if ($_OLD_SESSION !== false) {
+           if (isset($_OLD_SESSION)) {
                $_SESSION = $_OLD_SESSION;
                unset($_OLD_SESSION);
             } else {

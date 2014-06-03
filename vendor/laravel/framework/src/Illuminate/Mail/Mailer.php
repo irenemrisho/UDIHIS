@@ -61,13 +61,6 @@ class Mailer {
 	protected $failedRecipients = array();
 
 	/**
-	 * The QueueManager instance.
-	 *
-	 * @var \Illuminate\Queue\QueueManager
-	 */
-	protected $queue;
-
-	/**
 	 * Create a new Mailer instance.
 	 *
 	 * @param  \Illuminate\View\Environment  $views

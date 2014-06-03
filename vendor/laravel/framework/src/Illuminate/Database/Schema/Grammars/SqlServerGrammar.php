@@ -44,8 +44,8 @@ class SqlServerGrammar extends Grammar {
 	 */
 	public function compileColumnExists($table)
 	{
-		return "select col.name from sys.columns as col
-                join sys.objects as obj on col.object_id = obj.object_id
+		return "select col.name from sys.columns as col 
+                join sys.objects as obj on col.object_id = obj.object_id 
                 where obj.type = 'U' and obj.name = '$table'";
 	}
 
@@ -226,18 +226,6 @@ class SqlServerGrammar extends Grammar {
 
 		return "sp_rename {$from}, ".$this->wrapTable($command->to);
 	}
-
-	/**
-	 * Create the column definition for a char type.
-	 *
-	 * @param  \Illuminate\Support\Fluent  $column
-	 * @return string
-	 */
-	protected function typeChar(Fluent $column)
-	{
-		return "nchar({$column->length})";
-	}
-
 
 	/**
 	 * Create the column definition for a string type.
@@ -484,7 +472,7 @@ class SqlServerGrammar extends Grammar {
 	 */
 	protected function modifyIncrement(Blueprint $blueprint, Fluent $column)
 	{
-		if (in_array($column->type, $this->serials) && $column->autoIncrement)
+		if (in_array($column->type, $this->serials) and $column->autoIncrement)
 		{
 			return ' identity primary key';
 		}

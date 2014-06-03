@@ -374,7 +374,6 @@
     <h4 class = "text-left">Physical address</h4>
 
     <div class="control-group">
-
         <div class="controls">
             <select class="form-control"  data-placement="district" name="district" required >
                 <option disabled>Select District</option>
@@ -382,7 +381,6 @@
                 <option>Ilala</option>
                 <option>Temeke</option>
             </select>
-
         </div> <!-- /controls -->
     </div> <!-- /control-group -->
 
@@ -433,8 +431,11 @@
 <button type="submit" class="btn btn-primary" id="psave">Save</button>
 </div> <!-- /controls -->               
 </div> <!-- /control-group -->
-</div>
- </form>
+
+</form>
+
+</div>	
+
 </fieldset>	
 
 </section>

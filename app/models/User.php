@@ -153,4 +153,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     }
 
+    public function notification(){
+        return $this->belongsTo('Notification','notification_id','id');
+
+    }
+
 }
