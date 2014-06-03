@@ -139,12 +139,17 @@ class DoctorController extends BaseController {
 
 	}
 
+	public function doc_profile(){
+		
+		return View::make('doctor.profile');
+
+	}
 	public function profile(){
 		$pid = Input::get('pid');
 		$patient = Patient::find($pid);
 		return View::make('doctor.showPatient',compact('patient'));
 
-	}		
+	}			
 
 	public function reports(){
 		return View::make('doctor.reports');
