@@ -10,9 +10,51 @@
 								
 			
 												
-			<div class="widget-content">	
+			<div class="widget-content">
+            <div class="span5">
+                <div id="bar-chart" class="chart-holder"></div> <!-- /bar-chart -->
+            </div>	
 
-				<div id="bar-chart" class="chart-holder"></div> <!-- /bar-chart -->				
+					
+                <div class="span3">
+                <div class="box">
+                <div class="widget-header">
+                    <span class="title">
+                        <i class="icon-reorder"></i> noticeboard                    </span>
+                </div>
+                <div style="max-height: 500px; overflow-y: auto" class="box-content scrollable">
+                
+                                        <div class="box-section news with-icons">
+                        <div class="avatar blue">
+                            <i class="icon-tag icon-2x"></i>
+                        </div>
+                        <div class="news-time">
+                            <span>02</span> Oct                        </div>
+                        <div class="news-content">
+                            <div class="news-title">
+                                Health Clinic at Cox’s bazar                            </div>
+                            <div class="news-text">
+                                 lorem ipsum dolor sit amet..lorem ipsum dolor sit amet..lorem ipsum dolor sit amet..                            </div>
+                        </div>
+                    </div>
+                                        <div class="box-section news with-icons">
+                        <div class="avatar blue">
+                            <i class="icon-tag icon-2x"></i>
+                        </div>
+                        <div class="news-time">
+                            <span>23</span> Oct                        </div>
+                        <div class="news-content">
+                            <div class="news-title">
+                                Workshop on first aid                            </div>
+                            <div class="news-text">
+                                 lorem ipsum dolor sit amet..lorem ipsum dolor sit amet..lorem ipsum dolor sit amet..                            </div>
+                        </div>
+                    </div>
+                           
+                                        
+                                    </div>
+                    
+                </div>			
 			</div> <!-- /widget-content -->
 		
 @stop
