@@ -687,7 +687,7 @@ class Route {
 	 */
 	public function httpOnly()
 	{
-		return in_array('http', $this->action, true);
+		return in_array('http', $this->action);
 	}
 
 	/**
@@ -707,7 +707,7 @@ class Route {
 	 */
 	public function secure()
 	{
-		return in_array('https', $this->action, true);
+		return in_array('https', $this->action);
 	}
 
 	/**
@@ -741,16 +741,6 @@ class Route {
 		$this->uri = $uri;
 
 		return $this;
-	}
-
-	/**
-	 * Get the prefix of the route instance.
-	 *
-	 * @return string
-	 */
-	public function getPrefix()
-	{
-		return array_get($this->action, 'prefix');
 	}
 
 	/**

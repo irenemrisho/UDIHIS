@@ -1,5 +1,6 @@
 <?php namespace Illuminate\Http;
 
+use Illuminate\Session\Store as SessionStore;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
@@ -27,16 +28,6 @@ class Request extends SymfonyRequest {
 	public function instance()
 	{
 		return $this;
-	}
-
-	/**
-	 * Get the request method.
-	 *
-	 * @return string
-	 */
-	public function method()
-	{
-		return $this->getMethod();
 	}
 
 	/**
@@ -102,7 +93,11 @@ class Request extends SymfonyRequest {
 	 */
 	public function segment($index, $default = null)
 	{
-		return array_get($this->segments(), $index - 1, $default);
+		$segments = explode('/', trim($this->getPathInfo(), '/'));
+
+		$segments = array_filter($segments, function($v) { return $v != ''; });
+
+		return array_get($segments, $index - 1, $default);
 	}
 
 	/**
@@ -112,9 +107,9 @@ class Request extends SymfonyRequest {
 	 */
 	public function segments()
 	{
-		$segments = explode('/', $this->path());
+		$path = $this->path();
 
-		return array_values(array_filter($segments));
+		return $path == '/' ? array() : explode('/', $path);
 	}
 
 	/**
@@ -127,7 +122,7 @@ class Request extends SymfonyRequest {
 	{
 		foreach (func_get_args() as $pattern)
 		{
-			if (str_is($pattern, urldecode($this->path())))
+			if (str_is($pattern, $this->path()))
 			{
 				return true;
 			}
@@ -157,27 +152,7 @@ class Request extends SymfonyRequest {
 	}
 
 	/**
-	 * Determine if the request contains a given input item key.
-	 *
-	 * @param  string|array  $key
-	 * @return bool
-	 */
-	public function exists($key)
-	{
-		$keys = is_array($key) ? $key : func_get_args();
-
-		$input = $this->all();
-
-		foreach ($keys as $value)
-		{
-			if ( ! array_key_exists($value, $input)) return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Determine if the request contains a non-emtpy value for an  input item.
+	 * Determine if the request contains a given input item.
 	 *
 	 * @param  string|array  $key
 	 * @return bool
@@ -313,7 +288,7 @@ class Request extends SymfonyRequest {
 	{
 		if (is_array($file = $this->file($key))) $file = head($file);
 
-		return $file instanceof \SplFileInfo && $file->getPath() != '';
+		return $file instanceof \SplFileInfo;
 	}
 
 	/**
@@ -534,8 +509,6 @@ class Request extends SymfonyRequest {
 	 * Get the session associated with the request.
 	 *
 	 * @return \Illuminate\Session\Store
-	 *
-	 * @throws \RuntimeException
 	 */
 	public function session()
 	{

@@ -554,7 +554,7 @@ class FinderTest extends Iterator\RealIteratorTestCase
         $finder = $this->buildFinder($adapter);
         $finder->in($locations)->depth('< 1')->name('test.php');
 
-        $this->assertCount(1, $finder);
+        $this->assertEquals(1, count($finder));
     }
 
     /**
@@ -735,7 +735,7 @@ class FinderTest extends Iterator\RealIteratorTestCase
             $this->assertIterator($this->toAbsolute(array('foo bar', 'test.php', 'test.py')), $finder->getIterator());
             $this->fail('Finder should throw an exception when opening a non-readable directory.');
         } catch (\Exception $e) {
-            $this->assertInstanceOf('Symfony\\Component\\Finder\\Exception\\AccessDeniedException', $e);
+            $this->assertEquals('Symfony\\Component\\Finder\\Exception\\AccessDeniedException', get_class($e));
         }
 
         // restore original permissions

@@ -4,7 +4,6 @@ php:
   - 5.3
   - 5.4
   - 5.5
-  - hhvm
 
 before_script:
     - cp tests/acceptance.conf.php.default tests/acceptance.conf.php
@@ -14,8 +13,3 @@ before_script:
 
 script:
     - php test-suite/run.php
-
-matrix:
-  allow_failures:
-    - php: hhvm
-  fast_finish: true

@@ -68,12 +68,11 @@ class HtmlBuilder {
 	 *
 	 * @param  string  $url
 	 * @param  array   $attributes
-	 * @param  bool    $secure
 	 * @return string
 	 */
-	public function script($url, $attributes = array(), $secure = null)
+	public function script($url, $attributes = array())
 	{
-		$attributes['src'] = $this->url->asset($url, $secure);
+		$attributes['src'] = $this->url->asset($url);
 
 		return '<script'.$this->attributes($attributes).'></script>'.PHP_EOL;
 	}
@@ -83,16 +82,15 @@ class HtmlBuilder {
 	 *
 	 * @param  string  $url
 	 * @param  array   $attributes
-	 * @param  bool    $secure
 	 * @return string
 	 */
-	public function style($url, $attributes = array(), $secure = null)
+	public function style($url, $attributes = array())
 	{
 		$defaults = array('media' => 'all', 'type' => 'text/css', 'rel' => 'stylesheet');
 
 		$attributes = $attributes + $defaults;
 
-		$attributes['href'] = $this->url->asset($url, $secure);
+		$attributes['href'] = $this->url->asset($url);
 
 		return '<link'.$this->attributes($attributes).'>'.PHP_EOL;
 	}
@@ -103,14 +101,13 @@ class HtmlBuilder {
 	 * @param  string  $url
 	 * @param  string  $alt
 	 * @param  array   $attributes
-	 * @param  bool    $secure
 	 * @return string
 	 */
-	public function image($url, $alt = null, $attributes = array(), $secure = null)
+	public function image($url, $alt = null, $attributes = array())
 	{
 		$attributes['alt'] = $alt;
 
-		return '<img src="'.$this->url->asset($url, $secure).'"'.$this->attributes($attributes).'>';
+		return '<img src="'.$this->url->asset($url).'"'.$this->attributes($attributes).'>';
 	}
 
 	/**

@@ -18,7 +18,7 @@ class IcuResFileDumperTest extends \PHPUnit_Framework_TestCase
 {
     public function testDump()
     {
-        if (!function_exists('mb_convert_encoding')) {
+        if (!extension_loaded('mbstring')) {
             $this->markTestSkipped('This test requires mbstring to work.');
         }
 
