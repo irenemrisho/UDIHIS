@@ -38,26 +38,33 @@
 			    <div class="btn-toolbar" data-role="editor-toolbar"
     data-target="#consultNotes">
    <a data-edit="bold">...</a>
-    </div> 
+    </div>
+    
 			<p><b>Consultation Notes</b></p>
 			<textarea class="span8 form-control"  rows="6" id="consultNotes" value="">
 			{{$patient1->consultation}}
 
 			</textarea>
-		</td>
-	</tr>
-</table>
-<div class="" id="{{$patient->id}}">
+			<div class="control-group">											
+				<label class="control-label "  for="username">Next Visit</label>
+				<div class="controls">
+				<input type="text" class="input-xlarge date" value="" name="admit_date" id="" value="" />
+					
+				</div> <!-- /controls -->				
+			</div> <!-- /control-group -->
+    <div class="" id="{{$patient->id}}">
 <input id="pid" type="hidden" value="{{$patient->id}}" />
-<button class="btn btn-primary" id="nextVisit">Next Visit</button>
-
 <button class="btn btn-primary" id="admit">Admit</button>
 <button class="btn btn-primary" id="laboratory">Laboratory</button>
 <button class="btn btn-primary" id="prescribe">Prescribe</button>
 </div>
-<script type="text/javascript">
-	    
+		</td>
 
+	</tr>
+</table>
+
+<script type="text/javascript">
+	  
 					 $('#laboratory').on('click', function(){
 					        var pid = $('#pid').val();
 					        window.location = "patients/lab_test/" + pid;
