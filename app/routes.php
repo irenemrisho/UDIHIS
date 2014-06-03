@@ -38,7 +38,7 @@ Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('allpatients','DoctorController@patients');
 Route::get('patients/prescribe/backpatients','DoctorController@patients');
-Route::get('profile','DoctorController@profile');
+Route::get('profile','DoctorController@doc_profile');
 Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
