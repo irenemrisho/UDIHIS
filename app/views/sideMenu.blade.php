@@ -8,7 +8,7 @@
     <li><a href="manage_user"><i class="icon-exchange"></i>Manage users</a></li>
     <li><a href="manage_noticeboard"><i class="icon-exchange"></i>Manage noticeboard</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Setting</a></li>
-    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+    <li><a href="profile"><i class="icon-user"></i>My account</a></li>
 </ul>
 @endif
 
@@ -44,7 +44,7 @@
     <li><a href="{{url("appointRegister")}}"><i class="icon-exchange"></i>Appointment </a></li>
 
     <li><a href="{{url("reception/reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("reception/profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
 
 @endif
@@ -70,7 +70,7 @@
     <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
     <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="{{url("profile")}}"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("doctor/profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
 @endif
 
@@ -94,7 +94,7 @@
     <li><a href="{{url("hr/manage_person")}}"><i class="icon-user-md"></i>Manage Employees</a></li>
     <li><a href="{{url("hr/position")}}"><i class="icon-user-md"></i>Add Position</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+    <li><a href="{{url("hr/profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
 
 @endif

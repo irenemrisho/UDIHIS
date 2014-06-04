@@ -14,17 +14,26 @@
 class AdminController  extends BaseController{
 
 
-    public function __construct(){
+    public function __construct()
+    {
             $this->beforeFilter('auth', array('*'));
     }
 
-    public function getIndex(){
+    public function getIndex()
+    {
             return View::make("admin.admini_page");
     }
-    		public function manage_user(){
+    
+    public function manage_user()
+    {
             return View::make("admin.manage_user");
     }
 
+    public function admin_profile()
+    {
+        
+             return View::make('admin.admin_profile');
+    }
 
      public function editUser($id){
 

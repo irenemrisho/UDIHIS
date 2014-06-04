@@ -2,6 +2,25 @@
 @section('main')
 <h1 class="page-title"><i class="icon-th-large"></i>Person Other Informations</h1>
 <div class="widget-content">
+	<div class="span6">
+		<table class="table table-striped">
+    		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
+    		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
+    		<tr><td>Residence</td><td>{{$person->residence}}</td></tr>
+    		<tr><td>Place of Domicile</td><td>{{$person->place_of_domicile}}</td></tr>
+    		<tr><td>Nationality</td><td>{{$person->nationality}}</td></tr>
+    	</table>
+	</div>
+	<div class="span2">
+			@if($person->photo=="")
+			{{HTML::image("http://placehold.it/150x120","", array('class'=>'img-rounded'))}}
+			@else
+    		{{HTML::image("uploads/hr/{$person->photo}","",array('class'=>'img-rounded thumbnail', 'style'=>'height:150px;width:120px'))}}
+    		@endif
+    	
+	</div>
+</div>
+<div class="widget-content">
 	<div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#contact" data-toggle="tab">Contact Information</a></li>
@@ -13,8 +32,7 @@
               <div class="tab-pane fade in active" id="contact">
 
                 	<form id="contactform" action="{{URL::to('person/edit1/' . $person->id )}}" method="POST">
-                		<div class="span4 pull-left">
-                         <h4>{{$person->firstname}}</h4>
+                		<div class="span4 pull-left">                        
                 			<h4>Personal Contact Information</h4>
 	                		<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>
