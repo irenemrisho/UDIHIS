@@ -163,7 +163,7 @@ class RouteCollection implements Countable, IteratorAggregate {
 	}
 
 	/**
-	 * Throw a method not allowed HTTP exception.
+	 * Throw a methdo not allowed HTTP exception.
 	 *
 	 * @param  string  $other
 	 * @return void

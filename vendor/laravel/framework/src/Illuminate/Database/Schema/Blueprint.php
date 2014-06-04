@@ -361,18 +361,6 @@ class Blueprint {
 	}
 
 	/**
-	 * Create a new char column on the table.
-	 *
-	 * @param  string  $column
-	 * @param  int  $length
-	 * @return \Illuminate\Support\Fluent
-	 */
-	public function char($column, $length = 255)
-	{
-		return $this->addColumn('char', $column, compact('length'));
-	}
-
-	/**
 	 * Create a new string column on the table.
 	 *
 	 * @param  string  $column

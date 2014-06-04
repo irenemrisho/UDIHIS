@@ -206,7 +206,7 @@ class ConnectionFactory {
 	 *
 	 * @throws \InvalidArgumentException
 	 */
-	protected function createConnection($driver, PDO $connection, $database, $prefix = '', array $config = array())
+	protected function createConnection($driver, PDO $connection, $database, $prefix = '', $config = null)
 	{
 		if ($this->container->bound($key = "db.connection.{$driver}"))
 		{

@@ -923,17 +923,6 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertExceptionsAreCaught();
     }
 
-    public function testShouldCatchExceptionsWhenReloadingAndNoCacheRequest()
-    {
-        $this->catchExceptions();
-
-        $this->setNextResponse();
-        $this->cacheConfig['allow_reload'] = true;
-        $this->request('GET', '/', array(), array(), false, array('Pragma' => 'no-cache'));
-
-        $this->assertExceptionsAreCaught();
-    }
-
     public function testShouldNotCatchExceptions()
     {
         $this->catchExceptions(false);

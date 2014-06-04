@@ -6,6 +6,7 @@
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="admin"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="manage_user"><i class="icon-exchange"></i>Manage users</a></li>
+    <li><a href="manage_noticeboard"><i class="icon-exchange"></i>Manage noticeboard</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Setting</a></li>
     <li><a href="#"><i class="icon-user"></i>My account</a></li>
 </ul>
@@ -48,6 +49,19 @@
 
 @endif
 
+
+@if(Auth::user()->level == 6)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="{{url("nurse")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("allocate_ward")}}" id="patient"><i class="icon-user-md"></i>Allocate_Patient</a></li>
+    <li><a href="{{url("admitted_patients")}}" id="patient"><i class="icon-user-md"></i>Manage Admitted Patients</a></li>
+    <li><a href="{{url("reports")}}"><i class="icon-user"></i>Manage Reports</a></li>
+    <li><a href="{{url("myAccount")}}"><i class="icon-user"></i>My account</a></li>
+</ul>
+
+@endif
+
+
 @if(Auth::user()->level == 4)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
@@ -71,24 +85,24 @@
 </ul>
 @endif
 
-@if(Auth::user()->level == 6)
-<ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class=""><a href="{{url("index")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="admission/allocate_ward" id="patient"><i class="icon-user-md"></i>Allocate Ward</a></li>
-    <li><a href="" id="patient"><i class="icon-user-md"></i>Manage Wards</a></li>
-    <li><a href="admission/dosage"><i class="icon-exchange"></i>Dosage</a></li>
-
-    <li><a href=""><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href=""><i class="icon-user"></i>My account</a></li>
-</ul>
-
-@endif
 
 @if(Auth::user()->level == 7)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("hr")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Manage People</a></li>
+    <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Register Employee</a></li>
+    <li><a href="{{url("hr/manage_person")}}"><i class="icon-user-md"></i>Manage Employees</a></li>
     <li><a href="{{url("hr/position")}}"><i class="icon-user-md"></i>Add Position</a></li>
+    <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+</ul>
+
+@endif
+
+@if(Auth::user()->level == 8)
+<ul id="main-nav" class="nav nav-tabs nav-stacked">
+    <li class=""><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="#"><i class="icon-user-md"></i>Manage Patients</a></li>
+    <li><a href="#"><i class="icon-user-md"></i>Add</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="#"><i class="icon-user"></i>My account</a></li>
 </ul>

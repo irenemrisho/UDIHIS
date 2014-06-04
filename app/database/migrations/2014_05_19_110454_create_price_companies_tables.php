@@ -17,7 +17,6 @@ class CreatePriceCompaniesTables extends Migration {
 			$table->String('service_id')->nullable();
 			$table->String('company_id')->nullable();
 			$table->String('price')->nullable();
-			
 			$table->timestamps();
 
 		});

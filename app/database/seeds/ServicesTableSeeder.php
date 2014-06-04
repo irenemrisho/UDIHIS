@@ -11,13 +11,13 @@ class ServicesTableSeeder extends Seeder {
 		Service::create(array(
 
 				"name"=>"registration",
-				"price"=> 5000,
+				
 				
 			));
 		Service::create(array(
 
 				"name"=>"consultation",
-				"price"=> 5000,
+				
 				
 			));
 

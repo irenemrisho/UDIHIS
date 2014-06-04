@@ -4,7 +4,6 @@ use Closure;
 use Illuminate\Events\Dispatcher;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger as MonologLogger;
-use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RotatingFileHandler;
 
 class Writer {
@@ -84,9 +83,7 @@ class Writer {
 	{
 		$level = $this->parseLevel($level);
 
-		$this->monolog->pushHandler($handler = new StreamHandler($path, $level));
-
-		$handler->setFormatter(new LineFormatter(null, null, true));
+		$this->monolog->pushHandler(new StreamHandler($path, $level));
 	}
 
 	/**
@@ -101,9 +98,7 @@ class Writer {
 	{
 		$level = $this->parseLevel($level);
 
-		$this->monolog->pushHandler($handler = new RotatingFileHandler($path, $days, $level));
-
-		$handler->setFormatter(new LineFormatter(null, null, true));
+		$this->monolog->pushHandler(new RotatingFileHandler($path, $days, $level));
 	}
 
 	/**

@@ -24,7 +24,7 @@ class ElementParserTest extends \PHPUnit_Framework_TestCase
     {
         $parser = new ElementParser();
         $selectors = $parser->parse($source);
-        $this->assertCount(1, $selectors);
+        $this->assertEquals(1, count($selectors));
 
         /** @var SelectorNode $selector */
         $selector = $selectors[0];

@@ -18,20 +18,29 @@ class AdmissionController  extends BaseController{
         return View::make('admission.nurse',compact('patient'));
     }
 
-      public function dosage(){
+      public function patients(){
 
-        /*$patient = Patient::find();*/
-        return View::make('admission.dosage',compact('patient'));
+        $patient = Patient::all();
+         $pv = Patients_visit::all();
+        return View::make('admission.patients',compact('patient' , 'pv'));
     }
 
-     public function allocate_ward(){
+     public function allocate_ward($id){
 
-        /*$patient = Patient::find();*/
+        $patient = Patient::find($id);
+        $pv = Patients_visit::find($id);
         return View::make('admission.allocate_ward',compact('patient'));
     }
 
 
-    public function update($id){
+    public function manage_patient($id){
+      $patient = Patient::find($id);
+      return View::make('admission.manage_patient',compact('patient'));  
+        
+    }
+     public function allocate(){
+      
+    return "Please Specify the patient ID to allocate!!" ; 
         
     }
 
