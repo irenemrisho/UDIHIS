@@ -92,6 +92,12 @@ Route::post('billing/campanies_price','BillingController@campanyPrice');
 Route::get('add_campany_price','BillingController@addCampanyPrice');
 Route::post('add_campany_price','BillingController@saveCampanyPrice');
 
+Route::post('billing/patients_paids','BillingController@getPaidModel');
+
+Route::get('getPaymentInvoice','BillingController@get_patient_invoice');
+Route::get('getPaymentReceipt','BillingController@get_patient_patient');
+
+
 ///Receptionist
 /*for listsing patients and adding*/
 Route::get('reception/reports','ReceptionController@reports');

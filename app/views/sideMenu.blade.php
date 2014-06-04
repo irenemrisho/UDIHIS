@@ -62,7 +62,7 @@
 @if(Auth::user()->level == 5)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("billing")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment</a></li>
+    <li><a href="{{url("Pending_bills")}}"><i class="icon-money"></i>Payment<span class="label label-warning pull-right ">{{ Payment::where('status','=','unpaid')->count() }}</span></a></li>
     <li><a href="{{url("Insurance_management")}}"><i class="icon-user-md"></i>Insurance management</a></li>
     <li><a href="{{url("service_management")}}"><i class="icon-certificate"></i>Manage service</a></li>
     <li><a href="{{url("manage_report")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
