@@ -11,9 +11,6 @@
   |
  */
 
-
-
-
 //Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
@@ -82,7 +79,7 @@ Route::get('Insurance_management','BillingController@getInsurance');
 Route::post('Insurance_management','BillingController@addInsurance');
 Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
-Route::get('reports_billing','BillingController@getReports');
+Route::get('manage_report','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
 Route::get('My_account_billing','BillingController@getAccount');
 Route::post('billing/patients_payments','BillingController@profile');
@@ -94,6 +91,12 @@ Route::post('billing/campanies_price','BillingController@campanyPrice');
 
 Route::get('add_campany_price','BillingController@addCampanyPrice');
 Route::post('add_campany_price','BillingController@saveCampanyPrice');
+
+Route::post('billing/patients_paids','BillingController@getPaidModel');
+
+Route::get('getPaymentInvoice','BillingController@get_patient_invoice');
+Route::get('getPaymentReceipt','BillingController@get_patient_patient');
+
 
 ///Receptionist
 /*for listsing patients and adding*/
@@ -165,9 +168,11 @@ Route::post('reception/generateReports', 'ReportsController@generateReports');
 //Admission routes
 Route::get('/nurse', 'AdmissionController@index');
 Route::get('admitted_patients', 'AdmissionController@patients');
-Route::get('allocate_ward', 'AdmissionController@allocate_ward');
+Route::get('allocate_ward/{id}', 'AdmissionController@allocate_ward');
 Route::get('administer_dosage', 'AdmissionController@patients');
 Route::get('maintain_inp_info', 'AdmissionController@manage_inp_info');
+Route::get('manage/{id}', 'AdmissionController@manage_patient');
+Route::get('allocate_ward', 'AdmissionController@allocate');
 //Routes for HumanResource
 
 Route::get('hr', 'HumanResourceController@index');

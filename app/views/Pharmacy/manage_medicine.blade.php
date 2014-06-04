@@ -1,4 +1,25 @@
 @extends('dashboard')
+@section('page_specific_css')
+    <!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+    <!-- Datatable includes -->
+    {{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+    <script type="text/javascript">
+            $('#provide_medication_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+            
+            $('#manage_medicine_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+    </script>
+@stop
 @section('main')
 <h1 class="page-title">
 					<i class="icon-th-large"></i>
@@ -106,16 +127,10 @@
 										<div class="tab-pane active" id="1">
                                                                                         
 											<div class="widget widget-table">
-										
-	<div class="widget-header">
-			    <form class="form-search" style="margin-left:4px">
-				    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
-				</form> 
-	</div> <!-- /widget-header -->
+											
+											<div class="widget-content">
 												
-												<div class="widget-content">
-												
-													<table class="table table-striped table-bordered" id="mtable">
+													<table id="manage_medicine_table" class="table table-striped table-bordered" id="mtable">
 													 				
 															
 														

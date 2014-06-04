@@ -376,11 +376,12 @@ if ( ! function_exists('array_pull'))
 	 *
 	 * @param  array   $array
 	 * @param  string  $key
+	 * @param  mixed   $default
 	 * @return mixed
 	 */
-	function array_pull(&$array, $key)
+	function array_pull(&$array, $key, $default = null)
 	{
-		$value = array_get($array, $key);
+		$value = array_get($array, $key, $default);
 
 		array_forget($array, $key);
 
@@ -484,6 +485,7 @@ if ( ! function_exists('base_path'))
 	/**
 	 * Get the path to the base of the install.
 	 *
+	 * @param  string  $path
 	 * @return string
 	 */
 	function base_path($path = '')
@@ -546,6 +548,50 @@ if ( ! function_exists('csrf_token'))
 	}
 }
 
+if ( ! function_exists('data_get'))
+{
+	/**
+	 * Get an item from an array or object using "dot" notation.
+	 *
+	 * @param  mixed   $target
+	 * @param  string  $key
+	 * @param  mixed   $default
+	 * @return mixed
+	 */
+	function data_get($target, $key, $default = null)
+	{
+		if (is_null($key)) return $target;
+
+		foreach (explode('.', $key) as $segment)
+		{
+			if (is_array($target))
+			{
+				if ( ! array_key_exists($segment, $target))
+				{
+					return value($default);
+				}
+
+				$target = $target[$segment];
+			}
+			elseif (is_object($target))
+			{
+				if ( ! isset($target->{$segment}))
+				{
+					return value($default);
+				}
+
+				$target = $target->{$segment};
+			}
+			else
+			{
+				return value($default);
+			}
+		}
+
+		return $target;
+	}
+}
+
 if ( ! function_exists('dd'))
 {
 	/**
@@ -579,8 +625,8 @@ if ( ! function_exists('ends_with'))
 	/**
 	 * Determine if a given string ends with a given substring.
 	 *
-	 * @param string $haystack
-	 * @param string|array $needle
+	 * @param string  $haystack
+	 * @param string|array  $needle
 	 * @return bool
 	 */
 	function ends_with($haystack, $needle)
@@ -697,7 +743,7 @@ if ( ! function_exists('object_get'))
 	 */
 	function object_get($object, $key, $default = null)
 	{
-		if (is_null($key) or trim($key) == '') return $object;
+		if (is_null($key) || trim($key) == '') return $object;
 
 		foreach (explode('.', $key) as $segment)
 		{
@@ -738,6 +784,7 @@ if ( ! function_exists('public_path'))
 	/**
 	 * Get the path to the public folder.
 	 *
+	 * @param  string  $path
 	 * @return string
 	 */
 	function public_path($path = '')
@@ -752,7 +799,7 @@ if ( ! function_exists('route'))
 	 * Generate a URL to a named route.
 	 *
 	 * @param  string  $route
-	 * @param  string  $parameters
+	 * @param  array   $parameters
 	 * @return string
 	 */
 	function route($route, $parameters = array())
@@ -825,6 +872,7 @@ if ( ! function_exists('storage_path'))
 	/**
 	 * Get the path to the storage folder.
 	 *
+	 * @param   string  $path
 	 * @return  string
 	 */
 	function storage_path($path = '')
@@ -838,7 +886,7 @@ if ( ! function_exists('str_contains'))
 	/**
 	 * Determine if a given string contains a given substring.
 	 *
-	 * @param  string        $haystack
+	 * @param  string  $haystack
 	 * @param  string|array  $needle
 	 * @return bool
 	 */
@@ -912,12 +960,12 @@ if ( ! function_exists('str_plural'))
 if ( ! function_exists('str_random'))
 {
 	/**
-	 * Generate a "random" alpha-numeric string.
-	 *
-	 * Should not be considered sufficient for cryptography, etc.
+	 * Generate a more truly "random" alpha-numeric string.
 	 *
 	 * @param  int     $length
 	 * @return string
+	 *
+	 * @throws \RuntimeException
 	 */
 	function str_random($length = 16)
 	{
@@ -931,7 +979,7 @@ if ( ! function_exists('str_replace_array'))
 	 * Replace a given value in the string sequentially with an array.
 	 *
 	 * @param  string  $search
-	 * @param  array  $replace
+	 * @param  array   $replace
 	 * @param  string  $subject
 	 * @return string
 	 */
