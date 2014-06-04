@@ -108,5 +108,20 @@ class AdminController  extends BaseController{
 				return Redirect::to('manage_user');
 			}
   	}
+
+    public function manageNoticeboard(){
+        return View::make('admin.noticeboard');
+    }
+
+    public function addNoticeboard(){
+
+        $notice = new Notification();
+        $notice->title=Input::get('title');
+        $notice->message=Input::get('message');
+        $notice->date=Input::get('date');
+        $notice->save();
+
+        return Redirect::to('manage_noticeboard');
+    }
   }
-    //put your code here
+    //put your code here 

@@ -102,7 +102,7 @@ class Handler {
 	 */
 	protected function registerExceptionHandler()
 	{
-		set_exception_handler(array($this, 'handleUncaughtException'));
+		set_exception_handler(array($this, 'handleException'));
 	}
 
 	/**
@@ -126,11 +126,11 @@ class Handler {
 	 *
 	 * @throws \ErrorException
 	 */
-	public function handleError($level, $message, $file = '', $line = 0, $context = array())
+	public function handleError($level, $message, $file, $line, $context)
 	{
 		if (error_reporting() & $level)
 		{
-			throw new ErrorException($message, 0, $level, $file, $line);
+			throw new ErrorException($message, $level, 0, $file, $line);
 		}
 	}
 
@@ -138,7 +138,7 @@ class Handler {
 	 * Handle an exception for the application.
 	 *
 	 * @param  \Exception  $exception
-	 * @return \Symfony\Component\HttpFoundation\Response
+	 * @return void
 	 */
 	public function handleException($exception)
 	{
@@ -149,24 +149,31 @@ class Handler {
 		// type of exceptions to handled by a Closure giving great flexibility.
 		if ( ! is_null($response))
 		{
-			return $this->prepareResponse($response);
+			$response = $this->prepareResponse($response);
 		}
 
 		// If no response was sent by this custom exception handler, we will call the
 		// default exception displayer for the current application context and let
 		// it show the exception to the user / developer based on the situation.
-		return $this->displayException($exception);
+		else
+		{
+			$response = $this->displayException($exception);
+		}
+
+		return $this->sendResponse($response);
 	}
 
 	/**
-	 * Handle an uncaught exception.
+	 * Send the repsonse back to the client.
 	 *
-	 * @param  \Exception  $exception
-	 * @return void
+	 * @param  \Symfony\Component\HttpFoundation\Response  $response
+	 * @return mixed
 	 */
-	public function handleUncaughtException($exception)
+	protected function sendResponse($response)
 	{
-		$this->handleException($exception)->send();
+		return $this->responsePreparer->readyForResponses() && ! $this->runningInConsole()
+								? $response
+								: $response->send();
 	}
 
 	/**

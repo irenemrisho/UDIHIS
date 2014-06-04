@@ -41,3 +41,63 @@
 .span4{
 	margin-right: 5px;
 }
+.box {
+    background: none repeat scroll 0 0 #FBFBFB;
+    border: 1px solid #CDCDCD;
+    border-radius: 0;
+    box-shadow: 0 2px 2px -2px #CCCCCC;
+    margin-bottom: 20px;
+}
+.news-title {
+    color: #636364;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.news .avatar.blue {
+    background: -moz-linear-gradient(center top , #A5CAE1, #0F7F9A) repeat scroll 0 0 / 100% auto #7FB3D4;
+    border: 1px solid #60A1CA;
+}
+.news .avatar {
+    border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 36px;
+}
+.box-section {
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.news .avatar i {
+    color: #FFFFFF;
+    line-height: 36px;
+}
+.icon-2x {
+    font-size: 2em;
+}  
+.news.with-icons .news-content {
+    margin-left: 45px;
+}
+.news-content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.news-time {
+    color: #BBBBBB;
+    float: right;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.box .box-header .title, .box .box-footer .title {
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px;
+}

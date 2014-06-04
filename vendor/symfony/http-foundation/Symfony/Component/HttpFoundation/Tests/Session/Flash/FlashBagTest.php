@@ -150,6 +150,6 @@ class FlashBagTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertEquals(count($flashes), $i);
-        $this->assertCount(0, $this->bag->all());
+        $this->assertEquals(0, count($this->bag->all()));
     }
 }

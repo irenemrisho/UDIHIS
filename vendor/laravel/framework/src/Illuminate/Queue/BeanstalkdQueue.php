@@ -21,24 +21,15 @@ class BeanstalkdQueue extends Queue implements QueueInterface {
 	protected $default;
 
 	/**
-	 * The "time to run" for all pushed jobs.
-	 *
-	 * @var int
-	 */
-	protected $timeToRun;
-
-	/**
 	 * Create a new Beanstalkd queue instance.
 	 *
 	 * @param  Pheanstalk  $pheanstalk
 	 * @param  string  $default
-	 * @param  int  $timeToRun
 	 * @return void
 	 */
-	public function __construct(Pheanstalk $pheanstalk, $default, $timeToRun)
+	public function __construct(Pheanstalk $pheanstalk, $default)
 	{
 		$this->default = $default;
-		$this->timeToRun = $timeToRun;
 		$this->pheanstalk = $pheanstalk;
 	}
 
@@ -65,9 +56,7 @@ class BeanstalkdQueue extends Queue implements QueueInterface {
 	 */
 	public function pushRaw($payload, $queue = null, array $options = array())
 	{
-		return $this->pheanstalk->useTube($this->getQueue($queue))->put(
-			$payload, Pheanstalk::DEFAULT_PRIORITY, Pheanstalk::DEFAULT_DELAY, $this->timeToRun
-		);
+		return $this->pheanstalk->useTube($this->getQueue($queue))->put($payload);
 	}
 
 	/**
@@ -75,7 +64,7 @@ class BeanstalkdQueue extends Queue implements QueueInterface {
 	 *
 	 * @param  \DateTime|int  $delay
 	 * @param  string  $job
-	 * @param  mixed   $data
+	 * @param  mixed  $data
 	 * @param  string  $queue
 	 * @return mixed
 	 */

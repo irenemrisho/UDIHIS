@@ -14,6 +14,7 @@ namespace Monolog\Handler;
 use Aws\Common\Aws;
 use Aws\DynamoDb\DynamoDbClient;
 use Monolog\Formatter\ScalarFormatter;
+use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
 
 /**
@@ -38,9 +39,9 @@ class DynamoDbHandler extends AbstractProcessingHandler
 
     /**
      * @param DynamoDbClient $client
-     * @param string         $table
-     * @param integer        $level
-     * @param boolean        $bubble
+     * @param string $table
+     * @param integer $level
+     * @param boolean $bubble
      */
     public function __construct(DynamoDbClient $client, $table, $level = Logger::DEBUG, $bubble = true)
     {
@@ -69,12 +70,12 @@ class DynamoDbHandler extends AbstractProcessingHandler
     }
 
     /**
-     * @param  array $record
+     * @param array $record
      * @return array
      */
     protected function filterEmptyFields(array $record)
     {
-        return array_filter($record, function ($value) {
+        return array_filter($record, function($value) {
             return !empty($value) || false === $value || 0 === $value;
         });
     }

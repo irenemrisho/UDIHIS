@@ -77,8 +77,6 @@ class Builder {
 	 */
 	public function findMany($id, $columns = array('*'))
 	{
-		if (empty($id)) return new Collection;
-
 		$this->query->whereIn($this->model->getKeyName(), $id);
 
 		return $this->get($columns);
@@ -508,7 +506,7 @@ class Builder {
 		// Once we have the results, we just match those back up to their parent models
 		// using the relationship instance. Then we just return the finished arrays
 		// of models which have been eagerly hydrated and are readied for return.
-		$results = $relation->getEager();
+		$results = $relation->get();
 
 		return $relation->match($models, $results, $name);
 	}
@@ -579,7 +577,7 @@ class Builder {
 	{
 		$dots = str_contains($name, '.');
 
-		return $dots && starts_with($name, $relation.'.');
+		return $dots && starts_with($name, $relation) && $name != $relation;
 	}
 
 	/**
@@ -595,7 +593,7 @@ class Builder {
 	{
 		if ($column instanceof Closure)
 		{
-			$query = $this->model->newQuery(false);
+			$query = $this->model->newQuery();
 
 			call_user_func($column, $query);
 
@@ -603,7 +601,7 @@ class Builder {
 		}
 		else
 		{
-			call_user_func_array(array($this->query, 'where'), func_get_args());
+			$this->query->where($column, $operator, $value, $boolean);
 		}
 
 		return $this;
@@ -697,11 +695,6 @@ class Builder {
 	protected function addHasWhere(Builder $hasQuery, Relation $relation, $operator, $count, $boolean)
 	{
 		$this->mergeWheresToHas($hasQuery, $relation);
-
-		if (is_numeric($count))
-		{
-			$count = new Expression($count);
-		}
 
 		return $this->where(new Expression('('.$hasQuery->toSql().')'), $operator, $count, $boolean);
 	}

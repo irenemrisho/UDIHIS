@@ -23,13 +23,13 @@ class EmptyStringParserTest extends \PHPUnit_Framework_TestCase
     {
         $parser = new EmptyStringParser();
         $selectors = $parser->parse('');
-        $this->assertCount(1, $selectors);
+        $this->assertEquals(1, count($selectors));
 
         /** @var SelectorNode $selector */
         $selector = $selectors[0];
         $this->assertEquals('Element[*]', (string) $selector->getTree());
 
         $selectors = $parser->parse('this will produce an empty array');
-        $this->assertCount(0, $selectors);
+        $this->assertEquals(0, count($selectors));
     }
 }

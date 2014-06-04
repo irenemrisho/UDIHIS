@@ -17,7 +17,7 @@ class Queue implements HttpKernelInterface {
 	 *
 	 * @var \Illuminate\Cookie\CookieJar
 	 */
-	protected $cookies;
+	protected $encrypter;
 
 	/**
 	 * Create a new CookieQueue instance.

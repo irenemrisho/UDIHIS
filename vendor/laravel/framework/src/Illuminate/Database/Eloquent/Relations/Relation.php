@@ -94,16 +94,6 @@ abstract class Relation {
 	abstract public function getResults();
 
 	/**
-	 * Get the relationship for eager loading.
-	 *
-	 * @return \Illuminate\Database\Eloquent\Collection
-	 */
-	public function getEager()
-	{
-		return $this->get();
-	}
-
-	/**
 	 * Touch all of the related models for the relationship.
 	 *
 	 * @return void

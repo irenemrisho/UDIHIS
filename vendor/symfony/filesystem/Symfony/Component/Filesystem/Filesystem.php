@@ -433,11 +433,10 @@ class Filesystem
     /**
      * Atomically dumps content into a file.
      *
-     * @param  string       $filename The file to be written to.
-     * @param  string       $content  The data to write into the file.
-     * @param  null|integer $mode     The file mode (octal). If null, file permissions are not modified
-     *                                Deprecated since version 2.3.12, to be removed in 3.0.
-     * @throws IOException            If the file cannot be written to.
+     * @param  string  $filename The file to be written to.
+     * @param  string  $content  The data to write into the file.
+     * @param  integer $mode     The file mode (octal).
+     * @throws IOException       If the file cannot be written to.
      */
     public function dumpFile($filename, $content, $mode = 0666)
     {
@@ -456,9 +455,7 @@ class Filesystem
         }
 
         $this->rename($tmpFile, $filename, true);
-        if (null !== $mode) {
-            $this->chmod($filename, $mode);
-        }
+        $this->chmod($filename, $mode);
     }
 
     /**

@@ -127,9 +127,7 @@ class ProfilerListener implements EventSubscriberInterface
         foreach ($this->profiles as $request) {
             // isset call should be removed when requestStack is required
             if (isset($this->parents[$request]) && null !== $parentRequest = $this->parents[$request]) {
-                if (isset($this->profiles[$parentRequest])) {
-                    $this->profiles[$parentRequest]->addChild($this->profiles[$request]);
-                }
+                $this->profiles[$parentRequest]->addChild($this->profiles[$request]);
             }
         }
 

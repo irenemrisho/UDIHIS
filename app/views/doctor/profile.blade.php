@@ -2,7 +2,7 @@
 @section('main')
 	
 				<?php 
-				$individual=User::find(Auth::user()->id); 
+				$individual= User::find(Auth::user()->id); 
 
 				//$individual=Individual::account()->find($account->id); 
 				?>
@@ -23,7 +23,7 @@
 									  <li class="active">
 									    <a href="#1" data-toggle="tab">Profile</a>
 									  </li>
-									  <li class=""><a href="#2" data-toggle="tab">Settings</a></li>
+									  
 					
 									</ul>
 
@@ -70,22 +70,7 @@
 											</form>
 										</div>
 										
-										<div class="tab-pane" id="2">
-											<form id="edit-profile2" class="form-horizontal">
-												<fieldset>
-													<div class="control-group">
-														<label class="control-label" for="accounttype">SMS Notification<br/></label>
-														<div class="controls">
-															<label class="radio">
-																<label class="checkbox">
-																<input type="checkbox" name="accountadvanced" value="option1" checked="checked" id="accountadvanced">
-																I would like SMS Notification Service for every aapointment I have.
-															</label>
-															
-														</div>
-													</div>
-													
-													</div>
+						
 													
 													<div class="form-actions">
 														<button type="submit" class="btn btn-primary">Request</button> <button class="btn">Cancel</button>

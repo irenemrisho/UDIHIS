@@ -112,7 +112,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                        <?php $tests = Laboratory::where('tested','=','FALSE')->orderBy('id', 'DESC')->get(); $id=1;?>
+                                                        <?php $tests = Laboratory::where('tested','=','FALSE')->orderBy('id', 'DESC')->get(); $id=4;?>
                                                         @foreach($tests as $test)
                                                                 <?php
                                                                 $pid     = Patients_visit::find($test->pv_id)->patient_id;

@@ -673,7 +673,7 @@ class Environment {
 			$this->engines->register($engine, $resolver);
 		}
 
-		unset($this->extensions[$extension]);
+		unset($this->extensions[$engine]);
 
 		$this->extensions = array_merge(array($extension => $engine), $this->extensions);
 	}

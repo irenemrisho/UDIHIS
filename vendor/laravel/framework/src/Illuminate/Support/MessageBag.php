@@ -55,16 +55,11 @@ class MessageBag implements ArrayableInterface, Countable, JsonableInterface, Me
 	/**
 	 * Merge a new array of messages into the bag.
 	 *
-	 * @param  \Illuminate\Support\Contracts\MessageProviderInterface|array  $messages
+	 * @param  array  $messages
 	 * @return \Illuminate\Support\MessageBag
 	 */
-	public function merge($messages)
+	public function merge(array $messages)
 	{
-		if ($messages instanceof MessageProviderInterface)
-		{
-			$messages = $messages->getMessageBag()->getMessages();
-		}
-
 		$this->messages = array_merge_recursive($this->messages, $messages);
 
 		return $this;
@@ -257,7 +252,7 @@ class MessageBag implements ArrayableInterface, Countable, JsonableInterface, Me
 	 */
 	public function count()
 	{
-		return count($this->messages, COUNT_RECURSIVE) - count($this->messages);
+		return count($this->messages);
 	}
 
 	/**

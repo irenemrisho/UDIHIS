@@ -19,6 +19,8 @@ Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
+Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
+Route::post('/notification/add','AdminController@addNoticeboard');
 Route::post('/manage_user','Admin@addUser');
 Route::post('manage_user/search/', 'AdminController@search');
 
@@ -35,7 +37,7 @@ Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('allpatients','DoctorController@patients');
 Route::get('patients/prescribe/backpatients','DoctorController@patients');
-Route::get('profile','DoctorController@profile');
+Route::get('profile','DoctorController@doc_profile');
 Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
@@ -173,7 +175,8 @@ Route::get('hr/position', 'HumanResourceController@positionShow');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 
-//update the person informations  first
+//update the person informations  for the first time
+//first
 Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
 Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
@@ -181,6 +184,8 @@ Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
 Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 //fourth
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
+//display the page for persons
+Route::get('hr/manage_person', 'HumanResourceController@edit');
 
 
 

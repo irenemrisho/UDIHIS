@@ -109,7 +109,7 @@ class RoutesCommand extends Command {
 	 */
 	protected function getRouteInformation(Route $route)
 	{
-		$uri = implode('|', $route->methods()).' '.$route->uri();
+		$uri = head($route->methods()).' '.$route->uri();
 
 		return $this->filterRoute(array(
 			'host'   => $route->domain(),
