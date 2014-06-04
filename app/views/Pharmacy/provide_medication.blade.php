@@ -35,10 +35,7 @@
                         </div> <!-- /stat-container -->
 
                         <div class="widget-header">
-                         <form class="form-search" style="margin-left:4px">
-                    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
-                </form> 
-                           
+                            
                         </div> <!-- /widget-header -->
                     
                         <div class="widget-content">

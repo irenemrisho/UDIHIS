@@ -127,14 +127,8 @@
 										<div class="tab-pane active" id="1">
                                                                                         
 											<div class="widget widget-table">
-										
-	<div class="widget-header">
-			    <form class="form-search" style="margin-left:4px">
-				    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
-				</form> 
-	</div> <!-- /widget-header -->
-												
-												<div class="widget-content">
+											
+											<div class="widget-content">
 												
 													<table id="manage_medicine_table" class="table table-striped table-bordered" id="mtable">
 													 				
