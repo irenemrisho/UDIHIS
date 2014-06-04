@@ -8,6 +8,11 @@ Manage Patients New Visit
 <div class="span9">
 <div class="widget-content">
 
+    <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:150px">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Successfully updated! Redirecting...</strong>
+    </div>
+
     <form id="myWizard" type="get" action="">
 
         <section style="display:none" class="step" data-step-title="Initial Information">

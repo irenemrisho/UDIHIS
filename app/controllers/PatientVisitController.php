@@ -56,6 +56,7 @@ class PatientVisitController extends \BaseController {
         $this->addPayment("registration",$pid,$paymenttype);
 
         return url('manage/patients');
+
      }
 
 

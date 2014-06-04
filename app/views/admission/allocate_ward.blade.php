@@ -8,9 +8,9 @@ Allocate Ward To A Patient
 <div class="span9">
 <div class="widget-content">
 <form id="myWizard" type="get" action="">
-<h4 >Full name :  </h4>
+<h4 >Full name :  {{Patient::fullname($patient)}}</h4>
 <div class="">
-<h4> Hospital File no: UD/2014/<b></b></h4>
+<h4> Hospital File no:  UD/<b>{{$patient->filenumber}}</b></h4>
 <input name="pid" value="" type="hidden" />
 <label class="control-label">Direct To Ward</label>
 <p>Ward</p>
@@ -18,8 +18,15 @@ Allocate Ward To A Patient
 <option></option>
 <option>Male</option>
 <option>Female</option>
+</select> 
 
-</select>                   
+<section id ="section more">
+
+</section>   
+
+<section id ="section more">
+
+</section>                
 
 </fieldset>
 </section>

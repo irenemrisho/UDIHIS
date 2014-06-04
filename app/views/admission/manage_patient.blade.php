@@ -1,34 +1,35 @@
-
+@extends('dashboard')
+@section('main')
 <div class="widget-header"><h3>Inpatient Information </h3> <span class="pull-right" id="back" style="cursor:pointer; margin-right:8px"><i class=" icon-share"></i> Back </span> </div>
 <table class="table">
 	<tr>
-		<td><b>File Number:</b></td>
+		<td><b>File Number: {{$patient->filenumber}}</b></td>
 		
 		<td><b>Rhesus</b></td>
 		
 	</tr>
 	<tr>
-		<td><b>First Name:</b></td>
+		<td><b>First Name: {{$patient->firstname}}</b></td>
 		
-		<td><b>Birth Date</td>
+		<td><b>Birth Date: {{$patient->birth}}</td>
 		
 	</tr>
 	<tr>
-		<td><b>Last Name:</b></td>
+		<td><b>Last Name: {{$patient->lastname}}</b></td>
 	
-		<td><b>Weight:</td>
+		<td><b>Weight: {{$patient->weight}}</td>
 		
 	</tr>
 	<tr>
-		<td><b>Payment Type:</b></td>
+		<td><b>Payment Type: {{$patient->paymenttype}}</b></td>
 		
-		<td><b>Allergy:</b></td>
+		<td><b>Allergy: {{$patient->allergy}}</b></td>
 		
 	</tr>
 	<tr>
-		<td><b>Blood Group:</b></td>
+		<td><b>Blood Group:{{$patient->bloodgroup}}</b></td>
 		
-		<td><b>Gender:</b></td>
+		<td><b>Gender: {{$patient->gender}}</b></td>
 		
 	</tr>
 	<tr>
@@ -46,12 +47,15 @@
 	</tr>
 </table>
 <div class="" id="">
-<input id="pid" type="hidden" value="" />
+<input id="pid" type="hidden" value="{{$patient->id}}" />
 <button class="btn btn-primary" id="nextVisit">Discharge</button>
 
 <button class="btn btn-primary" id="admit">Transfer</button>
 
 </div>
+
+@stop
+
 <script type="text/javascript">
 	    
 
