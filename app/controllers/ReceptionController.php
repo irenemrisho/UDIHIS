@@ -18,8 +18,13 @@ class ReceptionController  extends BaseController{
     }
 
     public function index(){
-            return View::make('reception.managepatients');
+        return View::make('reception.managepatients');
     }
+
+    public function edit_profile(){
+        return View::make('reception.profile');
+    }
+
 
     public function reports(){
         return View::make('reception.reports');

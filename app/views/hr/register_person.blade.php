@@ -1,9 +1,10 @@
 @extends('dashboard')
+
 @section('main')
 <h1 class="page-title"><i class="icon-th-large"></i>Add Person</h1>
 <div class="widget-content">
 	
-		<form id="addform" action="{{url("person/add")}}" method="POST">
+		<form id="addform" action="{{url("person/add")}}" method="POST" enctype="multipart/form-data">
 			<div class="span4 pull-left" >
 				<h4>Personal Information </h4>
 				<div class="control-group">
@@ -134,7 +135,7 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="domicide">Place of Domicede*</label>
+					<label class="control-label" for="domicide">Place of Domicele*</label>
 					<div class="controls">
 					<input type="text" class="input-xlarge " id="" value="" name="domicide" required/>
 					</div>
@@ -193,10 +194,7 @@
 					</div>
 				</div>
 				<div style="position:relative;">
-					<a class='btn btn-primary' href='javascript:;'>
-					Upload photo...
-					<input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
-					</a>&nbsp;<span class='label label-info' id="upload-file-info"></span>
+					Image{{Form::file('img',array('class'=>'')) }}
 				</div>
 				<br>
 				<button type="reset" class="btn">Reset</button>

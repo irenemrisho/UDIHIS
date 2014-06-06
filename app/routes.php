@@ -17,12 +17,13 @@ Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
-Route::post('users/delete/{id}', 'UserController@destroy');
+Route::post('/users/delete/{id}', 'UserController@destroy');
 Route::get('/manage_user','Admin@manage_user');
 Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
+Route::get('/profile','AdminController@admin_profile');
 Route::post('/notification/add','AdminController@addNoticeboard');
 Route::post('/manage_user','Admin@addUser');
-Route::post('manage_user/search/', 'AdminController@search');
+Route::post('/manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');
 Route::get('/manage_user/{id}','Admin@manage_user');
@@ -37,7 +38,7 @@ Route::get('doctor','DoctorController@index');
 Route::get('appointment','DoctorController@appointment');
 Route::get('allpatients','DoctorController@patients');
 Route::get('patients/prescribe/backpatients','DoctorController@patients');
-Route::get('profile','DoctorController@doc_profile');
+Route::get('doctor/profile','DoctorController@doc_profile');
 Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
@@ -78,7 +79,7 @@ Route::get('Insurance_management','BillingController@getInsurance');
 Route::post('Insurance_management','BillingController@addInsurance');
 Route::get('service_management','BillingController@getService');
 Route::post('service_management','BillingController@addService');
-Route::get('reports_billing','BillingController@getReports');
+Route::get('manage_report','BillingController@getReports');
 Route::get('profile_billing','BillingController@getProfile');
 Route::get('My_account_billing','BillingController@getAccount');
 Route::post('billing/patients_payments','BillingController@profile');
@@ -91,6 +92,12 @@ Route::post('billing/campanies_price','BillingController@campanyPrice');
 Route::get('add_campany_price','BillingController@addCampanyPrice');
 Route::post('add_campany_price','BillingController@saveCampanyPrice');
 
+Route::post('billing/patients_paids','BillingController@getPaidModel');
+
+Route::get('getPaymentInvoice','BillingController@get_patient_invoice');
+Route::get('getPaymentReceipt','BillingController@get_patient_patient');
+
+
 ///Receptionist
 /*for listsing patients and adding*/
 Route::get('reception/reports','ReceptionController@reports');
@@ -99,6 +106,7 @@ Route::post('patients/loadsection', 'ReceptionController@loadsection');
 Route::post('patients/savepatientinfo', 'ReceptionController@savepatientinfo');
 Route::post('patients/savepatientinfo1', 'ReceptionController@patientinfo');
 Route::get('reception', 'ReceptionController@getIndex');
+Route::get('reception/profile', 'ReceptionController@edit_profile');
 Route::get('manage/patients', 'ReceptionController@index');
 Route::get('patient/edit/{id}', 'ReceptionController@update');
 Route::post('patient/edit/{id}', 'ReceptionController@edit');
@@ -172,6 +180,7 @@ Route::get('hr/person', 'HumanResourceController@person');
 Route::post('person/add', 'HumanResourceController@personStore');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 Route::get('hr/position', 'HumanResourceController@positionShow');
+Route::get('hr/profile', 'HumanResourceController@hr_profile');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 

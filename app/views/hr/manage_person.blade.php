@@ -55,13 +55,9 @@
                                 rel="tooltip" class="btn btn-small fetchuser" data-original-title="edit"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>
-                                <a href="{{url("print/$person->id")}}"
-                                rel="tooltip" data-placement="top" data-original-title="print" class="btn btn-small btn-primary">
-                                <i class="icon-print"></i>
-                                </a>
                                 <a href="{{url("patient/visit/$person->id")}}"
-                                rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-success">
-                                <i class="icon-exchange"></i>
+                                rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-primary">
+                                <i class="icon-wrench"></i>
                                 </a>
                             </td>
 
