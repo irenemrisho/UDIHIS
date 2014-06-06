@@ -113,18 +113,12 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td>HR make a new roster. All nurses should be on roaster this weekend</td>
-                                    <td>Sat 12</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Board embers meeting. All doctors and head of section meeting</td>
-                                    <td>Mon 24</td>
-                                  </tr>
-                                  <tr>
-                                    <td>General facility cleanliness. All nurses and should participate in each section</td>
-                                    <td>Fri 29</td>
-                                  </tr>
+                                <?php $notice = Notification::all(); ?>
+                                @foreach($notice as $notice)
+                                <tr><td>{{$notice->message}}</td>
+                                    <td>{{$notice->date}}</td>
+                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

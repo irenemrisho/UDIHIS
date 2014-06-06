@@ -9,7 +9,8 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('hr.hrdashboard');
+        $notice = Notification::all();
+		return View::make('hr.hrdashboard', compact("notice"));
 	}
 
 	public function person()
