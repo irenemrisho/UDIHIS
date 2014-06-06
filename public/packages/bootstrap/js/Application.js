@@ -506,6 +506,8 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    
+
     $('.fetch-price').on('click', function(){
 
         var id = $(this).parent().attr('id');
@@ -521,6 +523,15 @@ $(document).ready(function(){
         
         $.post('billing/patients_payments', {id:id}, function(data){
             $('#profile').html(data);
+        });
+    });
+
+    $('.fetch-paid').on('click', function(){
+
+        var id = $(this).parent().attr('id');
+        
+        $.post('billing/patients_paids', {id:id}, function(data){
+            $('#profile2').html(data);
         });
     });
 

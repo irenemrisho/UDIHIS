@@ -18,8 +18,43 @@ class HumanResourceController extends \BaseController {
 		return View::make('hr.register_person');
 	}
 
+    public function hr_profile()
+    {
+        
+        return View::make('hr.profile');
+
+    }
+
     public function personStore()
     {
+
+        $file = Input::file('img'); // your file upload input field in the form should be named 'file'
+       $destinationPath = public_path().'/uploads';
+       $filename = $file->getClientOriginalName();
+       //$extension =$file->getClientOriginalExtension(); //if you need extension of the file
+       $uploadSuccess = Input::file('img')->move($destinationPath, $filename);
+       $RandNumber          = rand(0, 9999999999);
+       if( $uploadSuccess ) {
+           require_once('PHPImageWorkshop/ImageWorkshop.php');
+           chmod($destinationPath."/".$filename, 0777);
+           $layer = PHPImageWorkshop\ImageWorkshop::initFromPath(public_path().'/uploads/'.$filename);
+           unlink(public_path().'/uploads/'.$filename);
+           $layer->resizeInPixel(400, null, true);
+           $layer->applyFilter(IMG_FILTER_CONTRAST, -16, null, null, null, true);
+           $layer->applyFilter(IMG_FILTER_BRIGHTNESS, 9, null, null, null, true);
+           $dirPath =public_path().'/uploads/' ."hr";
+           $filename = "_".$RandNumber.".png";
+           $createFolders = true;
+           $backgroundColor = null; // transparent, only for PNG (otherwise it will be white if set null)
+           $imageQuality = 100; // useless for GIF, usefull for PNG and JPEG (0 to 100%)
+           $layer->save($dirPath, $filename, $createFolders, $backgroundColor, $imageQuality);
+           chmod($dirPath ."/".$filename , 0777);
+       }
+
+
+
+
+
         $person = new Persons();
         $person->firstname = Input::get('firstname');
         $person->surname = Input::get('surname');
@@ -32,7 +67,7 @@ class HumanResourceController extends \BaseController {
         $person->marital_status = Input::get('marital_status');
         $person->number_of_dependence= Input::get('no_of_dependancy');
         $person->disability = Input::get('physical_disability');
-        $person->photo = Input::get('file_source');
+        $person->photo = $filename;
         $person->save();
 
         Session::flash('message', 'Successfully added!');

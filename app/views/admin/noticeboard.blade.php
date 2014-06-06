@@ -53,8 +53,8 @@
 					<i class="icon-edit" ></i>								
 					</a>
 					<a href="{{url("$notification->id")}}" 
-						rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-success">
-							<i class="icon-exchange"></i>
+						rel="tooltip" data-placement="top" data-original-title="delete" class="btn btn-small btn-danger">
+							<i class="icon-trash"></i>
 					</a>
 					</td>
 					</tr>

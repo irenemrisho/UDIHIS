@@ -1,4 +1,25 @@
 @extends('dashboard')
+@section('page_specific_css')
+    <!-- datatable includes -->
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables.css')}}
+    {{HTML::style('packages/datatables/media/css/jquery.dataTables_themeroller.css')}}
+@stop
+
+@section('page_specific_scripts')
+    <!-- Datatable includes -->
+    {{HTML::script('packages/datatables/media/js/jquery.dataTables.js')}}
+    <script type="text/javascript">
+            $('#provide_medication_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+            
+            $('#paid_table').dataTable({
+                ordering:false,
+                "jQueryUI": true
+            });
+    </script>
+@stop
 @section('main')
  <h1 class="page-title">
                         <i class="icon-th-list"></i>
@@ -14,10 +35,7 @@
                         </div> <!-- /stat-container -->
 
                         <div class="widget-header">
-                         <form class="form-search" style="margin-left:4px">
-                    <input type="text" id="search_m" class="input-medium search-query" placeholder="Search">
-                </form> 
-                           
+                            
                         </div> <!-- /widget-header -->
                     
                         <div class="widget-content">
@@ -33,7 +51,7 @@
                                                                             <strong>Providing failed....Please select atleast one medicine</strong>
                                                                         </div>
                                                                         <?php }}?>
-                            <table class="table  table-bordered">
+                            <table id="provide_medication_table" class="table  table-bordered">
                             <thead>
                                     <tr>
                                         <th>#</th>
