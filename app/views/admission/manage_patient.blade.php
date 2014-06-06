@@ -48,9 +48,9 @@
 </table>
 <div class="" id="">
 <input id="pid" type="hidden" value="{{$patient->id}}" />
-<button class="btn btn-primary" id="nextVisit">Discharge</button>
+<button class="btn btn-primary" id="discharged">Discharge</button>
 
-<button class="btn btn-primary" id="admit">Transfer</button>
+<button class="btn btn-primary" id="tranfered">Transfer</button>
 
 </div>
 
@@ -59,9 +59,8 @@
 <script type="text/javascript">
 	    
 
-					 $('#laboratory').on('click', function(){
-					        var pid = $('#pid').val();
-					        window.location = "patients/lab_test/" + pid;
+					 $('#discharged').on('click', function(){
+					      alert('click');
 					    });
 					 $('#prescribe').on('click', function(){
 					        var pid = $('#pid').val();

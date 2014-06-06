@@ -83,7 +83,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	protected $regexFilters = array();
 
 	/**
-	 * The reigstered route value binders.
+	 * The registered route value binders.
 	 *
 	 * @var array
 	 */
@@ -988,7 +988,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	{
 		$route = $this->findRoute($request);
 
-        $this->events->fire('router.matched', array($route, $request));
+		$this->events->fire('router.matched', array($route, $request));
 
 		// Once we have successfully matched the incoming request to a given route we
 		// can call the before filters on that route. This works similar to global
@@ -1120,7 +1120,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function parseFilter($callback)
 	{
-		if (is_string($callback) and ! str_contains($callback, '@'))
+		if (is_string($callback) && ! str_contains($callback, '@'))
 		{
 			return $callback.'@filter';
 		}
@@ -1396,7 +1396,21 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 
 		$data = array_merge(array($route, $request, $response), $parameters);
 
-		return $this->events->until('router.filter: '.$filter, array_filter($data));
+		return $this->events->until('router.filter: '.$filter, $this->cleanFilterParameters($data));
+	}
+
+	/**
+	 * Clean the parameters being passed to a filter callback.
+	 *
+	 * @param  array  $parameters
+	 * @return array
+	 */
+	protected function cleanFilterParameters(array $parameters)
+	{
+		return array_filter($parameters, function($p)
+		{
+			return ! is_null($p) && $p !== '';
+		});
 	}
 
 	/**
@@ -1494,6 +1508,25 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	}
 
 	/**
+	 * Alias for the "currentRouteNamed" method.
+	 *
+	 * @param  dynamic  string
+	 * @return bool
+	 */
+	public function is()
+	{
+		foreach (func_get_args() as $pattern)
+		{
+			if (str_is($pattern, $this->currentRouteName()))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
 	 * Determine if the current route matches a given name.
 	 *
 	 * @param  string  $name
@@ -1514,6 +1547,25 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 		$action = $this->current()->getAction();
 
 		return isset($action['controller']) ? $action['controller'] : null;
+	}
+
+	/**
+	 * Alias for the "currentRouteUses" method.
+	 *
+	 * @param  dynamic  string
+	 * @return bool
+	 */
+	public function isAction()
+	{
+		foreach (func_get_args() as $pattern)
+		{
+			if (str_is($pattern, $this->currentRouteAction()))
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
