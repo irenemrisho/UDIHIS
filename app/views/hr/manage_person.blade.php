@@ -51,13 +51,17 @@
                             <td style="text-align:center;">{{$person->surname}}</td>
                             <td style="text-align:center;">{{$person->offc_telephone}}</td>
                             <td style="text-align:center;">
-                                <a  href="{{url("person/edit/$person->id")}}"
-                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="edit"  data-toggle="modal">
+                                <a  href="{{url("person/manage/$person->id")}}"
+                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
+                                <i class="icon-user" ></i>
+                                </a>
+                                <a  href="{{url("person/manage/$person->id")}}"
+                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="more info"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>
                                 <a href="{{url("patient/visit/$person->id")}}"
-                                rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-primary">
-                                <i class="icon-wrench"></i>
+                                rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
+                                <i class="icon-tasks"></i>
                                 </a>
                             </td>
 

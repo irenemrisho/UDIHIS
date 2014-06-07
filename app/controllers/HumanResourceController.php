@@ -17,6 +17,12 @@ class HumanResourceController extends \BaseController {
 		return View::make('hr.register_person');
 	}
 
+  public function manage_employee($id)
+  {
+    $person = Persons::find($id);
+    return View::make('hr.person_info', compact('person'));
+  }
+
     public function hr_profile()
     {
         
