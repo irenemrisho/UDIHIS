@@ -39,7 +39,7 @@
                             <th style="text-align:center;">#</th>
                             <th style="text-align:center;">First Name</th>
                             <th style="text-align:center;">Surame</th>
-                            <th style="text-align:center;">Office Telephone Number</th>
+                            <th style="text-align:center;">Tel Number</th>
                             <th style="text-align: center">Operations</th>
                         </tr>
                         </thead>
@@ -55,8 +55,8 @@
                                 rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
                                 <i class="icon-user" ></i>
                                 </a>
-                                <a  href="{{url("person/manage/$person->id")}}"
-                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="more info"  data-toggle="modal">
+                                <a  href="{{url("person/more_info/$person->id")}}"
+                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>
                                 <a href="{{url("patient/visit/$person->id")}}"
