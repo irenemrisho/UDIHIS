@@ -58,15 +58,15 @@
 			            <div class="action-nav-normal">
 			                <div class="row-fluid">
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
+			                        <a href="{{url("hr/person")}}">
 			                        <i class="icon-user"></i>
-			                        <span>Manage People</span>
+			                        <span>Register Employee</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
-			                        <i class="icon-search"></i>
-			                        <span>Search Records</span>
+			                        <a href="{{url("hr/manage_person")}}">
+			                        <i class="icon-user"></i>
+			                        <span>Manage Employee</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
@@ -113,18 +113,13 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+                                  <?php $notice=Notification::orderBy('id', 'DESC')->get()->take(5); ?>
+                                  @foreach($notice as $notice)
                                   <tr>
-                                    <td>HR make a new roster. All nurses should be on roaster this weekend</td>
-                                    <td>Sat 12</td>
+                                    <td>{{$notice->message}}</td>
+                                    <td>{{$notice->date}}</td>
                                   </tr>
-                                  <tr>
-                                    <td>Board embers meeting. All doctors and head of section meeting</td>
-                                    <td>Mon 24</td>
-                                  </tr>
-                                  <tr>
-                                    <td>General facility cleanliness. All nurses and should participate in each section</td>
-                                    <td>Fri 29</td>
-                                  </tr>
+                                  @endforeach
                                 </tbody>
                             </table>
                         </div>
