@@ -114,12 +114,9 @@ Route::post('patient/editInitial/{id}', 'ReceptionController@editInitial');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
-
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
 Route::get('patients/add' , 'ReceptionController@index');
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
-
-Route::get('patients/add' , 'ReceptionController@index');
 
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
@@ -195,6 +192,9 @@ Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //display the page for persons
 Route::get('hr/manage_person', 'HumanResourceController@edit');
+//Manage specific person informations
+Route::get('person/manage/{id}', 'HumanResourceController@manage_employee');
+
 
 
 

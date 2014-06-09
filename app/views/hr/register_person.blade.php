@@ -170,6 +170,9 @@
 							<option></option>
 							<option>Single</option>
 							<option>Married</option>
+							<option>Separated</option>
+							<option>Divorced</option>
+							<option>Widowed</option>
 						</select>
 					</div>  
 				</div>
@@ -180,10 +183,11 @@
 							<option disabled> Select Disability</option>
 							<option></option>
 							<option>None</option>
-							<option>Blind</option>
-							<option>Deaf</option>
-							<option>Cripple</option>
-							<option></option>
+							<option>Hearing</option>
+							<option>Physical</option>
+							<option>Visual</option>
+							<option>Albinism</option>
+							<option>Others</option>
 						</select>
 					</div>  
 				</div>

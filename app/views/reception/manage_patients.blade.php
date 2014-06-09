@@ -68,7 +68,7 @@
     <hr>
 
     <div style="text-align:center">    
-     <button class="btn-primary" onMouseDown="save_image()">print card</button><br> 
+     <button class="btn-primary" onMouseDown="print()">print card</button><br> 
 
      <img src="" id="app_card_image" alt="appointment-card-here">
     </div>

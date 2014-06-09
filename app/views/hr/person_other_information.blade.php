@@ -25,7 +25,7 @@
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#contact" data-toggle="tab">Contact Information</a></li>
               <li><a href="#nextofkin" data-toggle="tab">Next of Kin Information</a></li>
-              <li><a href="#position" data-toggle="tab">Qualification Information</a></li>
+              <li><a href="#position" data-toggle="tab">Education Information</a></li>
               <li><a href="#uploadfile" data-toggle="tab">Position Information</a></li>              
             </ul>
             <div id="myTabContent" class="tab-content">
@@ -53,13 +53,7 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="faxnumber">Fax Number</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge " id=""  name="faxnumber" value={{$person->fax}}>
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="mailing">Mailing Address</label>
+								<label class="control-label" for="mailing">Physical Address</label>
 								<div class="controls">
 								<textarea rows="3" name="mailing" class="input-xlarge" >{{$person->mailing_address}}</textarea>
 								</div>
@@ -87,13 +81,7 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="faxnumber">Fax Number</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge " id="" value="" name="offcfaxnumber" value={{$person->offc_fax}}>
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="mailing">Mailing Address</label>
+								<label class="control-label" for="mailing">Phisical Address</label>
 								<div class="controls">
 								<textarea rows="3" name="offcmailing" class="input-xlarge">{{$person->offc_mailing_address}}</textarea>
 								</div>
@@ -121,10 +109,13 @@
 							            <option>{{$person->next_kn_name}}</option>
 							            <option>Mother</option>
 							            <option>Father</option>
-							            <option>Sister</option>
-							            <option>Brother</option>
+							            <option>Sibling</option>
+							            <option>Wife</option>
+							            <option>Husband</option>
 							            <option>Uncle</option>
 							            <option>Aunt</option>
+							            <option>Nice</option>
+							            <option>Nephew</option>
 							            <option>In law</option>
 							            <option>Guardian</option>
 							        </select>
@@ -137,7 +128,7 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="mailing">Mailing Address</label>
+								<label class="control-label" for="mailing">Physical Address</label>
 								<div class="controls">
 								<textarea rows="3" name="mailing" class="input-xlarge">{{$person->next_kn_mailing}} </textarea>
 								</div>
@@ -158,17 +149,12 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="faxnumber">Fax Number</label>
-								<div class="controls">
-								<input type="text" class="input-xlarge " id=""  name="faxnumber" value={{$person->next_kn_fax_no}}>
-								</div>
-							</div>
-							<div class="control-group">
 								<label class="control-label" for="notes">Notes</label>
 								<div class="controls">
 								<textarea rows="3" name="faxnumber" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
 								</div>
 							</div>
+							<br>
 							<button type="reset" class="btn">Reset</button>
 							<button type="submit" class="btn">Add</button>
                			</div>
@@ -178,10 +164,22 @@
 	                <form id="position_form" action="{{URL::to('person/edit4/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
 	                		<div class="control-group">
-		                		<label class="control-label" for="position">Position*</label>
+		                		<label class="control-label" for="position">Designation*</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="position" required/>
 							            <option disabled>Select Position</option>
+                                    <?php $position = Position::all(); ?>
+                                      @foreach($position as $position)
+							           <option value={{$position->id}}>{{$position->name}}</option>
+							            @endforeach
+							        </select>
+							    </div>
+							</div>
+							<div class="control-group">
+		                		<label class="control-label" for="position">Section*</label>
+							    <div class="controls">
+							        <select class="form-control input-xlarge" name="position" required/>
+							            <option disabled>Select Section</option>
                                     <?php $position = Position::all(); ?>
                                       @foreach($position as $position)
 							           <option value={{$position->id}}>{{$position->name}}</option>
@@ -196,12 +194,6 @@
 								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_start" required  placeholder=" "/>
 							    </div>          
 						    </div>
-						    <div class="control-group">
-							    <label class="control-label" for="date_end">End Date*</label>
-							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_end" required  placeholder=" "/>
-							    </div>          
-						    </div>
 	                	</div>
 	                	<div class="span4 pull-right">
 	                		<div class="control-group">
@@ -211,6 +203,7 @@
 							            <option disabled>Select Employment Type</option>
 							            <option></option>
 							            <option>Contract</option>
+							            <option>Intenship</option>
 							            <option>Permanent</option>
 							            <option>Volunteer</option>
 							        </select>
@@ -221,12 +214,20 @@
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="employ_status" required/>
 							            <option disabled>Select Status</option>
-							            <option></option>
-							            <option>On leave</option>
+							            <option></option>							            
 							            <option>Training</option>
+							            <option>Suspended</option>
+							            <option>Diceased</option>
+							            <option>Partenial leave</option>
 							            <option>Maternity Leave</option>
 							        </select>
 							    </div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="salary">Salary*</label>
+								<div class="controls">
+								<input type="text" class="input-xlarge " id="" name="salary" value="" >
+								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
 							<button type="submit" class="btn">Add</button>
@@ -236,32 +237,56 @@
               <div class="tab-pane fade" id="position">
                 	<form id="qualification_form" action="{{URL::to('person/edit3/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
+	                		<h4>Institution Information</h4>
 	                		<div class="control-group">
-		                		<label class="control-label" for="basic_edu">Basic Education Level*</label>
+								<label class="control-label" for="institution">Institution Name*</label>
+								<div class="controls">
+								<input type="text" class="input-xlarge " id="" name="institution" value={{$person->next_kn_email}} >
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="institution_loc">Institution Location*</label>
+								<div class="controls">
+								<input type="text" class="input-xlarge " id="" name="institution_loc" value={{$person->next_kn_email}} >
+								</div>
+							</div>
+							<div class="control-group">
+		                		<label class="control-label" for="profession">Year Completed</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="basic_edu" required/>
-							            <option disabled>Select Level</option>
-							            <option>{{$person->basic_edu}}</option>
-							            <option>Primary</option>
-							            <option>Ordinary</option>
-							            <option>Advanced</option>
+							        <select class="form-control input-xlarge" name="profession"/>
+							            <option disabled>Select Year</option>
+							            <option>{{$person->profession}}</option>
+							            <option>1990</option>
+							            <option>1991</option>
+							            <option>1992</option>
+							            <option>1993</option>
+							            <option>1994</option>
+							            <option>1995</option>
 							        </select>
 							    </div>
 							</div>
-							<div class="control-group">
-		                		<label class="control-label" for="profession">Profession Education Level</label>
+	                	</div>
+	                	<div class="span4 pull-right">
+	                		<h4>Level</h4>
+	                		<div class="control-group">
+		                		<label class="control-label" for="profession">Degree</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="profession"/>
-							            <option disabled>Select Level</option>
-							            <option>{{$person->profession}}</option>
-							            <option>Certificate</option>
-							            <option>Diploma</option>
-							            <option>Bachelor</option>
-							            <option>Masters</option>
-							            <option>Postgraduate</option>
+							            <option disabled>Select level</option>
+							            <option></option>
 							            <option>PhD</option>
+							            <option>Masters</option>
+							            <option>Bachelor</option>
+							            <option>Diploma</option>
+							            <option>Certificate</option>
 							        </select>
 							    </div>
+							    <div class="control-group">
+								<label class="control-label" for="major">Major</label>
+								<div class="controls">
+								<input type="text" class="input-xlarge " id="" name="major" value={{$person->next_kn_email}} >
+								</div>
+							</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
 							<button type="submit" class="btn">Add</button>
