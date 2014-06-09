@@ -44,7 +44,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $person = Persons::all(); $id=1;?>
+                        <?php $person = Persons::orderBy('id', 'DESC')->get(); $id=1;?>
                         @foreach($person as $person)
                         <tr><td style="text-align:center;">{{$id}}<?php $id++; ?></td>
                             <td style="text-align:center;">{{$person->firstname}}</td>
