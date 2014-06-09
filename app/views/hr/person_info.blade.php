@@ -4,7 +4,7 @@
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
-			<a href=""><span class="pull-left label">Update</span></a> &nbsp
+			<a href="{{url("person/update_basic_info/$person->id")}}"><span class="pull-left label">Update</span></a> &nbsp
 			<a href=""><span class="label" style="position:absolute">Name History</span></a>
     		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
@@ -19,7 +19,6 @@
 			@else
     		{{HTML::image("uploads/hr/{$person->photo}","",array('class'=>'img-rounded thumbnail', 'style'=>'height:150px;width:120px'))}}
     		@endif
-    	
 	</div>
 </div>
 

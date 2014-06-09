@@ -194,6 +194,13 @@ Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 Route::get('hr/manage_person', 'HumanResourceController@edit');
 //Manage specific person informations
 Route::get('person/manage/{id}', 'HumanResourceController@manage_employee');
+//Add actions to a specific employeer
+Route::get('person/more_info/{id}', 'HumanResourceController@employee_more_info');
+//update person basic information
+Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basic_info');
+
+
+
 
 
 
