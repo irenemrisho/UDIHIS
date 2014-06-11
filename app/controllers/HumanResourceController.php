@@ -68,9 +68,7 @@ class HumanResourceController extends \BaseController {
 
     public function hr_profile()
     {
-
-
-
+     
         return View::make('hr.profile');
 
       }
