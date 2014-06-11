@@ -42,44 +42,54 @@ class UserController extends BaseController {
             );
 
    if (Auth::attempt($userdata)) {
-        $level = Auth::user()->level;
-        switch ($level) {
-             case 0:
-                # code...
-                return Redirect::to('admin');
-                break;
-             case 1:
-                # code...
-                return Redirect::to('dashboard');
-                break; 
-             case 2:
-                # code...
-                return Redirect::to('laboratory');
-                break;  
-             case 3:
-                # code...
-                return Redirect::to('reception');
-                break; 
-             case 4:
-                # code...
-                return Redirect::to('doctor');
-            case 5:
-                # code...
-                return Redirect::to('billing');
-                break;
-            case 6:
-                # code...
-                return Redirect::to('nurse');
-                break;    
-            case 7:
-                # code...
-                return Redirect::to('hr');
-                break;
-                                  
-            default:
-                # code...
-                break;
-        }
+
+       if(Auth::user()->default_password == 1){
+
+           return Redirect::to();
+
+       }else{
+           $level = Auth::user()->level;
+           switch ($level) {
+               case 0:
+                   # code...
+                   return Redirect::to('admin');
+                   break;
+               case 1:
+                   # code...
+                   return Redirect::to('dashboard');
+                   break;
+               case 2:
+                   # code...
+                   return Redirect::to('laboratory');
+                   break;
+               case 3:
+                   # code...
+                   return Redirect::to('reception');
+                   break;
+               case 4:
+                   # code...
+                   return Redirect::to('doctor');
+               case 5:
+                   # code...
+                   return Redirect::to('billing');
+                   break;
+               case 6:
+                   # code...
+                   return Redirect::to('nurse');
+                   break;
+               case 7:
+                   # code...
+                   return Redirect::to('hr');
+                   break;
+
+               default:
+                   # code...
+                   break;
+           }
+
+       }
+
+
 
    }
    else{
