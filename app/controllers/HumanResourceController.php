@@ -19,6 +19,8 @@ class HumanResourceController extends \BaseController {
 
   public function manage_employee($id)
   {
+    //written by Bawa!
+    $id=Crypt::decrypt($id);
     $person = Persons::find($id);
     return View::make('hr.person_info', compact('person'));
   }
