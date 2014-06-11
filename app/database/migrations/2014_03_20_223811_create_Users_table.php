@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users',function($table){
 			$table->increments('id');
-			$table->String('email')->nullable();
+            $table->integer('notification_id')->references('id')->on('Notification')->nullable();			$table->String('email')->nullable();
             $table->String('password')->nullable();
             $table->String('first_name')->nullable();
             $table->String('middle_name')->nullable();

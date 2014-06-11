@@ -39,7 +39,7 @@
 @if(Auth::user()->level == 3)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("reception")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("patients")}}" id="patient"><i class="icon-user-md"></i>Register Patients</a></li>
+    <li><a href="{{url("patients")}}"><i class="icon-user-md"></i>Register Patients</a></li>
     <li><a href="{{url("manage/patients")}}" id="patient"><i class="icon-user-md"></i>Manage Patients</a></li>
     <li><a href="{{url("appointRegister")}}"><i class="icon-exchange"></i>Appointment </a></li>
 
@@ -85,12 +85,12 @@
 </ul>
 @endif
 
-
 @if(Auth::user()->level == 7)
+
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("hr")}}"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("hr/person")}}"><i class="icon-user-md"></i>Register Employee</a></li>
-    <li><a href="{{url("hr/manage_person")}}"><i class="icon-user-md"></i>Manage Employees</a></li>
+    <li><a href="{{url("hr/manage_user")}}"><i class="icon-exchange"></i>Manage Employees</a></li>
     <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("hr/profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>

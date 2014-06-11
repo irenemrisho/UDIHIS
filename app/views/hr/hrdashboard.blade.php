@@ -113,6 +113,14 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+<<<<<<< HEAD
+                                <?php $notice = Notification::all(); ?>
+                                @foreach($notice as $notice)
+                                <tr><td>{{$notice->message}}</td>
+                                    <td>{{$notice->date}}</td>
+                                </tr>
+                                @endforeach
+=======
                                   <?php $notice=Notification::orderBy('id', 'DESC')->get()->take(5); ?>
                                   @foreach($notice as $notice)
                                   <tr>
@@ -120,6 +128,7 @@
                                     <td>{{$notice->date}}</td>
                                   </tr>
                                   @endforeach
+>>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
                                 </tbody>
                             </table>
                         </div>
