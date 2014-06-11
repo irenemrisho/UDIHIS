@@ -8,30 +8,30 @@
 			<div class="span4 pull-left" >
 				<h4>Personal Information </h4>
 				<div class="control-group">
-					<label class="control-label" for="firstname">First Name*</label>
+					<label class="control-label" for="firstname">First Name</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="{{$person->firstname}}" name="firstname" required/>
+					<input type="text" class="input-xlarge " id="" value="{{$person->firstname}}" name="firstname" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label" for="surname">Surname*</label>
+					<label class="control-label" for="surname">Surname</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="{{$person->surname}}" name="surname" required/>
+					<input type="text" class="input-xlarge " id="" value="{{$person->surname}}" name="surname" />
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="othernames">Other Names</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="" name="othernames"/>
+					<input type="text" class="input-xlarge " id="" value="{{$person->othernames}}" name="othernames"/>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="nationality">Nationality</label>
 					<div class="controls">
-					<select class="form-control input-xlarge"  data-placement="nationality" name="nationality"  value = "">
+					<select class="form-control input-xlarge"  data-placement="nationality" name="nationality"  value = "{{$person->nationality}}">
 					<option disabled> Select Nationality</option>
 					 <option></option
 					<option value='US'>American</option>
@@ -129,15 +129,15 @@
 				</div>
 
 				<div class="control-group">
-					<label class="control-label" for="residence">Residence*</label>
+					<label class="control-label" for="residence">Residence</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="" name="residence" required/>
+					<input type="text" class="input-xlarge " id="" value="{{$person->residence}}" name="residence" />
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="domicide">Place of Domicele*</label>
+					<label class="control-label" for="domicide">Place of Domicele</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="" name="domicide" required/>
+					<input type="text" class="input-xlarge " id="" value="{{$person->place_of_domicile}}" name="domicide" />
 					</div>
 				</div>
 			</div>
@@ -145,16 +145,16 @@
 			<div class="span4 pull-right">
 				<h4>Demographic Information</h4>
 				<div class="control-group">
-					<label class="control-label" for="birthdate">Date of Birth*</label>
+					<label class="control-label" for="birthdate">Date of Birth</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge" id="birthdate" value="{{Input::get('birth')}}"  name="birthdate" required/>
+					<input type="text" class="input-xlarge" id="birthdate" value="{{Input::get('birth')}}"  name="birthdate" />
 					</div>
 				</div>
 
 				<div class="control-group">
-					<label class="control-label" for="gender">Gender*</label>
+					<label class="control-label" for="gender">Gender</label>
 					<div class="controls">
-						<select class="form-control input-xlarge"  data-placement="gender" name="gender" required/>
+						<select class="form-control input-xlarge"  data-placement="gender" name="gender" value="{{$person->gender}}" />
 							<option disabled> Select Gender</option>
 							<option></option>
 							<option>Male</option>
@@ -163,9 +163,9 @@
 					</div> 
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="marital_status">Marital Status*</label>
+					<label class="control-label" for="marital_status">Marital Status</label>
 					<div class="controls">
-						<select class="form-control input-xlarge"  data-placement="marital_status" name="marital_status"  value = "" required/>
+						<select class="form-control input-xlarge"  data-placement="marital_status" name="marital_status"  value = "{{$person->marital_status}}" />
 							<option disabled> Select Marital Status</option>
 							<option></option>
 							<option>Single</option>
@@ -177,9 +177,9 @@
 					</div>  
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="physical_disability">Physical Disability*</label>
+					<label class="control-label" for="physical_disability">Physical Disability</label>
 					<div class="controls">
-						<select class="form-control input-xlarge"  data-placement="physical_disability" name="physical_disability"  value = "" required/>
+						<select class="form-control input-xlarge"  data-placement="physical_disability" name="physical_disability"  value = "{{$person->physical_disability}}" />
 							<option disabled> Select Disability</option>
 							<option></option>
 							<option>None</option>
@@ -192,16 +192,16 @@
 					</div>  
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="no_of_dependancy">Number of Dependancies*</label>
+					<label class="control-label" for="no_of_dependancy">Number of Dependancies</label>
 					<div class="controls">
-					<input type="text" class="input-xlarge " id="" value="" name="no_of_dependancy" require />
+					<input type="text" class="input-xlarge " id="" value="{{$person->no_of_dependancy}}" name="no_of_dependancy"/>
 					</div>
 				</div>
 				<div style="position:relative;">
 					Image{{Form::file('img',array('class'=>'')) }}
 				</div>
 				<br>
-				<button type="reset" class="btn">Reset</button>
+				<button type="reset" class="btn">Cancel</button>
 				<button type="submit" class="btn">Add</button>
 			</div>
 		</form>

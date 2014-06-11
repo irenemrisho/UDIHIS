@@ -58,15 +58,15 @@
 			            <div class="action-nav-normal">
 			                <div class="row-fluid">
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
+			                        <a href="{{url("hr/person")}}">
 			                        <i class="icon-user"></i>
-			                        <span>Manage People</span>
+			                        <span>Register Employee</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="#">
-			                        <i class="icon-search"></i>
-			                        <span>Search Records</span>
+			                        <a href="{{url("hr/manage_person")}}">
+			                        <i class="icon-user"></i>
+			                        <span>Manage Employee</span>
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
@@ -113,12 +113,22 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+<<<<<<< HEAD
                                 <?php $notice = Notification::all(); ?>
                                 @foreach($notice as $notice)
                                 <tr><td>{{$notice->message}}</td>
                                     <td>{{$notice->date}}</td>
                                 </tr>
                                 @endforeach
+=======
+                                  <?php $notice=Notification::orderBy('id', 'DESC')->get()->take(5); ?>
+                                  @foreach($notice as $notice)
+                                  <tr>
+                                    <td>{{$notice->message}}</td>
+                                    <td>{{$notice->date}}</td>
+                                  </tr>
+                                  @endforeach
+>>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
                                 </tbody>
                             </table>
                         </div>

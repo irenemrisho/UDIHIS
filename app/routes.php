@@ -198,6 +198,15 @@ Route::get('person/manage/{id}', 'HumanResourceController@manage_employee');
 Route::get('person/more_info/{id}', 'HumanResourceController@employee_more_info');
 //update person basic information
 Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basic_info');
+//update pesonal contact
+Route::get('person/update_personal_contact/{id}', 'HumanResourceController@update_personal_contact');
+//update work contact
+Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_work_contact');
+//Add next of Kin 
+Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
+//Add Education
+Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+
 
 
 

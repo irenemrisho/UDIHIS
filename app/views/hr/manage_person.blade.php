@@ -51,11 +51,11 @@
                             <td style="text-align:center;">{{$person->surname}}</td>
                             <td style="text-align:center;">{{$person->offc_telephone}}</td>
                             <td style="text-align:center;">
-                                <a  href="{{url("person/manage/$person->id")}}"
+                                <a  href="{{url("person/manage/".Crypt::encrypt($person->id))}}"
                                 rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
                                 <i class="icon-user" ></i>
                                 </a>
-                                <a  href="{{url("person/more_info/$person->id")}}"
+                                <a  href="{{url("person/more_info/".Crypt::encrypt($person->id))}}"
                                 rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>

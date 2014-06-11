@@ -22,6 +22,7 @@ $individual= User::find(Auth::user()->id);
               <div class="tab-pane fade in active" id="profile">
             	<form id="edit-profile" class="form-horizontal">
 												<fieldset>
+<<<<<<< HEAD
 													<div class="control-group">
                                                         <div class="controls">
                                                             <table>
@@ -33,6 +34,17 @@ $individual= User::find(Auth::user()->id);
                                                                 </tr>
                                                             </table>
                                                         </div>
+=======
+													<div class="control-group">	
+														<div class="controls">
+															@if($person->photo=="")
+															{{HTML::image("http://placehold.it/150x120","", array('class'=>'img-rounded'))}}
+															@else
+												    		{{HTML::image("uploads/hr/{$person->photo}","",array('class'=>'img-rounded thumbnail', 'style'=>'height:150px;width:120px'))}}
+												    		@endif
+													  		<?php echo "  " . $individual->username ?>
+														</div>			
+>>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
 													</div>
 													<div class="control-group">											
 														<label class="control-label" for="username">Username</label>
