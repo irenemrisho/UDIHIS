@@ -100,11 +100,12 @@
 
 @if(Auth::user()->level == 8)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
-    <li class=""><a href="#"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="#"><i class="icon-user-md"></i>Manage Patients</a></li>
-    <li><a href="#"><i class="icon-user-md"></i>Add</a></li>
-    <li><a href="#"><i class="icon-hospital"></i>Manage Reports</a></li>
-    <li><a href="#"><i class="icon-user"></i>My account</a></li>
+    <li class=""><a href="{{url("supplies")}}"><i class="icon-home"></i>Dashboard</a></li>
+    <li><a href="{{url("supplies/request")}}"><i class="icon-user-md"></i>Pending request</a></li>
+    <li><a href="{{url("supplies/supplied")}}"><i class="icon-user-md"></i>Supplied</a></li>
+    <li><a href="{{url("supplies/goods")}}"><i class="icon-user-md"></i>Manage goods</a></li>
+    <li><a href="{{url("supplies/reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
+    <li><a href="{{url("supplies/account")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
 
 @endif

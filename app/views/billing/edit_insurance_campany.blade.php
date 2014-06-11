@@ -68,9 +68,12 @@
                                                     <div class="control-group">  
                                                      <label class="control-label" for="payment_type">Payment type</label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="payment_type" id="" value="{{$InsuranceCompany->payement_type}}">
-                                                            
-                                                        </div>                                       
+                                                            <select class="form-control"  data-placement="payment_type" name="payment_type">
+                                                        <option >{{$InsuranceCompany->payement_type}}</option>                                                        
+                                                        <option>Sick sheet</option>
+                                                        <option>Insurance</option>
+                                                        </select>
+                                                        </div>                                     
                                               
                                                     </div> <!-- /control-group -->
                                                     <div class="control-group">  

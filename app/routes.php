@@ -184,6 +184,17 @@ Route::get('hr/profile', 'HumanResourceController@hr_profile');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 
+
+//Routes for supplies 
+Route::get('supplies', 'SupplierController@index');
+Route::get('supplies/request', 'SupplierController@getRequest');
+Route::get('supplies/supplied', 'SupplierController@getSupplied');
+Route::get('supplies/goods', 'SupplierController@getGoods');
+Route::get('supplies/reports', 'SupplierController@getReports');
+Route::get('supplies/account', 'SupplierController@getAccount');
+
+
+
 //update the person informations  for the first time
 //first
 Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
