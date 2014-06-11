@@ -9,8 +9,13 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('hr.hrdashboard');
+		return View::make('hr.hrdashboard', compact("notice"));
 	}
+
+    public function manage_user()
+    {
+        return View::make("hr.manage_user");
+    }
 
 	public function person()
 	{
@@ -19,21 +24,25 @@ class HumanResourceController extends \BaseController {
 
   public function manage_employee($id)
   {
+<<<<<<< HEAD
+    $person = User::find($id);
+=======
     //written by Bawa!
     $id=Crypt::decrypt($id);
     $person = Persons::find($id);
+>>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
     return View::make('hr.person_info', compact('person'));
   }
 
   public function employee_more_info($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.person_more_information', compact('person'));
   }
 
   public function update_basic_info($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.update_basic_info', compact('person'));
   }
 
@@ -63,8 +72,13 @@ class HumanResourceController extends \BaseController {
 
     public function hr_profile($id)
     {
+<<<<<<< HEAD
+
+        return View::make('hr.profile');
+=======
         $person = Persons::find($id);
         return View::make('hr.profile', compact('person'));
+>>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
 
     }
 
@@ -98,10 +112,10 @@ class HumanResourceController extends \BaseController {
 
 
 
-        $person = new Persons();
-        $person->firstname = Input::get('firstname');
-        $person->surname = Input::get('surname');
-        $person->othername = Input::get('othernames');
+        $person = new User();
+        $person->first_name = Input::get('firstname');
+        $person->last_name = Input::get('surname');
+        $person->middle_name = Input::get('othernames');
         $person->nationality = Input::get('nationality');
         $person->residence = Input::get('residence');
         $person->place_of_domicile = Input::get('domicide');
@@ -194,7 +208,7 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function updateFirst($id)
 	{
-        $person1 = Persons::find($id);
+        $person1 = User::find($id);
         $person1->mobile_phone = Input::get('mobilephone');
         $person1->telephone = Input::get('telephone');
         $person1->email = Input::get('email');
@@ -214,7 +228,7 @@ class HumanResourceController extends \BaseController {
 
     public function updateSecond($id)
     {
-        $person2 = Persons::find($id);
+        $person2 = User::find($id);
         $person2->next_kn_name = Input::get('name');
         $person2->relationship = Input::get('relatioship');
         $person2->next_kn_email = Input::get('email');
@@ -232,7 +246,7 @@ class HumanResourceController extends \BaseController {
 
     public function updateThird($id)
     {
-        $person3 = Persons::find($id);
+        $person3 = User::find($id);
         $person3->basic_edu = Input::get('basic_edu');
         $person3->profession = Input::get('profession');
         $person3->save();
@@ -244,7 +258,7 @@ class HumanResourceController extends \BaseController {
 
     public function updateFourth($id)
     {
-        $person4 = Persons::find($id);
+        $person4 = User::find($id);
         $person4->position_id = Input::get('position');
         $person4->date_first = Input::get('date_start');
         $person4->date_last = Input::get('date_end');
