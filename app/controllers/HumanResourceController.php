@@ -24,13 +24,9 @@ class HumanResourceController extends \BaseController {
 
   public function manage_employee($id)
   {
-<<<<<<< HEAD
+
     $person = User::find($id);
-=======
-    //written by Bawa!
-    $id=Crypt::decrypt($id);
-    $person = Persons::find($id);
->>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
+
     return View::make('hr.person_info', compact('person'));
   }
 
@@ -72,13 +68,12 @@ class HumanResourceController extends \BaseController {
 
     public function hr_profile($id)
     {
-<<<<<<< HEAD
+
 
         return View::make('hr.profile');
-=======
-        $person = Persons::find($id);
-        return View::make('hr.profile', compact('person'));
->>>>>>> 7666e62f792ff3269c92f846860c449000b2d54a
+
+       
+
 
     }
 
