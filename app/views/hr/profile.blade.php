@@ -23,13 +23,8 @@ $individual= User::find(Auth::user()->id);
             	<form id="edit-profile" class="form-horizontal">
 												<fieldset>
 													<div class="control-group">	
-														<div class="controls">
-															@if($person->photo=="")
-															{{HTML::image("http://placehold.it/150x120","", array('class'=>'img-rounded'))}}
-															@else
-												    		{{HTML::image("uploads/hr/{$person->photo}","",array('class'=>'img-rounded thumbnail', 'style'=>'height:150px;width:120px'))}}
-												    		@endif
-													  		<?php echo "  " . $individual->username ?>
+														<div class="controls"><img src="http://placehold.it/100x100">
+													  	<?php echo "  " . $individual->username ?>
 														</div>			
 													</div>
 													<div class="control-group">											

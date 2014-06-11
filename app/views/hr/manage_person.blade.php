@@ -59,7 +59,7 @@
                                 rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>
-                                <a href="{{url("patient/visit/$person->id")}}"
+                                <a href="#"
                                 rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
                                 <i class="icon-tasks"></i>
                                 </a>

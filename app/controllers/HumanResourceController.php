@@ -61,10 +61,10 @@ class HumanResourceController extends \BaseController {
     return View::make('hr.add_education', compact('person'));
   }
 
-    public function hr_profile($id)
+    public function hr_profile()
     {
-        $person = Persons::find($id);
-        return View::make('hr.profile', compact('person'));
+        //$person = Persons::find();
+        return View::make('hr.profile');
 
     }
 
