@@ -127,5 +127,9 @@ class AdminController  extends BaseController{
 
         return Redirect::to('manage_noticeboard');
     }
+
+    public function manage_user(){
+            return View::make("admin.manage_user");
+    }
   }
     //put your code here 

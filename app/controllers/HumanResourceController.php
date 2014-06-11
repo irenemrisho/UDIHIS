@@ -44,37 +44,36 @@ class HumanResourceController extends \BaseController {
 
   public function update_personal_contact($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.update_personal_contact', compact('person'));
   }
 
   public function update_work_contact($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.update_work_contact', compact('person'));
   }
 
   public function add_next_of_kin($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.add_next_of_kin', compact('person'));
   }
 
   public function add_education($id)
   {
-    $person = Persons::find($id);
+    $person = User::find($id);
     return View::make('hr.add_education', compact('person'));
   }
 
-    public function hr_profile($id)
+    public function hr_profile()
     {
+
 
 
         return View::make('hr.profile');
 
-
-
-    }
+      }
 
     public function personStore()
     {

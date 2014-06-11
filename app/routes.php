@@ -22,6 +22,7 @@ Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
 Route::get('/profile','AdminController@admin_profile');
 Route::post('/notification/add','AdminController@addNoticeboard');
 Route::post('/manage_user','Admin@addUser');
+Route::get('manage_user','AdminController@manage_user');
 Route::post('/manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');

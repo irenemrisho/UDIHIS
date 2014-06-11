@@ -48,6 +48,9 @@
  <option></option>
 <option>Single</option>
 <option>Married</option>
+<option>Separated</option>
+<option>Divorced</option>
+<option>Widowed</option>
 </select>
 </div>  
 </div> <!-- /control-group -->
@@ -332,6 +335,8 @@
 <option></option>
 <option>Christian</option>
 <option>Islamic</option>
+<option>Paganism</option>
+
 </select>
 </div> <!-- /controls -->
 </div> <!-- /control-group -->
@@ -377,7 +382,7 @@
         <div class="controls">
             <select class="form-control"  data-placement="district" name="district" required >
                 <option disabled>Select District</option>
-                <option>Kiondoni</option>
+                <option>Kinondoni</option>
                 <option>Ilala</option>
                 <option>Temeke</option>
             </select>
