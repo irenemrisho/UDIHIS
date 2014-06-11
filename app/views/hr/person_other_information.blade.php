@@ -60,7 +60,6 @@
 							</div>
                			</div>
                			<div class="span4 pull-right">
-
                				<h4>Work Contact Information</h4>	
                				<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>

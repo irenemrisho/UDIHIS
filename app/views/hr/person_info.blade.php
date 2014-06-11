@@ -35,7 +35,7 @@
                 <div class="span6">
                 	<h4>Personal Contacts</h4>
 					<table class="table table-striped">
-						<a href=""><span class="pull-left label">Update</span></a>
+						<a href="{{url("person/update_personal_contact/$person->id")}}"><span class="pull-left label">Update</span></a>
 			    		<tr><td>Mobile Phone</td><td>{{$person->mobile_phone}}</td></tr>
 			    		<tr><td>Telephone</td><td>{{$person->telephone}}</td></tr>
 			    		<tr><td>Email</td><td>{{$person->email}}</td></tr>
@@ -45,7 +45,7 @@
 				<div class="span6">					
 				<h4>Work Contacts</h4>
 					<table class="table table-striped">
-						<a href=""><span class="pull-left label">Update</span></a>
+						<a href="{{url("person/update_work_contact/$person->id")}}"><span class="pull-left label">Update</span></a>
 			    		<tr><td>Mobile Phone</td><td>{{$person->offc_mobile_phone}}</td></tr>
 			    		<tr><td>Telephone</td><td>{{$person->offc_telephone}}</td></tr>
 			    		<tr><td>Email</td><td>{{$person->offc_email}}</td></tr>
@@ -56,8 +56,7 @@
               <div class="tab-pane fade" id="nextofkin">
                 <div class="span6">
 					<table class="table table-striped">
-						<a href=""><span class="pull-left label">Update</span></a> &nbsp
-						<a href=""><span class="label" style="position:absolute">Add Next of Kin</span></a>
+						<a href="{{url("person/add_next_of_kin/$person->id")}}"><span class="pull-left label">Add Next of Kin</span></a>						
 			    		<tr><td>Name</td><td>{{$person->next_kn_name}}</td></tr>
 			    		<tr><td>Relatonship</td><td>{{$person->relationship}}</td></tr>
 			    		<tr><td>Mobile Number</td><td>{{$person->next_kn_mob_no}}</td></tr>
@@ -71,7 +70,8 @@
               <div class="tab-pane fade" id="education">                
 	                <div class="span6">
 					<table class="table table-striped">
-						<a href=""><span class="pull-left label">Add Education</span></a>
+						<a href="{{url("person/add_education/$person->id")}}"><span class="pull-left label">Add Education</span></a> &nbsp
+						<a href=""><span class="label" style="position:absolute">Education History</span></a>
 			    		<tr><td>Institution Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
 			    		<tr><td>Institution Location</td><td>{{$person->gender}}</td></tr>
 			    		<tr><td>Year Completed</td><td>{{$person->residence}}</td></tr>
@@ -83,8 +83,8 @@
               <div class="tab-pane fade" id="position">
                 	<div class="span6">
 					<table class="table table-striped">
-						<a href=""><span class="pull-left label">Update</span></a> &nbsp
-						<a href=""><span class="label" style="position:absolute">Name History</span></a>
+						<a href=""><span class="pull-left label">Add</span></a> &nbsp
+						<a href=""><span class="label" style="position:absolute">Position History</span></a>
 			    		<tr><td>Designation</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
 			    		<tr><td>Section</td><td>{{$person->position_name}}</td></tr>
 			    		<tr><td>Date of First Appointment</td><td>{{$person->date_first}}</td></tr>
