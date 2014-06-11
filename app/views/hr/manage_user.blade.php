@@ -165,7 +165,7 @@ Manage users
 					<th>Last Name</th>
 					<th>Designation</th>
 					<th>Status</th>
-					<th>Last Access</th>
+					<th>Last Updated</th>
 					<th>operation</th>
 				</tr>
 			</thead>
@@ -179,15 +179,20 @@ Manage users
 					<td>{{User::level($user->level)}}</td>
 					<td>{{$user->status}}</td>
 					<td>{{User::ago($user->updated_at)}}</td>
-					<td class="action-td" id="{{$user->id}}">
-						<a href="#myModal" class="btn btn-small btn-primary fetchuser"  data-toggle="modal">
-							<i class="icon-pencil"></i>								
-						</a>					
-						<a href="javascript:;" class="btn btn-small btn-danger deleteuser">
-							<i class="icon-trash"></i>								
-						</a>
-
-					</td>
+                    <td style="text-align:center;">
+                        <a  href="{{url("person/manage/$user->id")}}"
+                        rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
+                        <i class="icon-user" ></i>
+                        </a>
+                        <a  href="{{url("person/more_info/$user->id")}}"
+                        rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
+                        <i class="icon-edit" ></i>
+                        </a>
+                        <a href="{{url("patient/visit/$user->id")}}"
+                        rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
+                        <i class="icon-tasks"></i>
+                        </a>
+                    </td>
 				</tr>
 				@endforeach
 				

@@ -168,10 +168,9 @@
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="position" required/>
 							            <option disabled>Select Position</option>
-                                    <?php $position = Position::all(); ?>
-                                      @foreach($position as $position)
-							           <option value={{$position->id}}>{{$position->name}}</option>
-							            @endforeach
+
+							           <option value=""></option>
+
 							        </select>
 							    </div>
 							</div>
@@ -180,10 +179,9 @@
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="position" required/>
 							            <option disabled>Select Section</option>
-                                    <?php $position = Position::all(); ?>
-                                      @foreach($position as $position)
-							           <option value={{$position->id}}>{{$position->name}}</option>
-							            @endforeach
+
+							           <option value=""></option>
+
 							        </select>
 							    </div>
 							</div>

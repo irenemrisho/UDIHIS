@@ -18,7 +18,6 @@ Route::post('/login', 'UserController@login');
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/users/delete/{id}', 'UserController@destroy');
-Route::get('/manage_user','Admin@manage_user');
 Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
 Route::get('/profile','AdminController@admin_profile');
 Route::post('/notification/add','AdminController@addNoticeboard');
@@ -180,6 +179,7 @@ Route::get('hr/position', 'HumanResourceController@positionShow');
 Route::get('hr/profile', 'HumanResourceController@hr_profile');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
+Route::get('hr/manage_user','HumanResourceController@manage_user');
 
 //update the person informations  for the first time
 //first

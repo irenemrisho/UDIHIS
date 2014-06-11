@@ -22,11 +22,17 @@ $individual= User::find(Auth::user()->id);
               <div class="tab-pane fade in active" id="profile">
             	<form id="edit-profile" class="form-horizontal">
 												<fieldset>
-													<div class="control-group">	
-														<div class="controls">
-															<img src="http://placehold.it/100x100">
-													  		<?php echo "  " . $individual->username ?>
-														</div>			
+													<div class="control-group">
+                                                        <div class="controls">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        image
+                                                                    </td>
+                                                                    <td><?php echo "  " . $individual->username ?></td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
 													</div>
 													<div class="control-group">											
 														<label class="control-label" for="username">Username</label>

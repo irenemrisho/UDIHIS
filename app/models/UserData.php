@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marusu
- * Date: 6/9/14
- * Time: 1:54 PM
- */ 
+
+class UserData extends Eloquent {
+
+    protected $table='user_data';
+    public static $unguarded = true;
+
+    public function user(){
+        return $this->belongsTo('Users','user_id','id');
+
+    }
+
+}
