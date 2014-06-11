@@ -24,6 +24,7 @@ class HumanResourceController extends \BaseController {
 
   public function manage_employee($id)
   {
+
     $person = User::find($id);
 
     return View::make('hr.person_info', compact('person'));
@@ -67,8 +68,12 @@ class HumanResourceController extends \BaseController {
 
     public function hr_profile()
     {
-      return View::make('hr.profile');
-    }
+
+
+
+        return View::make('hr.profile');
+
+      }
 
     public function personStore()
     {
