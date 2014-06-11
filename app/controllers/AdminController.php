@@ -27,7 +27,13 @@ class AdminController  extends BaseController{
     public function admin_profile()
     {
         
-             return View::make('admin.admin_profile');
+        return View::make('admin.admin_profile');
+    }
+
+    public function add_user($id)
+    {
+            $person = User::find($id);
+             return View::make('admin.add_system_user', compact('person'));
     }
 
      public function editUser($id){
