@@ -6,12 +6,12 @@
 
         <div class="navbar-inner">
                 <div class="span12 ">
-                    <div class=" pull-left"><img src="http://localhost/udihis/public/packages/bootstrap/img/logo1.png"></div>
+                    <div class=" pull-left">{{HTML::image('packages/bootstrap/img/logo1.png')}}</div>
             
                <div class="span8">
-                 <a class="brand" href="">UDSM Intergrated Hospital Information System</a>
+                 <a class="brand" href="" ><strong>UDSM Intergrated Hospital Information System</strong></a>
                </div> 
-               <div class="pull-right"><img src="http://localhost/udihis/public/packages/bootstrap/img/logo1.png"></div>
+               <div class="pull-right">{{HTML::image('packages/bootstrap/img/logo2.jpg')}}</div>
                 </div>
             </div>
          <!-- /container -->

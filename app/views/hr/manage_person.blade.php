@@ -39,25 +39,29 @@
                             <th style="text-align:center;">#</th>
                             <th style="text-align:center;">First Name</th>
                             <th style="text-align:center;">Surame</th>
-                            <th style="text-align:center;">Office Telephone Number</th>
+                            <th style="text-align:center;">Tel Number</th>
                             <th style="text-align: center">Operations</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $person = Persons::all(); $id=1;?>
+                        <?php $person = Persons::orderBy('id', 'DESC')->get(); $id=1;?>
                         @foreach($person as $person)
                         <tr><td style="text-align:center;">{{$id}}<?php $id++; ?></td>
                             <td style="text-align:center;">{{$person->firstname}}</td>
                             <td style="text-align:center;">{{$person->surname}}</td>
                             <td style="text-align:center;">{{$person->offc_telephone}}</td>
                             <td style="text-align:center;">
-                                <a  href="{{url("person/edit/$person->id")}}"
-                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="edit"  data-toggle="modal">
+                                <a  href="{{url("person/manage/".Crypt::encrypt($person->id))}}"
+                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
+                                <i class="icon-user" ></i>
+                                </a>
+                                <a  href="{{url("person/more_info/".Crypt::encrypt($person->id))}}"
+                                rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
                                 <i class="icon-edit" ></i>
                                 </a>
-                                <a href="{{url("patient/visit/$person->id")}}"
-                                rel="tooltip" data-placement="top" data-original-title="new visit" class="btn btn-small btn-primary">
-                                <i class="icon-wrench"></i>
+                                <a href="#"
+                                rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
+                                <i class="icon-tasks"></i>
                                 </a>
                             </td>
 

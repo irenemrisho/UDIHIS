@@ -18,11 +18,11 @@ Route::post('/login', 'UserController@login');
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/users/delete/{id}', 'UserController@destroy');
-Route::get('/manage_user','Admin@manage_user');
 Route::get('/manage_noticeboard','AdminController@manageNoticeboard');
 Route::get('/profile','AdminController@admin_profile');
 Route::post('/notification/add','AdminController@addNoticeboard');
 Route::post('/manage_user','Admin@addUser');
+Route::get('manage_user','AdminController@manage_user');
 Route::post('/manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');
@@ -114,12 +114,9 @@ Route::post('patient/editInitial/{id}', 'ReceptionController@editInitial');
 Route::get('patients' , 'PatientController@index');
 /*to add a patient*/
 Route::post('patients/add' , 'ReceptionController@savepatientinfo');
-
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
 Route::get('patients/add' , 'ReceptionController@index');
 Route::get('patients/app_card' , 'ReceptionController@app_card_view');
-
-Route::get('patients/add' , 'ReceptionController@index');
 
 /*for editing a patient*/
 Route::get('patients/edit/{id}' , 'PatientController@edit');
@@ -183,6 +180,7 @@ Route::get('hr/position', 'HumanResourceController@positionShow');
 Route::get('hr/profile', 'HumanResourceController@hr_profile');
 Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
+Route::get('hr/manage_user','HumanResourceController@manage_user');
 
 
 //Routes for supplies 
@@ -206,6 +204,25 @@ Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //display the page for persons
 Route::get('hr/manage_person', 'HumanResourceController@edit');
+//Manage specific person informations
+Route::get('person/manage/{id}', 'HumanResourceController@manage_employee');
+//Add actions to a specific employeer
+Route::get('person/more_info/{id}', 'HumanResourceController@employee_more_info');
+//update person basic information
+Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basic_info');
+//update pesonal contact
+Route::get('person/update_personal_contact/{id}', 'HumanResourceController@update_personal_contact');
+//update work contact
+Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_work_contact');
+//Add next of Kin 
+Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
+//Add Education
+Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+
+
+
+
+
 
 
 

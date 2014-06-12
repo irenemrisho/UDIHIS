@@ -6,7 +6,7 @@ class Notification extends Eloquent {
         public static $unguarded = true;
         
 	public function user(){
-		return $this->hasMany('Users','notification_id','id');
+		return $this->hasMany('User','notification_id','id');
 
 	}
 }

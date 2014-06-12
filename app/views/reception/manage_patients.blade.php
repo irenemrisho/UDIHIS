@@ -9,23 +9,6 @@
 <div class="span9">
 <div class="widget-content">
 
-<div class="tabbable">
-<ul class="nav nav-tabs">
-    <li class="active">
-        <a href="#2" data-toggle="tab">Register Patient</a>
-    </li>
-    <li class=""><a href="#1" data-toggle="tab">Search Patient</a></li>
-
-</ul>
-
-
-
-
-<div class="tab-content">
-<div class="tab-pane active " id="2">
-
-
-
     <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:150px">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <strong>Successfully updated! Redirecting...</strong>
@@ -68,10 +51,12 @@
     <hr>
 
     <div style="text-align:center">    
-     <button class="btn-primary" onMouseDown="save_image()">print card</button><br> 
+     <button class="btn-primary" onMouseDown="print()">print card</button><br> 
 
      <img src="" id="app_card_image" alt="appointment-card-here">
     </div>
+
+    <hr>
 
     <form id="myWizard" type="get" action="">
 
@@ -222,54 +207,6 @@
     <div>
     </div>
 
-</div>
-
-<div class="tab-pane " id="1">
-    <div class="widget-table">
-
-        <div class="widget-header">
-            <form class="form-search" style="margin-left:4px">
-                <input type="text" id="search" class="input-medium search-query" placeholder="Search">
-            </form>
-        </div> <!-- /widget-header -->
-
-        <div class="widget-content">
-
-            <table id="patients" class="table table-striped table-bordered">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Contact</th>
-
-                    <th>&nbsp;</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <?php $patients = Patient::all(); ?>
-                @foreach($patients as $patient)
-                <tr><td>{{$patient->id}}</td>
-                    <td>{{$patient->firstname}}</td>
-                    <td>{{$patient->lastname}}</td>
-                    <td>{{$patient->phone}}</td>
-                    <td></td>
-
-
-                </tr>
-                @endforeach
-
-
-
-
-
-                </tbody>
-            </table>
-
-        </div>
-    </div>
-</div>
 </div>
 </div>
 </div>

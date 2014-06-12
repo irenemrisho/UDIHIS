@@ -14,7 +14,8 @@
 class ReceptionController  extends BaseController{
     
     public function getIndex(){
-            return View::make("reception.reception");
+        $notice = Notification::all();
+            return View::make("reception.reception", compact("notice"));
     }
 
     public function index(){

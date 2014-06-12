@@ -23,11 +23,6 @@ class AdminController  extends BaseController{
     {
             return View::make("admin.admini_page");
     }
-    
-    public function manage_user()
-    {
-            return View::make("admin.manage_user");
-    }
 
     public function admin_profile()
     {
@@ -131,6 +126,10 @@ class AdminController  extends BaseController{
         $notice->save();
 
         return Redirect::to('manage_noticeboard');
+    }
+
+    public function manage_user(){
+            return View::make("admin.manage_user");
     }
   }
     //put your code here 
