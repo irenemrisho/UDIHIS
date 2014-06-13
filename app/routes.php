@@ -188,8 +188,11 @@ Route::get('supplies', 'SupplierController@index');
 Route::get('supplies/request', 'SupplierController@getRequest');
 Route::get('supplies/supplied', 'SupplierController@getSupplied');
 Route::get('supplies/goods', 'SupplierController@getGoods');
+Route::post('supplies/goods', 'SupplierController@addGoods');
 Route::get('supplies/reports', 'SupplierController@getReports');
 Route::get('supplies/account', 'SupplierController@getAccount');
+Route::get('supplies/edit_good', 'SupplierController@getEditGood');
+Route::post('supplies/edit_good', 'SupplierController@updateGood');
 
 
 
