@@ -24,7 +24,10 @@ class BillingController  extends BaseController{
 	       $payments = Payment::groupBy('patient_id')
          ->where('status','=','unpaid')->get(array('patient_id', DB::raw('count(*) as count')));
 
-        return  View::make('billing.Pending_bills')->with('payments',$payments);
+         $paids = Payment::groupBy('patient_id')
+         ->where('status','=','paid')->get(array('patient_id', DB::raw('count(*) as count')));
+
+        return  View::make('billing.Pending_bills')->with('payments',$payments)->with('paids',$paids);
 
     }
     
@@ -177,11 +180,26 @@ class BillingController  extends BaseController{
   	
           }  
     public function getReports(){
-            return View::make("billing.reports_billing");
+            return View::make("billing.manage_report");
     }
     
     public function get_patient_invoice(){
-            return View::make("billing.invoice_pdf");
+
+        $id = Input::get('p_id');
+        $patients_payments = Payment::whereRaw('status=? and patient_id = ? ', array('unpaid',$id))->get();
+        
+        $pdf = PDF::loadView('billing.invoice_pdf_generator', $patients_payments);
+        return $pdf->stream();
+           
+    }
+
+    public function get_patient_patient(){
+        $id = Input::get('p_id');
+        $patients_payments = Payment::whereRaw('status=? and patient_id = ? ', array('unpaid',$id))->get();
+        
+        $pdf = PDF::loadView('billing.receipt_pdf_generator', $patients_payments);
+        return $pdf->stream();
+
     }
 
     public function getProfile(){
@@ -200,6 +218,17 @@ class BillingController  extends BaseController{
         return View::make('billing.showPayements')->with('patients_payments',$patients_payments);
     }   
     
+    public function getPaidModel(){
+        
+        $id = Input::get('id');
+
+        $patients_payments = Payment::whereRaw('status=? and patient_id = ? ', array('paid',$id))->get();
+        
+
+       return View::make('billing.showPaids')->with('patients_payments',$patients_payments);
+        
+    } 
+
     public function campanyPrice(){
         
         $id = Input::get('id');      
