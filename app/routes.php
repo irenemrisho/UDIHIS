@@ -27,7 +27,7 @@ Route::post('/manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');
 Route::get('/manage_user/{id}','Admin@manage_user');
-
+Route::get('/add_user/{id}','AdminController@add_user');
 Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');

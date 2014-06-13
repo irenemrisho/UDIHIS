@@ -32,6 +32,7 @@ Manage users
 <div class="widget-header">
 <h3>Users</h3>
 </div> <!-- /widget-header -->
+<<<<<<< HEAD
 
 <div class="widget-content">
 <div class="tabbable">
@@ -154,6 +155,9 @@ Manage users
 	
 	<div class="widget-content" style="padding:10px">
 	
+=======
+<div class="widget-content" style="padding:10px">
+>>>>>>> fa96e3a91e5e6fa42250b5a4a21c7331644f2a82
 		<table class="table table-striped table-bordered" id="gtable">
 		   <?php	$users = User::where('level', '!=', 0)->get();					
 				?>
@@ -180,63 +184,20 @@ Manage users
 					<td>{{$user->status}}</td>
 					<td>{{User::ago($user->updated_at)}}</td>
                     <td style="text-align:center;">
-                        <a  href="{{url("person/manage/$user->id")}}"
-                        rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
+                        <a  href="{{url("add_user/$user->id")}}"
+                        rel="tooltip" class="btn btn-small " data-original-title="Add user"  data-toggle="modal">
                         <i class="icon-user" ></i>
                         </a>
                         <a  href="{{url("person/more_info/$user->id")}}"
-                        rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
+                        rel="tooltip" class="btn btn-small btn-danger" data-original-title="Remove user"  data-toggle="modal">
                         <i class="icon-edit" ></i>
-                        </a>
-                        <a href="{{url("patient/visit/$user->id")}}"
-                        rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
-                        <i class="icon-tasks"></i>
                         </a>
                     </td>
 				</tr>
 				@endforeach
-				
-
-				
-				
 			</tbody>
 		</table>
-
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">Edit User information</h3>
-</div>
-<div class="modal-body">
-  <img src="{{url("packages/bootstrap/img/loader.gif")}}" id="ajax" style="display:none2;z-index:3000;position:absolute;margin-left: 230px; margin-top:100px">
-  <span id="ajax2"><img src="{{url("packages/bootstrap/img/load.gif")}}"   style=""></span>
-  <div id="alrt" class="alert alert-success alert-dismissable" style="display:none;z-index:3000;position:absolute;margin-left: 160px; margin-top:100px">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <strong>Successfully updated! Redirecting...</strong> 
-  </div>
-	<div id="user_content">
-
-	</div>	
-</div>
-<div class="modal-footer">
-<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-<button class="btn btn-primary" id="save">Save changes</button>
-</div>
-</div>
-
-	
-	</div> <!-- /widget-content -->
-	
-
-</div>
-
-</div>	
-</div>
-</div>
-</div>
 </div>
 </div>	
-
-
+</div>
 @stop
