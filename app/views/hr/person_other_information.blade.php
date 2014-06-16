@@ -37,7 +37,7 @@
 	                		<div class="control-group">
 								<label class="control-label" for="mobilephone">Mobile Phone Number*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="mobilephone"   required value={{$person->mobile_phone}}>
+								<input type="text" class="input-xlarge " id="" name="mobilephone"   required value={{$person->phone_no}}>
 								</div>
 							</div>
 							<div class="control-group">
@@ -105,7 +105,7 @@
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="Relationship" required>
 							            <option disabled>Select Relationship</option>
-							            <option>{{$person->next_kn_name}}</option>
+							            <option>{{$person->relationship}}</option>
 							            <option>Mother</option>
 							            <option>Father</option>
 							            <option>Sibling</option>
@@ -166,29 +166,30 @@
                         <div class="control-group">
                             <label class="control-label" for="designation">Designation</label>
                             <div class="controls">
-                                {{Form::select('level',array(''=>'','1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','7'=>'HR Officer','8'=>'Nurse'), '', array('required'=>'required'))}}
+                                {{Form::select('level',array(''=>'','1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','6'=>'Nurse','7'=>'HR Officer'), '', array('required'=>'required'))}}
 
                             </div>
 
                         </div> <!-- /control-group -->
 							<div class="control-group">
-		                		<label class="control-label" for="position">Section*</label>
+		                		<label class="control-label" for="superposition">Super Position</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="position" required/>
-							            <option disabled>Select Section</option>
-
-							           <option value=""></option>
-
-							        </select>
+                                    <input type="text" class="input-xlarge" id="superposition"   name="superposition"   placeholder=" " value={{$person->super_position}}>
 							    </div>
 							</div>
 							<div class="control-group">
 							    <label class="control-label" for="date_start">Date of first appointment*</label>
 							    <div class="controls">
 
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="date_start" required  placeholder=" "/>
+								<input type="text" class="input-xlarge" id="appointment_date"  name="date_start" required  placeholder=" " value={{$person->date_first_appointment}}>
 							    </div>          
 						    </div>
+                            <div class="control-group">
+                                <label class="control-label" for="date_start">Payslip Number</label>
+                                <div class="controls">
+                                    <input type="text" class="input-xlarge" id="payslip"  name="payslip"   placeholder=" " value={{$person->payslip_no}}>
+                                </div>
+                            </div>
 	                	</div>
 	                	<div class="span4 pull-right">
 	                		<div class="control-group">
@@ -219,9 +220,10 @@
 							    </div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="salary">Salary*</label>
+								<label class="control-label" for="salary">Salary</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="salary" value="" >
+								<input type="text" class="input-xlarge " id="salary" name="salary" value={{$person->salary
+                                    }} >
 								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
@@ -236,21 +238,21 @@
 	                		<div class="control-group">
 								<label class="control-label" for="institution">Institution Name*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="institution" value={{$person->next_kn_email}} >
+								<input type="text" class="input-xlarge " id="" name="institution" value={{$person->institution}} >
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="institution_loc">Institution Location*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="institution_loc" value={{$person->next_kn_email}} >
+								<input type="text" class="input-xlarge " id="" name="institution" value={{$person->location}} >
 								</div>
 							</div>
 							<div class="control-group">
 		                		<label class="control-label" for="profession">Year Completed</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="profession"/>
+							        <select class="form-control input-xlarge" name="year_complete"/>
 							            <option disabled>Select Year</option>
-							            <option>{{$person->profession}}</option>
+							            <option>{{$person->year_complete}}</option>
 							            <option>1990</option>
 							            <option>1991</option>
 							            <option>1992</option>
@@ -268,7 +270,7 @@
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="profession"/>
 							            <option disabled>Select level</option>
-							            <option></option>
+							            <option>{{$person->profession}}</option>
 							            <option>PhD</option>
 							            <option>Masters</option>
 							            <option>Bachelor</option>
@@ -279,7 +281,7 @@
 							    <div class="control-group">
 								<label class="control-label" for="major">Major</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="major" value={{$person->next_kn_email}} >
+								<input type="text" class="input-xlarge " id="" name="major" value={{$person->major}} >
 								</div>
 							</div>
 							</div>
