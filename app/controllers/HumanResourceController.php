@@ -33,6 +33,7 @@ class HumanResourceController extends \BaseController {
 
   public function employee_more_info($id)
   {
+    $id = Crypt::decrypt($id);
     $person = User::find($id);
     return View::make('hr.person_more_information', compact('person'));
   }

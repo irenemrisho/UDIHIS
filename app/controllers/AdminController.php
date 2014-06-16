@@ -44,7 +44,7 @@ class AdminController  extends BaseController{
         $user->username = $inputs['username'];
         $user->password = Hash::make($inputs['password']);
         $user->save();
-        return "ok";
+        return View::make('admin.manage_user', compact('user'));
     }
 
      public function editUser($id){
