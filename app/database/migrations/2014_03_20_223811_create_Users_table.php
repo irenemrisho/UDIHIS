@@ -62,15 +62,16 @@ class CreateUsersTable extends Migration {
             $table->String('institution')->nullable();
             $table->String('location')->nullable();
             $table->String('year_complete')->nullable();
+            $table->String('profession')->nullable();
             $table->String('major')->nullable();
 
             $table->String('section')->nullable();
             $table->String('date_first_appointment')->nullable();
             $table->String('employee_type')->nullable();
-            $table->String('section_status')->nullable();
+            $table->String('employment_status')->nullable();
             $table->String('salary')->nullable();
             $table->String('super_position')->nullable();
-            $table->String('payslip_no')->nullable();
+            $table->String('payslip_no')->nullable()->unique();
 
             $table->String('reg_council')->nullable();
             $table->String('reg_no')->nullable();
