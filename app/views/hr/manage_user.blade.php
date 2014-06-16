@@ -20,7 +20,7 @@
 @section('main')
 <h1 class="page-title">
 <i class="icon-th-large"></i>
-Manage users					
+Manage Employees
 </h1>
 
 
@@ -30,19 +30,15 @@ Manage users
 
 
 <div class="widget-header">
-<h3>Users</h3>
+<h3>Employees</h3>
 </div> <!-- /widget-header -->
 	<div class="widget-content" style="padding:10px">
 		<table class="table table-striped table-bordered" id="gtable">
-		   <?php	$users = User::where('level', '!=', 0)->get();					
-				?>
-			
 			<thead>
 				<tr>
 					<th>#</th>
 					<th>First Name</th>
 					<th>Last Name</th>
-					<th>Designation</th>
 					<th>Status</th>
 					<th>Last Updated</th>
 					<th>operation</th>
@@ -50,12 +46,11 @@ Manage users
 			</thead>
 			
 			<tbody>
-			@foreach($users as $user)
+			@foreach($person as $user)
 				<tr>
 					<td>{{$user->id}}</td>
 					<td>{{$user->first_name}}</td>
 					<td>{{$user->last_name}} </td>
-					<td>{{User::level($user->level)}}</td>
 					<td>{{$user->status}}</td>
 					<td>{{User::ago($user->updated_at)}}</td>
                     <td style="text-align:center;">

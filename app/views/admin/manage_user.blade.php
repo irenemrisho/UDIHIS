@@ -34,7 +34,7 @@ Manage users
 </div> <!-- /widget-header -->
 <div class="widget-content" style="padding:10px">
 		<table class="table table-striped table-bordered" id="gtable">
-		   <?php	$users = User::where('level', '!=', 0)->get();					
+		   <?php	$users = User::orderBy('id', 'DESC')->get();
 				?>
 			
 			<thead>

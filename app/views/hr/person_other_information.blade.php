@@ -4,7 +4,7 @@
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
-    		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
+    		<tr><td>Full Name</td><td>{{$person->first_name}}  {{$person->last_name}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
     		<tr><td>Residence</td><td>{{$person->residence}}</td></tr>
     		<tr><td>Place of Domicile</td><td>{{$person->place_of_domicile}}</td></tr>
@@ -91,7 +91,7 @@
                 	</form>
               </div>
               <div class="tab-pane fade" id="nextofkin">
-                <form id="nextofkinform" action="{{URL::to('person/edit2/' . $person->id )}}" method="POST">
+                <form id="nextofkinform" action="{{URL::to('person/editNext/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
                 			<h4>Next of Kin Information</h4>
 	                		<div class="control-group">
@@ -150,7 +150,7 @@
 							<div class="control-group">
 								<label class="control-label" for="notes">Notes</label>
 								<div class="controls">
-								<textarea rows="3" name="faxnumber" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
+								<textarea rows="3" name="note" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
 								</div>
 							</div>
 							<br>
@@ -162,17 +162,15 @@
               <div class="tab-pane fade" id="uploadfile">                
 	                <form id="position_form" action="{{URL::to('person/edit4/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
-	                		<div class="control-group">
-		                		<label class="control-label" for="position">Designation*</label>
-							    <div class="controls">
-							        <select class="form-control input-xlarge" name="position" required/>
-							            <option disabled>Select Position</option>
 
-							           <option value=""></option>
+                        <div class="control-group">
+                            <label class="control-label" for="designation">Designation</label>
+                            <div class="controls">
+                                {{Form::select('level',array(''=>'','1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','7'=>'HR Officer','8'=>'Nurse'), '', array('required'=>'required'))}}
 
-							        </select>
-							    </div>
-							</div>
+                            </div>
+
+                        </div> <!-- /control-group -->
 							<div class="control-group">
 		                		<label class="control-label" for="position">Section*</label>
 							    <div class="controls">

@@ -4,7 +4,7 @@
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
-    		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
+    		<tr><td>Full Name</td><td>{{$person->first_name}}  {{$person->last_name}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
     		<tr><td>Residence</td><td>{{$person->residence}}</td></tr>
     		<tr><td>Place of Domicile</td><td>{{$person->place_of_domicile}}</td></tr>
@@ -30,12 +30,12 @@
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade in active" id="actions">
-                	<form id="contactform" action="{{URL::to('person/edit1/' . $person->id )}}" method="POST">
+                	<form id="contactform" action="{{URL::to('person/discipline/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
 							<div class="control-group">
 		                		<label class="control-label" for="benefit">Action*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="benefit">
+							        <select class="form-control input-xlarge" name="action">
 							            <option disabled>Select action</option>
 							            <option></option>							            
 							            <option>Dismissal</option>
@@ -47,7 +47,7 @@
 							<div class="control-group">
 		                		<label class="control-label" for="benefit">Reason*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="benefit">
+							        <select class="form-control input-xlarge" name="reason">
 							            <option disabled>Select source</option>							            
 							            <option></option>
 							            <option>Drug Related</option>
@@ -64,7 +64,7 @@
 	                		<div class="control-group">
 							    <label class="control-label" for="action_date">Start*</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="action_date" required  placeholder=""/>
+								<input type="text" class="input-xlarge picker" id="appointment_date" value=""  name="start_date" required  placeholder=""/>
 							    </div>          
 						    </div>
 	                	</div>
@@ -72,7 +72,7 @@
 	                		<div class="control-group">
 							    <label class="control-label" for="action_date">End </label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="action_date" placeholder=""/>
+								<input type="text" class="input-xlarge picker" id="appointment_date" value=""  name="end_date" placeholder=""/>
 							    </div>          
 						    </div>
 	                		<div class="control-group">
@@ -84,7 +84,7 @@
 							<div class="control-group">
 								<label class="control-label" for="notes">People involved</label>
 								<div class="controls">
-								<textarea rows="3" name="faxnumber" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
+								<textarea rows="3" name="people" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
 								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
@@ -131,7 +131,7 @@
 							<div class="control-group">
 							    <label class="control-label" for="reg_date">Expiration Date</label>
 							    <div class="controls">
-								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="reg_date" placeholder=" "/>
+								<input type="text" class="input-xlarge" id="appointment_date" value=""  name="exp_date" placeholder=" "/>
 							    </div>          
 						    </div>
 							<br>
@@ -158,7 +158,7 @@
 						    <div class="control-group">
 								<label class="control-label" for="course">Who request</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="course" value="" />
+								<input type="text" class="input-xlarge " id="" name="request" value="" />
 								</div>
 							</div>
 	                	</div>
@@ -172,7 +172,7 @@
 	                		<div class="control-group">
 		                		<label class="control-label" for="employ_type">Status</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="employ_type"/>
+							        <select class="form-control input-xlarge" name="status"/>
 							            <option disabled>Select Status</option>
 							            <option></option>
 							            <option>Completed</option>
@@ -182,9 +182,9 @@
 							    </div>
 							</div>
 	                		<div class="control-group">
-		                		<label class="control-label" for="employ_status">Evaluation</label>
+		                		<label class="control-label" for="evaluation">Evaluation</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="employ_status"/>
+							        <select class="form-control input-xlarge" name="evaluation"/>
 							            <option disabled>Select One</option>
 							            <option></option>							            
 							            <option>Pass</option>
@@ -218,7 +218,7 @@
 							<div class="control-group">
 		                		<label class="control-label" for="benefit">Source*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="benefit">
+							        <select class="form-control input-xlarge" name="source">
 							            <option disabled>Select source</option>							            
 							            <option></option>
 							            <option>NGO's</option>

@@ -72,11 +72,11 @@
 					<table class="table table-striped">
 						<a href="{{url("person/add_education/$person->id")}}"><span class="pull-left label">Add Education</span></a> &nbsp
 						<a href=""><span class="label" style="position:absolute">Education History</span></a>
-			    		<tr><td>Institution Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
-			    		<tr><td>Institution Location</td><td>{{$person->gender}}</td></tr>
-			    		<tr><td>Year Completed</td><td>{{$person->residence}}</td></tr>
-			    		<tr><td>Level</td><td>{{$person->place_of_domicile}}</td></tr>
-			    		<tr><td>Major</td><td>{{$person->nationality}}</td></tr>
+			    		<tr><td>Institution Name</td><td>{{$person->institution}}</td></tr>
+			    		<tr><td>Institution Location</td><td>{{$person->location}}</td></tr>
+			    		<tr><td>Year Completed</td><td>{{$person->year_complete}}</td></tr>
+			    		<tr><td>Level</td><td>{{$person->level}}</td></tr>
+			    		<tr><td>Major</td><td>{{$person->major}}</td></tr>
 			    	</table>
 				</div>
               </div>
@@ -85,9 +85,8 @@
 					<table class="table table-striped">
 						<a href=""><span class="pull-left label">Add</span></a> &nbsp
 						<a href=""><span class="label" style="position:absolute">Position History</span></a>
-			    		<tr><td>Designation</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
-			    		<tr><td>Section</td><td>{{$person->position_name}}</td></tr>
-			    		<tr><td>Date of First Appointment</td><td>{{$person->date_first}}</td></tr>
+			    		<tr><td>Section</td><td>{{$person->section}}</td></tr>
+			    		<tr><td>Date of First Appointment</td><td>{{$person->date_first_appointment}}</td></tr>
 			    		<tr><td>Type of employment</td><td>{{$person->employ_type}}</td></tr>
 			    		<tr><td>Employment Status</td><td>{{$person->employ_status}}</td></tr>
 			    		<tr><td>Salary</td><td>{{$person->salary}}</td></tr>

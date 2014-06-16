@@ -14,7 +14,8 @@ class HumanResourceController extends \BaseController {
 
     public function manage_user()
     {
-        return View::make("hr.manage_user");
+        $person= User::orderBy('id', 'DESC')->get();
+        return View::make('hr.manage_user', compact('person'));
     }
 
 	public function person()
@@ -199,14 +200,14 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function updateFirst($id)
 	{
+        $person = User::find($id);
         $person1 = User::find($id);
-        $person1->mobile_phone = Input::get('mobilephone');
+        $person1->phone_no = Input::get('mobilephone');
         $person1->telephone = Input::get('telephone');
         $person1->email = Input::get('email');
-        $person1->fax = Input::get('faxnumber');
         $person1->mailing_address = Input::get('mailing');
         $person1->offc_mobile_phone = Input::get('offcmobilephone');
-        $person1->offc_telephone = Input::get('offctelephone');
+        $person1->extension_no = Input::get('offctelephone');
         $person1->offc_email = Input::get('offcemail');
         $person1->offc_fax = Input::get('offcfaxnumber');
         $person1->offc_mailing_address = Input::get('offcmailing');
@@ -214,11 +215,12 @@ class HumanResourceController extends \BaseController {
         $person1->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-       return "ok";
+        return View::make('hr.person_more_information', compact('person'));
     }
 
     public function updateSecond($id)
     {
+        $person = User::find($id);
         $person2 = User::find($id);
         $person2->next_kn_name = Input::get('name');
         $person2->relationship = Input::get('relatioship');
@@ -226,42 +228,79 @@ class HumanResourceController extends \BaseController {
         $person2->next_kn_mailing = Input::get('mailing');
         $person2->next_kn_mob_no = Input::get('mobilephone');
         $person2->next_kn_tel_no = Input::get('telephone');
-        $person2->next_kn_fax_no = Input::get('faxnumber');
-        $person2->next_kn_notes = Input::get('faxnumber');
+        $person2->next_kn_notes = Input::get('note');
         $person2->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-        return "ok";
+        return View::make('hr.person_more_information', compact('person'));
+    }
+
+    public function updateRegistration($id)
+    {
+        $person = User::find($id);
+        $person2 = User::find($id);
+        $person2->reg_council = Input::get('benefit');
+        $person2->reg_no = Input::get('reg_number');
+        $person2->reg_date = Input::get('reg_date');
+        $person2->lisence = Input::get('lic_number');
+        $person2->exp_date = Input::get('exp_date');
+        $person2->save();
+        // redirect
+        Session::flash('message', 'Successfully updated!');
+        return View::make('hr.person_more_information', compact('person'));
     }
 
 
     public function updateThird($id)
     {
+        $person = User::find($id);
         $person3 = User::find($id);
-        $person3->basic_edu = Input::get('basic_edu');
-        $person3->profession = Input::get('profession');
+        $person3->benefit_type = Input::get('benefit');
+        $person3->source = Input::get('source');
+        $person3->amount = Input::get('amount');
+        $person3->start_benefit_date = Input::get('start');
+        $person3->end_benefit_date = Input::get('end');
         $person3->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-        return "ok";
+        return View::make('hr.person_more_information', compact('person'));
     }
 
 
     public function updateFourth($id)
     {
+        $person = User::find($id);
         $person4 = User::find($id);
-        $person4->position_id = Input::get('position');
-        $person4->date_first = Input::get('date_start');
-        $person4->date_last = Input::get('date_end');
-        $person4->employ_status = Input::get('employ_status');
-        $person4->employ_type = Input::get('employ_type');
+        $person4->course = Input::get('course');
+        $person4->course_start_date = Input::get('date_start');
+        $person4->who_request = Input::get('request');
+        $person4->cert_date = Input::get('cert_date');
+        $person4->course_status = Input::get('status');
+        $person4->evaluation = Input::get('evaluation');
         $person4->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-        return "ok";
+        return View::make('hr.person_more_information', compact('person'));
     }
 
-	/**
+    public function discplinaryAction($id)
+    {
+        $person = User::find($id);
+        $person5 = User::find($id);
+        $person5->action_taken = Input::get('action');
+        $person5->reason = Input::get('reason');
+        $person5->action_start = Input::get('start_date');
+        $person5->action_end = Input::get('end_date');
+        $person5->date_of_discussion = Input::get('status');
+        $person5->involved_people = Input::get('people');
+        $person5->save();
+        // redirect
+        Session::flash('message', 'Successfully updated!');
+        return View::make('hr.person_more_information', compact('person'));
+    }
+
+
+    /**
 	 * Remove the specified resource from storage.
 	 *
 	 * @param  int  $id

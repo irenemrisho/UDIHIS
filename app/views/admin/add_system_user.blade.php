@@ -4,12 +4,11 @@
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
-    		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
+    		<tr><td>Full Name</td><td>{{$person->first_name}}  {{$person->last_name}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
-    		<tr><td>Designation</td><td>{{$person->residence}}</td></tr>
-    		<tr><td>Facility</td><td>{{$person->place_of_domicile}}</td></tr>
-    		<tr><td>Email</td><td>{{$person->nationality}}</td></tr>
-    		<tr><td>Username</td><td>{{$person->nationality}}</td></tr>
+    		<tr><td>Designation</td><td>{{$person->level}}</td></tr>
+    		<tr><td>Facility</td><td>{{$person->department}}</td></tr>
+    		<tr><td>Email</td><td>{{$person->email}}</td></tr>
     	</table>
 	</div>
 	<div class="span2">
@@ -22,18 +21,18 @@
 </div>
 
 <div class="widget-content">
-	<form id="add_system_user_form" action="#" method="POST">
+	<form id="add_system_user_form" action="{{url("System_user/{$person->id}")}}" method="POST">
 		<div class="span4 pull-left">
             <div class="control-group">
 				<label class="control-label" for="username">Username*</label>
 				<div class="controls">
-				<input type="text" class="input-xlarge " id="" name="username" required value={{$person->offc_mobile_phone}}>
+				<input type="text" class="input-xlarge " id="" name="username" required value={{$person->username}}>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="password">Password*</label>
 				<div class="controls">
-				<input type="password" class="input-xlarge " id="" name="password" required value={{$person->offc_mobile_phone}}>
+				<input type="password" class="input-xlarge " id="" name="password" required value={{$person->password}}>
 				</div>
 			</div>
 			<button type="reset" class="btn">Cancel</button>

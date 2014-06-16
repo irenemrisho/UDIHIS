@@ -30,10 +30,20 @@ class AdminController  extends BaseController{
         return View::make('admin.admin_profile');
     }
 
-    public function add_user($id)
+    public function edit_user($id)
     {
             $person = User::find($id);
              return View::make('admin.add_system_user', compact('person'));
+    }
+
+    public function AssignRoll($id){
+        $inputs = Input::all();
+        $user   = User::find($id);
+
+        $user->username = $inputs['username'];
+        $user->password = Hash::make($inputs['password']);
+        $user->save();
+        return "ok";
     }
 
      public function editUser($id){

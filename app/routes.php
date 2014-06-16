@@ -27,7 +27,8 @@ Route::post('/manage_user/search/', 'AdminController@search');
 
 Route::post('/manage_user/{id}','AdminController@editUser');
 Route::get('/manage_user/{id}','Admin@manage_user');
-Route::get('/add_user/{id}','AdminController@add_user');
+Route::get('/add_user/{id}','AdminController@edit_user');
+Route::post('/System_user/{id}','AdminController@AssignRoll');
 Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
@@ -186,11 +187,15 @@ Route::get('hr/manage_user','HumanResourceController@manage_user');
 //first
 Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
-Route::post('person/edit2/{id}', 'HumanResourceController@updateSecond');
+Route::post('person/edit2/{id}', 'HumanResourceController@updateRegistration');
 //third
 Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
 //fourth
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
+//next of kin information
+Route::post('person/editNext/{id}', 'HumanResourceController@updateSecond');
+//route for updating the disciplinary action
+Route::post('person/discipline/{id}', 'HumanResourceController@discplinaryAction');
 //display the page for persons
 Route::get('hr/manage_person', 'HumanResourceController@edit');
 //Manage specific person informations
@@ -207,6 +212,7 @@ Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_wo
 Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
 //Add Education
 Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+
 
 
 
