@@ -4,7 +4,7 @@
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
-    		<tr><td>Full Name</td><td>{{$person->first_name}}  {{$person->last_name}}</td></tr>
+    		<tr><td>Full Name</td><td>{{$person->first_name}} {{$person->last_name}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
     		<tr><td>Residence</td><td>{{$person->residence}}</td></tr>
     		<tr><td>Place of Domicile</td><td>{{$person->place_of_domicile}}</td></tr>

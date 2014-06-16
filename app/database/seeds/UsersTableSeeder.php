@@ -22,6 +22,22 @@ class UsersTableSeeder extends Seeder {
 				"password"=>Hash::make('1234')
 			));
 
+		User::create(array(
+
+				"first_name"=>"Raphael",
+				"last_name"=>"Mhando",
+				"middle_name"=>"John",
+				"level"=>7,
+				"username"=>"hr",
+				"phone_no"=>"0762813052",
+				"extension_no"=>"2",
+				"room_no"=>"7",
+				"status"=>"active",
+				"password"=>Hash::make('1234')
+			));
+
 	}
+
+
 
 }

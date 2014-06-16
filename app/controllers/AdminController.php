@@ -31,7 +31,8 @@ class AdminController  extends BaseController{
     }
 
     public function edit_user($id)
-    {
+    {       
+            $id = Crypt::decrypt($id);
             $person = User::find($id);
              return View::make('admin.add_system_user', compact('person'));
     }

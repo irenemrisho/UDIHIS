@@ -54,15 +54,15 @@ Manage Employees
 					<td>{{$user->status}}</td>
 					<td>{{User::ago($user->updated_at)}}</td>
                     <td style="text-align:center;">
-                        <a  href="{{url("person/manage/$user->id")}}"
+                        <a  href="{{url("person/manage/".Crypt::encrypt($user->id))}}"
                         rel="tooltip" class="btn btn-small fetchuser" data-original-title="manage"  data-toggle="modal">
                         <i class="icon-user" ></i>
                         </a>
-                        <a  href="{{url("person/more_info/$user->id")}}"
+                        <a  href="{{url("person/more_info/".Crypt::encrypt($user->id))}}"
                         rel="tooltip" class="btn btn-small fetchuser" data-original-title="more actions"  data-toggle="modal">
                         <i class="icon-edit" ></i>
                         </a>
-                        <a href="{{url("patient/visit/$user->id")}}"
+                        <a href="{{url("patient/visit/".Crypt::encrypt($user->id))}}"
                         rel="tooltip" data-placement="top" data-original-title="make roaster" class="btn btn-small btn-primary">
                         <i class="icon-tasks"></i>
                         </a>

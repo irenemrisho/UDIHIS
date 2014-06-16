@@ -6,7 +6,7 @@
 		<table class="table table-striped">
 			<a href="{{url("person/update_basic_info/$person->id")}}"><span class="pull-left label">Update</span></a> &nbsp
 			<a href=""><span class="label" style="position:absolute">Name History</span></a>
-    		<tr><td>Full Name</td><td>{{$person->firstname}}  {{$person->surname}}</td></tr>
+    		<tr><td>Full Name</td><td>{{$person->first_name}}  {{$person->last_name}}</td></tr>
     		<tr><td>Gender</td><td>{{$person->gender}}</td></tr>
     		<tr><td>Residence</td><td>{{$person->residence}}</td></tr>
     		<tr><td>Place of Domicile</td><td>{{$person->place_of_domicile}}</td></tr>
