@@ -3,6 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
+
     "hash": "fa5f6d0d43219406326e7cf4ebf94fce",
     "packages": [
         {
@@ -427,6 +428,18 @@
         },
         {
             "name": "monolog/monolog",
+<<<<<<< HEAD
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65026b610f8c19e61d7242f600530677b0466aac",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
+=======
             "version": "1.10.0",
             "source": {
                 "type": "git",
@@ -437,6 +450,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/25b16e801979098cb2f120e697bfce454b18bf23",
                 "reference": "25b16e801979098cb2f120e697bfce454b18bf23",
+>>>>>>> c1b113f8bfa3340711f385b982e2e33ee74c6f6c
                 "shasum": ""
             },
             "require": {
@@ -491,7 +505,11 @@
                 "logging",
                 "psr-3"
             ],
+<<<<<<< HEAD
+            "time": "2014-04-24 13:29:03"
+=======
             "time": "2014-06-04 16:30:04"
+>>>>>>> c1b113f8bfa3340711f385b982e2e33ee74c6f6c
         },
         {
             "name": "nesbot/carbon",
