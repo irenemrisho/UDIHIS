@@ -23,6 +23,31 @@ class PharmacyController extends BaseController {
         
     }
 
+    public function getProductRequest(){
+        $products = Product::get();
+
+        return View::make('Pharmacy.product_request')->with('products',$products);
+    }
+
+    public function addProductRequest(){
+
+    $inputs = Input::all();
+            $request = Product_request::create(array(
+                "product_id" =>$inputs['product_name'],
+                "user_id" =>Auth::user()->id,
+                "quantity"=>$inputs['product_quantity'],
+                "status"=>'open',
+                ));
+
+            if ($request) {
+                            
+               return Redirect::to('product_request?msg=1');
+            }else{
+                
+                return Redirect::to('product_request?msg=2');
+            }
+    }
+
     public function getMedics(){
         if(isset($_GET['provide'])){
              $update = Recommended_medicine::find($_GET['provide']);
