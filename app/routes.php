@@ -224,11 +224,24 @@ Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basi
 //update pesonal contact
 Route::get('person/update_personal_contact/{id}', 'HumanResourceController@update_personal_contact');
 //update work contact
-Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_work_contact');
+Route::get('person/update_work_contact/{id}', 'HumanResourceController@work_contact');
 //Add next of Kin 
 Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
 //Add Education
 Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+//update basic informations person/update
+Route::post('person/update/{id}', 'HumanResourceController@update_person_basic_info');
+//update pesonal contact 
+Route::post('person/person_contact/{id}', 'HumanResourceController@update_person_contact');
+//update work contact
+Route::post('person/work_contact/{id}', 'HumanResourceController@update_work_contact');
+//update next of kin 
+Route::get('person/update_next_of_kin/{id}', 'HumanResourceController@update_next_of_kin');
+//update next of kin person/update_next_of_kin
+Route::post('person/update_next_of_kin/{id}', 'HumanResourceController@update_nextofkin');
+//change user password
+Route::post('person/change_password', 'HumanResourceController@update_user_password');
+
 
 
 

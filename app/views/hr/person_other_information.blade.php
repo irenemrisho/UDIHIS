@@ -108,6 +108,7 @@
 							            <option>{{$person->relationship}}</option>
 							            <option>Mother</option>
 							            <option>Father</option>
+							            <option>Friend</option>
 							            <option>Sibling</option>
 							            <option>Wife</option>
 							            <option>Husband</option>
@@ -166,13 +167,13 @@
                         <div class="control-group">
                             <label class="control-label" for="designation">Designation</label>
                             <div class="controls">
-                                {{Form::select('level',array(''=>'','1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','6'=>'Nurse','7'=>'HR Officer'), '', array('required'=>'required'))}}
+                                {{Form::select('level',array(''=>'','1'=>'Pharmacist','2'=>'Lab Technician','3'=>'Receptionist','4'=>'Doctor','5'=>'Accountant','6'=>'Nurse','7'=>'HR Officer','8'=>'supplier'), '', array('required'=>'required'))}}
 
                             </div>
 
                         </div> <!-- /control-group -->
 							<div class="control-group">
-		                		<label class="control-label" for="superposition">Super Position</label>
+		                		<label class="control-label" for="superposition">Superative Position</label>
 							    <div class="controls">
                                     <input type="text" class="input-xlarge" id="superposition"   name="superposition"   placeholder=" " value={{$person->super_position}}>
 							    </div>
@@ -185,7 +186,7 @@
 							    </div>          
 						    </div>
                             <div class="control-group">
-                                <label class="control-label" for="date_start">Payslip Number</label>
+                                <label class="control-label" for="date_start">Cheque Number</label>
                                 <div class="controls">
                                     <input type="text" class="input-xlarge" id="payslip"  name="payslip"   placeholder=" " value={{$person->payslip_no}}>
                                 </div>
@@ -242,13 +243,13 @@
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="institution_loc">Institution Location*</label>
+								<label class="control-label" for="location">Institution Location*</label>
 								<div class="controls">
-								<input type="text" class="input-xlarge " id="" name="institution" value={{$person->location}} >
+								<input type="text" class="input-xlarge " id="" name="location" value={{$person->institution_loc}} >
 								</div>
 							</div>
 							<div class="control-group">
-		                		<label class="control-label" for="profession">Year Completed</label>
+		                		<label class="control-label" for="year_complete">Year Completed</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="year_complete"/>
 							            <option disabled>Select Year</option>
@@ -266,9 +267,9 @@
 	                	<div class="span4 pull-right">
 	                		<h4>Level</h4>
 	                		<div class="control-group">
-		                		<label class="control-label" for="profession">Degree</label>
+		                		<label class="control-label" for="degree">Degree</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="profession"/>
+							        <select class="form-control input-xlarge" name="degree"/>
 							            <option disabled>Select level</option>
 							            <option>{{$person->profession}}</option>
 							            <option>PhD</option>
