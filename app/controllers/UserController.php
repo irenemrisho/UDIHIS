@@ -72,6 +72,10 @@ class UserController extends BaseController {
                    # code...
                    return Redirect::to('hr');
                    break;
+                case 8:
+                   # code...
+                   return Redirect::to('supplies');
+                   break;
 
                default:
                    # code...
