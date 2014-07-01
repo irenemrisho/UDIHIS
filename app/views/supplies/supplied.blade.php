@@ -60,19 +60,24 @@
                                         <th>product name</th>
                                         <th>receiver</th>
                                         <th>quantity</th>
-                                        <th>Action</th>  
                                
                                     </tr>
                             </thead>
                             <tbody id="provide_medication">
                                     
-                                 <tr><td>d</td>
-                                    <td>d</td>
-                                    <td>dfd</td>
-                                    <td>dsd</td>
-                                    <td >d</td>
+                                 <?php $index = 1; ?>
+                                    @foreach($product_supplieds as $product_supplied)
+                                    <?php $user=User::find($product_supplied->user_id)->first();
+                                          $product=Product::find($product_supplied->product_id)->first();
+                                     ?>
+                                 <tr>
+                                    <td>{{$index}}</td>
+                                    <td>{{$product->name}}</td>
+                                    <td>{{$user->first_name." ".$user->last_name}}</td>
+                                    <td>{{$product_supplied->quantity}}</td>
                                 </tr>
-                                    
+                                <?php $index++ ?>
+                                    @endforeach
                                 </tbody>
                             </table>
 

@@ -79,7 +79,6 @@ Manage Patients New Visit
                         <option></option>
                         <option>Cash</option>
                         <option>Insurance</option>
-                        <option>Sick Sheet</option>
                     </select>
 
                      <div id="insurance-more">

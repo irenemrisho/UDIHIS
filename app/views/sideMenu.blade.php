@@ -15,10 +15,11 @@
 @if(Auth::user()->level == 1)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication<span class="label label-warning pull-right ">{{ Recommended_medicine::where('status','=','open')->count() }}</span></a></li>
+    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication</a></li>
 
     </span></a></li>
     <li><a href="{{url("manage_medicine")}}"><i class="icon-user-md"></i>Manage medicine </a></li>
+    <li><a href="{{url("product_request")}}"><i class="icon-asterisk"></i>request product </a></li>
     <li><a href="{{url("#")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="my_accountpharmacy"><i class="icon-user"></i>My account</a></li>
 </ul>
@@ -100,8 +101,8 @@
 @if(Auth::user()->level == 8)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("supplies")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("supplies/request")}}"><i class="icon-user-md"></i>Pending request</a></li>
-    <li><a href="{{url("supplies/supplied")}}"><i class="icon-user-md"></i>Supplied</a></li>
+    <li><a href="{{url("supplies/request")}}"><i class="icon-asterisk"></i>Pending request<span class="label label-warning pull-right ">{{ Product_request::where('status','=','open')->count() }}</span></a></li>
+    <li><a href="{{url("supplies/supplied")}}"><i class="icon-sort"></i>Supplied</a></li>
     <li><a href="{{url("supplies/goods")}}"><i class="icon-user-md"></i>Manage goods</a></li>
     <li><a href="{{url("supplies/reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("supplies/account")}}"><i class="icon-user"></i>My account</a></li>

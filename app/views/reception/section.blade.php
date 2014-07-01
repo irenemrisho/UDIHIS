@@ -13,24 +13,32 @@ $docts = User::where('level',4)->get();
 @endif
 
 @if($section == "Insurance")
+<?php 
+$insurances = InsuranceCompany::get();
+          
+?>
 
 <p>Insurance Company</p>
 <select id="insurence" class="form-control" name="company">  
 <option  value=""></option>
-<option  value="nif">NIF</option>
-<option  value="aar">AAR</option>
-<option  value="nhif">NHIF</option>
-
-
-
+@foreach($insurances as $insurance)
+<option  value="{{$insurance->id}}">{{$insurance->name}}</option>
+@endforeach
 </select>
 
 @endif
 
 @if($section == "Cash")
 <?php 
-$registration = Service::where('name','registration')->first();
-$consultation = Service::where('name','consultation')->first();
+$private_id=InsuranceCompany::whereName('private')->first()->id;
+
+$registration_id= Service::whereName('registration')->first()->id;
+$consultation_id= Service::whereName('consultation')->first()->id;
+
+$registration_price = Price_company::whereRaw('service_id=? and company_id = ? ', array($registration_id,$private_id))->first()->price;
+$consultation_price = Price_company::whereRaw('service_id=? and company_id = ? ', array($consultation_id,$private_id))->first()->price;
+ 
+
 ?>
 
 <p>Payement</p>
@@ -50,9 +58,8 @@ $consultation = Service::where('name','consultation')->first();
             
          <tr>
          	<td>1</td>
-            <td>{{$registration->name}}</td>
-            <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
-            array(Service::where('name','registration')->first()->id,0))->first()->price}}</td>
+            <td>Registration</td>
+            <td>{{$registration_price}}</td>
             <td style="text-align:center;">
 		    	<label name="first" id="first1"   class="btn-small btn-primary">Pay now</label>
             	<label name="" id="second1" class="btn-small btn-warning">Later</label>
@@ -61,9 +68,8 @@ $consultation = Service::where('name','consultation')->first();
             </tr>
          <tr>
          	<td>2</td>
-            <td>{{$consultation->name}}</td>
-            <td>{{Price_company::whereRaw('service_id=? and company_id = ? ',
-            array(Service::where('name','consultation')->first()->id,0))->first()->price}}</td>
+            <td>Consultation</td>
+            <td>{{$consultation_price}}</td>
             <td style="text-align:center;">
 		    	<label name="" id="first2"  class="btn-small btn-primary">Pay now</label>
             	<label name="" id="second2" class="btn-small btn-warning">Later</label>

@@ -65,13 +65,21 @@
                                     </tr>
                             </thead>
                             <tbody id="provide_medication">
-                                    
-                                 <tr><td>d</td>
-                                    <td>d</td>
-                                    <td>dfd</td>
-                                    <td>dsd</td>
-                                    <td >d</td>
+                                    <?php $index = 1; ?>
+                                    @foreach($product_requests as $product_request)
+                                    <?php $user=User::find($product_request->user_id)->first();
+                                          $product=Product::find($product_request->product_id)->first();
+                                     ?>
+                                 <tr>
+                                    <td>{{$index}}</td>
+                                    <td>{{$product->name}}</td>
+                                    <td>{{$user->first_name." ".$user->last_name}}</td>
+                                    <td>{{$product_request->quantity}}</td>
+                                    <td><button href="javascript:;" class="btn btn-small btn-danger deleteCampany">Provide</button>
+                                                                      </td>
                                 </tr>
+                                <?php $index++ ?>
+                                    @endforeach
                                     
                                 </tbody>
                             </table>

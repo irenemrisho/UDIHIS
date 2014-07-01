@@ -65,7 +65,8 @@ Route::post('manage_medicine/search/', 'PharmacyController@search');
 Route::get('dashboard','PharmacyController@getDash'); 
 Route::post('pharmacy/recommended','PharmacyController@profile'); 
 Route::post('provide_recommended','PharmacyController@provide_selected'); 
-
+Route::get('product_request','PharmacyController@getProductRequest');
+Route::post('product_request','PharmacyController@addProductRequest');
 
 /*Billing Route*/
 Route::get('billing','BillingController@getIndex');
