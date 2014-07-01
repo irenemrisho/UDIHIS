@@ -50,7 +50,13 @@ class HumanResourceController extends \BaseController {
     return View::make('hr.update_personal_contact', compact('person'));
   }
 
-  public function update_work_contact($id)
+  public function update_next_of_kin($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.update_next_of_kin', compact('person'));
+  }
+
+  public function work_contact($id)
   {
     $person = User::find($id);
     return View::make('hr.update_work_contact', compact('person'));
@@ -224,7 +230,7 @@ class HumanResourceController extends \BaseController {
         $person = User::find($id);
         $person2 = User::find($id);
         $person2->next_kn_name = Input::get('name');
-        $person2->relationship = Input::get('Relatioship');
+        $person2->relationship = Input::get('Relationship');
         $person2->next_kn_email = Input::get('email');
         $person2->next_kn_mailing = Input::get('mailing');
         $person2->next_kn_mob_no = Input::get('mobilephone');
@@ -257,9 +263,9 @@ class HumanResourceController extends \BaseController {
         $person = User::find($id);
         $person3 = User::find($id);
         $person3->institution = Input::get('institution');
-        $person3->location = Input::get('institution');
+        $person3->location = Input::get('location');
         $person3->year_complete = Input::get('year_complete');
-        $person3->profession = Input::get('profession');
+        $person3->degree = Input::get('degree');
         $person3->major = Input::get('major');
         $person3->save();
         // redirect
@@ -299,6 +305,100 @@ class HumanResourceController extends \BaseController {
         // redirect
         Session::flash('message', 'Successfully updated!');
         return View::make('hr.person_more_information', compact('person'));
+    }
+
+    public function update_person_basic_info($id){
+
+      $person = User::find($id);
+        $person->first_name = Input::get('firstname');
+        $person->last_name = Input::get('surname');
+        $person->middle_name = Input::get('othernames');
+        $person->nationality = Input::get('nationality');
+        $person->residence = Input::get('residence');
+        $person->place_of_domicile = Input::get('domicide');
+        $person->date_of_birth = Input::get('date_of_birth');
+        $person->gender = Input::get('gender');
+        $person->marital_status = Input::get('marital_status');
+        $person->number_of_dependence= Input::get('no_of_dependancy');
+        $person->disability = Input::get('physical_disability');
+        //$person->photo = $filename;
+        $person->save();
+
+        Session::flash('message', 'Successfully updated!');
+        return View::make('hr.person_info',  compact('person'));
+
+    }
+
+    public function update_person_contact($id) {
+
+
+        $person = User::find($id);
+        $person->phone_no = Input::get('mobilephone');
+        $person->telephone = Input::get('telephone');
+        $person->email = Input::get('email');
+        $person->mailing_address = Input::get('mailing');
+        $person->save();
+
+        Session::flash('message', 'Successfully updated!');
+        return View::make('hr.person_info',  compact('person')); 
+
+    }
+
+    public function update_work_contact($id) {
+
+
+        $person = User::find($id);
+        $person->offc_mobile_phone = Input::get('offcmobilephone');
+        $person->extension_no = Input::get('offctelephone');
+        $person->offc_email = Input::get('offcemail');
+        $person->offc_mailing_address = Input::get('offcmailing');
+        $person->save();
+
+        Session::flash('message', 'Successfully updated!');
+        return View::make('hr.person_info',  compact('person')); 
+
+    }
+
+    public function update_nextofkin($id) {
+
+      $person = User::find($id);
+      $person->next_kn_name = Input::get('name');
+      $person->relationship = Input::get('Relationship');
+      $person->next_kn_email = Input::get('email');
+      $person->next_kn_mailing = Input::get('mailing');
+      $person->next_kn_mob_no = Input::get('mobilephone');
+      $person->next_kn_tel_no = Input::get('telephone');
+      $person->next_kn_notes = Input::get('notes');
+      $person->save();
+
+      Session::flash('message', 'Successfully updated!');
+      return View::make('hr.person_info',  compact('person'));
+    }
+
+    public function update_user_password() {
+
+      $individual = User::find(Auth::user()->id);
+      $old= Input::get('password');
+      $new = Input::get('new_password');
+      $confirm = Input::get('new_password1');
+      if( $old!=null && $new!=null && $confirm!=null){
+        if(Hash::check($old,Auth::user()->password)){
+          if($new == $confirm){
+              $individual->update(['password'=>Hash::make($new)]);
+              Mail::send('emails.change_password',['email'=>'admin@udihis.go.tz', 'pass'=>'new_password'],function($message){
+                $message->to('raphaelj20@gmail.com','Raphael Mhando')->subject('Password Changed');
+              });
+              Session::flash('message', 'Password Successfully Updated!');
+              return Redirect::back();
+          }else{
+            return Redirect::back()->withErrors('New passwords do not match!');
+          }
+        }else{
+            return Redirect::back()->withErrors('Wrong user Password!');
+        }
+      }else{
+            return Redirect::back()->withErrors('Fill all fields!');
+      } 
     }
 
 
