@@ -254,7 +254,7 @@ class HumanResourceController extends \BaseController {
         $person3->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_other_information', compact('person'));
+        return View::make('hr.person_more_information', compact('person'));
     }
 
 

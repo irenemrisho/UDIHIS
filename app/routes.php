@@ -204,7 +204,9 @@ Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
 Route::post('person/edit2/{id}', 'HumanResourceController@updateRegistration');
 //third
-Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
+Route::post('person/edit3/{id}', 'HumanResourceController@update
+
+Third');
 //fourth
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //next of kin information

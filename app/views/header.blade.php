@@ -1,3 +1,6 @@
+<?php
+$user = User::all();
+?>
 <div class="navbar navbar-fixed-top">
     
     <div class="navbar-inner">
@@ -36,11 +39,10 @@
 
                     <div class="account-container">
 <?php   if (Auth::user()) {
-    
+
 ?>
                         <div class="account-avatar">
-                        {{HTML::image('packages/bootstrap/img/login.png','',array('class'=>'thumbnail'))}}
-                            <!--<img src="packages/bootstrap/img/login.png" alt="" class="thumbnail" />-->
+                            {{HTML::image('packages/bootstrap/img/login.png','',array('class'=>'thumbnail'))}}
                         </div> <!-- /account-avatar -->
 
                         <div class="account-details">
