@@ -10,7 +10,7 @@
 		<form id="addnextofkinform" action="{{URL::to('person/discipline/' . $person->id )}}" method="POST">
         	<div class="span4 pull-left">
 				<div class="control-group">
-		        	<label class="control-label" for="benefit">Action*</label>
+		        	<label class="control-label" for="action">Action*</label>
 						<div class="controls">
 						    <select class="form-control input-xlarge" name="action">
 						        <option disabled>Select action</option>

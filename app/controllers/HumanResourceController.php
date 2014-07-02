@@ -92,16 +92,27 @@ class HumanResourceController extends \BaseController {
     return View::make('hr.add_benefit', compact('person'));
   }
 
+  public function update_qualification($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.update_qualification', compact('person'));
+  }
 
-    public function hr_profile()
-    {
+  public function add_qualification($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.add_qualification', compact('person'));
+  }
+
+  public function hr_profile()
+  {
      
-        return View::make('hr.profile');
+    return View::make('hr.profile');
 
-      }
+  }
 
-    public function personStore()
-    {
+  public function personStore()
+  {
 
         $file = Input::file('img'); // your file upload input field in the form should be named 'file'
        $destinationPath = public_path().'/uploads';
@@ -255,7 +266,7 @@ class HumanResourceController extends \BaseController {
     {
         $person = User::find($id);
         $person2 = User::find($id);
-        $person2->reg_council = Input::get('benefit');
+        $person2->reg_council = Input::get('reg_council');
         $person2->reg_no = Input::get('reg_number');
         $person2->reg_date = Input::get('reg_date');
         $person2->lisence = Input::get('lic_number');
@@ -324,7 +335,7 @@ class HumanResourceController extends \BaseController {
         $person5->reason = Input::get('reason');
         $person5->action_start = Input::get('start_date');
         $person5->action_end = Input::get('end_date');
-        $person5->date_of_discussion = Input::get('status');
+        $person5->date_of_discussion = Input::get('disc_date');
         $person5->involved_people = Input::get('people');
         $person5->save();
         // redirect

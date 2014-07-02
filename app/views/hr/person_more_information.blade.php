@@ -33,7 +33,7 @@
                 	<form id="contactform" action="{{URL::to('person/discipline/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
 							<div class="control-group">
-		                		<label class="control-label" for="benefit">Action*</label>
+		                		<label class="control-label" for="action">Action*</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="action">
 							            <option disabled>Select action</option>
@@ -45,7 +45,7 @@
 							    </div>
 							</div>
 							<div class="control-group">
-		                		<label class="control-label" for="benefit">Reason*</label>
+		                		<label class="control-label" for="reason">Reason*</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="reason">
 							            <option disabled>Select source</option>							            
@@ -82,9 +82,9 @@
 							    </div>          
 						    </div>
 							<div class="control-group">
-								<label class="control-label" for="notes">People involved</label>
+								<label class="control-label" for="people">People involved</label>
 								<div class="controls">
-								<textarea rows="3" name="people" class="input-xlarge">{{$person->next_kn_notes}}</textarea>
+								<textarea rows="3" name="people" class="input-xlarge">{{$person->people}}</textarea>
 								</div>
 							</div>
 							<button type="reset" class="btn">Reset</button>
@@ -93,13 +93,13 @@
                 	</form>
               </div>
               <div class="tab-pane fade" id="qualifications">
-                <form id="nextofkinform" action="{{URL::to('person/edit2/' . $person->id )}}" method="POST">
+                <form id="qualificationform" action="{{URL::to('person/edit2/' . $person->id )}}" method="POST">
                 		<div class="span4 pull-left">
                 			<div class="control-group">
-		                		<label class="control-label" for="benefit">Registration Council*</label>
+		                		<label class="control-label" for="reg_council">Registration Council*</label>
 							    <div class="controls">
-							        <select class="form-control input-xlarge" name="benefit">
-							            <option disabled>Select benefit</option>
+							        <select class="form-control input-xlarge" name="reg_council">
+							            <option disabled>Select council</option>
 							            <option></option>							            
 							            <option>Medical and Dental Council</option>
 							            <option>Nurse Council</option>
@@ -170,7 +170,7 @@
 							    </div>          
 						    </div>
 	                		<div class="control-group">
-		                		<label class="control-label" for="employ_type">Status</label>
+		                		<label class="control-label" for="status">Status</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="status"/>
 							            <option disabled>Select Status</option>
@@ -216,7 +216,7 @@
 							    </div>
 							</div>
 							<div class="control-group">
-		                		<label class="control-label" for="benefit">Source*</label>
+		                		<label class="control-label" for="source">Source*</label>
 							    <div class="controls">
 							        <select class="form-control input-xlarge" name="source">
 							            <option disabled>Select source</option>							            
