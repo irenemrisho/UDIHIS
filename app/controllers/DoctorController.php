@@ -22,6 +22,23 @@ class DoctorController extends BaseController {
 
 	}
 
+	public function getAppoints(){
+		$n = Appointment::whereRaw('doctor_id = ? and accepted = ?', array(Auth::user()->id, "no"))->count();
+		if($n == 0){
+			return "no";
+		}else{
+			return $n;
+		}
+	}
+
+	public function accept($id){
+
+		$appointment = Appointment::find($id);
+		$appointment->accepted = "yes";
+		$appointment->save();
+		return 3;
+	}
+
 	public function attend(){
 		$id    = Input::get('pid');
 		$patient = Patient::find($id);
