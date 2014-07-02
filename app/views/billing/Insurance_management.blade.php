@@ -13,6 +13,8 @@
                 ordering:false,
                 "jQueryUI": true
             });
+
+            
     </script>
 @stop
 
@@ -123,8 +125,11 @@
 
                                                      </label>
                                                         <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="payment_type" id="" value="">
-                                                            
+                                                            <select class="form-control"  data-placement="payment_type" name="payment_type">
+                                                        <option disabled>Select type</option>                                                        
+                                                        <option>Sick sheet</option>
+                                                        <option>Insurance</option>
+                                                        </select>
                                                         </div>
 
                                                     </div> <!-- /control-group -->
@@ -190,7 +195,7 @@
                                                                 <td>{{$campany->payement_type}} </td>                                                             
                                                                 <td class="action-td" id="{{$campany->id}}">
                                                                     <a href="edit_insurance_campany?edit={{$campany->id}}" class="icon-edit btn btn-small btn btn-primary"></a> &nbsp;                  
-                                                                    <a href="javascript:;" class="btn btn-small btn-danger deleteCampany">
+                                                                    <a href="" class="btn btn-small btn-danger deleteCampany" onclick="alert("djkshjkds");">
                                                                         <i class="icon-trash"></i>                              
                                                                     </a>
 

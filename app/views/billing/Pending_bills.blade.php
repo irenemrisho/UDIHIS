@@ -120,7 +120,7 @@
             </div>
             <div class="modal-footer" id="">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button type="submit"  aria-hidden="true" class="btn btn-primary fetch-paid1">print</button>
+                
             </div>
             </form>
             </div>

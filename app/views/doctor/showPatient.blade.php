@@ -48,7 +48,7 @@
 			<div class="control-group">											
 				<label class="control-label "  for="username">Next Visit</label>
 				<div class="controls">
-				<input type="text" class="input-xlarge date" value="" name="admit_date" id="" value="" />
+				<input type="text" class="input-xlarge date" value="" name="admit_date" id="nextDate" value="" />
 					
 				</div> <!-- /controls -->				
 			</div> <!-- /control-group -->
@@ -64,6 +64,13 @@
 </table>
 
 <script type="text/javascript">
+
+				    $('.date').datepicker({
+				        dateFormat: "yy-mm-dd",
+				        changeMonth: true,
+				        changeYear: true,
+				        Date: -1   
+				    });
 	  
 					 $('#laboratory').on('click', function(){
 					        var pid = $('#pid').val();

@@ -59,20 +59,20 @@
                             <div class="row-fluid">
                                 <div class="span3 action-nav-button">
                                     <a href="Pending_bills">
-                                    <i class="icon-money"></i>
-                                    <span>Payment</span>
+                                    <i class="icon-sort"></i>
+                                    <span>supplied</span>
                                     </a>
                                 </div>
                                 <div class="span3 action-nav-button">
                                     <a href="service_management">
-                                    <i class="icon-certificate"></i>
-                                    <span>Manage service</span>
+                                    <i class="icon-asterisk"></i>
+                                    <span>Pending request</span>
                                     </a>
                                 </div>
                                 <div class="span3 action-nav-button">
                                     <a href="manage_report">
-                                    <i class="icon-hospital"></i>
-                                    <span>Manage  report</span>
+                                    <i class="icon-user-md"></i>
+                                    <span>Manage goods</span>
                                     </a>
                                 </div>
                                 <div class="span3 action-nav-button">
