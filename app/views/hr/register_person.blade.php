@@ -10,6 +10,7 @@
 				<div class="control-group">
 					<label class="control-label" for="firstname">First Name*</label>
 					<div class="controls">
+                        <input type="hidden" value="uid" name="uid">
 					<input type="text" class="input-xlarge " id="" value="" name="firstname" required/>
 					</div>
 				</div>

@@ -44,7 +44,7 @@ class HumanResourceController extends \BaseController {
     return View::make('hr.update_basic_info', compact('person'));
   }
 
-  public function update_personal_contact($id)
+  public function edit_personal_contact($id)
   {
     $person = User::find($id);
     return View::make('hr.update_personal_contact', compact('person'));
@@ -180,16 +180,6 @@ class HumanResourceController extends \BaseController {
 	 */
 	public function store()
 	{
-        $position = new Position();
-        $position->name = Input::get('position_name');
-        $position->facility = Input::get('facility');
-        $position->proposed_hiring_date = Input::get('proposed_hiring_date');
-        $position->status = Input::get('position_status');
-        $position->proposed_salary = Input::get('proposed_salary');
-        $position->save();
-
-        Session::flash('message', 'Successfully added!');
-        return View::make('hr.positionAdd');
 
 	}
 
@@ -289,7 +279,7 @@ class HumanResourceController extends \BaseController {
         $person3->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_other_information', compact('person'));
+        return View::make('hr.person_more_information', compact('person'));
     }
 
     public function benefit($id)
