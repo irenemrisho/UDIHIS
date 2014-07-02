@@ -204,9 +204,9 @@ Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
 Route::post('person/edit2/{id}', 'HumanResourceController@updateRegistration');
 //third
-Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
+Route::post('person/edit3/{id}', 'HumanResourceController@benefit');
 //fourth
-Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
+Route::post('person/edit4/{id}', 'HumanResourceController@training');
 //next of kin information
 Route::post('person/editNext/{id}', 'HumanResourceController@updateSecond');
 //route for updating the disciplinary action
@@ -237,6 +237,12 @@ Route::post('person/work_contact/{id}', 'HumanResourceController@update_work_con
 Route::get('person/update_next_of_kin/{id}', 'HumanResourceController@update_next_of_kin');
 //update next of kin person/update_next_of_kin
 Route::post('person/update_next_of_kin/{id}', 'HumanResourceController@update_nextofkin');
+//add disciplinary action
+Route::get('person/add_disciplinary_action/{id}', 'HumanResourceController@add_disc_action');
+//add training
+Route::get('person/add_training/{id}', 'HumanResourceController@add_training');
+//add special payment/benefit
+Route::get('person/add_benefit/{id}', 'HumanResourceController@add_benefit');
 //change user password
 Route::post('person/change_password', 'HumanResourceController@update_user_password');
 

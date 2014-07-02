@@ -156,7 +156,7 @@
 							    </div>          
 						    </div>
 						    <div class="control-group">
-								<label class="control-label" for="course">Who request</label>
+								<label class="control-label" for="request">Who request</label>
 								<div class="controls">
 								<input type="text" class="input-xlarge " id="" name="request" value="" />
 								</div>

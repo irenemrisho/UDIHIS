@@ -74,6 +74,25 @@ class HumanResourceController extends \BaseController {
     return View::make('hr.add_education', compact('person'));
   }
 
+  public function add_disc_action($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.add_disciplinary_action', compact('person'));
+  }
+
+  public function add_training($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.add_training', compact('person'));
+  }
+
+  public function add_benefit($id)
+  {
+    $person = User::find($id);
+    return View::make('hr.add_benefit', compact('person'));
+  }
+
+
     public function hr_profile()
     {
      
@@ -273,22 +292,38 @@ class HumanResourceController extends \BaseController {
         return View::make('hr.person_other_information', compact('person'));
     }
 
+    public function benefit($id)
+    {
+        $person = User::find($id);
+        $person3 = User::find($id);
+        $person3->benefit_type = Input::get('benefit');
+        $person3->source = Input::get('source');
+        $person3->amount = Input::get('amount');
+        $person3->start_benefit_date = Input::get('start');
+        $person3->end_benefit_date = Input::get('end');
+        $person3->save();
+        // redirect
+        Session::flash('message', 'Payments Successfully updated!');
+        //return View::make('hr.person_other_information', compact('person'));
+        return Redirect::back();
+    }
 
-    public function updateFourth($id)
+
+    public function training($id)
     {
         $person = User::find($id);
         $person4 = User::find($id);
-        $person4->level = Input::get('level');
-        $person4->date_first_appointment = Input::get('date_start');
-        $person4->employee_type = Input::get('employ_type');
-        $person4->employment_status = Input::get('employ_status');
-        $person4->salary = Input::get('salary');
-        $person4->super_position = Input::get('superposition');
-        $person4->payslip_no = Input::get('payslip');
+        $person4->course = Input::get('course');
+        $person4->course_start_date = Input::get('date_start');
+        $person4->who_request = Input::get('request');
+        $person4->cert_date = Input::get('cert_date');
+        $person4->course_status = Input::get('status');
+        $person4->evaluation = Input::get('evaluation');        
         $person4->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_other_information', compact('person'));
+        Session::flash('message', 'Training Successfully Added!');
+        //return View::make('hr.person_other_information', compact('person'));
+        return Redirect::back();
     }
 
     public function discplinaryAction($id)
@@ -303,8 +338,9 @@ class HumanResourceController extends \BaseController {
         $person5->involved_people = Input::get('people');
         $person5->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_more_information', compact('person'));
+        Session::flash('message', 'Action Successfully Added!');        
+        //return View::make('hr.person_more_information', compact('person'));
+        return Redirect::back();
     }
 
     public function update_person_basic_info($id){
