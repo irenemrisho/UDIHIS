@@ -4,7 +4,7 @@
 <h1 class="page-title"><i class="icon-th-large"></i>Update Person</h1>
 <div class="widget-content">
 	
-		<form id="updateform" action="{{url("person/add")}}" method="POST" enctype="multipart/form-data">
+		<form id="updateform" action="{{url('person/update/'. $person->id)}}" method="POST" enctype="multipart/form-data">
 			<div class="span4 pull-left" >
 				<h4>Personal Information </h4>
 				<div class="control-group">

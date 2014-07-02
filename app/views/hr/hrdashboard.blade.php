@@ -64,7 +64,7 @@
 			                        </a>
 			                    </div>
 			                    <div class="span3 action-nav-button">
-			                        <a href="{{url("hr/manage_person")}}">
+			                        <a href="{{url("hr/manage_user")}}">
 			                        <i class="icon-user"></i>
 			                        <span>Manage Employee</span>
 			                        </a>
