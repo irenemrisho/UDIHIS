@@ -1,3 +1,33 @@
+function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          document.getElementById('tnail').src = e.target.result;  
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+if(window.File && window.FileList && window.FileReader) {
+    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+}
+//////////////////////////////////////////////////////////////////
 
 $(function () {
 
@@ -60,6 +90,8 @@ function getAppoints(){
 $(document).ready(function(){
 
 
+
+
     //get appoints number
     setInterval(getAppoints, 2000);
 
@@ -82,7 +114,6 @@ $(document).ready(function(){
               }
           }); 
       });
-
 
     $('#From, #To').datepicker({
         dateFormat: "yy-mm-dd",
@@ -435,11 +466,6 @@ $(document).ready(function(){
             });
         });
     });
-
-
-    //provide_request
-        //delete campany 
-
 
     $('.fetchuser').on('click', function(){
         $('#ajax').show();
