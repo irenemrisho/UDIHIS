@@ -19,7 +19,7 @@ $id= $_GET['p_id'];
   
   </tr>
   <tr>
-    <td width="30%"  >Name:&nbsp;&nbsp;<</td>
+    <td width="30%"  >Name:&nbsp;&nbsp;</td>
    
     <td width="70%" colspan="2"><u>{{Patient::find($id)->firstname." ".Patient::find($id)->lastname}}</u></td>
   </tr>
@@ -51,10 +51,10 @@ $total =0;
     <?php $index=1; ?>
 @foreach($patients_payments as $payment)
     <tr>
-    <?php $amount = Price_company::whereRaw('company_id = ? and service_id = ? ', array(1,$payment->service_id))->first()->price;
+    <?php $amount = Price_company::whereId($payment->price_company_id)->first()->price;
     ?>
     <td>{{$index}} </td>
-    <td>{{Service::find($payment->service_id)->name}}</td>
+    <td>{{Service::find(Price_company::whereId($payment->price_company_id)->first()->service_id)->name}}</td>
     <td>{{$amount}}</td>
     
     </tr>

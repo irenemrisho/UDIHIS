@@ -14,10 +14,9 @@
                     <?php $index=1; ?>
                     @foreach($patients_payments as $patients_payment)
                  <tr>
-                 	<td>{{$index}}</td>
-                    <td>{{Service::find($patients_payment->service_id)->name}}</td>
-                    <td>{{Price_company::where('service_id',$patients_payment->service_id)->first()->price}}</td>
-                    
+                    <td>{{$index}}</td>
+                    <td>{{Service::find(Price_company::whereId($patients_payment->price_company_id)->first()->service_id)->name}}</td>
+                    <td>{{Price_company::whereId($patients_payment->price_company_id)->first()->price}}</td>
                  </tr>
                     <?php $index++; ?>
                     @endforeach
