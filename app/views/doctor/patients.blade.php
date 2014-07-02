@@ -36,7 +36,7 @@
 													<div id="loadpatientinfo">
 
 													</div>
-													<p id="loader" style="display:none">{{HTML::image('packages/bootstrap/img/loader.gif','',array('class'=>'thumbnail2','style'=>'position:absolute;top:130px;z-index: 30000; left: 380px; height:y26px'))}}</p>
+													<p id="loader" style="display:none">{{HTML::image('packages/bootstrap/img/loader.gif','',array('class'=>'thumbnail2','style'=>'position:absolute;top:80px;z-index: 30000; left: 350px; height:y26px'))}}</p>
 													<div id="table-content">
 
 													<table id="patients_table" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
@@ -59,6 +59,10 @@
 
 														<?php $patients = Patient::orderBy('filenumber', 'DESC')->get(); $id=1;?>
 														@foreach($patients as $patient)
+															<?php
+																$status = Payment::where('patient_id', $patient->id)->first()->status;
+															?>
+															@if($status == "paid")
 																<tr>
 
 										        					<td style="text-align:center;">{{$patient->filenumber}}</td>
@@ -74,6 +78,7 @@
 																	
 																	
 																</tr>
+															@endif	
 														@endforeach
 															@endif	
 																

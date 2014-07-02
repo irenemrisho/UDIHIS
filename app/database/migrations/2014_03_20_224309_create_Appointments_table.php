@@ -27,6 +27,7 @@ class CreateAppointmentsTable extends Migration {
 			->onUpdate('cascade');
             $table->String('date');
             $table->String('time');
+            $table->String('accepted')->default('no');
 			$table->timestamps();
 
 		});

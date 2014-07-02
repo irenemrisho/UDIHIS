@@ -1,3 +1,33 @@
+function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          document.getElementById('tnail').src = e.target.result;  
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+if(window.File && window.FileList && window.FileReader) {
+    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+}
+//////////////////////////////////////////////////////////////////
 
 $(function () {
 
@@ -45,8 +75,45 @@ var Application = function () {
 
 }();
 
+//Notifications code
+function getAppoints(){
+    $.get('getAppoints', function(data){
+        if(data == "no"){
+            $('#appoints').hide(); 
+        }else{
+            $('#appoints').hide().html(data).fadeIn(1000); 
+        }
+    }); 
+}
+
+
 $(document).ready(function(){
 
+
+
+
+    //get appoints number
+    setInterval(getAppoints, 2000);
+
+
+        $('#chbtn').click(function(){
+          $('#my_f').css('opacity', '0.2'); 
+          $('#loader').show(); 
+          var url = $('#urlPax').val();
+          var cpax =  $('#cpax').val();
+          $.post(url, {cpax:cpax}, function(data){
+              if(data == "ok"){
+                  $('#loader').hide();
+                  $('#my_f').css('opacity', '1'); 
+                  $('#olpax, #npax, #cpax').val('');
+                  $('#fdbk, #fbk, #fb').html('');
+                  $('#np, #cp, #chbtn').hide(); 
+                  $('#paxchg').fadeIn('fast', function(){
+                      $(this).fadeOut(6000);
+                  }); 
+              }
+          }); 
+      });
 
     $('#From, #To').datepicker({
         dateFormat: "yy-mm-dd",
@@ -506,7 +573,89 @@ var Application = function () {
 
 $(document).ready(function(){
 
-    
+
+      $('#cpax').keyup(function(){
+          var nlt = $('#npax').val().length;
+          var cl = $(this).val().length;
+          $('#fbk').html('checking .. ').css('color', 'black');  
+          if(cl >= nlt){
+             var newpass = $('#npax').val(); 
+             var conpass = $('#cpax').val();
+             if(newpass == conpass){
+              $('#chbtn').show();
+              $('#fbk').html('Password Matches ...').css('color', 'green'); 
+             }else{
+              $('#chbtn').hide();
+              $('#fbk').html('Password mismatches ...').css('color', 'red');          
+             }          
+          }else if(cl == 0){
+             $('#chbtn').hide();
+            $('#fbk').html('checking ..').css('color', 'black'); 
+          }else{
+             $('#chbtn').hide();
+             $('#fbk').html('checking ..').css('color', 'black'); 
+          }
+      });
+
+    $('#olpax').on('keyup', function(){
+        var olpax = $(this).val();
+        var url   = $('#urlPass').val();
+      var l = olpax.length;
+      $('#fdbk').html('checking ...').css('color','black');
+      if(l != 0){
+         $('#fdbk').html('checking ...').css('color','black');       
+        if(l >= 4){
+        $('#fdbk').html('checking ...').css('color','black');
+          $.post(url, {olpax:olpax}, function(data){
+            if(data == "good"){
+                $('#fdbk').html('Matches ...').css('color','green');
+                $('#np').fadeIn(1000);
+            }else{
+                $('#fdbk').html('Mismatches please try again').css('color','red');
+                $('#np').fadeOut(1000);
+            }
+          });
+        }else{ 
+            $('#fdbk').html('checking ...').css('color','black');
+            $('#np').fadeOut();           
+        }
+      }else{
+         
+        $('#np').fadeOut(1000); 
+      }
+    });
+
+    var strtext  = ["weak", "average", "strong"];
+    var strcolor = ["#c00", "#f80", "#080"];
+
+    $('#npax').on('keyup', function(){
+              var pass   = $(this).val();
+              var uc  = pass.match(/[A-Z]/g);
+              uc = (uc && uc.length || 0);
+
+              var nm = pass.match(/\d/g);
+              nm  = (nm && nm.length || 0);
+
+              var nw = pass.match(/\W/g);
+              nw = (nw && nw.length || 0);
+
+              var s = pass.length + uc + (nm*2) + (nw*3);
+
+              s = Math.min(Math.floor(s / 10), 2);
+
+              var sw = strtext[s];
+              if(sw != "weak"){
+                  /*if(sw != "average"){
+                     $('#cp').show();  
+                  }else{
+                    $('#cp').hide(); 
+                  }*/
+                  $('#cp').show(); 
+              }else{
+                  $('#cp').hide();        
+              }
+              $('#fb').html(strtext[s]).css('color', strcolor[s]);
+    });
 
     $('.fetch-price').on('click', function(){
 
@@ -625,6 +774,7 @@ $(document).ready(function(){
         changeYear: true,
         Date: -1   
     });
+
 
     $('#search').keyup(function(){
         var user = $(this).val();

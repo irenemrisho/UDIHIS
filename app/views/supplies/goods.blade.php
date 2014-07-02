@@ -69,7 +69,7 @@
 										<div class="tab-pane " id="2">
 						
 
-                                              <form id="edit-profile" class="form-horizontal" action="supplies/goods" method="post">
+                                              <form id="edit-profile" class="form-horizontal" action="goods" method="post">
                                                 <fieldset>
                                                     <div class="control-group">  
                                                      <label class="control-label" for="name">Product name</label>
