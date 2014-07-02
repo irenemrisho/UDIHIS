@@ -49,7 +49,7 @@
                                     <?php }elseif ($_GET['msg']==2) { ?>
                                     <div class="alert alert-warning alert-dismissable">
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                        <strong>Providing failed....Please select atleast one medicine</strong>
+                                        <strong>Providing failed</strong>
                                     </div>
                                     <?php }}?>
 
@@ -75,16 +75,19 @@
                                     <td>{{$product->name}}</td>
                                     <td>{{$user->first_name." ".$user->last_name}}</td>
                                     <td>{{$product_request->quantity}}</td>
-                                    <td><button href="javascript:;" class="btn btn-small btn-danger deleteCampany">Provide</button>
-                                                                      </td>
+                                    <td>
+                                    <a href="showProvide?id={{$product_request->id}}" >
+                                    
+                            <button class="btn  btn-primary">Provide</button>
+                            </a>
+                                    </td>
                                 </tr>
                                 <?php $index++ ?>
                                     @endforeach
                                     
                                 </tbody>
                             </table>
-
-
+                            
                         </div> <!-- /widget-content -->
 
 

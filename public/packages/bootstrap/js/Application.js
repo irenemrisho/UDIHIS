@@ -59,6 +59,7 @@ function getAppoints(){
 
 $(document).ready(function(){
 
+
     //get appoints number
     setInterval(getAppoints, 2000);
 
@@ -81,6 +82,7 @@ $(document).ready(function(){
               }
           }); 
       });
+
 
     $('#From, #To').datepicker({
         dateFormat: "yy-mm-dd",
@@ -433,6 +435,11 @@ $(document).ready(function(){
             });
         });
     });
+
+
+    //provide_request
+        //delete campany 
+
 
     $('.fetchuser').on('click', function(){
         $('#ajax').show();
