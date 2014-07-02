@@ -7,7 +7,7 @@
 		    {{implode('',$errors->all('<div class="alert alert-danger" style="text-align: center">:message</div>'))}}	
 		@endif    
 	<div class="widget-content">
-		<form id="addnextofkinform" action="{{URL::to('person/discipline/' . $person->id )}}" method="POST">
+		<form id="addnextofkinform" action="{{URL::to('person/qualification/' . $person->id )}}" method="POST">
         	<div class="span4 pull-left">
                 			<div class="control-group">
 		                		<label class="control-label" for="reg_council">Registration Council*</label>

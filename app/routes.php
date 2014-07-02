@@ -208,7 +208,7 @@ Route::post('person/edit3/{id}', 'HumanResourceController@benefit');
 
 Route::post('person/edit_3/{id}', 'HumanResourceController@updateThird');
 //fourth
-Route::post('person/edit4/{id}', 'HumanResourceController@training');
+Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //next of kin information
 Route::post('person/editNext/{id}', 'HumanResourceController@updateSecond');
 //route for updating the disciplinary action
@@ -221,8 +221,10 @@ Route::get('person/manage/{id}', 'HumanResourceController@manage_employee');
 Route::get('person/more_info/{id}', 'HumanResourceController@employee_more_info');
 //update person basic information
 Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basic_info');
-//update pesonal contact
+//show  formm for update pesonal contact
 Route::get('person/update_personal_contact/{id}', 'HumanResourceController@update_personal_contact');
+//update the contact information
+Route::post('person/contact/update/{id}', 'HumanResourceController@updateFirst');
 //update work contact
 Route::get('person/update_work_contact/{id}', 'HumanResourceController@work_contact');
 //Add next of Kin 
@@ -245,8 +247,10 @@ Route::get('person/add_disciplinary_action/{id}', 'HumanResourceController@add_d
 Route::get('person/add_training/{id}', 'HumanResourceController@add_training');
 //add special payment/benefit
 Route::get('person/add_benefit/{id}', 'HumanResourceController@add_benefit');
-//update qualification
+//form for update qualification
 Route::get('person/update_qualification/{id}', 'HumanResourceController@update_qualification');
+//update qualification
+Route::post('person/qualification/{id}', 'HumanResourceController@updateRegistration');
 //add qualification
 Route::get('person/add_qualification/{id}', 'HumanResourceController@add_qualification');
 
