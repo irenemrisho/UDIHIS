@@ -241,7 +241,7 @@ class HumanResourceController extends \BaseController {
 
         $person1->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
+        Session::flash('message', 'Contact Information Successfully added!');
         return View::make('hr.person_other_information', compact('person'));
     }
 
@@ -258,7 +258,7 @@ class HumanResourceController extends \BaseController {
         $person2->next_kn_notes = Input::get('note');
         $person2->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
+        Session::flash('message', 'Next of Kin Successfully added!');
         return View::make('hr.person_other_information', compact('person'));
     }
 
@@ -273,7 +273,7 @@ class HumanResourceController extends \BaseController {
         $person2->exp_date = Input::get('exp_date');
         $person2->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
+        Session::flash('message', 'Registration Successfully added!');
         return View::make('hr.person_more_information', compact('person'));
     }
 
@@ -289,7 +289,7 @@ class HumanResourceController extends \BaseController {
         $person3->major = Input::get('major');
         $person3->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
+        Session::flash('message', 'Education Successfully added!');
         return View::make('hr.person_more_information', compact('person'));
     }
 
