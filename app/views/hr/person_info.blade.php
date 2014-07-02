@@ -23,6 +23,11 @@
 </div>
 
 <div class="widget-content">
+	@if(Session::has('message'))
+			<div class="alert alert-success" style="text-align: center">{{Session::get('message')}}</div>
+		@elseif($errors->any())
+		    {{implode('',$errors->all('<div class="alert alert-danger" style="text-align: center">:message</div>'))}}	
+		@endif
 	<div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#contact" data-toggle="tab">Contact Information</a></li>
@@ -36,7 +41,7 @@
                 	<h4>Personal Contacts</h4>
 					<table class="table table-striped">
 						<a href="{{url("person/update_personal_contact/$person->id")}}"><span class="pull-left label">Update</span></a>
-			    		<tr><td>Mobile Phone</td><td>{{$person->mobile_phone}}</td></tr>
+			    		<tr><td>Mobile Phone</td><td>{{$person->phone_no}}</td></tr>
 			    		<tr><td>Telephone</td><td>{{$person->telephone}}</td></tr>
 			    		<tr><td>Email</td><td>{{$person->email}}</td></tr>
 			    		<tr><td>Physical Address</td><td>{{$person->mailing_address}}</td></tr>
@@ -47,7 +52,7 @@
 					<table class="table table-striped">
 						<a href="{{url("person/update_work_contact/$person->id")}}"><span class="pull-left label">Update</span></a>
 			    		<tr><td>Mobile Phone</td><td>{{$person->offc_mobile_phone}}</td></tr>
-			    		<tr><td>Telephone</td><td>{{$person->offc_telephone}}</td></tr>
+			    		<tr><td>Telephone</td><td>{{$person->extension_no}}</td></tr>
 			    		<tr><td>Email</td><td>{{$person->offc_email}}</td></tr>
 			    		<tr><td>Physical Address</td><td>{{$person->offc_mailing_address}}</td></tr>
 			    	</table>
@@ -56,7 +61,8 @@
               <div class="tab-pane fade" id="nextofkin">
                 <div class="span6">
 					<table class="table table-striped">
-						<a href="{{url("person/add_next_of_kin/$person->id")}}"><span class="pull-left label">Add Next of Kin</span></a>						
+						<a href="{{url("person/update_next_of_kin/$person->id")}}"><span class="pull-left label">Update </span></a>	&nbsp					
+						<a href="{{url("person/add_next_of_kin/$person->id")}}"><span class="label" style="position:absolute">Add Next of Kin</span></a>
 			    		<tr><td>Name</td><td>{{$person->next_kn_name}}</td></tr>
 			    		<tr><td>Relatonship</td><td>{{$person->relationship}}</td></tr>
 			    		<tr><td>Mobile Number</td><td>{{$person->next_kn_mob_no}}</td></tr>
@@ -85,11 +91,85 @@
 					<table class="table table-striped">
 						<a href=""><span class="pull-left label">Add</span></a> &nbsp
 						<a href=""><span class="label" style="position:absolute">Position History</span></a>
+			    		<tr><td>Job Title</td><td>{{$person->section}}</td></tr>
 			    		<tr><td>Section</td><td>{{$person->section}}</td></tr>
 			    		<tr><td>Date of First Appointment</td><td>{{$person->date_first_appointment}}</td></tr>
+			    		<tr><td>Proposed End Date</td><td>{{$person->end_date}}</td></tr>
 			    		<tr><td>Type of employment</td><td>{{$person->employ_type}}</td></tr>
+			    		<tr><td>Superative Position</td><td>{{$person->superative_position}}</td></tr>
+			    		<tr><td>Start Date</td><td>{{$person->superative_position}}</td></tr>
 			    		<tr><td>Employment Status</td><td>{{$person->employ_status}}</td></tr>
 			    		<tr><td>Salary</td><td>{{$person->salary}}</td></tr>
+			    	</table>
+				</div>
+              </div>
+            </div>
+        </div>
+	</div>
+
+	<div class="widget-content">
+	@if(Session::has('message'))
+			<div class="alert alert-success" style="text-align: center">{{Session::get('message')}}</div>
+		@elseif($errors->any())
+		    {{implode('',$errors->all('<div class="alert alert-danger" style="text-align: center">:message</div>'))}}	
+		@endif
+	<div class="bs-docs-example">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#qualification" data-toggle="tab">Qualifications/Registration</a></li>
+              <li><a href="#payment" data-toggle="tab">Special Payments</a></li>
+              <li><a href="#training" data-toggle="tab">Training</a></li>
+              <li><a href="#action" data-toggle="tab">Disciplinary Actions</a></li>              
+            </ul>
+            <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="qualification">
+                <div class="span6">
+					<table class="table table-striped">
+						<a href="{{url("person/update_qualification/$person->id")}}"><span class="pull-left label">Update</span></a> &nbsp
+						<a href="{{url("person/add_qualification/$person->id")}}"><span class="label" style="position:absolute">Add Qualification</span></a>
+			    		<tr><td>Registration council</td><td>{{$person->reg_council}}</td></tr>
+			    		<tr><td>Registration number</td><td>{{$person->reg_no}}</td></tr>
+			    		<tr><td>Registration Date</td><td>{{$person->reg_date}}</td></tr>
+			    		<tr><td>Licence Number</td><td>{{$person->lisence}}</td></tr>
+			    		<tr><td>Expiration Date</td><td>{{$person->exp_date}}</td></tr>
+			    	</table>
+				</div>
+              </div>
+              <div class="tab-pane fade" id="payment">
+                <div class="span6">
+					<table class="table table-striped">
+						<a href="#"><span class="pull-left label">Update </span></a> &nbsp					
+						<a href="{{url("person/add_benefit/$person->id")}}"><span class="label" style="position:absolute">Add Payment/Benefit</span></a>
+			    		<tr><td>Type of Benefit</td><td>{{$person->benefit}}</td></tr>
+			    		<tr><td>Source</td><td>{{$person->source}}</td></tr>
+			    		<tr><td>Amount</td><td>{{$person->amount}}</td></tr>
+			    		<tr><td>Start Date</td><td>{{$person->start}}</td></tr>
+			    		<tr><td>End Date</td><td>{{$person->end}}</td></tr>
+			    	</table>
+				</div>
+              </div>
+              <div class="tab-pane fade" id="training">                
+	                <div class="span6">
+					<table class="table table-striped">
+						<a href="{{url("person/add_training/$person->id")}}"><span class="pull-left label">Add Training</span></a> &nbsp
+			    		<tr><td>Course</td><td>{{$person->course}}</td></tr>
+			    		<tr><td>Who request</td><td>{{$person->request}}</td></tr>
+			    		<tr><td>Start Date</td><td>{{$person->date_start}}</td></tr>
+			    		<tr><td>Certification Date</td><td>{{$person->cert_date}}</td></tr>
+			    		<tr><td>Status</td><td>{{$person->status}}</td></tr>
+			    		<tr><td>Evaluation</td><td>{{$person->evaluation}}</td></tr>
+			    	</table>
+				</div>
+              </div>
+              <div class="tab-pane fade" id="action">
+                	<div class="span6">
+					<table class="table table-striped">
+						<a href="{{url("person/add_disciplinary_action/$person->id")}}"><span class="pull-left label">Add Action</span></a> &nbsp
+			    		<tr><td>Action</td><td>{{$person->action_taken}}</td></tr>
+			    		<tr><td>Reason</td><td>{{$person->reason}}</td></tr>
+			    		<tr><td>Start</td><td>{{$person->action_start}}</td></tr>
+			    		<tr><td>End</td><td>{{$person->action_end}}</td></tr>
+			    		<tr><td>Discussion Date</td><td>{{$person->date_of_discussion}}</td></tr>
+			    		<tr><td>People involved</td><td>{{$person->involved_people}}</td></tr>
 			    	</table>
 				</div>
               </div>

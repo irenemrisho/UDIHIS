@@ -13,6 +13,11 @@ $individual= User::find(Auth::user()->id);
 	</div>
 
 	<div class="widget-content">
+		@if(Session::has('message'))
+			<div class="alert alert-success" style="text-align: center">{{Session::get('message')}}</div>
+		@elseif($errors->any())
+		    {{implode('',$errors->all('<div class="alert alert-danger" style="text-align: center">:message</div>'))}}	
+		@endif    
 	<div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
@@ -75,24 +80,24 @@ $individual= User::find(Auth::user()->id);
 											</form>
               </div>
               <div class="tab-pane fade" id="password">
-                <form class="form-horizontal" id="password_form" action="{{URL::to('')}}" method="POST">
+                <form class="form-horizontal" id="password_form" action="{{URL::to('person/change_password')}}" method="POST">
                 		<div class="span4 pull-left">
                 			<div class="control-group">											
-								<label class="control-label" for="password1">Current Password*</label>
+								<label class="control-label" for="password">Current Password*</label>
 								<div class="controls">
-								<input type="password" class="input-xlarge" id="password1" value="" required>
+								<input type="password" class="input-xlarge" id="password" value="" name="password" >
 								</div> <!-- /controls -->				
 							</div> <!-- /control-group -->
 							<div class="control-group">											
-								<label class="control-label" for="password1">New Password</label>
+								<label class="control-label" for="new_password">New Password</label>
 								<div class="controls">
-								<input type="password" class="input-xlarge" id="password1" value="">
+								<input type="password" class="input-xlarge" id="new_password" name="new_password" value="">
 								</div> <!-- /controls -->				
 							</div> <!-- /control-group -->
 							<div class="control-group">											
-								<label class="control-label" for="password2">Confirm Password</label>
+								<label class="control-label" for="new_password1">Confirm Password</label>
 								<div class="controls">
-								<input type="password" class="input-xlarge" id="password2" value="">
+								<input type="password" class="input-xlarge" id="password2" value="" name="new_password1">
 								</div> <!-- /controls -->				
 							</div>
 							<div class="controls">

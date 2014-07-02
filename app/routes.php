@@ -11,10 +11,14 @@
   |
  */
 
-//Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
+
+ Route::group(array('before'=>'auth'), function(){
+
+//Route::controller('/', 'UserController');
+
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/users/delete/{id}', 'UserController@destroy');
@@ -50,7 +54,9 @@ Route::post('patients/search','DoctorController@search');
 Route::get('patient/attend/{id}','DoctorController@attend');
 Route::get('patients/admit/{id}','DoctorController@admit');
 Route::post('patients/admit/{id}','DoctorController@admit_post');
-
+Route::post('appointment/accept/{id}', 'DoctorController@accept');
+Route::get('getAppoints', 'DoctorController@getAppoints');
+Route::post('doctor/passwordChange', 'DoctorController@passwordChange');
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');
@@ -184,6 +190,10 @@ Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 Route::get('hr/manage_user','HumanResourceController@manage_user');
 
+//Routes for password change/reset
+Route::post('password/change', 'PasswordController@change');
+Route::post('password/pax', 'PasswordController@pax');
+
 
 //Routes for supplies 
 Route::get('supplies', 'SupplierController@index');
@@ -207,9 +217,11 @@ Route::post('person/edit1/{id}', 'HumanResourceController@updateFirst');
 // second
 Route::post('person/edit2/{id}', 'HumanResourceController@updateRegistration');
 //third
-Route::post('person/edit3/{id}', 'HumanResourceController@updateThird');
+Route::post('person/edit3/{id}', 'HumanResourceController@benefit');
+
+Route::post('person/edit_3/{id}', 'HumanResourceController@updateThird');
 //fourth
-Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
+Route::post('person/edit4/{id}', 'HumanResourceController@training');
 //next of kin information
 Route::post('person/editNext/{id}', 'HumanResourceController@updateSecond');
 //route for updating the disciplinary action
@@ -225,11 +237,42 @@ Route::get('person/update_basic_info/{id}', 'HumanResourceController@update_basi
 //update pesonal contact
 Route::get('person/update_personal_contact/{id}', 'HumanResourceController@update_personal_contact');
 //update work contact
-Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_work_contact');
+Route::get('person/update_work_contact/{id}', 'HumanResourceController@work_contact');
 //Add next of Kin 
 Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
 //Add Education
 Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+//update basic informations person/update
+Route::post('person/update/{id}', 'HumanResourceController@update_person_basic_info');
+//update pesonal contact 
+Route::post('person/person_contact/{id}', 'HumanResourceController@update_person_contact');
+//update work contact
+Route::post('person/work_contact/{id}', 'HumanResourceController@update_work_contact');
+//update next of kin 
+Route::get('person/update_next_of_kin/{id}', 'HumanResourceController@update_next_of_kin');
+//update next of kin person/update_next_of_kin
+Route::post('person/update_next_of_kin/{id}', 'HumanResourceController@update_nextofkin');
+//add disciplinary action
+Route::get('person/add_disciplinary_action/{id}', 'HumanResourceController@add_disc_action');
+//add training
+Route::get('person/add_training/{id}', 'HumanResourceController@add_training');
+//add special payment/benefit
+Route::get('person/add_benefit/{id}', 'HumanResourceController@add_benefit');
+//update qualification
+Route::get('person/update_qualification/{id}', 'HumanResourceController@update_qualification');
+//add qualification
+Route::get('person/add_qualification/{id}', 'HumanResourceController@add_qualification');
+
+//change user password
+Route::post('person/change_password', 'HumanResourceController@update_user_password');
+
+
+
+
+
+ }); 
+
+
 
 
 

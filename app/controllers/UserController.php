@@ -25,15 +25,6 @@ class UserController extends BaseController {
     public function getIndex() {
         $this->layout->content = View::make('login.login_page');
     }
-
-    public function addUser() {
-        $this->layout->content = View::make('admin.addUser');
-    }
-
-    public function storeUser() {
-        User::create(Input::all());
-    }
-
     public function login() {
 
         $userdata = array(
@@ -43,7 +34,7 @@ class UserController extends BaseController {
 
    if (Auth::attempt($userdata)) {
 
-       if(Auth::user()->default_password == 1){
+       if(Auth::user()->default_password == 1 ){
 
            return Redirect::to();
 

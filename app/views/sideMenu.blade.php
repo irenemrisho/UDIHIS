@@ -1,4 +1,4 @@
-<?php   if (Auth::user()) {
+<?php   if (Auth::user()->id != null) {
     
 ?>
 @if(Auth::check())
@@ -66,12 +66,13 @@
 @if(Auth::user()->level == 4)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("doctor")}}"><i class="icon-home"></i>Dashboard       </a></li>
-    <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment </a></li>
+    <li><a href="{{url("appointment")}}"><i class="icon-exchange"></i>Appointment <span class="label label-warning pull-right" id="appoints">{{ (Appointment::whereRaw('doctor_id = ? and accepted = ?', array(Auth::user()->id, "no"))->count() == 0) ? "" : Appointment::whereRaw('doctor_id = ? and accepted = ?', array(Auth::user()->id, "no"))->count() }}</span></a> </a></li>
     <li><a href="{{url("allpatients")}}" id="patient"><i class="icon-user-md"></i>Patients        </a></li>
     <li><a href="{{url("prescription")}}"><i class="icon-stethoscope"></i>Prescription    <span class="label label-warning pull-right"></span></a></li>
     <li><a href="{{url("reports")}}"><i class="icon-hospital"></i>Manage Reports</a></li>
     <li><a href="{{url("doctor/profile")}}"><i class="icon-user"></i>My account</a></li>
 </ul>
+
 @endif
 
 @if(Auth::user()->level == 5)
