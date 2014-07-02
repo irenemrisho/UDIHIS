@@ -245,6 +245,11 @@ Route::get('person/add_disciplinary_action/{id}', 'HumanResourceController@add_d
 Route::get('person/add_training/{id}', 'HumanResourceController@add_training');
 //add special payment/benefit
 Route::get('person/add_benefit/{id}', 'HumanResourceController@add_benefit');
+//update qualification
+Route::get('person/update_qualification/{id}', 'HumanResourceController@update_qualification');
+//add qualification
+Route::get('person/add_qualification/{id}', 'HumanResourceController@add_qualification');
+
 //change user password
 Route::post('person/change_password', 'HumanResourceController@update_user_password');
 
