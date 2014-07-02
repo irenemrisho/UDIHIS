@@ -42,7 +42,7 @@ $user = User::all();
 
 ?>
                         <div class="account-avatar">
-                            {{HTML::image('packages/bootstrap/img/login.png','',array('class'=>'thumbnail'))}}
+                            {{HTML::image('packages/bootstrap/img/login.jpg','',array('class'=>'thumbnail'))}}
                         </div> <!-- /account-avatar -->
 
                         <div class="account-details">
