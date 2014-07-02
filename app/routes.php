@@ -11,10 +11,14 @@
   |
  */
 
-//Route::controller('/', 'UserController');
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
+
+ Route::group(array('before'=>'auth'), function(){
+
+//Route::controller('/', 'UserController');
+
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/users/delete/{id}', 'UserController@destroy');
@@ -50,7 +54,9 @@ Route::post('patients/search','DoctorController@search');
 Route::get('patient/attend/{id}','DoctorController@attend');
 Route::get('patients/admit/{id}','DoctorController@admit');
 Route::post('patients/admit/{id}','DoctorController@admit_post');
-
+Route::post('appointment/accept/{id}', 'DoctorController@accept');
+Route::get('getAppoints', 'DoctorController@getAppoints');
+Route::post('doctor/passwordChange', 'DoctorController@passwordChange');
 /*Pharmacy Route*/
 
 Route::get('pharmacy', 'PharmacyController@getIndex');
@@ -184,6 +190,10 @@ Route::post('position/add', 'HumanResourceController@store');
 Route::get('hr/person_other_info', 'HumanResourceController@personOtherInfo');
 Route::get('hr/manage_user','HumanResourceController@manage_user');
 
+//Routes for password change/reset
+Route::post('password/change', 'PasswordController@change');
+Route::post('password/pax', 'PasswordController@pax');
+
 
 //Routes for supplies 
 Route::get('supplies', 'SupplierController@index');
@@ -227,6 +237,13 @@ Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_wo
 Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
 //Add Education
 Route::get('person/add_education/{id}', 'HumanResourceController@add_education');
+
+
+
+
+ }); 
+
+
 
 
 

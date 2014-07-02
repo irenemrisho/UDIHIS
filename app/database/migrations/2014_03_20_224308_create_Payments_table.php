@@ -20,7 +20,11 @@ class CreatePaymentsTable extends Migration {
 		$table->integer('patient_id')->nullable();
         $table->foreign('patient_id')->references('id')->on('patients')
         ->onDelete('cascade')
-	    ->onUpdate('cascade');   
+	    ->onUpdate('cascade');  
+	    $table->integer('service_id')->nullable();
+		$table->foreign('service_id')->references('id')->on('services')
+		->onDelete('cascade')
+	    ->onUpdate('cascade');  
         $table->String('status');
 		$table->timestamps();
 
