@@ -47,6 +47,7 @@ var Application = function () {
 
 $(document).ready(function(){
 
+    //request_provide
 
     $('#From, #To').datepicker({
         dateFormat: "yy-mm-dd",
@@ -399,6 +400,11 @@ $(document).ready(function(){
             });
         });
     });
+
+
+    //provide_request
+        //delete campany 
+
 
     $('.fetchuser').on('click', function(){
         $('#ajax').show();

@@ -195,6 +195,9 @@ Route::get('supplies/reports', 'SupplierController@getReports');
 Route::get('supplies/account', 'SupplierController@getAccount');
 Route::get('supplies/edit_good', 'SupplierController@getEditGood');
 Route::post('supplies/edit_good', 'SupplierController@updateGood');
+Route::get('supplies/showProvide', 'SupplierController@getProductRequest');
+Route::post('supplies/showProvide', 'SupplierController@provideProductRequest');
+
 
 
 
