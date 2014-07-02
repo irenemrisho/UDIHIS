@@ -18,7 +18,7 @@ Route::post('/login', 'UserController@login');
  Route::group(array('before'=>'auth'), function(){
 
 //Route::controller('/', 'UserController');
-
+Route::get('admin_settings','AdminController@settings');
 Route::get('admin','Admin@getIndex');
 Route::post('/users/store','UserController@storeUser');
 Route::post('/users/delete/{id}', 'UserController@destroy');
