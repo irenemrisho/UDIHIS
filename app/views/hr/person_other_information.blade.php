@@ -1,6 +1,11 @@
 @extends('dashboard')
 @section('main')
 <h1 class="page-title"><i class="icon-th-large"></i>Person Other Informations</h1>
+@if(Session::has('message'))
+			<div class="alert alert-success" style="text-align: center">{{Session::get('message')}}</div>
+		@elseif($errors->any())
+		    {{implode('',$errors->all('<div class="alert alert-danger" style="text-align: center">:message</div>'))}}	
+		@endif   
 <div class="widget-content">
 	<div class="span6">
 		<table class="table table-striped">
@@ -233,7 +238,7 @@
 	                </form>
               </div>
               <div class="tab-pane fade" id="position">
-                	<form id="qualification_form" action="{{URL::to('person/edit3/' . $person->id )}}" method="POST">
+                	<form id="qualification_form" action="{{URL::to('person/education/' . $person->id )}}" method="POST">
 	                	<div class="span4 pull-left">
 	                		<h4>Institution Information</h4>
 	                		<div class="control-group">

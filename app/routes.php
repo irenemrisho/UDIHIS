@@ -11,6 +11,16 @@
   |
  */
 
+Route::get('d', function(){
+	$today = date('Y-m-d');
+	echo "<pre/>";
+
+	$days = (Patients_visit::getDays($today));
+	foreach ($days as $day) {
+		echo Patients_visit::whereRaw('doctor_id = ? and created_at = ? ', array(Auth::user()->id, "2014-07-02"))->count();
+	}
+});
+
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
@@ -37,6 +47,7 @@ Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
+Route::get('doctor/reports', 'DoctorController@getReport');
 Route::get('patients/lab_test/{id}','DoctorController@lab_test');
 Route::post('patients/lab_test/{id}','DoctorController@lab_test_post');
 Route::get('doctor','DoctorController@index');
@@ -205,9 +216,6 @@ Route::get('supplies/reports', 'SupplierController@getReports');
 Route::get('supplies/account', 'SupplierController@getAccount');
 Route::get('supplies/edit_good', 'SupplierController@getEditGood');
 Route::post('supplies/edit_good', 'SupplierController@updateGood');
-Route::get('supplies/showProvide', 'SupplierController@getProductRequest');
-Route::post('supplies/showProvide', 'SupplierController@provideProductRequest');
-
 
 
 
@@ -219,7 +227,7 @@ Route::post('person/edit2/{id}', 'HumanResourceController@updateRegistration');
 //third
 Route::post('person/edit3/{id}', 'HumanResourceController@benefit');
 
-Route::post('person/edit_3/{id}', 'HumanResourceController@updateThird');
+Route::post('person/education/{id}', 'HumanResourceController@updateThird');
 //fourth
 Route::post('person/edit4/{id}', 'HumanResourceController@updateFourth');
 //next of kin information
@@ -239,7 +247,7 @@ Route::get('person/update_personal_contact/{id}', 'HumanResourceController@updat
 //update the contact information
 Route::post('person/contact/update/{id}', 'HumanResourceController@updateFirst');
 //update work contact
-Route::get('person/update_work_contact/{id}', 'HumanResourceController@work_contact');
+Route::get('person/update_work_contact/{id}', 'HumanResourceController@update_work_contact');
 //Add next of Kin 
 Route::get('person/add_next_of_kin/{id}', 'HumanResourceController@add_next_of_kin');
 //Add Education
@@ -269,7 +277,6 @@ Route::get('person/add_qualification/{id}', 'HumanResourceController@add_qualifi
 
 //change user password
 Route::post('person/change_password', 'HumanResourceController@update_user_password');
-
 
 
 

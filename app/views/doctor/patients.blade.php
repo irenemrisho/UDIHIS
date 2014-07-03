@@ -59,6 +59,10 @@
 
 														<?php $patients = Patient::orderBy('filenumber', 'DESC')->get(); $id=1;?>
 														@foreach($patients as $patient)
+															<?php
+																$status = Payment::where('patient_id', $patient->id)->first()->status;
+															?>
+															@if($status == "paid")
 																<tr>
 
 										        					<td style="text-align:center;">{{$patient->filenumber}}</td>
@@ -74,6 +78,7 @@
 																	
 																	
 																</tr>
+															@endif	
 														@endforeach
 															@endif	
 																

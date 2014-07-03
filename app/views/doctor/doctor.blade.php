@@ -63,10 +63,12 @@
 	{{HTML::script('packages/charts/js/highcharts.js')}}
 	{{HTML::script('packages/charts/js/modules/exporting.js')}}
 	<script type="text/javascript">	
-		
-$(function () {
-	
-        $('#bar-chart').highcharts({
+
+        $.get('doctor/reports', function(data){
+
+            var obj = JSON.parse(data);
+
+             $('#bar-chart').highcharts({
              chart: {
                 type: 'column'
             },
@@ -79,8 +81,7 @@ $(function () {
                 x: -20
             },
             xAxis: {
-                categories: ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat',
-                    'Sun']
+                categories: obj.xAxisData
             },
             yAxis: {
                 title: {
@@ -97,19 +98,18 @@ $(function () {
             },
             
             
-	        
+            
             series: [{
                 name: 'Male',
-                data: [15, 29, 19, 14, 18, 21, 25]
+                data: obj.yAxisDataMale
             }, {
                 name: 'Female',
-                data: [10, 12, 23, 26, 17.0, 22, 24]
-            }, {
-                name: 'Children',
-                data: [20, 16, 7, 8, 13, 17, 30]
+                data: obj.yAxisDataFemale
             }]
         });
-    });
+		     
+        });
+
 
 	</script>
 @stop

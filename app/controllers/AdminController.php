@@ -23,6 +23,9 @@ class AdminController  extends BaseController{
     {
             return View::make("admin.admini_page");
     }
+     public function settings(){
+        return View::make('admin/settings');
+    }
 
     public function admin_profile()
     {

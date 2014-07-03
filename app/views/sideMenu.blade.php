@@ -7,7 +7,7 @@
     <li class=""><a href="admin"><i class="icon-home"></i>Dashboard</a></li>
     <li><a href="{{url("manage_user")}}"><i class="icon-exchange"></i>Manage users</a></li>
     <li><a href="{{url("manage_noticeboard")}}"><i class="icon-exchange"></i>Manage noticeboard</a></li>    
-    <li><a href="#"><i class="icon-hospital"></i>Setting</a></li>
+    <li><a href="{{url("admin_settings")}}"><i class="icon-hospital"></i>Setting</a></li>
     <li><a href="profile"><i class="icon-user"></i>My account</a></li>
 </ul>
 @endif
