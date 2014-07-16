@@ -68,7 +68,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'udihis',
 			'username' => 'postgres',
-			'password' => 'nedwo45',
+			'password' => 'makaranga',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',

@@ -28,6 +28,32 @@ class Patient extends Eloquent{
 
 	}
 
+	public static function getNo($g, $vs){
+		if($g=="all"){
+			return count($vs);
+		}else if($g=="male"){
+			$c = 0;
+			foreach ($vs as $v) {
+				$pid    = $v->patient_id;
+				$gender = Patient::find($pid)->gender;
+				if($gender == "Male"){
+					$c++;
+				} 
+			}
+			return $c;
+		}else{
+			$c = 0;
+			foreach ($vs as $v) {
+				$pid    = $v->patient_id;
+				$gender = Patient::find($pid)->gender;
+				if($gender == "Female"){
+					$c++;
+				} 
+			}
+			return $c;
+		}
+	}
+
 	public static function fullname(Patient $p){
 		return $p->firstname . " " . $p->lastname;
 	}

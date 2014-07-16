@@ -82,27 +82,36 @@ class ReceptionController  extends BaseController{
             "paymenttype" => $payment,
             "allergy" => $allergy,
             "patient_id"=>$pid,
-            "paymenttype"=>$payment
+            "paymenttype"=>$payment,
+            "dt"=>date('Y-m-d')
           ));
       $patient_id = $pid;
 
+      $private_id=InsuranceCompany::whereName('private')->first()->id;
+
+      $registration_id= Service::whereName('registration')->first()->id;
+      $consultation_id= Service::whereName('consultation')->first()->id;
+
+      $registration_price_id = Price_company::whereRaw('service_id=? and company_id = ? ', array($registration_id,$private_id))->first()->id;
+      $consultation_price_id = Price_company::whereRaw('service_id=? and company_id = ? ', array($consultation_id,$private_id))->first()->id;
+ 
                     if($payReg == 1){
-                            $this->addPayment(1,$patient_id,'now');
+                            $this->addPayment($registration_price_id,$patient_id,'now');
                         }
                         else{
-                            $this->addPayment(1,$patient_id,'later');
+                            $this->addPayment($registration_price_id,$patient_id,'later');
                         }
                         if($payCons == 1){
-                             $this->addPayment(2,$patient_id,'now');
+                             $this->addPayment($consultation_price_id,$patient_id,'now');
                         }else{
-                            $this->addPayment(2,$patient_id,'later');
+                            $this->addPayment($consultation_price_id,$patient_id,'later');
                         }
 
         
      }
 
 
-    public function addPayment($service_id,$patient_id,$time) {
+    public function addPayment($price_company_id,$patient_id,$time) {
         //$cash is boolean value true for cash , false for insured
         if($time=='now'){
             $status="paid";
@@ -115,9 +124,10 @@ class ReceptionController  extends BaseController{
 
 
         $payment = Payment::create(array(
-            "service_id"=>$service_id,
+            "price_company_id"=>$price_company_id,
             "patient_id"=>$patient_id,
-            "status"=>$status
+            "status"=>$status,
+            "dt"=>date('Y-m-d')
         ));
 
     }
@@ -136,7 +146,7 @@ class ReceptionController  extends BaseController{
                     # code for validation success!
                 $chk = Patient::where('phone_no', $inputs['phone_no'])->count();
             if($chk == 0){
-                    $filenumber = array('filenumber' => Patient::fileno());
+                    $filenumber = array('filenumber' => Patient::fileno(), 'dt'=>date('Y-m-d'));
                     $inputs     = array_merge($inputs, $filenumber);
                     $newpatient = Patient::create($inputs);
                     

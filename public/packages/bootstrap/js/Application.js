@@ -1,32 +1,10 @@
-function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // Loop through the FileList and render image files as thumbnails.
-    for (var i = 0, f; f = files[i]; i++) {
-
-      // Only process image files.
-      if (!f.type.match('image.*')) {
-        continue;
-      }
-
-      var reader = new FileReader();
-
-      // Closure to capture the file information.
-      reader.onload = (function(theFile) {
-        return function(e) {
-          // Render thumbnail.
-          document.getElementById('tnail').src = e.target.result;  
-        };
-      })(f);
-
-      // Read in the image file as a data URL.
-      reader.readAsDataURL(f);
-    }
-  }
-
-if(window.File && window.FileList && window.FileReader) {
-    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+window.onerror = function(e, i, k){
+    //alert(e + i + k);
 }
+
+
+
+
 //////////////////////////////////////////////////////////////////
 
 $(function () {
@@ -91,7 +69,6 @@ $(document).ready(function(){
 
 
 
-
     //get appoints number
     setInterval(getAppoints, 2000);
 
@@ -132,6 +109,7 @@ $(document).ready(function(){
             $('#date').hide();
         }
     });
+
 
     $('#go').on('click', function(){
         var from       = $('#From').val();
@@ -401,7 +379,7 @@ $(document).ready(function(){
 
     });
 
-    $('.date').datepicker({});
+    //$('.date').datepicker({});
 
     $('#searchPatient').keyup(function(){
         var patient = $(this).val();
@@ -729,6 +707,15 @@ $(document).ready(function(){
             $('#section-more').html(data);
         });
 
+    });
+
+    $('.dt').datepicker({
+        dateFormat: "yy-mm-dd",
+        changeMonth: true,
+        changeYear: true,
+        maxDate: 0,
+        yearRange: "-100:+0" ,
+        showMonths: [3,3]
     });
 
     $('#birthdate').datepicker({

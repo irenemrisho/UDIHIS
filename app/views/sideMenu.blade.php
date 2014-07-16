@@ -15,7 +15,8 @@
 @if(Auth::user()->level == 1)
 <ul id="main-nav" class="nav nav-tabs nav-stacked">
     <li class=""><a href="{{url("dashboard")}}"><i class="icon-home"></i>Dashboard</a></li>
-    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication</a></li>
+    <li><a href="{{url("provide_medication")}}"><i class="icon-exchange"></i>Provide medication <span class="label label-warning pull-right" id="">{{Recommended_medicine::groupBy('pv_id')->where('status','=','open')->count()}}
+</span></a></li>
 
     </span></a></li>
     <li><a href="{{url("manage_medicine")}}"><i class="icon-user-md"></i>Manage medicine </a></li>

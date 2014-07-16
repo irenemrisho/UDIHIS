@@ -22,6 +22,46 @@ class DoctorController extends BaseController {
 
 	}
 
+	public function all(){
+		$g = "all";
+		$dt = $_GET['date'];
+		$visits = Patients_visit::where('dt', $dt)->get();
+		$pdf = PDF::loadView('doctor.getReportx', compact('visits', 'g'));
+		return $pdf->stream();
+	}
+
+	public function male(){
+		$g = "male";
+		$dt = $_GET['date'];
+		$visits = Patients_visit::where('dt', $dt)->get();
+		$pdf = PDF::loadView('doctor.getReportx', compact('visits', 'g'));
+		return $pdf->stream();
+	}
+
+	public function female(){
+		$g = "female";
+		$dt = $_GET['date'];
+		$visits = Patients_visit::where('dt', $dt)->get();
+		$pdf = PDF::loadView('doctor.getReportx', compact('visits', 'g'));
+		return $pdf->stream();
+	}
+
+	public function getReports(){
+		$g     =  Input::get('g');
+		$rpt   =  Input::get('rpt');
+		$rptt  =  Input::get('rptt');
+		$dt    =  Input::get('dt');
+
+			$visits = Patients_visit::where('dt', $dt)->count();
+			if($visits==0){
+				return "<div class='alert alert-danger'>No data found </div>";
+			}else{
+				$visits = Patients_visit::where('dt', $dt)->get();
+				return View::make('doctor.getReports', compact('visits'))->with('g', $g)->with('dt', $dt);
+			}
+
+	}
+
 	public function getReport(){
 
 		//setup goes down
@@ -112,9 +152,9 @@ class DoctorController extends BaseController {
 					"test_type"=>$tests
 		 	));
 
-		 $pv     = Patients_visit::where('patient_id',$id)->first();
-		 $pv->labteststatus = "Yes";
-		 $pv->save();
+		 // $pv     = Patients_visit::where('patient_id',$id)->first();
+		 // $pv->labteststatus = "Yes";
+		 // $pv->save();
 
 		return url('patients');
 
@@ -143,12 +183,17 @@ class DoctorController extends BaseController {
           }
     }
 
-	public function recommend(){
+	public function recommend($id){
+
+
+
+
 		$inputs      = Input::all();
+		
 		$medicine_id = Medicine::where('name', $inputs['prescribedmedicine'])->first()->id;
 		$recommend   = Recommended_medicine::create(array(
 				"medicine_id"=>$medicine_id,
-				"pv_id"=>1,
+				"pv_id"=>Patients_visit::where('patient_id', $id)->first()->id,
 				"status"=>"open",
 				"quantity"=>$inputs['quantity'],
 				"description"=>$inputs['notes']

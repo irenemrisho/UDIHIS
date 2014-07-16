@@ -21,6 +21,9 @@ Route::get('d', function(){
 	}
 });
 
+
+
+
 Route::get('/', 'UserController@getIndex');
 Route::get('login', 'UserController@getIndex');
 Route::post('/login', 'UserController@login');
@@ -47,6 +50,10 @@ Route::get('/logout','UserController@logout');
 Route::get('forgot_password','UserController@forgotPassword');
 Route::get('loaduser/{id}', 'UserController@loaduser');
 //Doctor routes
+Route::get('doctor/printReport/all', 'DoctorController@all');
+Route::get('doctor/printReport/male', 'DoctorController@male');
+Route::get('doctor/printReport/female', 'DoctorController@female');
+Route::post('doctor/getReports', 'DoctorController@getReports');
 Route::get('doctor/reports', 'DoctorController@getReport');
 Route::get('patients/lab_test/{id}','DoctorController@lab_test');
 Route::post('patients/lab_test/{id}','DoctorController@lab_test_post');
@@ -58,7 +65,7 @@ Route::get('doctor/profile','DoctorController@doc_profile');
 Route::get('reports','DoctorController@reports');
 Route::get('prescription','DoctorController@prescription');
 Route::get('patients/prescribe/{id}', 'DoctorController@prescribe');
-Route::post('patients/prescribe/recommended', 'DoctorController@recommend');
+Route::post('patients/prescribe/recommended/{id}', 'DoctorController@recommend');
 Route::post('patients/prescribe/getMedxn', 'DoctorController@getMedxn');
 Route::post('consultation/autosave','DoctorController@autosave');
 Route::post('patients/search','DoctorController@search');
@@ -86,6 +93,11 @@ Route::get('product_request','PharmacyController@getProductRequest');
 Route::post('product_request','PharmacyController@addProductRequest');
 
 /*Billing Route*/
+
+Route::get('billing/printReport', 'BillingController@printReport');
+
+Route::post('generateReports', 'BillingController@getRerpx');
+
 Route::get('billing','BillingController@getIndex');
 Route::get('edit_service','BillingController@getEditService'); 
 Route::post('edit_service','BillingController@getService'); 
@@ -119,6 +131,7 @@ Route::get('getPaymentReceipt','BillingController@get_patient_patient');
 
 ///Receptionist
 /*for listsing patients and adding*/
+Route::get('reception/printReport', 'ReportsController@printReport');
 Route::get('reception/reports','ReceptionController@reports');
 Route::post('reception/reports','ReceptionController@getreports');
 Route::post('patients/loadsection', 'ReceptionController@loadsection');

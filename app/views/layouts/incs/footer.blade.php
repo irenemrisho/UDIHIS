@@ -41,6 +41,22 @@
 ?> 
 <script type="text/javascript">
 $(document).ready(function(){
+	$(".try").click(function(){
+        var id1 = $(this).parent().attr('id');
+        $(".try").show("slow").parent().find("span").remove();
+        var btn = $(this).parent().parent();
+        $(this).hide("slow").parent().append("<span><br>Delete? <br /> <a href='#s' id='yes' class='btn btn-success btn-mini'><i class='fa fa-check'></i> Y</a> <a href='#s' id='no' class='btn btn-danger btn-mini'> <i class='fa fa-times'></i> N</a></span>");
+        $("#no").click(function(){
+            $(this).parent().parent().find(".try").show("slow");
+            $(this).parent().parent().find("span").remove();
+        });
+        $("#yes").click(function(){
+            $(this).parent().html("<br><i class=''></i><span style='font-size: 11px; color:red'>deleting...</span>");
+            $.post("billing/delete/"+id1,function(data){
+                btn.hide("slow").next("hr").hide("slow");
+            });
+        });
+    });
 
 	$('#tokenfield').tokenfield({
 	  autocomplete: {
@@ -98,5 +114,26 @@ $(document).ready(function(){
 @endif
 
 @endif
+
+<script type="text/javascript">
+	$('#gent').on('click', function(){
+		var gender      = $('#gender').val();
+		var report      = $('#report').val();
+		var reporttype  = $('#reporttype').val();
+		var dt          = $('#dt').val();
+		if(gender==""||report==""||reporttype==""||dt==""){
+			alert("Please fill the fields");
+		}else{
+
+			$('#loader').show();
+			$('#iload').css('opacity', '0.2');
+			$.post('doctor/getReports', {g:gender, rpt:report, rptt:reporttype, dt:dt}, function(data){
+				$('#loader').hide();
+				$('#iload').css('opacity', '1');
+				$('#ireport').hide().html(data).fadeIn(1000);
+			});
+		}
+	});
+</script>
 </body>
 </html>

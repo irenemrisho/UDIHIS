@@ -27,7 +27,6 @@ Manage Patients
 <div class="span9">
 <div class="widget-content">
 
-
 <div class="widget-table">
 @if(isset($message))
 <div class="alert alert-info" id="message">{{ $message }}</div>

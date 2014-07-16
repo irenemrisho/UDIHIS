@@ -13,6 +13,26 @@ class BillingController  extends BaseController{
             
 }
 
+    public function getRerpx(){
+        $inputs   = Input::all();
+        $from     = $inputs['from'];
+        $to       = $inputs['to'];
+
+        $reports = Payment::whereRaw('dt <= ? and dt > ?', array($to, $from))->get();
+
+        if($inputs['reporttype'] == "Table"){
+            return   View::make('reports.payment', compact('reports'))->with('f',$from)->with('t',$to);
+        }
+    }
+
+    public function printReport(){
+       $f     = $_GET['from'];
+       $t     = $_GET['to'];
+       $reports = Payment::whereRaw('dt <= ? and dt > ?', array($t, $f))->get();
+       $pdf  = PDF::loadView('reports.paymentx', compact('reports'));
+       return $pdf->stream();
+    }
+
     public function getBills(){
 
         if(isset($_GET['pay'])){

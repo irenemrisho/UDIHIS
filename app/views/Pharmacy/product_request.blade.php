@@ -21,7 +21,7 @@
                                 if($_GET['msg']==1){?>
                                 <div class="alert alert-success alert-dismissable">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                    <strong>Successfully provided</strong>
+                                    <strong>request successfully sent</strong>
                                 </div>
                                 <?php }elseif ($_GET['msg']==2) { ?>
                                 <div class="alert alert-warning alert-dismissable">

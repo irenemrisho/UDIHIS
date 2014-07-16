@@ -2,16 +2,24 @@
 
 class ReportsController extends \BaseController {
 
+	public function printReport(){
+		$f     = $_GET['from'];
+		$t     = $_GET['to'];
+		$reports = Patient::whereRaw('dt <= ? and dt > ?', array($t, $f))->get();
+		$pdf     = PDF::loadView('reports.receptionx', compact('reports'));
+		return $pdf->stream();
+	}
+
 	public function generateReports(){
 		$inputs   = Input::all();
 		$from     = $inputs['from'];
 		$to       = $inputs['to'];
 
 
-		$reports = Patient::whereRaw('created_at <= ? and created_at > ?', array($to, $from))->get();
+		$reports = Patient::whereRaw('dt <= ? and dt > ?', array($to, $from))->get();
 
 		if($inputs['reporttype'] == "Table"){
-			return   View::make('reports.reception', compact('reports'));
+			return   View::make('reports.reception', compact('reports'))->with('f',$from)->with('t',$to);
 		}else{
 	
 			$days        = Report::generateDays($from, $to);
@@ -22,16 +30,16 @@ class ReportsController extends \BaseController {
 			$private        = array();
 
 			foreach ($days as $day) {
-				$students[] = Patient::whereRaw('created_at = ? and designation = ?', array($day, 'Student'))->count();
-				$staff[]    = Patient::whereRaw('created_at = ? and designation = ?', array($day, 'Staff'))->count();
-				$family[]   = Patient::whereRaw('created_at = ? and designation = ?', array($day, 'FamilyMember'))->count();
-				$private[]  = Patient::whereRaw('created_at = ? and designation = ?', array($day, 'Private'))->count();
+				$students[] = Patient::whereRaw('dt = ? and designation = ?', array($day, 'Student'))->count();
+				$staff[]    = Patient::whereRaw('dt = ? and designation = ?', array($day, 'Staff'))->count();
+				$family[]   = Patient::whereRaw('dt = ? and designation = ?', array($day, 'FamilyMember'))->count();
+				$private[]  = Patient::whereRaw('dt = ? and designation = ?', array($day, 'Private'))->count();
 			}
 
-			$student_per    = Patient::whereRaw('created_at <= ? and created_at > ? and designation = ?', array($to, $from, 'Student'))->count();
-			$staff_per      = Patient::whereRaw('created_at <= ? and created_at > ? and designation = ?', array($to, $from, 'Staff'))->count();
-			$family_per     = Patient::whereRaw('created_at <= ? and created_at > ? and designation = ?', array($to, $from, 'FamilyMember'))->count();
-			$private_per    = Patient::whereRaw('created_at <= ? and created_at > ? and designation = ?', array($to, $from, 'Private'))->count();
+			$student_per    = Patient::whereRaw('dt <= ? and dt > ? and designation = ?', array($to, $from, 'Student'))->count();
+			$staff_per      = Patient::whereRaw('dt <= ? and dt > ? and designation = ?', array($to, $from, 'Staff'))->count();
+			$family_per     = Patient::whereRaw('dt <= ? and dt > ? and designation = ?', array($to, $from, 'FamilyMember'))->count();
+			$private_per    = Patient::whereRaw('dt <= ? and dt > ? and designation = ?', array($to, $from, 'Private'))->count();
 			
 			$total_per      = ($student_per + $staff_per + $family_per + $private_per);
 

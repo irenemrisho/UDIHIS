@@ -49,7 +49,13 @@
 
 ?>
 
+
+
 <div class="widget-content" style="padding:10px;">
+
+	<a href="{{url('reception/printReport/')}}?from={{$f}}&to={{$t}}"><button class="btn btn-small btn-primary"><i class="icon-file"></i> Print</button></a>
+	<br/>
+	<br/>
 	<div class="widget-header" style="font-weight:bold; padding-left:10px">All Cases</div>
 	<table id="reporttable" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
 		<thead>
