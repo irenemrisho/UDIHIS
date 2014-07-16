@@ -215,8 +215,8 @@ class HumanResourceController extends \BaseController {
 
         $person1->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_other_information', compact('person'));
+         Session::flash('message', 'Contact Information Successfully added!');
+        return View::make('hr.person_more_information', compact('person'));
     }
 
     public function updateSecond($id)
@@ -232,8 +232,9 @@ class HumanResourceController extends \BaseController {
         $person2->next_kn_notes = Input::get('note');
         $person2->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
-        return View::make('hr.person_other_information', compact('person'));
+       Session::flash('message', 'Next of Kin Successfully added!');
+        return View::make('hr.person_more_information', compact('person'));
+
     }
 
     public function updateRegistration($id)
@@ -247,7 +248,7 @@ class HumanResourceController extends \BaseController {
         $person2->exp_date = Input::get('exp_date');
         $person2->save();
         // redirect
-        Session::flash('message', 'Successfully updated!');
+        Session::flash('message', 'Registration Successfully added!');
         return View::make('hr.person_more_information', compact('person'));
     }
 
@@ -261,6 +262,20 @@ class HumanResourceController extends \BaseController {
         $person3->year_complete = Input::get('year_complete');
         $person3->profession = Input::get('profession');
         $person3->major = Input::get('major');
+        $person3->save();
+        // redirect
+        Session::flash('message', 'Education Successfully added!');
+        return View::make('hr.person_more_information', compact('person'));
+    }
+    public function updateFourth($id)
+    {
+        $person = User::find($id);
+        $person3 = User::find($id);
+        $person3->level = Input::get('level');
+        $person3->super_position = Input::get('superposition');
+        $person3->reg_date = Input::get('date_start');
+        $person3->payslip_no = Input::get('payslip');
+        $person3->employee_type = Input::get('employ_type');
         $person3->save();
         // redirect
         Session::flash('message', 'Successfully updated!');
