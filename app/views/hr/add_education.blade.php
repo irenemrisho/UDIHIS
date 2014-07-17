@@ -2,7 +2,7 @@
 @section('main')
 <h1 class="page-title"><i class="icon-th-large"></i>Add Education</h1>
 <div class="widget-content">
-	<form id="qualification_form" action="{{URL::to('person/edit3/' . $person->id )}}" method="POST">
+	<form id="qualification_form" action="{{URL::to('person/edit_3/' . $person->id )}}" method="POST">
 	    <div class="span4 pull-left">
 	    <h4>Institution Information</h4>
 	        <div class="control-group">

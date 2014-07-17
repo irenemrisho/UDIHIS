@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Absolute_Positioner' => $vendorDir . '/dompdf/dompdf/include/absolute_positioner.cls.php',
     'Abstract_Renderer' => $vendorDir . '/dompdf/dompdf/include/abstract_renderer.cls.php',
+<<<<<<< HEAD
     'AddAdmitNotesColumnToPatientsVisitsTable' => $baseDir . '/app/database/migrations/2014_05_22_121550_add_admit_notes_column_to_Patients_visits_table.php',
     'AddBloodpressureColumnToPatientsVisitsTable' => $baseDir . '/app/database/migrations/2014_04_22_101010_add_bloodpressure_column_to_Patients_visits_table.php',
     'AddCostColumnToRecommendedMedicinesTable' => $baseDir . '/app/database/migrations/2014_05_21_081053_add_cost_column_to_recommended_medicines_table.php',
@@ -21,12 +22,17 @@ return array(
     'AddRememberTokenColumnToUsersTable' => $baseDir . '/app/database/migrations/2014_04_22_082225_add_remember_token_column_to_users_table.php',
     'AddTemperatureColumnToPatientsVisitsTable' => $baseDir . '/app/database/migrations/2014_04_22_095225_add_temperature_column_to_Patients_visits_table.php',
     'AddWorkingplaceColumnToPatientsTable' => $baseDir . '/app/database/migrations/2014_04_22_114219_add_workingplace_column_to_patients_table.php',
+=======
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
     'Admin' => $baseDir . '/app/controllers/Admin.php',
     'AdminController' => $baseDir . '/app/controllers/AdminController.php',
     'AdmissionController' => $baseDir . '/app/controllers/AdmissionController.php',
     'Adobe_Font_Metrics' => $vendorDir . '/phenx/php-font-lib/classes/Adobe_Font_Metrics.php',
+<<<<<<< HEAD
     'AlterAddColumnConstraintsToTables' => $baseDir . '/app/database/migrations/2014_06_27_094249_alter_add_column_constraints_to_users.php',
     'AlterServiceIdColumnToPayments' => $baseDir . '/app/database/migrations/2014_05_21_083113_alter_service_id_column_to_payments.php',
+=======
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
     'Appointment' => $baseDir . '/app/models/Appointment.php',
     'Attribute_Translator' => $vendorDir . '/dompdf/dompdf/include/attribute_translator.cls.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Barryvdh/DomPDF/Facade.php',
@@ -65,6 +71,7 @@ return array(
     'ClassPreloader\\Parser\\DirVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
+<<<<<<< HEAD
     'CreateAppointmentsTable' => $baseDir . '/app/database/migrations/2014_03_20_224310_create_Appointments_table.php',
     'CreateInsuranceCompaniesTable' => $baseDir . '/app/database/migrations/2014_05_22_071718_create_insuranceCompanies_table.php',
     'CreateLaboratoriesTable' => $baseDir . '/app/database/migrations/2014_03_20_224005_create_Laboratories_table.php',
@@ -84,6 +91,25 @@ return array(
     'CreateServicesTable' => $baseDir . '/app/database/migrations/2014_03_20_224057_create_Services_table.php',
     'CreateUserDataTable' => $baseDir . '/app/database/migrations/2014_06_09_175217_create_user_data_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_03_20_223811_create_Users_table.php',
+=======
+    'CreateAppointmentsTable' => $baseDir . '/app/database/migrations/2014_03_20_224309_create_Appointments_table.php',
+    'CreateInsuranceCompaniesTable' => $baseDir . '/app/database/migrations/2014_03_20_224306_create_insuranceCompanies_table.php',
+    'CreateLaboratoriesTable' => $baseDir . '/app/database/migrations/2014_03_20_224316_create_Laboratories_table.php',
+    'CreateMedicinesTable' => $baseDir . '/app/database/migrations/2014_03_20_224310_create_medicines_table.php',
+    'CreateNotificationTable' => $baseDir . '/app/database/migrations/2014_03_20_224302_create_notification_table.php',
+    'CreatePatientsTable' => $baseDir . '/app/database/migrations/2014_03_20_224304_create_patients_table.php',
+    'CreatePatientsVisitsTable' => $baseDir . '/app/database/migrations/2014_03_20_224315_create_Patients_visits_table.php',
+    'CreatePaymentsTable' => $baseDir . '/app/database/migrations/2014_03_20_224308_create_Payments_table.php',
+    'CreatePriceCompaniesTables' => $baseDir . '/app/database/migrations/2014_03_20_224307_create_price_companies_tables.php',
+    'CreateProductRequestsTable' => $baseDir . '/app/database/migrations/2014_03_20_224313_create_Product_requests_table.php',
+    'CreateProductSuppliesTable' => $baseDir . '/app/database/migrations/2014_03_20_224314_create_Product_supplies_table.php',
+    'CreateProductsTable' => $baseDir . '/app/database/migrations/2014_03_20_224312_create_products_table.php',
+    'CreateRecommendedMedicinesTable' => $baseDir . '/app/database/migrations/2014_03_20_224317_create_Recommended_medicines_table.php',
+    'CreateRoomsTable' => $baseDir . '/app/database/migrations/2014_03_20_224303_create_Rooms_table.php',
+    'CreateServicesTable' => $baseDir . '/app/database/migrations/2014_03_20_224301_create_Services_table.php',
+    'CreateUserDataTable' => $baseDir . '/app/database/migrations/2014_03_20_224311_create_user_data_table.php',
+    'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_03_20_224305_create_Users_table.php',
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
     'Crypt_Blowfish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
@@ -101,7 +127,10 @@ return array(
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'Doctor' => $baseDir . '/app/controllers/Doctor.php',
     'DoctorController' => $baseDir . '/app/controllers/DoctorController.php',
+<<<<<<< HEAD
     'DropPriceColumnToService' => $baseDir . '/app/database/migrations/2014_05_21_085550_drop_price_column_to_service.php',
+=======
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
     'Encoding_Map' => $vendorDir . '/phenx/php-font-lib/classes/Encoding_Map.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -806,6 +835,7 @@ return array(
     'Patchwork\\TurkishUtf8' => $vendorDir . '/patchwork/utf8/class/Patchwork/TurkishUtf8.php',
     'Patchwork\\Utf8' => $vendorDir . '/patchwork/utf8/class/Patchwork/Utf8.php',
     'Patchwork\\Utf8\\Bootup' => $vendorDir . '/patchwork/utf8/class/Patchwork/Utf8/Bootup.php',
+    'Patchwork\\Utf8\\WinFsStreamWrapper' => $vendorDir . '/patchwork/utf8/class/Patchwork/Utf8/WinFsStreamWrapper.php',
     'Patient' => $baseDir . '/app/models/Patient.php',
     'PatientController' => $baseDir . '/app/controllers/PatientController.php',
     'PatientVisitController' => $baseDir . '/app/controllers/PatientVisitController.php',
@@ -1081,13 +1111,12 @@ return array(
     'Psr\\Log\\InvalidArgumentException' => $vendorDir . '/psr/log/Psr/Log/InvalidArgumentException.php',
     'Psr\\Log\\LogLevel' => $vendorDir . '/psr/log/Psr/Log/LogLevel.php',
     'Psr\\Log\\LoggerAwareInterface' => $vendorDir . '/psr/log/Psr/Log/LoggerAwareInterface.php',
+    'Psr\\Log\\LoggerAwareTrait' => $vendorDir . '/psr/log/Psr/Log/LoggerAwareTrait.php',
     'Psr\\Log\\LoggerInterface' => $vendorDir . '/psr/log/Psr/Log/LoggerInterface.php',
+    'Psr\\Log\\LoggerTrait' => $vendorDir . '/psr/log/Psr/Log/LoggerTrait.php',
     'Psr\\Log\\NullLogger' => $vendorDir . '/psr/log/Psr/Log/NullLogger.php',
     'ReceptionController' => $baseDir . '/app/controllers/ReceptionController.php',
     'Recommended_medicine' => $baseDir . '/app/models/Recommended_medicine.php',
-    'RemoveBloodgroupColumnFromPatientsTable' => $baseDir . '/app/database/migrations/2014_04_22_094413_remove_bloodgroup_column_from_patients_table.php',
-    'RemoveTemperatureColumnFromPatientsTable' => $baseDir . '/app/database/migrations/2014_04_22_094146_remove_temperature_column_from_patients_table.php',
-    'RemoveWeightFromPatientsTable' => $baseDir . '/app/database/migrations/2014_04_22_093735_remove_weight_from_patients_table.php',
     'Renderer' => $vendorDir . '/dompdf/dompdf/include/renderer.cls.php',
     'Report' => $baseDir . '/app/models/Report.php',
     'ReportsController' => $baseDir . '/app/controllers/ReportsController.php',
@@ -1326,6 +1355,7 @@ return array(
     'Symfony\\Component\\HttpFoundation\\RequestMatcher' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/RequestMatcher.php',
     'Symfony\\Component\\HttpFoundation\\RequestMatcherInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/RequestMatcherInterface.php',
     'Symfony\\Component\\HttpFoundation\\RequestStack' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/RequestStack.php',
+    'Symfony\\Component\\HttpFoundation\\Resources\\stubs\\FakeFile' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/FakeFile.php',
     'Symfony\\Component\\HttpFoundation\\Response' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php',
     'Symfony\\Component\\HttpFoundation\\ResponseHeaderBag' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/ResponseHeaderBag.php',
     'Symfony\\Component\\HttpFoundation\\ServerBag' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/ServerBag.php',
@@ -1677,8 +1707,8 @@ return array(
     'Symfony\\Component\\Translation\\Translator' => $vendorDir . '/symfony/translation/Symfony/Component/Translation/Translator.php',
     'Symfony\\Component\\Translation\\TranslatorInterface' => $vendorDir . '/symfony/translation/Symfony/Component/Translation/TranslatorInterface.php',
     'Symfony\\Component\\Translation\\Writer\\TranslationWriter' => $vendorDir . '/symfony/translation/Symfony/Component/Translation/Writer/TranslationWriter.php',
-    'System_SSH_Agent' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH_Agent.php',
-    'System_SSH_Agent_Identity' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH_Agent.php',
+    'System_SSH_Agent' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
+    'System_SSH_Agent_Identity' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'TCPDF_Adapter' => $vendorDir . '/dompdf/dompdf/include/tcpdf_adapter.cls.php',
     'Table_Cell_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/table_cell_frame_decorator.cls.php',
     'Table_Cell_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/table_cell_frame_reflower.cls.php',
@@ -1699,6 +1729,10 @@ return array(
     'User' => $baseDir . '/app/models/User.php',
     'UserController' => $baseDir . '/app/controllers/UserController.php',
     'UserData' => $baseDir . '/app/models/UserData.php',
+<<<<<<< HEAD
+=======
+    'UserDataController' => $baseDir . '/app/controllers/UserDataController.php',
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
     'UsersTableSeeder' => $baseDir . '/app/database/seeds/UsersTableSeeder.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Frame' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Frame.php',

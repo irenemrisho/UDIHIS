@@ -67,6 +67,10 @@ return array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
 			'database' => 'udihis',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d0ad1da1a14c1e14d98935b44742e6bf85ec74c
 			'username' => 'udihis',
 			'password' => 'udihis',
 			'charset'  => 'utf8',
