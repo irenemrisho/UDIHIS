@@ -66,8 +66,8 @@
                                     <?php $index=1; ?>
                                     @foreach($provided_medicines as $provided_medicine)
                                  <tr><td>{{$index}}</td>
-                                    <td>{{Patient::find($provided_medicine->pv_id)->firstname}}</td>
-                                    <td>{{Patient::find($provided_medicine->pv_id)->filenumber}}</td>
+                                    <td>{{Patient::find(Patients_visit::find($provided_medicine->pv_id)->patient_id)->firstname}}</td>
+                                    <td>{{Patient::find(Patients_visit::find($provided_medicine->pv_id)->patient_id)->firstname}}</td>
                                     <td>{{$provided_medicine->count}}</td>
                                     <td class="action-td" id="{{$provided_medicine->pv_id}}">
                                         <a href="#recommended" role="button" class="btn btn-primary fetch-recommendation" data-toggle="modal">Provide</a>

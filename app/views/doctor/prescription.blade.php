@@ -22,7 +22,7 @@
 									  <li class="active">
 									    <a href="#1" data-toggle="tab">Prescribe</a>
 									  </li>
-									  <li class=""><a href="#2" data-toggle="tab">Report</a></li>
+									 
 									</ul>
 
 									<div class="tab-content">
@@ -30,7 +30,7 @@
 						
 
 											
-											<form  id="presform" action="{{url("patients/prescribe/recommended")}}" class="form-horizontal pull-center" method="POST">
+											<form  id="presform" action="{{url("patients/prescribe/recommended/{$patient->id}")}}" class="form-horizontal pull-center" method="POST">
 												
 										@if(Session::has('msg')) 
 										  <div class="alert alert-info">{{Session::get('msg')}}</div>
@@ -88,63 +88,7 @@
 										<div class="tab-pane" id="2">
 											<div class="widget widget-table">
 										
-												<div class="widget-header">
-
-													<i class="icon-th-list"></i>
-													<h3>Patients report</h3>
-												</div> <!-- /widget-header -->
 												
-												<div class="widget-content">
-												
-													<table class="table table-striped table-bordered">
-														<thead>
-															<tr>
-																<th>#</th>
-																<th>Name</th>
-																<th>Disease</th>
-																<th>Prescribed medicine</th>
-																<th>Date</th>
-																<th>&nbsp;</th>
-															</tr>
-														</thead>
-														
-														<tbody>
-															<tr>
-																<td>1</td>
-																<td>Joramu Sundu</td>
-																<td>Malaria </td>
-																<td>Mseto</td>
-																<td>Fri 21st Mar 2014</td>
-																<td class="action-td">
-																	<a href="javascript:;" class="btn btn-small btn-warning">
-																		<i class="icon-ok"></i>								
-																	</a>					
-																	<a href="javascript:;" class="btn btn-small">
-																		<i class="icon-remove"></i>						
-																	</a>
-																</td>
-															</tr>
-															
-																<td>2</td>
-																<td>Irene Kimomwe</td>
-																<td>Headache </td>
-																<td>Paracetamol</td>
-																<td>Mon 27th Mar 2014</td>
-																<td class="action-td">
-																	<a href="javascript:;" class="btn btn-small btn-warning">
-																		<i class="icon-ok"></i>								
-																	</a>						
-																	<a href="javascript:;" class="btn btn-small">
-																		<i class="icon-remove"></i>						
-																	</a>
-																</td>
-															</tr>
-															
-															
-														</tbody>
-													</table>
-												
-												</div> <!-- /widget-content -->
 												
 											
 										</div>

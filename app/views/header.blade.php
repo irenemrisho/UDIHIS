@@ -1,6 +1,3 @@
-<?php
-$user = User::all();
-?>
 <div class="navbar navbar-fixed-top">
     
     <div class="navbar-inner">
@@ -9,9 +6,9 @@ $user = User::all();
             
             
             <center><div class="" > <div class="pull-left">{{HTML::image('packages/bootstrap/img/logo1.png')}}
-            </div> <div class=" pull-right">{{HTML::image('packages/bootstrap/img/logo2.jpg')}}</div>
+            </div> <div class=" pull-right">{{HTML::image('packages/bootstrap/img/logo2.png')}}</div>
             <div class=" " >
-        <h4>UDSM INTERGRATED HOSPITAL INFORMATION SYSTEM </h4></div>
+        <h2>UDSM INTEGRATED HOSPITAL INFORMATION SYSTEM </h2></div>
             </div></center>
             
             
@@ -28,7 +25,7 @@ $user = User::all();
     </div> <!-- /navbar-inner -->
     
 </div>
-
+<!-- /navbar -->
         <div id="content">
 
         <div class="container">
@@ -39,10 +36,11 @@ $user = User::all();
 
                     <div class="account-container">
 <?php   if (Auth::user()) {
-
+    
 ?>
                         <div class="account-avatar">
-                            {{HTML::image('packages/bootstrap/img/login.jpg','',array('class'=>'thumbnail'))}}
+                        {{HTML::image('packages/bootstrap/img/noavatar.png','',array('class'=>'thumbnail'))}}
+                            <!--<img src="packages/bootstrap/img/login.png" alt="" class="thumbnail" />-->
                         </div> <!-- /account-avatar -->
 
                         <div class="account-details">

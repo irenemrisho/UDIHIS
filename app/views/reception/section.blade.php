@@ -14,7 +14,7 @@ $docts = User::where('level',4)->get();
 
 @if($section == "Insurance")
 <?php 
-$insurances = InsuranceCompany::get();
+$insurances = InsuranceCompany::get()->except(3);
           
 ?>
 

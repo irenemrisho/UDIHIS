@@ -84,14 +84,7 @@
                                                         </div>                                       
                                               
                                                     </div> <!-- /control-group -->
-                                                    <div class="control-group">  
-                                                     <label class="control-label" for="cash">Cash</label>
-                                                        <div class="controls">
-                                                            <input type="text" class="input-xlarge" name="cash" id="" value="" placeholder="price">
-                                                            
-                                                        </div>                                       
-                                              
-                                                    </div> <!-- /control-group -->
+                                                    
                                                     <!-- retrieve all campanies-->
                                                     <?php  $Campanies =InsuranceCompany::all(); ?>
                                                     @foreach($Campanies as $Campany )

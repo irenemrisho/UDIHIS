@@ -28,52 +28,78 @@ class PatientVisitController extends \BaseController {
     	return View::make('reception.section',compact('section'));
     }
 
-    public function patientinfo(){
-        $inputs     = Input::all();
+       public function patientinfo(){
+        $inputs     = Input::except('payReg','payCons');
+        $payReg =Input::get('payReg');
+        $payCons =Input::get('payCons');
+
         $pid = $inputs['pid'];
         $height = $inputs['height'];
         $weight = $inputs['weight'];
-        /*$allergy = $inputs['allergy'];*/
+        $allergy = $inputs['allergy'];
         $temperature = $inputs['temperature'];
         $bloodpressure = $inputs['bloodpressure'];
-        /*$bloodgroup = $inputs['bloodgroup'];*/
-        /*$rhesus = $inputs['rhesus'];*/
-        $paymenttype = $inputs['payment'];
+        $bloodgroup = $inputs['bloodgroup'];
+       // $rhesus = $inputs['rhesus'];
+        $payment = $inputs['payment'];
         $section = $inputs['section'];
 
       $pvInfo = Patients_visit::create(array(
 
             'height' => $height,
-            'weight' => $weight,
-            'temperature' => $temperature,
-            /*'bloodgroup'=>$bloodgroup,*/
-            'bloodpressure' => $bloodpressure,
-            'paymenttype' =>$paymenttype,
-
-            /*'rhesus' =>$rhesus,*/
-            'patient_id' =>$pid,
+            "weight" => $weight,
+            "temperature" => $temperature,
+            "bloodgroup"=>$bloodgroup,
+            "bloodpressure" => $bloodpressure,
+            "paymenttype" => $payment,
+            "allergy" => $allergy,
+            "patient_id"=>$pid,
+            "paymenttype"=>$payment,
+            "dt"=>date('Y-m-d')
           ));
-        $this->addPayment("registration",$pid,$paymenttype);
+      $patient_id = $pid;
 
-        return url('manage/patients');
+      $private_id=InsuranceCompany::whereName('private')->first()->id;
 
+      $registration_id= Service::whereName('registration')->first()->id;
+      $consultation_id= Service::whereName('consultation')->first()->id;
+
+      $registration_price_id = Price_company::whereRaw('service_id=? and company_id = ? ', array($registration_id,$private_id))->first()->id;
+      $consultation_price_id = Price_company::whereRaw('service_id=? and company_id = ? ', array($consultation_id,$private_id))->first()->id;
+ 
+                    if($payReg == 1){
+                            $this->addPayment($registration_price_id,$patient_id,'now');
+                        }
+                        else{
+                            $this->addPayment($registration_price_id,$patient_id,'later');
+                        }
+                        if($payCons == 1){
+                             $this->addPayment($consultation_price_id,$patient_id,'now');
+                        }else{
+                            $this->addPayment($consultation_price_id,$patient_id,'later');
+                        }
+
+        
      }
 
 
-    public function addPayment($service_name,$patient_id,$pay_type) {
+    public function addPayment($price_company_id,$patient_id,$time) {
         //$cash is boolean value true for cash , false for insured
-        if($pay_type=='Cash'){
-            $status="unpaid";
-        }else{
+        if($time=='now'){
             $status="paid";
+        }else{
+            $status="unpaid";
         }
 
-        $service_id = Service::where('name',$service_name)->first()->id;
+        //$service_id = Service::where('name',$service_name)->first()->id;
+
+
 
         $payment = Payment::create(array(
-            "service_id"=>$service_id,
+            "price_company_id"=>$price_company_id,
             "patient_id"=>$patient_id,
-            "status"=>$status
+            "status"=>$status,
+            "dt"=>date('Y-m-d')
         ));
 
     }
@@ -185,7 +211,7 @@ class PatientVisitController extends \BaseController {
           $appointment->delete();
         return View::make('reception.appointment');
 
-;	}
+	}
 
 
 }

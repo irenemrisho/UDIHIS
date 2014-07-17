@@ -13,6 +13,26 @@ class BillingController  extends BaseController{
             
 }
 
+    public function getRerpx(){
+        $inputs   = Input::all();
+        $from     = $inputs['from'];
+        $to       = $inputs['to'];
+
+        $reports = Payment::whereRaw('dt <= ? and dt > ?', array($to, $from))->get();
+
+        if($inputs['reporttype'] == "Table"){
+            return   View::make('reports.payment', compact('reports'))->with('f',$from)->with('t',$to);
+        }
+    }
+
+    public function printReport(){
+       $f     = $_GET['from'];
+       $t     = $_GET['to'];
+       $reports = Payment::whereRaw('dt <= ? and dt > ?', array($t, $f))->get();
+       $pdf  = PDF::loadView('reports.paymentx', compact('reports'));
+       return $pdf->stream();
+    }
+
     public function getBills(){
 
         if(isset($_GET['pay'])){
@@ -146,17 +166,15 @@ class BillingController  extends BaseController{
             
 
 			if ($service) {
-                            
+                $Campanies =InsuranceCompany::all();          
                 $Service_id =$service->id;
-                $Campanies =InsuranceCompany::all();
-
-                $cash_price = Price_company::create(array(
+               /* $cash_price = Price_company::create(array(
                 "service_id"=> $Service_id,             
                 "company_id"=>0,  // zero is used as campany_id for cash doesn't reference in any table           
                 "price"=>$inputs['cash']
 
                 )); 
-                
+                */
                 foreach ($Campanies as $Campany) {
 
                     $Campany_id = $Campany->id;

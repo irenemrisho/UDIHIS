@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('content')
-
-<div class="navbar navbar-fixed-top">
+     <div class="navbar navbar-fixed-top">
     
     <div class="navbar-inner">
         
@@ -9,9 +8,9 @@
             
             
             <center><div class="" > <div class="pull-left">{{HTML::image('packages/bootstrap/img/logo1.png')}}
-            </div> <div class=" pull-right">{{HTML::image('packages/bootstrap/img/logo2.jpg')}}</div>
+            </div> <div class=" pull-right">{{HTML::image('packages/bootstrap/img/logo2.png')}}</div>
             <div class=" " >
-        <h4>UDSM INTERGRATED HOSPITAL INFORMATION SYSTEM </h4></div>
+        <h2>UDSM INTEGRATED HOSPITAL INFORMATION SYSTEM </h2></div>
             </div></center>
             
             
@@ -95,7 +94,7 @@
 
 
     <div id="login-extra">
-        		
+                
     </div> <!-- /login-extra -->
     
 

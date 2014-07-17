@@ -50,6 +50,7 @@ class CreatePatientsVisitsTable extends Migration {
            	$table->String('bloodgroup')->nullable();
            	$table->String('paymenttype')->nullable();
            	$table->String('allergy');
+           	$table->String('dt');
 			$table->timestamps();
 
 		});

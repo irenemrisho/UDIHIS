@@ -56,7 +56,7 @@ class PharmacyController extends BaseController {
             
         }
 
-        $provided_medicines = Recommended_medicine::groupBy('pv_id')->where('status','=','open')->get(array('pv_id', DB::raw('count(*) as count')));
+       $provided_medicines = Recommended_medicine::groupBy('pv_id')->where('status','=','open')->get(array('pv_id', DB::raw('count(*) as count')));
        return  View::make('Pharmacy.provide_medication')->with('provided_medicines',$provided_medicines);
     }
     public function getMedic(){

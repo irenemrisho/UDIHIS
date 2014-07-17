@@ -7,12 +7,15 @@ public function index(){
 }
 
 public function getRequest(){
-            return View::make("supplies.request");
+	
+		$product_requests= Product_request::where('status','=','open')->get();
+        return View::make("supplies.request")->with('product_requests',$product_requests);
             
 }
 
 public function getSupplied(){
-            return View::make("supplies.supplied");
+             $product_supplieds= Product_supply::get();
+            return View::make("supplies.supplied")->with('product_supplieds',$product_supplieds);
             
 }
 
@@ -27,6 +30,58 @@ public function getGoods(){
       
   return View::make("supplies.goods")->with('goods',$goods);
             
+}
+
+public function getProductRequest(){
+        
+        $id = $_GET['id'];
+        
+        $product_requests= Product_request::whereRaw('status=? and id = ? ', array('open',$id))->get();
+        
+        return View::make('supplies.showProvide')->with('product_requests',$product_requests);
+ }
+
+public function provideProductRequest(){
+
+    $rq_q =$_GET['rq_q'];
+    $rq_id= $_GET['rq_id'];
+    $p_id = $_GET['p_id'];
+    $us_id =$_GET['us_id'];
+
+    $provided_product =  Input::get('request');
+
+   
+    $q_remain = $rq_q - $provided_product;
+
+    if($q_remain> 0){
+        $status = "open";
+    }else{
+        $status = "closed";
+    }
+
+   
+
+    $Provide = Product_supply::create(array(
+        "product_id"=>$p_id ,
+        "user_id"=>$us_id,
+        "quantity"=>$provided_product
+        ));
+
+    if ($Provide) {
+
+                $Product = Product_request::where('id',$rq_id)
+                                ->update(array(
+                "status"=>$status,
+                "quantity" =>$q_remain
+
+                )); 
+
+               return Redirect::to('supplies/request?msg=1');
+            }else{
+                
+                return Redirect::to('supplies/request?msg=2');
+            }       
+
 }
 
 public function addGoods(){

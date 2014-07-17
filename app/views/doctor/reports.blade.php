@@ -27,42 +27,20 @@
 										<option>male</option>	
 										<option>female</option>	
 									</select>
-									Age:
-									<select id="age"  style="width:80px">
-										<option></option>
-										<option>all</option>	
-										<option>children</option>	
-										<option>Adults</option>	
-										<option>Elders</option>	
-									</select>
-									District:
-									<select id="district" style="width:80px">
-										<option></option>
-										<option>all</option>	
-										<option>Kinondoni</option>	
-										<option>Temeke</option>	
-										<option>Ilala</option>	
-									</select>
 									Report type:
 									<select id="reporttype" style="width:80px">
 										<option></option>
-										<option>Table</option>	
-										<option>Pie</option>	
-										<option>Column</option>	
-										<option>Line</option>	
+										<option>Table</option>		
 									</select>
 									Report:
 									<select id="report"  style="width:80px">
 										<option></option>
 										<option>daily</option>	
-										<option>weekly</option>	
-										<option>monthly</option>	
-										<option>Yearly</option>	
 									</select>
 									<span id="date" style="display:none">
-										<input type="text" id="dt" style="width:80px" placeholder="Enter date" />
+										<input type="text" id="dt" class="dt" style="width:100px" placeholder="Enter date" />
 									</span>
-									<button class="btn" id="go" type="button">
+									<button class="btn" id="gent" type="button">
 										Go
 									</button>
 								</form>
@@ -73,7 +51,4 @@
 					</div>
 				</div>
 	</div>	
-
-
-
 @stop

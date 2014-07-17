@@ -33,7 +33,7 @@
                                     <td>{{$index}}</td>
                                     <td>
                                     <?php if($Price_company->company_id == 0){ ?>
-                                    {{"Cash"}}
+                                    {{""}}
                                     <?php }else{?>
                                     {{InsuranceCompany::where('id',$Price_company->company_id)->first()->name}}
                                     <?php }?>

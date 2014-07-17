@@ -75,7 +75,7 @@
 										<div class="tab-pane " id="2">
 						
 
-                                                                                    <form id="edit-profile" class="form-horizontal" action="manage_medicine" method="post">
+                                                <form id="edit-profile" class="form-horizontal" action="manage_medicine" method="post">
                                                 <fieldset>
                                                     <div class="control-group">  
                                                      <label class="control-label" for="Medicine_name">Medicine name</label>
@@ -149,7 +149,8 @@
                                                                                                                 <tbody>
                                                                                                                 <?php $index=1; ?>
 														@foreach($medicines as $medicine)
-															<tr>    <td>{{$index}}</td>
+															<tr>
+                                                                <td>{{$index}}</td>
 																<td>{{$medicine->name}}</td>
 																<td>{{$medicine->price}} </td>
 																<td>{{$medicine->quantity}} </td>
@@ -158,12 +159,12 @@
                                                                                                                                 
 																<td class="action-td">
                                                                                                                                     
-                                                                                                                                    <a href="edit_medicine?edit={{$medicine->id}}"><span class="icon-edit btn btn-small btn btn-primary">
-                                                                                                                                        </span>
-                                                                                                                                    </a>&nbsp;
-                                                                                                                                        <a href="manage_medicine?dlt={{$medicine->id}}" onclick="return confirm('Are you sure you want to delete');" ><span class="icon-trash  btn btn-small btn-danger ">
-                                                                                                                                        <span>
-                                                                                                                                     </a>
+                                                                <a href="edit_medicine?edit={{$medicine->id}}"><span class="icon-edit btn btn-small btn btn-primary">
+                                                                    </span>
+                                                                </a>&nbsp;
+                                                                    <a href="manage_medicine?dlt={{$medicine->id}}" onclick="return confirm('Are you sure you want to delete');" ><span class="icon-trash  btn btn-small btn-danger ">
+                                                                    <span>
+                                                                 </a>
                                                                                                                                         
 																</td>
 															</tr>

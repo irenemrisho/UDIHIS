@@ -1,5 +1,19 @@
 @extends('dashboard')
 @section('main')
+<script type="text/javascript">
+    
+    function myCardCode(){
+        var prtCont = document.getElementById("myCard");
+        var wpnt    = window.open('','','left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+        wpnt.document.write(prtCont.innerHTML);
+        wpnt.document.close();
+        wpnt.focus();
+        wpnt.print();
+        wpnt.close();
+        
+    }
+
+</script>
     <h1 class="page-title">
                     <i class="icon-th-large"></i>
                     Print Appointment Card    
@@ -9,7 +23,7 @@
 <div class="span9">
 <div class="widget-content">
 
-    <div style="text-align:center">
+    <div style="text-align:center" id="myCard">
         <canvas id="app_card_canvas" width="520" height="300"></canvas>
 
         <script type="text/javascript">
@@ -42,11 +56,12 @@
     <hr>
 
     <div style="text-align:center">    
-     <button class="btn-primary" onMouseDown="save_image()">print card</button><br> 
+     <button class="btn-primary" onMouseDown="myCardCode()">print card</button><br> 
 
      <img src="" id="app_card_image" alt="appointment-card-here">
     </div>
 
+    <hr>
 </div>
 </div>
 </div>

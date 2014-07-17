@@ -32,10 +32,7 @@
 									<select id="reporttype" style="width:120px">
 										<option></option>
 										<option>Table</option>	
-										<option>Pie</option>	
-										<option>Column</option>	
-										<option>Line</option>	
-										<option>Combine</option>	
+											
 									</select>
 									<span id="date" style="display:none">
 										<input type="text" id="dt" style="width:80px" placeholder="Enter date" />
